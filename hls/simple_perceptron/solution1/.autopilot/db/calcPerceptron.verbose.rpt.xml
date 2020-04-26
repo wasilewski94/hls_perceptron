@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'calcPerceptron'" level="0">
-<item name = "Date">Sun Apr 26 14:31:33 2020
+<item name = "Date">Sun Apr 26 19:39:45 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">simple_perceptron</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00 ns, 8.232 ns, 1.25 ns</column>
+<column name="ap_clk">10.00 ns, 8.677 ns, 1.25 ns</column>
 </table>
 </item>
 </section>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">142, 142, 1.420 us, 1.420 us, 142, 142, none</column>
+<column name="">136, 136, 1.360 us, 1.360 us, 136, 136, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">139, 139, 41, 1, 1, 100, yes</column>
+<column name="- Loop 1">134, 134, 36, 1, 1, 100, yes</column>
 </table>
 </item>
 </section>
@@ -48,14 +48,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 95, -</column>
+<column name="Expression">-, -, 0, 63, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, 31, 1781, 3777, -</column>
+<column name="Instance">0, 22, 1139, 2346, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 78, -</column>
-<column name="Register">0, -, 572, 128, -</column>
+<column name="Multiplexer">-, -, -, 57, -</column>
+<column name="Register">0, -, 438, 96, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 14, 2, 7, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 10, 1, 4, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -63,12 +63,10 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="calcPerceptron_CRTL_BUS_s_axi_U">calcPerceptron_CRTL_BUS_s_axi, 0, 0, 74, 104, 0</column>
-<column name="calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6">calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1, 0, 3, 445, 1149, 0</column>
-<column name="calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7">calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1, 0, 11, 317, 578, 0</column>
 <column name="calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1">calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 390, 0</column>
+<column name="calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U2">calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 390, 0</column>
 <column name="calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5">calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1, 0, 7, 277, 924, 0</column>
-<column name="calcPerceptron_fpext_32ns_64_2_1_U3">calcPerceptron_fpext_32ns_64_2_1, 0, 0, 100, 138, 0</column>
-<column name="calcPerceptron_fptrunc_64ns_32_2_1_U2">calcPerceptron_fptrunc_64ns_32_2_1, 0, 0, 128, 277, 0</column>
+<column name="calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1_U3">calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 321, 0</column>
 <column name="calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4">calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1, 0, 8, 235, 217, 0</column>
 </table>
 </item>
@@ -86,26 +84,25 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="idx_fu_137_p2">+, 0, 0, 15, 7, 1</column>
-<column name="icmp_ln11_fu_131_p2">icmp, 0, 0, 11, 7, 6</column>
+<column name="idx_fu_141_p2">+, 0, 0, 15, 7, 1</column>
+<column name="icmp_ln12_fu_135_p2">icmp, 0, 0, 11, 7, 6</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 <column name="ap_enable_reg_pp0_iter1">xor, 0, 0, 2, 2, 1</column>
-<column name="xor_ln13_fu_151_p2">xor, 0, 0, 65, 64, 65</column>
+<column name="xor_ln14_fu_156_p2">xor, 0, 0, 33, 32, 33</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">27, 5, 1, 5</column>
+<column name="ap_NS_fsm">21, 4, 1, 4</column>
 <column name="ap_enable_reg_pp0_iter1">9, 2, 1, 2</column>
-<column name="ap_enable_reg_pp0_iter40">9, 2, 1, 2</column>
-<column name="grp_fu_107_p0">15, 3, 32, 96</column>
-<column name="idx_0_reg_88">9, 2, 7, 14</column>
+<column name="ap_enable_reg_pp0_iter35">9, 2, 1, 2</column>
+<column name="idx_0_reg_101">9, 2, 7, 14</column>
 <column name="res_WEN_A">9, 2, 4, 8</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">4, 0, 4, 0</column>
+<column name="ap_CS_fsm">3, 0, 3, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter10">1, 0, 1, 0</column>
@@ -136,30 +133,25 @@
 <column name="ap_enable_reg_pp0_iter33">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter34">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter35">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter36">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter37">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter38">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter39">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter4">1, 0, 1, 0</column>
-<column name="ap_enable_reg_pp0_iter40">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter5">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter6">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter7">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter8">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter9">1, 0, 1, 0</column>
-<column name="icmp_ln11_reg_172">1, 0, 1, 0</column>
-<column name="idx_0_reg_88">7, 0, 7, 0</column>
-<column name="tmp_1_reg_196">64, 0, 64, 0</column>
-<column name="tmp_2_reg_201">64, 0, 64, 0</column>
-<column name="tmp_3_reg_206">64, 0, 64, 0</column>
-<column name="tmp_4_reg_231">32, 0, 32, 0</column>
-<column name="tmp_7_reg_226">32, 0, 32, 0</column>
+<column name="bias_read_reg_167">32, 0, 32, 0</column>
+<column name="icmp_ln12_reg_172">1, 0, 1, 0</column>
+<column name="idx_0_reg_101">7, 0, 7, 0</column>
+<column name="tmp_1_reg_206">32, 0, 32, 0</column>
+<column name="tmp_2_reg_211">32, 0, 32, 0</column>
+<column name="tmp_5_reg_226">32, 0, 32, 0</column>
 <column name="tmp_i_i_reg_221">32, 0, 32, 0</column>
-<column name="tmp_reg_167">64, 0, 64, 0</column>
-<column name="x_assign_reg_216">32, 0, 32, 0</column>
-<column name="zext_ln13_reg_181">7, 0, 64, 57</column>
-<column name="icmp_ln11_reg_172">64, 64, 1, 0</column>
-<column name="zext_ln13_reg_181">64, 64, 64, 57</column>
+<column name="tmp_reg_231">32, 0, 32, 0</column>
+<column name="w_load_reg_201">32, 0, 32, 0</column>
+<column name="x_load_reg_196">32, 0, 32, 0</column>
+<column name="zext_ln14_reg_181">7, 0, 64, 57</column>
+<column name="icmp_ln12_reg_172">64, 48, 1, 0</column>
+<column name="zext_ln14_reg_181">64, 48, 64, 57</column>
 </table>
 </item>
 </section>
@@ -196,6 +188,13 @@
 <column name="x_Dout_A">in, 32, bram, x, array</column>
 <column name="x_Clk_A">out, 1, bram, x, array</column>
 <column name="x_Rst_A">out, 1, bram, x, array</column>
+<column name="w_Addr_A">out, 32, bram, w, array</column>
+<column name="w_EN_A">out, 1, bram, w, array</column>
+<column name="w_WEN_A">out, 4, bram, w, array</column>
+<column name="w_Din_A">out, 32, bram, w, array</column>
+<column name="w_Dout_A">in, 32, bram, w, array</column>
+<column name="w_Clk_A">out, 1, bram, w, array</column>
+<column name="w_Rst_A">out, 1, bram, w, array</column>
 <column name="res_Addr_A">out, 32, bram, res, array</column>
 <column name="res_EN_A">out, 1, bram, res, array</column>
 <column name="res_WEN_A">out, 4, bram, res, array</column>

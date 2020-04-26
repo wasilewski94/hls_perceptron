@@ -1,1 +1,1 @@
-set ::AESL_AUTOSIM::gTopFileName /home/wask/workspace/hls/lab_6_bram/simple_perceptron/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp.tb.cpp
+set ::AESL_AUTOSIM::gTopFileName /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp.tb.cpp

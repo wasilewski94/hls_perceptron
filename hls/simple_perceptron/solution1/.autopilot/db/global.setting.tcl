@@ -42,7 +42,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../core.cpp}
 set SourceFlags {sc {} c {{}}}
-set DirectiveFile /home/wask/workspace/hls/lab_6_bram/simple_perceptron/solution1/solution1.directive
+set DirectiveFile /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/solution1.directive
 set TBFiles {verilog ../test_core.cpp bc ../test_core.cpp vhdl ../test_core.cpp sc ../test_core.cpp cas ../test_core.cpp c {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

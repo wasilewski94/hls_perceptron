@@ -1,2 +1,2 @@
    text	   data	    bss	    dec	    hex	filename
-  65188	   2600	  23336	  91124	  163f4	simple_perceptron_sw.elf
+  65260	   2608	  23336	  91204	  16444	simple_perceptron_sw.elf

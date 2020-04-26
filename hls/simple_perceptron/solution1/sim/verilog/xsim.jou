@@ -2,12 +2,12 @@
 # xsim v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Apr 26 14:35:36 2020
-# Process ID: 20756
-# Current directory: /home/wask/workspace/hls/lab_6_bram/simple_perceptron/solution1/sim/verilog
+# Start of session at: Sun Apr 26 19:47:46 2020
+# Process ID: 14862
+# Current directory: /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog
 # Command line: xsim -mode tcl -source {xsim.dir/calcPerceptron/xsim_script.tcl}
-# Log file: /home/wask/workspace/hls/lab_6_bram/simple_perceptron/solution1/sim/verilog/xsim.log
-# Journal file: /home/wask/workspace/hls/lab_6_bram/simple_perceptron/solution1/sim/verilog/xsim.jou
+# Log file: /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/xsim.log
+# Journal file: /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/xsim.jou
 #-----------------------------------------------------------
 source xsim.dir/calcPerceptron/xsim_script.tcl
 source calcPerceptron.tcl

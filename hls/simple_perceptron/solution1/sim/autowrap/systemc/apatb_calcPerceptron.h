@@ -5,5 +5,6 @@
 
 extern void AESL_WRAP_calcPerceptron (
 float x[100],
+float w[100],
 float bias,
 float res[100]);

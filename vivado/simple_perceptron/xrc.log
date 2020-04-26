@@ -1,0 +1,8 @@
+Sun Apr 26 20:13:41 2020: Server was asked to start on port: '36923'
+Sun Apr 26 20:13:41 2020: Server is using token UUID: 'bfc5d198-9148-4ca3-a4ea-ac7c07ba732c'
+Sun Apr 26 20:13:41 2020: Attempting to start server on port '36923'
+Sun Apr 26 20:13:41 2020: XRC main fifo: created main fifo '/tmp/xrcmainbfc5d198-9148-4ca3-a4ea-ac7c07ba732c', fd read = 11
+Sun Apr 26 20:13:41 2020: Running Rule Check Server
+Sun Apr 26 20:13:41 2020: Version 1.5.1
+Sun Apr 26 20:13:42 2020: Rule Check Server: Accepted socket connection from client
+Sun Apr 26 20:13:42 2020: EXCHANGE_TOKEN received, server token: bfc5d198-9148-4ca3-a4ea-ac7c07ba732c, passed token: bfc5d198-9148-4ca3-a4ea-ac7c07ba732c

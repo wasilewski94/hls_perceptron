@@ -1,0 +1,42 @@
+INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'wask' on host 'legion' (Linux_x86_64 version 5.3.0-46-generic) on Sun Apr 26 19:48:16 CEST 2020
+INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/wask/workspace/mgr/hls_perceptron/hls'
+Sourcing Tcl script '/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/export.tcl'
+INFO: [HLS 200-10] Opening project '/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron'.
+INFO: [HLS 200-10] Opening solution '/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-4832] The IP name 'calcPerceptron_ap_fadd_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'calcPerceptron_ap_fadd_3_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'calcPerceptron_ap_fadd_3_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'calcPerceptron_ap_fexp_7_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'calcPerceptron_ap_fexp_7_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'calcPerceptron_ap_fexp_7_full_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'calcPerceptron_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'calcPerceptron_ap_fmul_2_max_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'calcPerceptron_ap_fmul_2_max_dsp_32'...
+WARNING: [IP_Flow 19-4832] The IP name 'calcPerceptron_ap_frecip_8_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues.
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'calcPerceptron_ap_frecip_8_full_dsp_32'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'calcPerceptron_ap_frecip_8_full_dsp_32'...
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 19:48:38 2020...

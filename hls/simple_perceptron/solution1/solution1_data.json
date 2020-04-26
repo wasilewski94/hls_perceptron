@@ -13,6 +13,8 @@
     "Speed": "-1"
   },
   "HlsSolution": {"Config": [
+      "config_export -format=ip_catalog",
+      "config_export -rtl=verilog",
       "config_export -vivado_optimization_level=0",
       "config_export -vivado_phys_opt=none",
       "config_export -vivado_report_level=0",
@@ -36,8 +38,18 @@
         "interfaceRef": "x"
       }
     },
-    "bias": {
+    "w": {
       "index": "1",
+      "type": {
+        "kinds": ["array"],
+        "dataType": "float",
+        "dataWidth": "32",
+        "arraySizes": ["100"],
+        "interfaceRef": "w"
+      }
+    },
+    "bias": {
+      "index": "2",
       "type": {
         "dataType": "float",
         "dataWidth": "32",
@@ -46,7 +58,7 @@
       }
     },
     "res": {
-      "index": "2",
+      "index": "3",
       "type": {
         "kinds": ["array"],
         "dataType": "float",
@@ -64,7 +76,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "142",
+    "Latency": "136",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -83,23 +95,17 @@
     "CSource": ["..\/core.cpp"],
     "Vhdl": [
       "impl\/vhdl\/calcPerceptron_CRTL_BUS_s_axi.vhd",
-      "impl\/vhdl\/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1.vhd",
-      "impl\/vhdl\/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd",
-      "impl\/vhdl\/calcPerceptron_fpext_32ns_64_2_1.vhd",
-      "impl\/vhdl\/calcPerceptron_fptrunc_64ns_32_2_1.vhd",
+      "impl\/vhdl\/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron.vhd"
     ],
     "Verilog": [
       "impl\/verilog\/calcPerceptron_CRTL_BUS_s_axi.v",
-      "impl\/verilog\/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1.v",
-      "impl\/verilog\/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1.v",
       "impl\/verilog\/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.v",
       "impl\/verilog\/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.v",
-      "impl\/verilog\/calcPerceptron_fpext_32ns_64_2_1.v",
-      "impl\/verilog\/calcPerceptron_fptrunc_64ns_32_2_1.v",
+      "impl\/verilog\/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.v",
       "impl\/verilog\/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.v",
       "impl\/verilog\/calcPerceptron.v"
     ],
@@ -115,32 +121,19 @@
     ],
     "Misc": ["impl\/misc\/logo.png"],
     "Subcore": [
-      "impl\/misc\/calcPerceptron_ap_dadd_3_full_dsp_64_ip.tcl",
-      "impl\/misc\/calcPerceptron_ap_dmul_4_max_dsp_64_ip.tcl",
       "impl\/misc\/calcPerceptron_ap_fadd_3_full_dsp_32_ip.tcl",
       "impl\/misc\/calcPerceptron_ap_fexp_7_full_dsp_32_ip.tcl",
-      "impl\/misc\/calcPerceptron_ap_fpext_0_no_dsp_32_ip.tcl",
-      "impl\/misc\/calcPerceptron_ap_fptrunc_0_no_dsp_64_ip.tcl",
+      "impl\/misc\/calcPerceptron_ap_fmul_2_max_dsp_32_ip.tcl",
       "impl\/misc\/calcPerceptron_ap_frecip_8_full_dsp_32_ip.tcl"
     ],
-    "DesignXml": "\/home\/wask\/workspace\/hls\/lab_6_bram\/simple_perceptron\/solution1\/.autopilot\/db\/calcPerceptron.design.xml",
-    "DebugDir": "\/home\/wask\/workspace\/hls\/lab_6_bram\/simple_perceptron\/solution1\/.debug",
-    "ProtoInst": ["\/home\/wask\/workspace\/hls\/lab_6_bram\/simple_perceptron\/solution1\/.debug\/calcPerceptron.protoinst"]
+    "DesignXml": "\/home\/wask\/workspace\/mgr\/hls_perceptron\/hls\/simple_perceptron\/solution1\/.autopilot\/db\/calcPerceptron.design.xml",
+    "DebugDir": "\/home\/wask\/workspace\/mgr\/hls_perceptron\/hls\/simple_perceptron\/solution1\/.debug",
+    "ProtoInst": ["\/home\/wask\/workspace\/mgr\/hls_perceptron\/hls\/simple_perceptron\/solution1\/.debug\/calcPerceptron.protoinst"]
   },
   "SubcoreInfo": {
     "HasXpmMemory": false,
     "HasClockedDsp": false,
     "IP": [
-      {
-        "name": "calcPerceptron_ap_dadd_3_full_dsp_64",
-        "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Add CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 3 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name calcPerceptron_ap_dadd_3_full_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Add_Subtract CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
-      },
-      {
-        "name": "calcPerceptron_ap_dmul_4_max_dsp_64",
-        "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 4 CONFIG.c_mult_usage Max_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name calcPerceptron_ap_dmul_4_max_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Multiply CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
-      },
       {
         "name": "calcPerceptron_ap_fadd_3_full_dsp_32",
         "vlnv": "xilinx.com:ip:floating_point:7.1",
@@ -152,14 +145,9 @@
         "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 7 CONFIG.c_mult_usage Full_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name calcPerceptron_ap_fexp_7_full_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Exponential CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
       },
       {
-        "name": "calcPerceptron_ap_fpext_0_no_dsp_32",
+        "name": "calcPerceptron_ap_fmul_2_max_dsp_32",
         "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 11 CONFIG.c_result_fraction_width 53 CONFIG.component_name calcPerceptron_ap_fpext_0_no_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Float_to_Float CONFIG.result_precision_type Double CONFIG.result_tlast_behv Null"
-      },
-      {
-        "name": "calcPerceptron_ap_fptrunc_0_no_dsp_64",
-        "vlnv": "xilinx.com:ip:floating_point:7.1",
-        "params": "CONFIG.a_precision_type Double CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 11 CONFIG.c_a_fraction_width 53 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 0 CONFIG.c_mult_usage No_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name calcPerceptron_ap_fptrunc_0_no_dsp_64 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken false CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Float_to_Float CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
+        "params": "CONFIG.a_precision_type Single CONFIG.a_tuser_width 1 CONFIG.add_sub_value Both CONFIG.b_tuser_width 1 CONFIG.c_a_exponent_width 8 CONFIG.c_a_fraction_width 24 CONFIG.c_compare_operation Programmable CONFIG.c_has_divide_by_zero false CONFIG.c_has_invalid_op false CONFIG.c_has_overflow false CONFIG.c_has_underflow false CONFIG.c_latency 2 CONFIG.c_mult_usage Max_Usage CONFIG.c_optimization Speed_Optimized CONFIG.c_rate 1 CONFIG.c_result_exponent_width 8 CONFIG.c_result_fraction_width 24 CONFIG.component_name calcPerceptron_ap_fmul_2_max_dsp_32 CONFIG.flow_control NonBlocking CONFIG.has_a_tlast false CONFIG.has_a_tuser false CONFIG.has_aclken true CONFIG.has_aresetn false CONFIG.has_b_tlast false CONFIG.has_b_tuser false CONFIG.has_operation_tlast false CONFIG.has_operation_tuser false CONFIG.has_result_tready false CONFIG.maximum_latency false CONFIG.operation_tuser_width 1 CONFIG.operation_type Multiply CONFIG.result_precision_type Single CONFIG.result_tlast_behv Null"
       },
       {
         "name": "calcPerceptron_ap_frecip_8_full_dsp_32",
@@ -452,6 +440,39 @@
         "WSTRB": "4"
       }
     },
+    "w": {
+      "type": "native_bram",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "w",
+      "mem_width": "32",
+      "mem_depth": "1",
+      "mem_ports": "a",
+      "addr_width": "32",
+      "we_width": "4",
+      "master_type": "BRAM_CTRL",
+      "ctype": {
+        "EN": {"Type": "bool"},
+        "CLK": {"Type": "bool"},
+        "RST": {"Type": "bool"},
+        "ADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "WE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "DIN": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "DOUT": {
+          "Type": "real float",
+          "Width": "32"
+        }
+      }
+    },
     "x": {
       "type": "native_bram",
       "is_adaptor": "true",
@@ -596,6 +617,34 @@
       "dir": "out",
       "width": "1"
     },
+    "w_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "w_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "w_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "w_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "w_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "w_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "w_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
     "res_Addr_A": {
       "dir": "out",
       "width": "32"
@@ -636,30 +685,30 @@
       }},
     "Metrics": {"calcPerceptron": {
         "Latency": {
-          "LatencyBest": "142",
-          "LatencyAvg": "142",
-          "LatencyWorst": "142",
-          "PipelineII": "143",
+          "LatencyBest": "136",
+          "LatencyAvg": "136",
+          "LatencyWorst": "136",
+          "PipelineII": "137",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
         "Timing": {
           "Target": "10.00",
           "Uncertainty": "1.25",
-          "Estimate": "8.232"
+          "Estimate": "8.677"
         },
         "Loops": [{
             "Name": "Loop 1",
             "TripCount": "100",
-            "Latency": "139",
+            "Latency": "134",
             "PipelineII": "1",
-            "PipelineDepth": "41"
+            "PipelineDepth": "36"
           }],
         "Area": {
           "BRAM_18K": "0",
-          "DSP48E": "31",
-          "FF": "2353",
-          "LUT": "4078",
+          "DSP48E": "22",
+          "FF": "1577",
+          "LUT": "2562",
           "URAM": "0"
         }
       }}
@@ -674,7 +723,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-04-26 14:31:34 CEST",
+    "Time": "2020-04-26 19:39:46 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

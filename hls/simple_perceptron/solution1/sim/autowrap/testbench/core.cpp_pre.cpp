@@ -1,9 +1,9 @@
-# 1 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/core.cpp"
+# 1 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/core.cpp"
+# 1 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.cpp"
 # 1 "/opt/Xilinx/Vivado/2019.2/include/hls_math.h" 1
 # 36 "/opt/Xilinx/Vivado/2019.2/include/hls_math.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 1 3
@@ -83571,19 +83571,20 @@ namespace hls {
     uint32_t logb(uint32_t);
 
 };
-# 2 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/core.cpp" 2
+# 2 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.cpp" 2
 
-void calcPerceptron(float x[100], float bias, float res[100])
+void calcPerceptron(float x[100], float w[100], float bias, float res[100])
 {
 #pragma HLS INTERFACE s_axilite port=return bundle=CRTL_BUS
 #pragma HLS INTERFACE s_axilite port=bias bundle=CRTL_BUS
 #pragma HLS INTERFACE bram port=x
+#pragma HLS INTERFACE bram port=w
 #pragma HLS INTERFACE bram port=res
 
 
  for (int idx = 0; idx < 100; idx++)
  {
-  res[idx] = 1.0 / (1 + hls::expf(-( x[idx] * 0.5 + bias)));
+  res[idx] = 1.0 / (1 + hls::expf(-( x[idx] * w[idx] + bias)));
  }
 
 }

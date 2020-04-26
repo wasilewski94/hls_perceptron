@@ -1,4 +1,4 @@
-<project xmlns="com.autoesl.autopilot.project" top="calcPerceptron" name="simple_perceptron">
+<project xmlns="com.autoesl.autopilot.project" name="simple_perceptron" top="calcPerceptron">
     <includePaths/>
     <libraryPaths/>
     <Simulation>

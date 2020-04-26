@@ -1,0 +1,48 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Sun Apr 26 20:04:55 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2004261437) to (Rev. 2004261948)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_calcPerceptron_0_0'.
+
+
+-Upgrade has added interface 'w_PORTA' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_calcPerceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'w_Addr_A'
+
+-Upgrade has added port 'w_Clk_A'
+
+-Upgrade has added port 'w_Din_A'
+
+-Upgrade has added port 'w_Dout_A'
+
+-Upgrade has added port 'w_EN_A'
+
+-Upgrade has added port 'w_Rst_A'
+
+-Upgrade has added port 'w_WEN_A'
+
+

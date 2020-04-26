@@ -25,6 +25,7 @@ MEMORY
 {
    axi_bram_ctrl_0_Mem0 : ORIGIN = 0x40000000, LENGTH = 0x2000
    axi_bram_ctrl_1_Mem0 : ORIGIN = 0x42000000, LENGTH = 0x2000
+   axi_bram_ctrl_2_Mem0 : ORIGIN = 0x44000000, LENGTH = 0x2000
    ps7_ddr_0 : ORIGIN = 0x100000, LENGTH = 0x3FF00000
    ps7_qspi_linear_0 : ORIGIN = 0xFC000000, LENGTH = 0x1000000
    ps7_ram_0 : ORIGIN = 0x0, LENGTH = 0x30000

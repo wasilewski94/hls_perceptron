@@ -16,13 +16,17 @@
 
 `define AESL_BRAM_x AESL_autobram_x
 `define AESL_BRAM_INST_x bram_inst_x
+`define AESL_BRAM_w AESL_autobram_w
+`define AESL_BRAM_INST_w bram_inst_w
 `define AESL_DEPTH_bias 1
 `define AESL_BRAM_res AESL_autobram_res
 `define AESL_BRAM_INST_res bram_inst_res
 `define AUTOTB_TVIN_x  "../tv/cdatafile/c.calcPerceptron.autotvin_x.dat"
+`define AUTOTB_TVIN_w  "../tv/cdatafile/c.calcPerceptron.autotvin_w.dat"
 `define AUTOTB_TVIN_bias  "../tv/cdatafile/c.calcPerceptron.autotvin_bias.dat"
 `define AUTOTB_TVIN_res  "../tv/cdatafile/c.calcPerceptron.autotvin_res.dat"
 `define AUTOTB_TVIN_x_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_x.dat"
+`define AUTOTB_TVIN_w_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_w.dat"
 `define AUTOTB_TVIN_bias_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_bias.dat"
 `define AUTOTB_TVIN_res_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_res.dat"
 `define AUTOTB_TVOUT_res  "../tv/cdatafile/c.calcPerceptron.autotvout_res.dat"
@@ -31,8 +35,9 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 142;
+parameter LATENCY_ESTIMATION = 136;
 parameter LENGTH_x = 100;
+parameter LENGTH_w = 100;
 parameter LENGTH_bias = 1;
 parameter LENGTH_res = 100;
 
@@ -89,6 +94,13 @@ wire [31 : 0] x_DIN_A;
 wire [31 : 0] x_DOUT_A;
 wire  x_CLK_A;
 wire  x_RST_A;
+wire [31 : 0] w_ADDR_A;
+wire  w_EN_A;
+wire [3 : 0] w_WEN_A;
+wire [31 : 0] w_DIN_A;
+wire [31 : 0] w_DOUT_A;
+wire  w_CLK_A;
+wire  w_RST_A;
 wire [31 : 0] res_ADDR_A;
 wire  res_EN_A;
 wire [3 : 0] res_WEN_A;
@@ -151,6 +163,13 @@ wire ap_rst_n_n;
     .x_Dout_A(x_DOUT_A),
     .x_Clk_A(x_CLK_A),
     .x_Rst_A(x_RST_A),
+    .w_Addr_A(w_ADDR_A),
+    .w_EN_A(w_EN_A),
+    .w_WEN_A(w_WEN_A),
+    .w_Din_A(w_DIN_A),
+    .w_Dout_A(w_DOUT_A),
+    .w_Clk_A(w_CLK_A),
+    .w_Rst_A(w_RST_A),
     .res_Addr_A(res_ADDR_A),
     .res_EN_A(res_EN_A),
     .res_WEN_A(res_WEN_A),
@@ -264,6 +283,51 @@ assign bramx_WEN_B = 0;
 assign bramx_Din_B = 0;
 assign bramx_ready=    ready;
 assign bramx_done = 0;
+
+
+//------------------------bramw Instantiation--------------
+
+// The input and output of bramw
+wire  bramw_Clk_A, bramw_Clk_B;
+wire  bramw_EN_A, bramw_EN_B;
+wire  [4 - 1 : 0] bramw_WEN_A, bramw_WEN_B;
+wire    [31 : 0]    bramw_Addr_A, bramw_Addr_B;
+wire    [31 : 0]    bramw_Din_A, bramw_Din_B;
+wire    [31 : 0]    bramw_Dout_A, bramw_Dout_B;
+wire    bramw_ready;
+wire    bramw_done;
+
+`AESL_BRAM_w `AESL_BRAM_INST_w(
+    .Clk_A    (bramw_Clk_A),
+    .Rst_A    (bramw_Rst_A),
+    .EN_A     (bramw_EN_A),
+    .WEN_A    (bramw_WEN_A),
+    .Addr_A   (bramw_Addr_A),
+    .Din_A    (bramw_Din_A),
+    .Dout_A   (bramw_Dout_A),
+    .Clk_B    (bramw_Clk_B),
+    .Rst_B    (bramw_Rst_B),
+    .EN_B     (bramw_EN_B),
+    .WEN_B    (bramw_WEN_B),
+    .Addr_B   (bramw_Addr_B),
+    .Din_B    (bramw_Din_B),
+    .Dout_B   (bramw_Dout_B),
+    .ready    (bramw_ready),
+    .done        (bramw_done)
+);
+
+// Assignment between dut and bramw
+assign bramw_Clk_A = w_CLK_A;
+assign bramw_Rst_A = w_RST_A;
+assign bramw_Addr_A = w_ADDR_A;
+assign bramw_EN_A = w_EN_A;
+assign w_DOUT_A = bramw_Dout_A;
+assign bramw_WEN_A = 0;
+assign bramw_Din_A = 0;
+assign bramw_WEN_B = 0;
+assign bramw_Din_B = 0;
+assign bramw_ready=    ready;
+assign bramw_done = 0;
 
 
 
@@ -408,6 +472,9 @@ end
 reg end_x;
 reg [31:0] size_x;
 reg [31:0] size_x_backup;
+reg end_w;
+reg [31:0] size_w;
+reg [31:0] size_w_backup;
 reg end_bias;
 reg [31:0] size_bias;
 reg [31:0] size_bias_backup;

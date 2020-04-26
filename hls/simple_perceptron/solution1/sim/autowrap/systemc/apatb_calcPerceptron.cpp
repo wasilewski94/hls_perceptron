@@ -31,6 +31,8 @@ using namespace sc_dt;
 
 // wrapc file define: "x"
 #define AUTOTB_TVIN_x  "../tv/cdatafile/c.calcPerceptron.autotvin_x.dat"
+// wrapc file define: "w"
+#define AUTOTB_TVIN_w  "../tv/cdatafile/c.calcPerceptron.autotvin_w.dat"
 // wrapc file define: "bias"
 #define AUTOTB_TVIN_bias  "../tv/cdatafile/c.calcPerceptron.autotvin_bias.dat"
 // wrapc file define: "res"
@@ -47,6 +49,7 @@ class INTER_TCL_FILE {
 		INTER_TCL_FILE(const char* name) {
 			mName = name;
 			x_depth = 0;
+			w_depth = 0;
 			bias_depth = 0;
 			res_depth = 0;
 			trans_num =0;
@@ -69,6 +72,7 @@ class INTER_TCL_FILE {
 		string get_depth_list () {
 			stringstream total_list;
 			total_list << "{x " << x_depth << "}\n";
+			total_list << "{w " << w_depth << "}\n";
 			total_list << "{bias " << bias_depth << "}\n";
 			total_list << "{res " << res_depth << "}\n";
 			return total_list.str();
@@ -79,6 +83,7 @@ class INTER_TCL_FILE {
 		}
 	public:
 		int x_depth;
+		int w_depth;
 		int bias_depth;
 		int res_depth;
 		int trans_num;
@@ -90,11 +95,13 @@ class INTER_TCL_FILE {
 
 extern void calcPerceptron (
 float x[100],
+float w[100],
 float bias,
 float res[100]);
 
 void AESL_WRAP_calcPerceptron (
 float x[100],
+float w[100],
 float bias,
 float res[100])
 {
@@ -259,6 +266,10 @@ float res[100])
 		char* tvin_x = new char[50];
 		aesl_fh.touch(AUTOTB_TVIN_x);
 
+		// "w"
+		char* tvin_w = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_w);
+
 		// "bias"
 		char* tvin_bias = new char[50];
 		aesl_fh.touch(AUTOTB_TVIN_bias);
@@ -320,6 +331,54 @@ float res[100])
 
 		// release memory allocation
 		delete [] x_tvin_wrapc_buffer;
+
+		// [[transaction]]
+		sprintf(tvin_w, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_w, tvin_w);
+
+		sc_bv<32>* w_tvin_wrapc_buffer = new sc_bv<32>[100];
+
+		// RTL Name: w
+		{
+			// bitslice(31, 0)
+			{
+				int hls_map_index = 0;
+				// celement: w(31, 0)
+				{
+					// carray: (0) => (99) @ (1)
+					for (int i_0 = 0; i_0 <= 99; i_0 += 1)
+					{
+						// sub                   : i_0
+						// ori_name              : w[i_0]
+						// sub_1st_elem          : 0
+						// ori_name_1st_elem     : w[0]
+						// regulate_c_name       : w
+						// input_type_conversion : *(int*)&w[i_0]
+						if (&(w[0]) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> w_tmp_mem;
+							w_tmp_mem = *(int*)&w[i_0];
+							w_tvin_wrapc_buffer[hls_map_index].range(31, 0) = w_tmp_mem.range(31, 0);
+                                 	       hls_map_index++;
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 100; i++)
+		{
+			sprintf(tvin_w, "%s\n", (w_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_w, tvin_w);
+		}
+
+		tcl_file.set_num(100, &tcl_file.w_depth);
+		sprintf(tvin_w, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_w, tvin_w);
+
+		// release memory allocation
+		delete [] w_tvin_wrapc_buffer;
 
 		// [[transaction]]
 		sprintf(tvin_bias, "[[transaction]] %d\n", AESL_transaction);
@@ -414,7 +473,7 @@ float res[100])
 // [call_c_dut] ---------->
 
 		CodeState = CALL_C_DUT;
-		calcPerceptron(x, bias, res);
+		calcPerceptron(x, w, bias, res);
 
 		CodeState = DUMP_OUTPUTS;
 
@@ -469,6 +528,8 @@ float res[100])
 		CodeState = DELETE_CHAR_BUFFERS;
 		// release memory allocation: "x"
 		delete [] tvin_x;
+		// release memory allocation: "w"
+		delete [] tvin_w;
 		// release memory allocation: "bias"
 		delete [] tvin_bias;
 		// release memory allocation: "res"

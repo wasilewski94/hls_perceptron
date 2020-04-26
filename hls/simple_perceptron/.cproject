@@ -55,13 +55,15 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
+                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
                                     								
                                 </option>
                                 								
@@ -91,13 +93,15 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
+                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
                                     								
                                 </option>
                                 								
@@ -160,6 +164,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.456955855.1711950157" name="test_core.cpp" rcbsApplicability="disable" resourcePath="testbench/test_core.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.366277123.878879881">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.366277123.878879881" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.366277123">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.846563056" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.1513658608" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.596741493" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1659147922" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						
@@ -227,13 +261,15 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
+                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
                                     								
                                 </option>
                                 								
@@ -253,13 +289,15 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
+                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
+                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
                                     								
                                 </option>
                                 								
@@ -312,6 +350,36 @@
                         </toolChain>
                         					
                     </folderInfo>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.163337223.988631666" name="test_core.cpp" rcbsApplicability="disable" resourcePath="testbench/test_core.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1402262448.756826075">
+                        						
+                        <tool id="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1402262448.756826075" name="GCC C++ Compiler" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1402262448">
+                            							
+                            <option id="gnu.cpp.compiler.option.preprocessor.def.1685475158" name="Defined symbols (-D)" superClass="gnu.cpp.compiler.option.preprocessor.def"/>
+                            							
+                            <option id="gnu.cpp.compiler.option.include.paths.349306741" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
+                                								
+                                <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
+                                							
+                            </option>
+                            							
+                            <option id="gnu.cpp.compiler.option.other.other.992485299" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            							
+                            <inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1833167824" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+                            						
+                        </tool>
+                        					
+                    </fileInfo>
                     					
                     <sourceEntries>
                         						

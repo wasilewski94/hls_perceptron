@@ -2,12 +2,12 @@
 // Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // ==============================================================
-# 1 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/test_core.cpp"
+# 1 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/test_core.cpp"
+# 1 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp"
 # 1 "/usr/include/stdio.h" 1 3 4
 # 27 "/usr/include/stdio.h" 3 4
 # 1 "/usr/include/x86_64-linux-gnu/bits/libc-header-start.h" 1 3 4
@@ -904,7 +904,7 @@ extern int ftrylockfile (FILE *__stream) throw () ;
 extern void funlockfile (FILE *__stream) throw ();
 # 868 "/usr/include/stdio.h" 3 4
 }
-# 2 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/test_core.cpp" 2
+# 2 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp" 2
 # 1 "/opt/Xilinx/Vivado/2019.2/include/hls_math.h" 1
 # 36 "/opt/Xilinx/Vivado/2019.2/include/hls_math.h"
 # 1 "/opt/Xilinx/Vivado/2019.2/tps/lnx64/gcc-6.2.0/include/c++/6.2.0/cmath" 1 3
@@ -83573,31 +83573,33 @@ namespace hls {
     uint32_t logb(uint32_t);
 
 };
-# 3 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/test_core.cpp" 2
-void calcPerceptron(float x[100], float bias, float res[100]);
+# 3 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp" 2
+void calcPerceptron(float x[100], float w[100], float bias, float res[100]);
 
 #ifndef HLS_FASTSIM
 #ifndef HLS_FASTSIM
 #include "apatb_calcPerceptron.h"
 #endif
-# 5 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/test_core.cpp"
+# 5 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp"
 int main()
 {
  float XVec[100];
+ float WVec[100];
  float res[100];
  for (int idxX = 0; idxX < 100; idxX++)
  {
   XVec[idxX] = idxX;
+  WVec[idxX] = idxX;
  }
 
  
 #ifndef HLS_FASTSIM
 #define calcPerceptron AESL_WRAP_calcPerceptron
 #endif
-# 14 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/test_core.cpp"
-calcPerceptron(XVec, -0.5f, res);
+# 16 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp"
+calcPerceptron(XVec, WVec, -0.5f, res);
 #undef calcPerceptron
-# 14 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/test_core.cpp"
+# 16 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp"
 
 
 
@@ -83608,5 +83610,5 @@ calcPerceptron(XVec, -0.5f, res);
  return 0;
 }
 #endif
-# 22 "/home/wask/workspace/hls/lab_6_bram/simple_perceptron/test_core.cpp"
+# 24 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp"
 

@@ -26875,17 +26875,18 @@ namespace hls {
 };
 # 2 "simple_perceptron/core.cpp" 2
 
-void calcPerceptron(float x[100], float bias, float res[100])
-{_ssdm_SpecArrayDimSize(x, 100);_ssdm_SpecArrayDimSize(res, 100);
+void calcPerceptron(float x[100], float w[100], float bias, float res[100])
+{_ssdm_SpecArrayDimSize(x, 100);_ssdm_SpecArrayDimSize(w, 100);_ssdm_SpecArrayDimSize(res, 100);
 _ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "CRTL_BUS", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(bias, "s_axilite", 0, 0, "", 0, 0, "CRTL_BUS", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(x, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(w, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(res, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 
 
  for (int idx = 0; idx < 100; idx++)
  {
-  res[idx] = 1.0 / (1 + hls::expf(-( x[idx] * 0.5 + bias)));
+  res[idx] = 1.0 / (1 + hls::expf(-( x[idx] * w[idx] + bias)));
  }
 
 }

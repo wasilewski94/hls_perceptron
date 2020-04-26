@@ -14,6 +14,8 @@
 
 float *XVecHW = (float *)0x40000000;
 float *resHW = (float *)0x42000000;
+float *WVecHW = (float *)0x44000000;
+
 
 XCalcperceptron calcPerceptron;
 XCalcperceptron_Config *calcPerceptron_cfg;
@@ -29,9 +31,9 @@ void init_PerceptronCore() {
 	}
 }
 
-void perceptronFunction(float x[100], float bias, float res[100]) {
+void perceptronFunction(float x[100], float w[100], float bias, float res[100]) {
 	for (int idx = 0; idx < 100; idx++) {
-		res[idx] = 1.0 / (1 + expf(-( x[idx] * 0.5 + bias)));
+		res[idx] = 1.0 / (1 + expf(-( x[idx] * w[idx] + bias)));
 	}
 }
 
@@ -49,24 +51,28 @@ unsigned int float_to_u32(float val) {
 
 int main() {
 
-	printf("Test BRAM\n");
+	printf("Perceptron test\n");
 
 	init_PerceptronCore();
 
 //	AxiTimerHelper myTimer;
 
 	float XVecSW[100];
+	float WVecSW[100];
 	float resSW[100];
+	float base = -0.8;
 	for(int idxX=0; idxX<100; idxX++) {
 		XVecSW[idxX] = idxX;
 		XVecHW[idxX] = idxX;
+		WVecSW[idxX] = idxX;
+		WVecHW[idxX] = idxX;
 	}
 //	myTimer.startTimer();
-	perceptronFunction(XVecSW, -0.5f, resSW);
+	perceptronFunction(XVecSW, WVecSW, base, resSW);
 //	myTimer.stopTimer();
 //	printf("SW test finished, in %f seconds\n", myTimer.getElapsedTimerInSeconds());
 
-	XCalcperceptron_Set_bias(&calcPerceptron, float_to_u32(-0.5f));
+	XCalcperceptron_Set_bias(&calcPerceptron, float_to_u32(base));
 
 //	myTimer.startTimer();
 	XCalcperceptron_Start(&calcPerceptron);

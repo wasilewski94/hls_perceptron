@@ -1,4 +1,4 @@
-2020-04-26T15:31:54.4651700255-15:31:54 **** Incremental Build of configuration Debug for project simple_perceptron_sw ****
+2020-04-26T21:05:15.2481400255-21:05:15 **** Incremental Build of configuration Debug for project simple_perceptron_sw ****
 000-make all 
 000-make --no-print-directory pre-build
 000-a9-linaro-pre-build-step
@@ -17,9 +17,9 @@
 000-Invoking: ARM v7 Print Size
 000-arm-none-eabi-size simple_perceptron_sw.elf  |tee "simple_perceptron_sw.elf.size"
 000-   text	   data	    bss	    dec	    hex	filename
-000-  65188	   2600	  23336	  91124	  163f4	simple_perceptron_sw.elf
+000-  65260	   2608	  23336	  91204	  16444	simple_perceptron_sw.elf
 000-Finished building: simple_perceptron_sw.elf.size
 000- 
 00255-
-15:31:54 Build Finished (took 217ms)
+21:05:15 Build Finished (took 217ms)
 

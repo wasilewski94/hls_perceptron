@@ -1,0 +1,183 @@
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [SYN 201-201] Setting up clock 'default' with an uncertainty of 2.7ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=place
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+WARNING: [HLS 200-483] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release. Use 'config_export -vivado_optimization_level' as its replacement.
+INFO: [HLS 200-435] Setting 'config_sdx -optimization_level' configuration: config_export -vivado_optimization_level=2
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=place
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: config_export -vivado_optimization_level=0
+INFO: [HLS 200-435] Setting 'config_export -vivado_optimization_level' configuration: config_export -vivado_phys_opt=none
+INFO: [HLS 200-435] Setting 'config_sdx -target' configuration: set_clock_uncertainty 27%
+WARNING: [HLS 200-484] The 'config_sdx -optimization_level' command is deprecated and will be removed in a future release.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 19202 ; free virtual = 27127
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 19202 ; free virtual = 27127
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 1102.117 ; gain = 661.211 ; free physical = 18994 ; free virtual = 26962
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'range_redux_payne_hanek_hotbm<29, float, 29, 29>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:470) automatically.
+INFO: [XFORM 203-602] Inlining function 'table_lookup_4oPi_hotbm<23, 29>' into 'range_redux_payne_hanek_hotbm<29, float, 29, 29>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:496) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz<29, 58, 0>' into 'range_redux_payne_hanek_hotbm<29, float, 29, 29>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:524) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'fp_struct<float>::to_float' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:348) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_float' into 'fp_struct<float>::to_ieee' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:369) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz' into 'scaled_fixed2ieee<29, 1>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:307) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::set_mantissa' into 'scaled_fixed2ieee<29, 1>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:340) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'scaled_fixed2ieee<29, 1>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:342) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::value_list<float>::sin_or_cos_approximation<29, 29>' into 'hotbm_::sin_or_cos<float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:279) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'hotbm_::sin_or_cos<float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:316) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::sin' into 'hls::hotbm::sin' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/sincoshotbmfloat.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::hotbm::sin' into 'hls::sin' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/sincoshotbmfloat.cpp:32) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sin' into 'calcPerceptron' (simple_perceptron/core.cpp:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sqrtf' into 'calcPerceptron' (simple_perceptron/core.cpp:30) automatically.
+WARNING: [SYNCHK 200-23] /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:297: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1180.773 ; gain = 739.867 ; free physical = 18911 ; free virtual = 26886
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2' (simple_perceptron/core.cpp:28) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'scaled_fixed2ieee<29, 1>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:282).
+INFO: [HLS 200-489] Unrolling loop 'Loop-1' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:295) in function 'scaled_fixed2ieee<29, 1>' completely with a factor of 1.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:306) in function 'scaled_fixed2ieee<29, 1>' completely with a factor of 2.
+INFO: [HLS 200-489] Unrolling loop 'Loop-3' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:313) in function 'scaled_fixed2ieee<29, 1>' completely with a factor of 2.
+INFO: [XFORM 203-102] Partitioning array 'out_bits.V' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:294) automatically.
+INFO: [XFORM 203-102] Partitioning array 'c' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:305) automatically.
+INFO: [XFORM 203-101] Partitioning array 'swap_table.1'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'swap_table'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'neg_sin_table'  in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'neg_cos_table'  in dimension 1 completely.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'range_redux_payne_hanek_hotbm<29, float, 29, 29>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:470) automatically.
+INFO: [XFORM 203-602] Inlining function 'table_lookup_4oPi_hotbm<23, 29>' into 'range_redux_payne_hanek_hotbm<29, float, 29, 29>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:496) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz<29, 58, 0>' into 'range_redux_payne_hanek_hotbm<29, float, 29, 29>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:524) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::data' into 'fp_struct<float>::to_float' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:348) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_float' into 'fp_struct<float>::to_ieee' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_utils.h:369) automatically.
+INFO: [XFORM 203-602] Inlining function 'clz' into 'scaled_fixed2ieee<29, 1>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:307) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::set_mantissa' into 'scaled_fixed2ieee<29, 1>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:340) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'scaled_fixed2ieee<29, 1>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:342) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::value_list<float>::sin_or_cos_approximation<29, 29>' into 'hotbm_::sin_or_cos<float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:279) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::to_ieee' into 'hotbm_::sin_or_cos<float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:316) automatically.
+INFO: [XFORM 203-602] Inlining function 'hotbm_::sin' into 'hls::hotbm::sin' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/sincoshotbmfloat.cpp:10) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::hotbm::sin' into 'hls::sin' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/sincoshotbmfloat.cpp:32) automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sin' into 'calcPerceptron' (simple_perceptron/core.cpp:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:30) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::sqrtf' into 'calcPerceptron' (simple_perceptron/core.cpp:30) automatically.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/src/hls/utils/x_hls_float_utils.h:343:1) in function 'scaled_fixed2ieee<29, 1>'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:461:7) to (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h:544:1) in function 'range_redux_payne_hanek_hotbm<29, float, 29, 29>'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:238:18) to (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:316:12) in function 'hotbm_::sin_or_cos<float>'... converting 6 basic blocks.
+INFO: [XFORM 203-602] Inlining function 'range_redux_payne_hanek_hotbm<29, float, 29, 29>' into 'hotbm_::sin_or_cos<float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:268) automatically.
+INFO: [XFORM 203-602] Inlining function 'scaled_fixed2ieee<29, 1>' into 'hotbm_::sin_or_cos<float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:281) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1303.047 ; gain = 862.141 ; free physical = 18753 ; free virtual = 26759
+WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos<float>' to 'sin_or_cos<float>' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_hotbm.h:238)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:30:45)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1303.047 ; gain = 862.141 ; free physical = 18734 ; free virtual = 26743
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<float>' to 'sin_or_cos_float_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=r_V_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=r_V_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP48 latency (root=r_V_14) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining function 'sin_or_cos<float>'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 25.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 52.31 seconds; current allocated memory: 510.270 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.1 seconds; current allocated memory: 510.996 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 37.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.21 seconds; current allocated memory: 511.266 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.17 seconds; current allocated memory: 511.597 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_float_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_mul_24ns_80ns_104_5_1': 1 instance(s).
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

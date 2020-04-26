@@ -1,0 +1,1381 @@
+
+*** Running vivado
+    with args -log design_1_calcPerceptron_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_calcPerceptron_0_0.tcl
+
+
+****** Vivado v2019.2 (64-bit)
+  **** SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
+  **** IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+source design_1_calcPerceptron_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/wask/workspace/hls/lab_6_bram/simple_perceptron/solution1'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
+Command: synth_design -top design_1_calcPerceptron_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23550 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1962.684 ; gain = 202.715 ; free physical = 11405 ; free virtual = 20054
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_0' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/synth/design_1_calcPerceptron_0_0.vhd:95]
+	Parameter C_S_AXI_CRTL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CRTL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:12' bound to instance 'U0' of component 'calcPerceptron' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/synth/design_1_calcPerceptron_0_0.vhd:192]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:54]
+	Parameter C_S_AXI_CRTL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CRTL_BUS_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:86]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:89]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:96]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:100]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:288]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_CRTL_BUS_s_axi' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_CRTL_BUS_s_axi.vhd:9' bound to instance 'calcPerceptron_CRTL_BUS_s_axi_U' of component 'calcPerceptron_CRTL_BUS_s_axi' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:445]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_CRTL_BUS_s_axi' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_CRTL_BUS_s_axi.vhd:67]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_CRTL_BUS_s_axi' (1#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_CRTL_BUS_s_axi.vhd:67]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1' of component 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:477]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_fadd_3_full_dsp_32' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fadd_3_full_dsp_32_u' of component 'calcPerceptron_ap_fadd_3_full_dsp_32' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fadd_3_full_dsp_32' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fadd_3_full_dsp_32' (19#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' (20#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_fptrunc_64ns_32_2_1' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fptrunc_64ns_32_2_1.vhd:8' bound to instance 'calcPerceptron_fptrunc_64ns_32_2_1_U2' of component 'calcPerceptron_fptrunc_64ns_32_2_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:492]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fptrunc_64ns_32_2_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fptrunc_64ns_32_2_1.vhd:24]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_fptrunc_0_no_dsp_64' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fptrunc_0_no_dsp_64.vhd:59' bound to instance 'calcPerceptron_ap_fptrunc_0_no_dsp_64_u' of component 'calcPerceptron_ap_fptrunc_0_no_dsp_64' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fptrunc_64ns_32_2_1.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fptrunc_0_no_dsp_64' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fptrunc_0_no_dsp_64.vhd:68]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fptrunc_0_no_dsp_64.vhd:199]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fptrunc_0_no_dsp_64' (26#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fptrunc_0_no_dsp_64.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fptrunc_64ns_32_2_1' (27#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fptrunc_64ns_32_2_1.vhd:24]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_fpext_32ns_64_2_1' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fpext_32ns_64_2_1.vhd:8' bound to instance 'calcPerceptron_fpext_32ns_64_2_1_U3' of component 'calcPerceptron_fpext_32ns_64_2_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:505]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fpext_32ns_64_2_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fpext_32ns_64_2_1.vhd:24]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 2 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_fpext_0_no_dsp_32' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fpext_0_no_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fpext_0_no_dsp_32_u' of component 'calcPerceptron_ap_fpext_0_no_dsp_32' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fpext_32ns_64_2_1.vhd:45]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fpext_0_no_dsp_32' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fpext_0_no_dsp_32.vhd:68]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 1 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 0 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 0 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 0 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fpext_0_no_dsp_32.vhd:199]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fpext_0_no_dsp_32' (28#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fpext_0_no_dsp_32.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fpext_32ns_64_2_1' (29#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fpext_32ns_64_2_1.vhd:24]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 10 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4' of component 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:518]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 10 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_frecip_8_full_dsp_32' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_frecip_8_full_dsp_32_u' of component 'calcPerceptron_ap_frecip_8_full_dsp_32' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_frecip_8_full_dsp_32' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 1 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 8 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:205]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-5811] Detected attribute (* ram_style  = "distributed" *) on module flt_recip_approx 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_frecip_8_full_dsp_32' (43#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' (44#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 9 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5' of component 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:533]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 9 - type: integer 
+	Parameter din0_WIDTH bound to: 32 - type: integer 
+	Parameter din1_WIDTH bound to: 32 - type: integer 
+	Parameter dout_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_fexp_7_full_dsp_32' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fexp_7_full_dsp_32_u' of component 'calcPerceptron_ap_fexp_7_full_dsp_32' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fexp_7_full_dsp_32' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:70]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 1 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_B_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_C_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 24 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 7 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 0 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:205]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fexp_7_full_dsp_32' (56#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' (57#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6' of component 'calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:548]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 5 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_dadd_3_full_dsp_64' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_dadd_3_full_dsp_64.vhd:59' bound to instance 'calcPerceptron_ap_dadd_3_full_dsp_64_u' of component 'calcPerceptron_ap_dadd_3_full_dsp_64' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_dadd_3_full_dsp_64' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_dadd_3_full_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 1 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 3 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 2 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_dadd_3_full_dsp_64.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_dadd_3_full_dsp_64' (68#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_dadd_3_full_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1' (69#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1.vhd:8' bound to instance 'calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7' of component 'calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:563]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1.vhd:26]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 6 - type: integer 
+	Parameter din0_WIDTH bound to: 64 - type: integer 
+	Parameter din1_WIDTH bound to: 64 - type: integer 
+	Parameter dout_WIDTH bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_dmul_4_max_dsp_64' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_dmul_4_max_dsp_64.vhd:59' bound to instance 'calcPerceptron_ap_dmul_4_max_dsp_64_u' of component 'calcPerceptron_ap_dmul_4_max_dsp_64' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_dmul_4_max_dsp_64' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_dmul_4_max_dsp_64.vhd:72]
+	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
+	Parameter C_HAS_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
+	Parameter C_HAS_MULTIPLY bound to: 1 - type: integer 
+	Parameter C_HAS_DIVIDE bound to: 0 - type: integer 
+	Parameter C_HAS_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_COMPARE bound to: 0 - type: integer 
+	Parameter C_HAS_FIX_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FIX bound to: 0 - type: integer 
+	Parameter C_HAS_FLT_TO_FLT bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP bound to: 0 - type: integer 
+	Parameter C_HAS_RECIP_SQRT bound to: 0 - type: integer 
+	Parameter C_HAS_ABSOLUTE bound to: 0 - type: integer 
+	Parameter C_HAS_LOGARITHM bound to: 0 - type: integer 
+	Parameter C_HAS_EXPONENTIAL bound to: 0 - type: integer 
+	Parameter C_HAS_FMA bound to: 0 - type: integer 
+	Parameter C_HAS_FMS bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ADD bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_SUB bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_UNFUSED_MULTIPLY_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_S bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_A bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUMULATOR_PRIMITIVE_S bound to: 0 - type: integer 
+	Parameter C_A_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_B_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_C_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_RESULT_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_FRACTION_WIDTH bound to: 53 - type: integer 
+	Parameter C_COMPARE_OPERATION bound to: 8 - type: integer 
+	Parameter C_LATENCY bound to: 4 - type: integer 
+	Parameter C_OPTIMIZATION bound to: 1 - type: integer 
+	Parameter C_MULT_USAGE bound to: 3 - type: integer 
+	Parameter C_BRAM_USAGE bound to: 0 - type: integer 
+	Parameter C_RATE bound to: 1 - type: integer 
+	Parameter C_ACCUM_INPUT_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_MSB bound to: 32 - type: integer 
+	Parameter C_ACCUM_LSB bound to: -31 - type: integer 
+	Parameter C_HAS_UNDERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_INVALID_OP bound to: 0 - type: integer 
+	Parameter C_HAS_DIVIDE_BY_ZERO bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACCUM_INPUT_OVERFLOW bound to: 0 - type: integer 
+	Parameter C_HAS_ACLKEN bound to: 1 - type: integer 
+	Parameter C_HAS_ARESETN bound to: 0 - type: integer 
+	Parameter C_THROTTLE_SCHEME bound to: 3 - type: integer 
+	Parameter C_HAS_A_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_A_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_B bound to: 1 - type: integer 
+	Parameter C_HAS_B_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_B_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_C bound to: 0 - type: integer 
+	Parameter C_HAS_C_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_C_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_OPERATION_TLAST bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TUSER bound to: 0 - type: integer 
+	Parameter C_HAS_RESULT_TLAST bound to: 0 - type: integer 
+	Parameter C_TLAST_RESOLUTION bound to: 0 - type: integer 
+	Parameter C_A_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_A_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_B_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_B_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_C_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_C_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_OPERATION_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_OPERATION_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_RESULT_TDATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_dmul_4_max_dsp_64.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_dmul_4_max_dsp_64' (76#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/ip/calcPerceptron_ap_dmul_4_max_dsp_64.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1' (77#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron' (78#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'design_1_calcPerceptron_0_0' (79#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/synth/design_1_calcPerceptron_0_0.vhd:95]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized68 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[11]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[10]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[9]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DEC_OP_STATE[8]
+WARNING: [Synth 8-3331] design flt_dec_op_lat has unconnected port DIVIDE_BY_ZERO_IN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized158 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized158 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized158 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized158 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized158 has unconnected port SINIT
+WARNING: [Synth 8-3331] design carry_chain__parameterized21 has unconnected port B[18]
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized43 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized29 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized91 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized91 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized91 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized91 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized91 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized58 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized13 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized11 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized7 has unconnected port SINIT
+WARNING: [Synth 8-3331] design dsp48e1_wrapper__parameterized9 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized25 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized25 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized25 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized25 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized25 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized1 has unconnected port NORMALIZE[1]
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized1 has unconnected port FIXED_POINT
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized1 has unconnected port FIX_MANT_SIGN
+WARNING: [Synth 8-3331] design flt_round_bit__parameterized1 has unconnected port SIGN
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized51 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized160 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized160 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized160 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized160 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized160 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized181 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized181 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized181 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized181 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized181 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized156 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized156 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized156 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized156 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized156 has unconnected port SINIT
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized154 has unconnected port CLK
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized154 has unconnected port CE
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized154 has unconnected port SCLR
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized154 has unconnected port SSET
+WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized154 has unconnected port SINIT
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[47]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[46]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[45]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[44]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[43]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[42]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[41]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[40]
+WARNING: [Synth 8-3331] design flt_mult_round has unconnected port MANT_CASC_IN[39]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:37 ; elapsed = 00:00:54 . Memory (MB): peak = 2267.402 ; gain = 507.434 ; free physical = 12718 ; free virtual = 21389
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:56 . Memory (MB): peak = 2267.402 ; gain = 507.434 ; free physical = 12649 ; free virtual = 21356
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:56 . Memory (MB): peak = 2267.402 ; gain = 507.434 ; free physical = 12649 ; free virtual = 21356
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.31 . Memory (MB): peak = 2267.402 ; gain = 0.000 ; free physical = 13440 ; free virtual = 22119
+INFO: [Netlist 29-17] Analyzing 664 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/constraints/calcPerceptron_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/constraints/calcPerceptron_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2416.246 ; gain = 0.000 ; free physical = 13162 ; free virtual = 21846
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 10 instances were transformed.
+  FDE => FDRE: 10 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.20 . Memory (MB): peak = 2416.246 ; gain = 0.000 ; free physical = 13147 ; free virtual = 21831
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:51 ; elapsed = 00:01:10 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 13143 ; free virtual = 21828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:51 ; elapsed = 00:01:10 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 13143 ; free virtual = 21828
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:01:10 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 13143 ; free virtual = 21828
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'calcPerceptron_CRTL_BUS_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'calcPerceptron_CRTL_BUS_s_axi'
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "rom". This will be implemented in logic
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                              011
+*
+                  wridle |                             0010 |                              000
+                  wrdata |                             0100 |                              001
+                  wrresp |                             1000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'calcPerceptron_CRTL_BUS_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                              110
+*
+                  rdidle |                              010 |                              100
+                  rddata |                              100 |                              101
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'calcPerceptron_CRTL_BUS_s_axi'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:55 ; elapsed = 00:01:15 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 14163 ; free virtual = 22847
+---------------------------------------------------------------------------------
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/FLT_TO_FLT_OP.SPD.OP/RND_REQ.ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fptrunc_64ns_32_2_1_U2/calcPerceptron_ap_fptrunc_0_no_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/calcPerceptron_ap_fpext_0_no_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/calcPerceptron_ap_fpext_0_no_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/calcPerceptron_ap_fpext_0_no_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/calcPerceptron_ap_fpext_0_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/calcPerceptron_ap_fpext_0_no_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/calcPerceptron_ap_fpext_0_no_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/DELAY_OVERFLOW' (delay__parameterized0) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/DELAY_OVERFLOW' (delay__parameterized0) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[0].i_sign_delay' (delay__parameterized0) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_recip_ln2/g_tables[1].i_sign_delay'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[0].i_sign_delay' (delay__parameterized0) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_ccm_ln2/g_tables[1].i_sign_delay'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/DELAY_INVALID_OP' (delay__parameterized0) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/SUB_DELAY' (delay__parameterized0) to 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/ALIGN_BLK/SUBTRACT_PREADD_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXP_INC_DELAY' (delay__parameterized0) to 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/ADDSUB_OP.ADDSUB/LOGIC_SPEED.OP/NORM/ROUND/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/calcPerceptron_ap_dadd_3_full_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXTRA_LSB_BIT_DEL' (delay__parameterized0) to 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXTRA_LSB_RND1_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_INC_DELAY' (delay__parameterized0) to 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_INC_RND1_DELAY'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_IN_DEL' (delay__parameterized114) to 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_IN_DELAY.EXP_OFF_OP_DEL' (delay__parameterized114) to 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/MULT.OP/i_non_prim.R_AND_R/LOGIC.R_AND_R/EXP_RND2_DELAY.EXP_OFF_RND_DEL'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
+INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/calcPerceptron_ap_dmul_4_max_dsp_64_u/U0/i_synth/DELAY_ACCUM_INPUT_OVERFLOW'
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
+INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "LZE/enc_chunk" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-4471] merging register 'calcPerceptron_fptrunc_64ns_32_2_1_U2/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fptrunc_64ns_32_2_1.vhd:69]
+INFO: [Synth 8-4471] merging register 'calcPerceptron_fpext_32ns_64_2_1_U3/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fpext_32ns_64_2_1.vhd:69]
+INFO: [Synth 8-4471] merging register 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:63]
+INFO: [Synth 8-4471] merging register 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:63]
+INFO: [Synth 8-4471] merging register 'calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1_U6/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dadd_64ns_64ns_64_5_full_dsp_1.vhd:70]
+INFO: [Synth 8-4471] merging register 'calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/5cf6/hdl/vhdl/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1.vhd:70]
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[52] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[53] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[54] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[55] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[56] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[57] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[58] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[59] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[60] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din1_buf1_reg[51] )
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_shift_to_fixed/DEL_SIGN/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_recombination/result_delay/i_pipe/opt_has_pipe.first_q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_Sx/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_special_detect/input_sign_delay_balance/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_Sx_at_Xi/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_special_detect/input_sign_delay_balance/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_Sx_at_Xf/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_special_detect/input_sign_delay_balance/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][0]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_Sx_at_op/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_special_detect/input_sign_delay_balance/i_pipe/opt_has_pipe.i_pipe[4].pipe_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_Sx_at_op/i_pipe/opt_has_pipe.i_pipe[2].pipe_reg[2][0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_special_detect/input_sign_delay_balance/i_pipe/opt_has_pipe.i_pipe[5].pipe_reg[5][0]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/NORMALIZE_RND1_DEL/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_Fr_less_than_one_at_res_exp/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_renorm_and_round/EXP_INC_RND1_DELAY/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_recombination/result_delay/i_pipe/opt_has_pipe.first_q_reg[31]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_Sx_at_op/i_pipe/opt_has_pipe.i_pipe[3].pipe_reg[3][0]' (FDE) to 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0/i_synth/EXP_OP.i_sp_or_dp.OP/i_special_detect/input_sign_delay_balance/i_pipe/opt_has_pipe.i_pipe[6].pipe_reg[6][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U5/calcPerceptron_ap_fexp_7_full_dsp_32_u/U0 /i_synth/\EXP_OP.i_sp_or_dp.OP/i_recombination/result_delay/i_pipe/opt_has_pipe.first_q_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[22] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[28] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[12] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[27] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[26] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[25] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[23] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/din1_buf1_reg[24] )
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.y_reg/i_pipe/opt_has_pipe.first_q_reg[16]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.reciprocal_estimate/recip_estimate_delay_balance/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.y_reg/i_pipe/opt_has_pipe.first_q_reg[17]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.reciprocal_estimate/recip_estimate_delay_balance/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.y_reg/i_pipe/opt_has_pipe.first_q_reg[18]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.reciprocal_estimate/recip_estimate_delay_balance/i_pipe/opt_has_pipe.first_q_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.y_reg/i_pipe/opt_has_pipe.first_q_reg[19]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.reciprocal_estimate/recip_estimate_delay_balance/i_pipe/opt_has_pipe.first_q_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.y_reg/i_pipe/opt_has_pipe.first_q_reg[20]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.reciprocal_estimate/recip_estimate_delay_balance/i_pipe/opt_has_pipe.first_q_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.y_reg/i_pipe/opt_has_pipe.first_q_reg[21]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.reciprocal_estimate/recip_estimate_delay_balance/i_pipe/opt_has_pipe.first_q_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.y_reg/i_pipe/opt_has_pipe.first_q_reg[22]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.reciprocal_estimate/recip_estimate_delay_balance/i_pipe/opt_has_pipe.first_q_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma2_delay_balance/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma2_delay_balance/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma2_delay_balance/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma2_delay_balance/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma2_delay_balance/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma2_delay_balance/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma2_delay_balance/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma2_delay_balance/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[0]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[1]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[14]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[15]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[2]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[3]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[4]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[5]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[6]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U4/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[21]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg )
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[17]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[18]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[19]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[20]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[21]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[22]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[23]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[24]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[25]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[26]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[27]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[28]' (FDE) to 'U0/tmp_1_reg_196_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[59]' (FDE) to 'U0/tmp_1_reg_196_reg[60]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[60]' (FDE) to 'U0/tmp_1_reg_196_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[0]' (FDE) to 'U0/tmp_1_reg_196_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[1]' (FDE) to 'U0/tmp_1_reg_196_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[2]' (FDE) to 'U0/tmp_1_reg_196_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[3]' (FDE) to 'U0/tmp_1_reg_196_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[4]' (FDE) to 'U0/tmp_1_reg_196_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[5]' (FDE) to 'U0/tmp_1_reg_196_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[6]' (FDE) to 'U0/tmp_1_reg_196_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[7]' (FDE) to 'U0/tmp_1_reg_196_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[8]' (FDE) to 'U0/tmp_1_reg_196_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[9]' (FDE) to 'U0/tmp_1_reg_196_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[10]' (FDE) to 'U0/tmp_1_reg_196_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[11]' (FDE) to 'U0/tmp_1_reg_196_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[12]' (FDE) to 'U0/tmp_1_reg_196_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[13]' (FDE) to 'U0/tmp_1_reg_196_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[14]' (FDE) to 'U0/tmp_1_reg_196_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_1_reg_196_reg[15]' (FDE) to 'U0/tmp_1_reg_196_reg[16]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\tmp_1_reg_196_reg[16] )
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din0_buf1_reg[59]' (FD) to 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din0_buf1_reg[60]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din0_buf1_reg[60]' (FD) to 'U0/calcPerceptron_dmul_64ns_64ns_64_6_max_dsp_1_U7/din0_buf1_reg[61]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fpext_32ns_64_2_1_U3/dout_r_reg[0] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/dout_r_reg[59]' (FD) to 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/dout_r_reg[60]'
+INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/dout_r_reg[60]' (FD) to 'U0/calcPerceptron_fpext_32ns_64_2_1_U3/dout_r_reg[61]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[0]' (FDE) to 'U0/tmp_reg_167_reg[1]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[1]' (FDE) to 'U0/tmp_reg_167_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[2]' (FDE) to 'U0/tmp_reg_167_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[3]' (FDE) to 'U0/tmp_reg_167_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[4]' (FDE) to 'U0/tmp_reg_167_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[5]' (FDE) to 'U0/tmp_reg_167_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[6]' (FDE) to 'U0/tmp_reg_167_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[7]' (FDE) to 'U0/tmp_reg_167_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[8]' (FDE) to 'U0/tmp_reg_167_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[9]' (FDE) to 'U0/tmp_reg_167_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[10]' (FDE) to 'U0/tmp_reg_167_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[11]' (FDE) to 'U0/tmp_reg_167_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[12]' (FDE) to 'U0/tmp_reg_167_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[13]' (FDE) to 'U0/tmp_reg_167_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[14]' (FDE) to 'U0/tmp_reg_167_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[15]' (FDE) to 'U0/tmp_reg_167_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[16]' (FDE) to 'U0/tmp_reg_167_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[17]' (FDE) to 'U0/tmp_reg_167_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[18]' (FDE) to 'U0/tmp_reg_167_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[19]' (FDE) to 'U0/tmp_reg_167_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[20]' (FDE) to 'U0/tmp_reg_167_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[21]' (FDE) to 'U0/tmp_reg_167_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[22]' (FDE) to 'U0/tmp_reg_167_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[23]' (FDE) to 'U0/tmp_reg_167_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[24]' (FDE) to 'U0/tmp_reg_167_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[25]' (FDE) to 'U0/tmp_reg_167_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/tmp_reg_167_reg[26]' (FDE) to 'U0/tmp_reg_167_reg[27]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (calcPerceptron_CRTL_BUS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module calcPerceptron.
+WARNING: [Synth 8-3332] Sequential element (calcPerceptron_CRTL_BUS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module calcPerceptron.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_9_viv.
+INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_9_viv.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:09 ; elapsed = 00:01:29 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 15095 ; free virtual = 23816
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:17 ; elapsed = 00:01:38 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16542 ; free virtual = 25280
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:18 ; elapsed = 00:01:40 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16423 ; free virtual = 25143
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:20 ; elapsed = 00:01:42 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16379 ; free virtual = 25067
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:24 ; elapsed = 00:01:45 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16342 ; free virtual = 25031
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:24 ; elapsed = 00:01:45 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16342 ; free virtual = 25031
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:24 ; elapsed = 00:01:46 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16342 ; free virtual = 25030
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:24 ; elapsed = 00:01:46 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16342 ; free virtual = 25030
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:24 ; elapsed = 00:01:46 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16342 ; free virtual = 25030
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:24 ; elapsed = 00:01:46 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16360 ; free virtual = 25048
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |    24|
+|2     |DSP48E1    |     1|
+|3     |DSP48E1_1  |     3|
+|4     |DSP48E1_10 |     1|
+|5     |DSP48E1_11 |     1|
+|6     |DSP48E1_12 |     1|
+|7     |DSP48E1_13 |     1|
+|8     |DSP48E1_14 |     1|
+|9     |DSP48E1_15 |     1|
+|10    |DSP48E1_16 |     1|
+|11    |DSP48E1_17 |     1|
+|12    |DSP48E1_18 |     1|
+|13    |DSP48E1_19 |     1|
+|14    |DSP48E1_20 |     1|
+|15    |DSP48E1_3  |     1|
+|16    |DSP48E1_4  |     1|
+|17    |DSP48E1_5  |     2|
+|18    |DSP48E1_6  |     2|
+|19    |DSP48E1_7  |     6|
+|20    |DSP48E1_8  |     3|
+|21    |DSP48E1_9  |     1|
+|22    |LUT1       |    47|
+|23    |LUT2       |   292|
+|24    |LUT3       |   303|
+|25    |LUT4       |   304|
+|26    |LUT5       |   279|
+|27    |LUT6       |   986|
+|28    |MUXCY      |   367|
+|29    |MUXF7      |   203|
+|30    |MUXF8      |     3|
+|31    |SRL16E     |    66|
+|32    |SRLC32E    |    14|
+|33    |XORCY      |   146|
+|34    |FDE        |    10|
+|35    |FDRE       |  1625|
+|36    |FDSE       |     8|
++------+-----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:24 ; elapsed = 00:01:46 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16361 ; free virtual = 25050
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 726 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:18 ; elapsed = 00:01:40 . Memory (MB): peak = 2416.246 ; gain = 507.434 ; free physical = 16682 ; free virtual = 25371
+Synthesis Optimization Complete : Time (s): cpu = 00:01:25 ; elapsed = 00:01:46 . Memory (MB): peak = 2416.246 ; gain = 656.277 ; free physical = 16682 ; free virtual = 25371
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2416.246 ; gain = 0.000 ; free physical = 16746 ; free virtual = 25434
+INFO: [Netlist 29-17] Analyzing 784 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2416.246 ; gain = 0.000 ; free physical = 16688 ; free virtual = 25376
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 117 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 107 instances
+  FDE => FDRE: 10 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+370 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:36 ; elapsed = 00:02:00 . Memory (MB): peak = 2416.246 ; gain = 904.812 ; free physical = 16924 ; free virtual = 25613
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2416.246 ; gain = 0.000 ; free physical = 16924 ; free virtual = 25613
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/design_1_calcPerceptron_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_calcPerceptron_0_0, cache-ID = 63795522395a2de0
+INFO: [Coretcl 2-1174] Renamed 374 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2440.258 ; gain = 0.000 ; free physical = 16930 ; free virtual = 25627
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/design_1_calcPerceptron_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_calcPerceptron_0_0_utilization_synth.rpt -pb design_1_calcPerceptron_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 15:00:12 2020...

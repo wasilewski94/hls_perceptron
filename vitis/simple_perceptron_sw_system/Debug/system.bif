@@ -1,0 +1,7 @@
+/*simple_perceptron*/
+the_ROM_image:
+{
+ [bootloader] <simple_perceptron/boot/fsbl.elf>
+ <bitstream>
+ <elf,ps7_cortexa9_0>
+}

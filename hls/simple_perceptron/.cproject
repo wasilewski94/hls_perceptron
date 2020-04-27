@@ -55,15 +55,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
                                 								
@@ -93,15 +91,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
                                 								
@@ -261,15 +257,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
                                 								
@@ -289,15 +283,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
                                 								

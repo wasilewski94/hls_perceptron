@@ -7,12 +7,15 @@ LD_SRCS += \
 ../src/lscript.ld 
 
 CPP_SRCS += \
+../src/AxiTimerHelper.cpp \
 ../src/main.cpp 
 
 OBJS += \
+./src/AxiTimerHelper.o \
 ./src/main.o 
 
 CPP_DEPS += \
+./src/AxiTimerHelper.d \
 ./src/main.d 
 
 

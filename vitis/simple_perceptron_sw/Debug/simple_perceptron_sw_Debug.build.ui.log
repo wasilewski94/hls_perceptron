@@ -1,9 +1,14 @@
-2020-04-26T21:05:15.2481400255-21:05:15 **** Incremental Build of configuration Debug for project simple_perceptron_sw ****
+2020-04-28T01:24:38.9166800255-01:24:38 **** Incremental Build of configuration Debug for project simple_perceptron_sw ****
 000-make all 
 000-make --no-print-directory pre-build
 000-a9-linaro-pre-build-step
 000- 
 000-make --no-print-directory main-build
+000-Building file: ../src/AxiTimerHelper.cpp
+000-Invoking: ARM v7 g++ compiler
+000-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/AxiTimerHelper.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include -MMD -MP -MF"src/AxiTimerHelper.d" -MT"src/AxiTimerHelper.o" -o "src/AxiTimerHelper.o" "../src/AxiTimerHelper.cpp"
+000-Finished building: ../src/AxiTimerHelper.cpp
+000- 
 000-Building file: ../src/main.cpp
 000-Invoking: ARM v7 g++ compiler
 000-arm-none-eabi-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.cpp"
@@ -11,15 +16,15 @@
 000- 
 000-Building target: simple_perceptron_sw.elf
 000-Invoking: ARM v7 g++ linker
-000-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bsplib/lib -o "simple_perceptron_sw.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+000-arm-none-eabi-g++ -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bsplib/lib -o "simple_perceptron_sw.elf"  ./src/AxiTimerHelper.o ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
 000-Finished building target: simple_perceptron_sw.elf
 000- 
 000-Invoking: ARM v7 Print Size
 000-arm-none-eabi-size simple_perceptron_sw.elf  |tee "simple_perceptron_sw.elf.size"
 000-   text	   data	    bss	    dec	    hex	filename
-000-  65260	   2608	  23336	  91204	  16444	simple_perceptron_sw.elf
+000- 118364	   2636	  23372	 144372	  233f4	simple_perceptron_sw.elf
 000-Finished building: simple_perceptron_sw.elf.size
 000- 
 00255-
-21:05:15 Build Finished (took 217ms)
+01:24:39 Build Finished (took 370ms)
 

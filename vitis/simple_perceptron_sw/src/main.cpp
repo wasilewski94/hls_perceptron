@@ -9,7 +9,7 @@
 #include <xcalcperceptron.h>
 #include <xparameters.h>
 #include <math.h>
-//#include "AxiTimerHelper.h"
+#include "AxiTimerHelper.h"
 
 
 float *XVecHW = (float *)0x40000000;
@@ -55,7 +55,7 @@ int main() {
 
 	init_PerceptronCore();
 
-//	AxiTimerHelper myTimer;
+	AxiTimerHelper myTimer;
 
 	float XVecSW[100];
 	float WVecSW[100];
@@ -67,18 +67,18 @@ int main() {
 		WVecSW[idxX] = idxX;
 		WVecHW[idxX] = idxX;
 	}
-//	myTimer.startTimer();
+	myTimer.startTimer();
 	perceptronFunction(XVecSW, WVecSW, base, resSW);
-//	myTimer.stopTimer();
-//	printf("SW test finished, in %f seconds\n", myTimer.getElapsedTimerInSeconds());
+	myTimer.stopTimer();
+	printf("SW test finished, in %f seconds\n", myTimer.getElapsedTimerInSeconds());
 
 	XCalcperceptron_Set_bias(&calcPerceptron, float_to_u32(base));
 
-//	myTimer.startTimer();
+	myTimer.startTimer();
 	XCalcperceptron_Start(&calcPerceptron);
 	while(!XCalcperceptron_IsDone(&calcPerceptron));
-//	myTimer.stopTimer();
-//	printf("HW test finished, in %f seconds\n", myTimer.getElapsedTimerInSeconds());
+	myTimer.stopTimer();
+	printf("HW test finished, in %f seconds\n", myTimer.getElapsedTimerInSeconds());
 
 	float error = 0;
 		for (int idx = 0; idx < 100; idx++) {

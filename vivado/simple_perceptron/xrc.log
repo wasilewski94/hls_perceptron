@@ -1,14 +1,14 @@
-Tue Apr 28 01:19:29 2020: Server was asked to start on port: '44373'
-Tue Apr 28 01:19:29 2020: Server is using token UUID: '703302f1-2017-4e0f-8f2e-63a7ee9c14ca'
-Tue Apr 28 01:19:29 2020: Attempting to start server on port '44373'
-Tue Apr 28 01:19:29 2020: XRC main fifo: created main fifo '/tmp/xrcmain703302f1-2017-4e0f-8f2e-63a7ee9c14ca', fd read = 11
-Tue Apr 28 01:19:29 2020: Running Rule Check Server
-Tue Apr 28 01:19:29 2020: Version 1.5.1
-Tue Apr 28 01:19:30 2020: Rule Check Server: Accepted socket connection from client
-Tue Apr 28 01:19:30 2020: EXCHANGE_TOKEN received, server token: 703302f1-2017-4e0f-8f2e-63a7ee9c14ca, passed token: 703302f1-2017-4e0f-8f2e-63a7ee9c14ca
-Tue Apr 28 01:29:12 2020: STOP_SERVER received, server token: 703302f1-2017-4e0f-8f2e-63a7ee9c14ca, passed token: 703302f1-2017-4e0f-8f2e-63a7ee9c14ca
-Tue Apr 28 01:29:12 2020: Socket received request to stop server.
-Tue Apr 28 01:29:12 2020: SERVER: destructor for server bound to port 44373
-Tue Apr 28 01:29:12 2020: XRC main fifo: Good unlink of /tmp/xrcmain703302f1-2017-4e0f-8f2e-63a7ee9c14ca
-Tue Apr 28 01:29:12 2020: Server exiting with status 0.
-Tue Apr 28 01:29:12 2020: Closing log file.
+Wed May 20 23:23:16 2020: Server was asked to start on port: '34195'
+Wed May 20 23:23:16 2020: Server is using token UUID: '178f7482-d0c8-4a27-9eeb-c881082aba02'
+Wed May 20 23:23:16 2020: Attempting to start server on port '34195'
+Wed May 20 23:23:16 2020: XRC main fifo: created main fifo '/tmp/xrcmain178f7482-d0c8-4a27-9eeb-c881082aba02', fd read = 11
+Wed May 20 23:23:16 2020: Running Rule Check Server
+Wed May 20 23:23:16 2020: Version 1.5.1
+Wed May 20 23:23:17 2020: Rule Check Server: Accepted socket connection from client
+Wed May 20 23:23:18 2020: EXCHANGE_TOKEN received, server token: 178f7482-d0c8-4a27-9eeb-c881082aba02, passed token: 178f7482-d0c8-4a27-9eeb-c881082aba02
+Wed May 20 23:28:00 2020: STOP_SERVER received, server token: 178f7482-d0c8-4a27-9eeb-c881082aba02, passed token: 178f7482-d0c8-4a27-9eeb-c881082aba02
+Wed May 20 23:28:00 2020: Socket received request to stop server.
+Wed May 20 23:28:00 2020: SERVER: destructor for server bound to port 34195
+Wed May 20 23:28:00 2020: XRC main fifo: Good unlink of /tmp/xrcmain178f7482-d0c8-4a27-9eeb-c881082aba02
+Wed May 20 23:28:00 2020: Server exiting with status 0.
+Wed May 20 23:28:00 2020: Closing log file.

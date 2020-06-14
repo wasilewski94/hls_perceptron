@@ -9,7 +9,6 @@
 #include <xcalcperceptron.h>
 #include <xparameters.h>
 #include <math.h>
-#include "AxiTimerHelper.h"
 
 
 float *XVecHW = (float *)0x40000000;
@@ -31,11 +30,6 @@ void init_PerceptronCore() {
 	}
 }
 
-void perceptronFunction(float x[100], float w[100], float bias, float res[100]) {
-	for (int idx = 0; idx < 100; idx++) {
-		res[idx] = 1.0 / (1 + expf(-( x[idx] * w[idx] + bias)));
-	}
-}
 
 unsigned int float_to_u32(float val) {
 	unsigned int result;
@@ -55,43 +49,68 @@ int main() {
 
 	init_PerceptronCore();
 
-	AxiTimerHelper myTimer;
+	float bias = -0.008;
 
-	float XVecSW[100];
-	float WVecSW[100];
-	float resSW[100];
-	float base = -0.8;
-	for(int idxX=0; idxX<100; idxX++) {
-		XVecSW[idxX] = idxX;
-		XVecHW[idxX] = idxX;
-		WVecSW[idxX] = idxX;
-		WVecHW[idxX] = idxX;
+	float Weights[100] = {
+			0.246981, 0.117405, 0.093909, 0.084148, -0.062933,
+			0.059469, -0.001097, -0.069079, -0.082620, 0.022078,
+			-0.121930, -0.148492, -0.147534, -0.038065, -0.001991,
+			-0.002789, 0.016306, 0.075648, 0.073643, 0.047817,
+			-0.068736, -0.130499, 0.183542, -0.010175, -0.146292,
+			-0.201574, 0.025235, 0.054847, 0.168662, 0.081872,
+			0.039366, 0.116663, 0.040949, 0.054335, 0.029128,
+			0.062554, -0.033703, 0.008813, -0.026387, -0.079323,
+			-0.160883, -0.083825, 0.012166, -0.037238, -0.053369,
+			-0.117194, -0.021056, -0.101078, -0.129772, -0.071997,
+			0.016805, -0.112021, -0.192751, -0.178410, -0.144378,
+			-0.122421, 0.014276, 0.198882, 0.118526, 0.005658,
+			0.020629, 0.040992, 0.035095, -0.012944, 0.046719,
+			0.040889, -0.174580, -0.048117, -0.023244, 0.120926,
+			0.076765, -0.024464, -0.087209, -0.026035, -0.160679,
+			-0.210912, -0.293178, -0.227376, 0.034730, -0.219927,
+			-0.123490, -0.010861, -0.207343, -0.161672, -0.163780,
+			0.150256, 0.051043, 0.054785, -0.071503, -0.055345,
+			0.090890, 0.031127, 0.018844, -0.194341, -0.108139,
+			0.128574, 0.116233, 0.146617, 0.111831, 0.166209
+	};
+
+	float X[100] = {
+			0.000000, 0.000000, 0.329412, 0.725490, 0.623529,
+			0.592157, 0.235294, 0.141176, 0.000000, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.870588, 0.996078, 0.996078, 0.996078, 0.996078,
+			0.945098, 0.776471, 0.776471, 0.776471, 0.776471,
+			0.776471, 0.776471, 0.776471, 0.776471, 0.666667,
+			0.203922, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.262745, 0.447059,
+			0.282353, 0.447059, 0.639216, 0.890196, 0.996078,
+			0.882353, 0.996078, 0.996078, 0.996078, 0.980392,
+			0.898039, 0.996078, 0.996078, 0.549020, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
+			0.000000, 0.066667, 0.258824, 0.054902, 0.262745,
+			0.262745, 0.262745, 0.231373, 0.082353, 0.925490
+	};
+
+	for(int idx=0; idx<100; idx++) {
+		XVecHW[idx] = X[idx];
+		WVecHW[idx] = Weights[idx];
 	}
-	myTimer.startTimer();
-	perceptronFunction(XVecSW, WVecSW, base, resSW);
-	myTimer.stopTimer();
-	printf("SW test finished, in %f seconds\n", myTimer.getElapsedTimerInSeconds());
 
-	XCalcperceptron_Set_bias(&calcPerceptron, float_to_u32(base));
+	XCalcperceptron_Set_bias(&calcPerceptron, float_to_u32(bias));
 
-	myTimer.startTimer();
 	XCalcperceptron_Start(&calcPerceptron);
 	while(!XCalcperceptron_IsDone(&calcPerceptron));
-	myTimer.stopTimer();
-	printf("HW test finished, in %f seconds\n", myTimer.getElapsedTimerInSeconds());
 
-	float error = 0;
-		for (int idx = 0; idx < 100; idx++) {
-		error += fabsf(resHW[idx] - resSW[idx]);
-		printf("HW: %f, SW: %f\n", resHW[idx], resSW[idx]);
+	for (int idx = 0; idx < 100; idx++) {
+		printf("HW: %f\n", resHW[idx]);
 	}
-	error /=100.0f;
-	printf("Total averege error %f\n", error);
+
 
 	return 0;
 }
-
-
-
-
-

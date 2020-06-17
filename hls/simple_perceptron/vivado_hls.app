@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="com.autoesl.autopilot.project" name="simple_perceptron" top="calcPerceptron">
   <files>
+    <file name="../weights.h" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
     <file name="../test_core.cpp" sc="0" tb="1" cflags=" -Wno-unknown-pragmas" blackbox="false" csimflags=" -Wno-unknown-pragmas"/>
     <file name="simple_perceptron/core.cpp" sc="0" tb="false" cflags="" blackbox="false" csimflags=""/>
   </files>

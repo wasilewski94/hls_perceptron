@@ -19,7 +19,38 @@
 };
 
 &axi_timer_0 {
+    compatible = "generic-uio";/include/ "system-conf.dtsi"
+/ {
+    chosen {
+        bootargs = "earlycon clk_ignore_unused   uio_pdrv_genirq.of_id=generic-uio";
+        stdout-path = "serial0:115200n8";
+    };
+};
+
+&axi_bram_ctrl_0 {
     compatible = "generic-uio";
+};
+
+&axi_bram_ctrl_1 {
+    compatible = "generic-uio";
+};
+
+&axi_bram_ctrl_2 {
+    compatible = "generic-uio";
+};
+
+&axi_bram_ctrl_3 {
+    compatible = "generic-uio";
+};
+
+&axi_timer_0 {
+    compatible = "generic-uio";
+};
+
+&calcPerceptron_0 {
+    compatible = "generic-uio";
+};
+
 };
 
 &calcPerceptron_0 {

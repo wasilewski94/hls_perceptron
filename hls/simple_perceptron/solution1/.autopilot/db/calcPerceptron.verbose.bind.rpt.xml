@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'calcPerceptron'" level="0">
-<item name = "Date">Sun Apr 26 19:39:44 2020
+<item name = "Date">Sun Jun 14 17:47:34 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">simple_perceptron</item>
@@ -24,7 +24,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="8">, min, max, min, max, min, max, Type</keys>
-<column name="">136, 136, 1.360 us, 1.360 us, 136, 136, none</column>
+<column name="">62763, 62763, 0.628 ms, 0.628 ms, 62763, 62763, none</column>
 </table>
 </item>
 <item name = "Detail">
@@ -35,7 +35,7 @@
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
 <keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
-<column name="- Loop 1">134, 134, 36, 1, 1, 100, yes</column>
+<column name="- Loop 1">62761, 62761, 47, 5, 1, 12544, yes</column>
 </table>
 </item>
 </section>

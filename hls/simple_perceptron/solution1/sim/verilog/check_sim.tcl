@@ -82,7 +82,7 @@ proc check_tvin_file {} {
     set rtlfilelist {
          "c.calcPerceptron.autotvin_x.dat"
          "c.calcPerceptron.autotvin_w.dat"
-         "c.calcPerceptron.autotvin_bias.dat"
+         "c.calcPerceptron.autotvin_b.dat"
          "c.calcPerceptron.autotvin_res.dat"
          "c.calcPerceptron.autotvout_res.dat"
     }

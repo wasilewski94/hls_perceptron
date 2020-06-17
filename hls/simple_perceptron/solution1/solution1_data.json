@@ -34,7 +34,7 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["100"],
+        "arraySizes": ["784"],
         "interfaceRef": "x"
       }
     },
@@ -44,17 +44,18 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["100"],
+        "arraySizes": ["12544"],
         "interfaceRef": "w"
       }
     },
-    "bias": {
+    "b": {
       "index": "2",
       "type": {
+        "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "interfaceRef": "s_axi_CRTL_BUS",
-        "registerRefs": ["bias"]
+        "arraySizes": ["16"],
+        "interfaceRef": "b"
       }
     },
     "res": {
@@ -63,7 +64,7 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["100"],
+        "arraySizes": ["16"],
         "interfaceRef": "res"
       }
     }
@@ -76,7 +77,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "136",
+    "Latency": "62763",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -99,6 +100,7 @@
       "impl\/vhdl\/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd",
+      "impl\/vhdl\/calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1.vhd",
       "impl\/vhdl\/calcPerceptron.vhd"
     ],
     "Verilog": [
@@ -107,6 +109,7 @@
       "impl\/verilog\/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.v",
       "impl\/verilog\/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.v",
       "impl\/verilog\/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.v",
+      "impl\/verilog\/calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1.v",
       "impl\/verilog\/calcPerceptron.v"
     ],
     "SwDriver": [
@@ -172,6 +175,39 @@
       "bundle_name": "ap_rst_n",
       "bundle_role": "default"
     },
+    "b": {
+      "type": "native_bram",
+      "is_adaptor": "true",
+      "mode": "master",
+      "port_prefix": "b",
+      "mem_width": "32",
+      "mem_depth": "1",
+      "mem_ports": "a",
+      "addr_width": "32",
+      "we_width": "4",
+      "master_type": "BRAM_CTRL",
+      "ctype": {
+        "EN": {"Type": "bool"},
+        "CLK": {"Type": "bool"},
+        "RST": {"Type": "bool"},
+        "ADDR": {
+          "Type": "integer unsigned",
+          "Width": "32"
+        },
+        "WE": {
+          "Type": "integer unsigned",
+          "Width": "4"
+        },
+        "DIN": {
+          "Type": "real float",
+          "Width": "32"
+        },
+        "DOUT": {
+          "Type": "real float",
+          "Width": "32"
+        }
+      }
+    },
     "interrupt": {
       "type": "interrupt",
       "ctype": {"INTERRUPT": {"Type": "bool"}},
@@ -217,7 +253,7 @@
       "mode": "slave",
       "port_prefix": "s_axi_CRTL_BUS",
       "param_prefix": "C_S_AXI_CRTL_BUS",
-      "addr_bits": "5",
+      "addr_bits": "4",
       "registers": [
         {
           "offset": "0x00",
@@ -374,21 +410,6 @@
               "description": "Reserved.  0s on read."
             }
           ]
-        },
-        {
-          "offset": "0x10",
-          "name": "bias",
-          "access": "W",
-          "reset_value": "0x0",
-          "description": "Data signal of bias",
-          "fields": [{
-              "offset": "0",
-              "width": "32",
-              "name": "bias",
-              "access": "W",
-              "reset_value": "0",
-              "description": "Bit 31 to 0 Data signal of bias"
-            }]
         }
       ],
       "ctype": {
@@ -412,10 +433,10 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "5"
+          "Width": "4"
         },
         "WDATA": {
-          "Type": "real float",
+          "Type": "null",
           "Width": "32"
         },
         "WSTRB": {
@@ -424,17 +445,17 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "5"
+          "Width": "4"
         },
         "RDATA": {
-          "Type": "real float",
+          "Type": "null",
           "Width": "32"
         }
       },
       "data_width": "32",
       "port_width": {
-        "ARADDR": "5",
-        "AWADDR": "5",
+        "ARADDR": "4",
+        "AWADDR": "4",
         "RDATA": "32",
         "WDATA": "32",
         "WSTRB": "4"
@@ -518,7 +539,7 @@
     },
     "s_axi_CRTL_BUS_AWADDR": {
       "dir": "in",
-      "width": "5"
+      "width": "4"
     },
     "s_axi_CRTL_BUS_WVALID": {
       "dir": "in",
@@ -546,7 +567,7 @@
     },
     "s_axi_CRTL_BUS_ARADDR": {
       "dir": "in",
-      "width": "5"
+      "width": "4"
     },
     "s_axi_CRTL_BUS_RVALID": {
       "dir": "out",
@@ -645,6 +666,34 @@
       "dir": "out",
       "width": "1"
     },
+    "b_Addr_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "b_EN_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "b_WEN_A": {
+      "dir": "out",
+      "width": "4"
+    },
+    "b_Din_A": {
+      "dir": "out",
+      "width": "32"
+    },
+    "b_Dout_A": {
+      "dir": "in",
+      "width": "32"
+    },
+    "b_Clk_A": {
+      "dir": "out",
+      "width": "1"
+    },
+    "b_Rst_A": {
+      "dir": "out",
+      "width": "1"
+    },
     "res_Addr_A": {
       "dir": "out",
       "width": "32"
@@ -685,10 +734,10 @@
       }},
     "Metrics": {"calcPerceptron": {
         "Latency": {
-          "LatencyBest": "136",
-          "LatencyAvg": "136",
-          "LatencyWorst": "136",
-          "PipelineII": "137",
+          "LatencyBest": "62763",
+          "LatencyAvg": "62763",
+          "LatencyWorst": "62763",
+          "PipelineII": "62764",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -699,16 +748,16 @@
         },
         "Loops": [{
             "Name": "Loop 1",
-            "TripCount": "100",
-            "Latency": "134",
-            "PipelineII": "1",
-            "PipelineDepth": "36"
+            "TripCount": "12544",
+            "Latency": "62761",
+            "PipelineII": "5",
+            "PipelineDepth": "47"
           }],
         "Area": {
           "BRAM_18K": "0",
-          "DSP48E": "22",
-          "FF": "1577",
-          "LUT": "2562",
+          "DSP48E": "21",
+          "FF": "1517",
+          "LUT": "2330",
           "URAM": "0"
         }
       }}
@@ -723,7 +772,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-04-26 19:39:46 CEST",
+    "Time": "2020-06-14 17:47:35 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

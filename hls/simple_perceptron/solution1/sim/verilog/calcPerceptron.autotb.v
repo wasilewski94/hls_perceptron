@@ -18,16 +18,17 @@
 `define AESL_BRAM_INST_x bram_inst_x
 `define AESL_BRAM_w AESL_autobram_w
 `define AESL_BRAM_INST_w bram_inst_w
-`define AESL_DEPTH_bias 1
+`define AESL_BRAM_b AESL_autobram_b
+`define AESL_BRAM_INST_b bram_inst_b
 `define AESL_BRAM_res AESL_autobram_res
 `define AESL_BRAM_INST_res bram_inst_res
 `define AUTOTB_TVIN_x  "../tv/cdatafile/c.calcPerceptron.autotvin_x.dat"
 `define AUTOTB_TVIN_w  "../tv/cdatafile/c.calcPerceptron.autotvin_w.dat"
-`define AUTOTB_TVIN_bias  "../tv/cdatafile/c.calcPerceptron.autotvin_bias.dat"
+`define AUTOTB_TVIN_b  "../tv/cdatafile/c.calcPerceptron.autotvin_b.dat"
 `define AUTOTB_TVIN_res  "../tv/cdatafile/c.calcPerceptron.autotvin_res.dat"
 `define AUTOTB_TVIN_x_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_x.dat"
 `define AUTOTB_TVIN_w_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_w.dat"
-`define AUTOTB_TVIN_bias_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_bias.dat"
+`define AUTOTB_TVIN_b_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_b.dat"
 `define AUTOTB_TVIN_res_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_res.dat"
 `define AUTOTB_TVOUT_res  "../tv/cdatafile/c.calcPerceptron.autotvout_res.dat"
 `define AUTOTB_TVOUT_res_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvout_res.dat"
@@ -35,11 +36,11 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 136;
-parameter LENGTH_x = 100;
-parameter LENGTH_w = 100;
-parameter LENGTH_bias = 1;
-parameter LENGTH_res = 100;
+parameter LATENCY_ESTIMATION = 62763;
+parameter LENGTH_x = 784;
+parameter LENGTH_w = 12544;
+parameter LENGTH_b = 16;
+parameter LENGTH_res = 16;
 
 task read_token;
     input integer fp;
@@ -69,14 +70,14 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
-wire [4 : 0] CRTL_BUS_AWADDR;
+wire [3 : 0] CRTL_BUS_AWADDR;
 wire  CRTL_BUS_AWVALID;
 wire  CRTL_BUS_AWREADY;
 wire  CRTL_BUS_WVALID;
 wire  CRTL_BUS_WREADY;
 wire [31 : 0] CRTL_BUS_WDATA;
 wire [3 : 0] CRTL_BUS_WSTRB;
-wire [4 : 0] CRTL_BUS_ARADDR;
+wire [3 : 0] CRTL_BUS_ARADDR;
 wire  CRTL_BUS_ARVALID;
 wire  CRTL_BUS_ARREADY;
 wire  CRTL_BUS_RVALID;
@@ -101,6 +102,13 @@ wire [31 : 0] w_DIN_A;
 wire [31 : 0] w_DOUT_A;
 wire  w_CLK_A;
 wire  w_RST_A;
+wire [31 : 0] b_ADDR_A;
+wire  b_EN_A;
+wire [3 : 0] b_WEN_A;
+wire [31 : 0] b_DIN_A;
+wire [31 : 0] b_DOUT_A;
+wire  b_CLK_A;
+wire  b_RST_A;
 wire [31 : 0] res_ADDR_A;
 wire  res_EN_A;
 wire [3 : 0] res_WEN_A;
@@ -117,7 +125,6 @@ reg ready_last_n;
 reg ready_delay_last_n;
 reg done_delay_last_n;
 reg interface_done = 0;
-wire CRTL_BUS_write_data_finish;
 wire AESL_slave_start;
 reg AESL_slave_start_lock = 0;
 wire AESL_slave_write_start_in;
@@ -170,6 +177,13 @@ wire ap_rst_n_n;
     .w_Dout_A(w_DOUT_A),
     .w_Clk_A(w_CLK_A),
     .w_Rst_A(w_RST_A),
+    .b_Addr_A(b_ADDR_A),
+    .b_EN_A(b_EN_A),
+    .b_WEN_A(b_WEN_A),
+    .b_Din_A(b_DIN_A),
+    .b_Dout_A(b_DOUT_A),
+    .b_Clk_A(b_CLK_A),
+    .b_Rst_A(b_RST_A),
     .res_Addr_A(res_ADDR_A),
     .res_EN_A(res_EN_A),
     .res_WEN_A(res_WEN_A),
@@ -186,7 +200,7 @@ assign AESL_reset = rst;
 assign AESL_start = start;
 assign AESL_ce = ce;
 assign AESL_continue = tb_continue;
-  assign AESL_slave_write_start_in = slave_start_status  & CRTL_BUS_write_data_finish;
+  assign AESL_slave_write_start_in = slave_start_status ;
   assign AESL_slave_start = AESL_slave_write_start_finish;
   assign AESL_done = slave_done_status ;
 
@@ -330,6 +344,50 @@ assign bramw_ready=    ready;
 assign bramw_done = 0;
 
 
+//------------------------bramb Instantiation--------------
+
+// The input and output of bramb
+wire  bramb_Clk_A, bramb_Clk_B;
+wire  bramb_EN_A, bramb_EN_B;
+wire  [4 - 1 : 0] bramb_WEN_A, bramb_WEN_B;
+wire    [31 : 0]    bramb_Addr_A, bramb_Addr_B;
+wire    [31 : 0]    bramb_Din_A, bramb_Din_B;
+wire    [31 : 0]    bramb_Dout_A, bramb_Dout_B;
+wire    bramb_ready;
+wire    bramb_done;
+
+`AESL_BRAM_b `AESL_BRAM_INST_b(
+    .Clk_A    (bramb_Clk_A),
+    .Rst_A    (bramb_Rst_A),
+    .EN_A     (bramb_EN_A),
+    .WEN_A    (bramb_WEN_A),
+    .Addr_A   (bramb_Addr_A),
+    .Din_A    (bramb_Din_A),
+    .Dout_A   (bramb_Dout_A),
+    .Clk_B    (bramb_Clk_B),
+    .Rst_B    (bramb_Rst_B),
+    .EN_B     (bramb_EN_B),
+    .WEN_B    (bramb_WEN_B),
+    .Addr_B   (bramb_Addr_B),
+    .Din_B    (bramb_Din_B),
+    .Dout_B   (bramb_Dout_B),
+    .ready    (bramb_ready),
+    .done        (bramb_done)
+);
+
+// Assignment between dut and bramb
+assign bramb_Clk_A = b_CLK_A;
+assign bramb_Rst_A = b_RST_A;
+assign bramb_Addr_A = b_ADDR_A;
+assign bramb_EN_A = b_EN_A;
+assign b_DOUT_A = bramb_Dout_A;
+assign bramb_WEN_A = 0;
+assign bramb_Din_A = 0;
+assign bramb_WEN_B = 0;
+assign bramb_Din_B = 0;
+assign bramb_ready=    ready;
+assign bramb_done = 0;
+
 
 //------------------------bramres Instantiation--------------
 
@@ -396,7 +454,6 @@ AESL_axi_slave_CRTL_BUS AESL_AXI_SLAVE_CRTL_BUS(
     .TRAN_s_axi_CRTL_BUS_BREADY (CRTL_BUS_BREADY),
     .TRAN_s_axi_CRTL_BUS_BRESP (CRTL_BUS_BRESP),
     .TRAN_CRTL_BUS_interrupt (CRTL_BUS_INTERRUPT),
-    .TRAN_CRTL_BUS_write_data_finish(CRTL_BUS_write_data_finish),
     .TRAN_CRTL_BUS_ready_out (AESL_ready),
     .TRAN_CRTL_BUS_ready_in (AESL_slave_ready),
     .TRAN_CRTL_BUS_done_out (AESL_slave_output_done),
@@ -475,9 +532,9 @@ reg [31:0] size_x_backup;
 reg end_w;
 reg [31:0] size_w;
 reg [31:0] size_w_backup;
-reg end_bias;
-reg [31:0] size_bias;
-reg [31:0] size_bias_backup;
+reg end_b;
+reg [31:0] size_b;
+reg [31:0] size_b_backup;
 reg end_res;
 reg [31:0] size_res;
 reg [31:0] size_res_backup;

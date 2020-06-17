@@ -73,23 +73,6 @@ void XCalcperceptron_DisableAutoRestart(XCalcperceptron *InstancePtr) {
     XCalcperceptron_WriteReg(InstancePtr->Crtl_bus_BaseAddress, XCALCPERCEPTRON_CRTL_BUS_ADDR_AP_CTRL, 0);
 }
 
-void XCalcperceptron_Set_bias(XCalcperceptron *InstancePtr, u32 Data) {
-    Xil_AssertVoid(InstancePtr != NULL);
-    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    XCalcperceptron_WriteReg(InstancePtr->Crtl_bus_BaseAddress, XCALCPERCEPTRON_CRTL_BUS_ADDR_BIAS_DATA, Data);
-}
-
-u32 XCalcperceptron_Get_bias(XCalcperceptron *InstancePtr) {
-    u32 Data;
-
-    Xil_AssertNonvoid(InstancePtr != NULL);
-    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
-
-    Data = XCalcperceptron_ReadReg(InstancePtr->Crtl_bus_BaseAddress, XCALCPERCEPTRON_CRTL_BUS_ADDR_BIAS_DATA);
-    return Data;
-}
-
 void XCalcperceptron_InterruptGlobalEnable(XCalcperceptron *InstancePtr) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

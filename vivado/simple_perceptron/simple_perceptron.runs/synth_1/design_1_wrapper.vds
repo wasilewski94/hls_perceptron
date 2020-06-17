@@ -2,8 +2,8 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Tue Apr 28 01:04:24 2020
-# Process ID: 29148
+# Start of session at: Sun Jun 14 23:02:25 2020
+# Process ID: 22504
 # Current directory: /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1
 # Command line: vivado -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/design_1_wrapper.vds
@@ -19,35 +19,39 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 29179 
+INFO: Helper process launched with PID 22543 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1978.395 ; gain = 200.684 ; free physical = 15784 ; free virtual = 26657
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1978.426 ; gain = 200.715 ; free physical = 2857 ; free virtual = 22617
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:40]
-INFO: [Synth 8-3491] module 'design_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3168' bound to instance 'design_1_i' of component 'design_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:67]
-INFO: [Synth 8-638] synthesizing module 'design_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3198]
-INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'design_1_axi_bram_ctrl_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3876]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:55]
-INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_1_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_axi_bram_ctrl_1_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_1' of component 'design_1_axi_bram_ctrl_1_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3923]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_1_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_axi_bram_ctrl_1_0_stub.vhdl:55]
-INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_2_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_axi_bram_ctrl_2_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_2' of component 'design_1_axi_bram_ctrl_2_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3970]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_2_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_axi_bram_ctrl_2_0_stub.vhdl:55]
-INFO: [Synth 8-3491] module 'design_1_axi_timer_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'design_1_axi_timer_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4017]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_axi_timer_0_0_stub.vhdl:37]
-INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_calcPerceptron_0_0_stub.vhdl:5' bound to instance 'calcPerceptron_0' of component 'design_1_calcPerceptron_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4046]
-INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_calcPerceptron_0_0_stub.vhdl:52]
-INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_bram_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_calcPerceptron_0_bram_0_stub.vhdl:5' bound to instance 'calcPerceptron_0_bram' of component 'design_1_calcPerceptron_0_bram_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4090]
-INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_bram_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_calcPerceptron_0_bram_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_bram_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_calcPerceptron_0_bram_0_0_stub.vhdl:5' bound to instance 'calcPerceptron_0_bram_0' of component 'design_1_calcPerceptron_0_bram_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4110]
-INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_bram_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_calcPerceptron_0_bram_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_bram_1_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_calcPerceptron_0_bram_1_0_stub.vhdl:5' bound to instance 'calcPerceptron_0_bram_1' of component 'design_1_calcPerceptron_0_bram_1_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4130]
-INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_bram_1_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_calcPerceptron_0_bram_1_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4150]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_processing_system7_0_0_stub.vhdl:86]
-INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1829]
+INFO: [Synth 8-3491] module 'design_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3617' bound to instance 'design_1_i' of component 'design_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'design_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3647]
+INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'design_1_axi_bram_ctrl_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4453]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_bram_ctrl_0_0_stub.vhdl:55]
+INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_1_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_bram_ctrl_1_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_1' of component 'design_1_axi_bram_ctrl_1_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4500]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_1_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_bram_ctrl_1_0_stub.vhdl:55]
+INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_2_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_bram_ctrl_2_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_2' of component 'design_1_axi_bram_ctrl_2_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4547]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_2_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_bram_ctrl_2_0_stub.vhdl:55]
+INFO: [Synth 8-3491] module 'design_1_axi_bram_ctrl_3_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_bram_ctrl_3_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_3' of component 'design_1_axi_bram_ctrl_3_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4594]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_3_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_bram_ctrl_3_0_stub.vhdl:55]
+INFO: [Synth 8-3491] module 'design_1_axi_timer_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'design_1_axi_timer_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4641]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_timer_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_axi_timer_0_0_stub.vhdl:37]
+INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_0_stub.vhdl:5' bound to instance 'calcPerceptron_0' of component 'design_1_calcPerceptron_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4670]
+INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_0_stub.vhdl:59]
+INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_bram_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_bram_0_stub.vhdl:5' bound to instance 'calcPerceptron_0_bram' of component 'design_1_calcPerceptron_0_bram_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4721]
+INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_bram_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_bram_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_bram_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_bram_0_0_stub.vhdl:5' bound to instance 'calcPerceptron_0_bram_0' of component 'design_1_calcPerceptron_0_bram_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4741]
+INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_bram_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_bram_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_bram_1_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_bram_1_0_stub.vhdl:5' bound to instance 'calcPerceptron_0_bram_1' of component 'design_1_calcPerceptron_0_bram_1_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4761]
+INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_bram_1_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_bram_1_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_calcPerceptron_0_bram_2_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_bram_2_0_stub.vhdl:5' bound to instance 'calcPerceptron_0_bram_2' of component 'design_1_calcPerceptron_0_bram_2_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4781]
+INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_bram_2_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_calcPerceptron_0_bram_2_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4801]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_processing_system7_0_0_stub.vhdl:86]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:2057]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:79]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:263]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_auto_pc_0_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (1#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:79]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:410]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (2#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:410]
@@ -56,22 +60,28 @@ INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (3#1) [/
 INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:792]
 INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (4#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:792]
 INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_17KQ732' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:969]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1153]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_auto_pc_1_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_auto_pc_1_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1153]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_auto_pc_1_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_17KQ732' (5#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:969]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1305]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_2' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1546]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_auto_pc_2_stub.vhdl:90]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (6#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1305]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:2934]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_xbar_0_stub.vhdl:89]
-INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (7#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1829]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_100M_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_1_rst_ps7_0_100M_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:4422]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_100M_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-29148-legion/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:21]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (8#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3198]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (9#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:40]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_VQEDA7' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1300]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_VQEDA7' (6#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1300]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1496]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_2' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_auto_pc_2_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1737]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_2' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_auto_pc_2_stub.vhdl:90]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (7#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:1496]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3344]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_xbar_0_stub.vhdl:89]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (8#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:2057]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_100M_0' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_100M' of component 'design_1_rst_ps7_0_100M_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:5110]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_100M_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/.Xil/Vivado-22504-legion/realtime/design_1_rst_ps7_0_100M_0_stub.vhdl:21]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (9#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/synth/design_1.vhd:3647]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (10#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:40]
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_VQEDA7 has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_VQEDA7 has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m05_couplers_imp_VQEDA7 has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m05_couplers_imp_VQEDA7 has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m04_couplers_imp_17KQ732 has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m04_couplers_imp_17KQ732 has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m03_couplers_imp_YFYJ3U has unconnected port M_ACLK
@@ -98,10 +108,12 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2048.113 ; gain = 270.402 ; free physical = 15825 ; free virtual = 26686
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2049.145 ; gain = 271.434 ; free physical = 2861 ; free virtual = 22637
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -114,12 +126,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2048.113 ; gain = 270.402 ; free physical = 15823 ; free virtual = 26684
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2049.145 ; gain = 271.434 ; free physical = 2867 ; free virtual = 22626
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2048.113 ; gain = 270.402 ; free physical = 15823 ; free virtual = 26684
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2049.145 ; gain = 271.434 ; free physical = 2867 ; free virtual = 22626
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2048.113 ; gain = 0.000 ; free physical = 15816 ; free virtual = 26677
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2049.145 ; gain = 0.000 ; free physical = 2859 ; free virtual = 22619
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -140,12 +152,16 @@ Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptr
 Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_bram_0_0/design_1_calcPerceptron_0_bram_0_0/design_1_calcPerceptron_0_bram_0_0_in_context.xdc] for cell 'design_1_i/calcPerceptron_0_bram_0'
 Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_1'
 Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_1_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_1'
-Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_bram_1_0/design_1_calcPerceptron_0_bram_1_0/design_1_calcPerceptron_0_bram_0_0_in_context.xdc] for cell 'design_1_i/calcPerceptron_0_bram_1'
-Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_bram_1_0/design_1_calcPerceptron_0_bram_1_0/design_1_calcPerceptron_0_bram_0_0_in_context.xdc] for cell 'design_1_i/calcPerceptron_0_bram_1'
-Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_2_0/design_1_axi_bram_ctrl_2_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_2'
-Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_2_0/design_1_axi_bram_ctrl_2_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_2'
+Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_bram_1_0/design_1_calcPerceptron_0_bram_1_0/design_1_calcPerceptron_0_bram_1_0_in_context.xdc] for cell 'design_1_i/calcPerceptron_0_bram_1'
+Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_bram_1_0/design_1_calcPerceptron_0_bram_1_0/design_1_calcPerceptron_0_bram_1_0_in_context.xdc] for cell 'design_1_i/calcPerceptron_0_bram_1'
+Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_2_0/design_1_axi_bram_ctrl_2_0/design_1_axi_bram_ctrl_2_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_2'
+Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_2_0/design_1_axi_bram_ctrl_2_0/design_1_axi_bram_ctrl_2_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_2'
 Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0/design_1_axi_timer_0_0_in_context.xdc] for cell 'design_1_i/axi_timer_0'
 Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_timer_0_0/design_1_axi_timer_0_0/design_1_axi_timer_0_0_in_context.xdc] for cell 'design_1_i/axi_timer_0'
+Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_bram_2_0/design_1_calcPerceptron_0_bram_2_0/design_1_calcPerceptron_0_bram_0_0_in_context.xdc] for cell 'design_1_i/calcPerceptron_0_bram_2'
+Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_bram_2_0/design_1_calcPerceptron_0_bram_2_0/design_1_calcPerceptron_0_bram_0_0_in_context.xdc] for cell 'design_1_i/calcPerceptron_0_bram_2'
+Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_3_0/design_1_axi_bram_ctrl_3_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_3'
+Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_3_0/design_1_axi_bram_ctrl_3_0/design_1_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_1_i/axi_bram_ctrl_3'
 Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_2/design_1_auto_pc_2/design_1_auto_pc_1_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/m00_couplers/auto_pc'
@@ -156,23 +172,24 @@ Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptr
 Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2171.926 ; gain = 0.000 ; free physical = 15711 ; free virtual = 26572
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2177.957 ; gain = 0.000 ; free physical = 2743 ; free virtual = 22522
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2171.926 ; gain = 0.000 ; free physical = 15711 ; free virtual = 26572
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2177.957 ; gain = 0.000 ; free physical = 2743 ; free virtual = 22521
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/calcPerceptron_0_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/calcPerceptron_0_bram_0' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/calcPerceptron_0_bram_1' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/calcPerceptron_0_bram_2' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15791 ; free virtual = 26646
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2277 ; free virtual = 22142
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15791 ; free virtual = 26646
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2267 ; free virtual = 22132
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -450,14 +467,16 @@ Applied set_property DONT_TOUCH = true for design_1_i/axi_bram_ctrl_1. (constrai
 Applied set_property DONT_TOUCH = true for design_1_i/calcPerceptron_0_bram_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_bram_ctrl_2. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_timer_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/calcPerceptron_0_bram_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_bram_ctrl_3. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/m00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/m04_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15797 ; free virtual = 26652
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2259 ; free virtual = 22094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15797 ; free virtual = 26653
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2234 ; free virtual = 22070
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -502,10 +521,12 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15791 ; free virtual = 26650
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2154 ; free virtual = 21993
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -517,13 +538,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15658 ; free virtual = 26523
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2216 ; free virtual = 22026
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15658 ; free virtual = 26523
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2216 ; free virtual = 22026
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -535,7 +556,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15657 ; free virtual = 26522
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2213 ; free virtual = 22024
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -559,13 +580,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15657 ; free virtual = 26522
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2150 ; free virtual = 22183
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15657 ; free virtual = 26522
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2142 ; free virtual = 22183
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -584,25 +605,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15657 ; free virtual = 26522
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2155 ; free virtual = 22184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15657 ; free virtual = 26522
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2155 ; free virtual = 22184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15657 ; free virtual = 26522
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2153 ; free virtual = 22183
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15657 ; free virtual = 26522
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2152 ; free virtual = 22182
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -619,67 +640,71 @@ Report BlackBoxes:
 |5     |design_1_axi_bram_ctrl_0_0         |         1|
 |6     |design_1_axi_bram_ctrl_1_0         |         1|
 |7     |design_1_axi_bram_ctrl_2_0         |         1|
-|8     |design_1_axi_timer_0_0             |         1|
-|9     |design_1_calcPerceptron_0_0        |         1|
-|10    |design_1_calcPerceptron_0_bram_0   |         1|
-|11    |design_1_calcPerceptron_0_bram_0_0 |         1|
-|12    |design_1_calcPerceptron_0_bram_1_0 |         1|
-|13    |design_1_processing_system7_0_0    |         1|
-|14    |design_1_rst_ps7_0_100M_0          |         1|
+|8     |design_1_axi_bram_ctrl_3_0         |         1|
+|9     |design_1_axi_timer_0_0             |         1|
+|10    |design_1_calcPerceptron_0_0        |         1|
+|11    |design_1_calcPerceptron_0_bram_0   |         1|
+|12    |design_1_calcPerceptron_0_bram_0_0 |         1|
+|13    |design_1_calcPerceptron_0_bram_1_0 |         1|
+|14    |design_1_calcPerceptron_0_bram_2_0 |         1|
+|15    |design_1_processing_system7_0_0    |         1|
+|16    |design_1_rst_ps7_0_100M_0          |         1|
 +------+-----------------------------------+----------+
 
 Report Cell Usage: 
 +------+------------------------------------------+------+
 |      |Cell                                      |Count |
 +------+------------------------------------------+------+
-|1     |design_1_auto_pc_0_bbox_9                 |     1|
-|2     |design_1_auto_pc_1_bbox_10                |     1|
-|3     |design_1_auto_pc_2_bbox_11                |     1|
+|1     |design_1_auto_pc_0_bbox_11                |     1|
+|2     |design_1_auto_pc_1_bbox_12                |     1|
+|3     |design_1_auto_pc_2_bbox_13                |     1|
 |4     |design_1_axi_bram_ctrl_0_0_bbox_0         |     1|
 |5     |design_1_axi_bram_ctrl_1_0_bbox_1         |     1|
 |6     |design_1_axi_bram_ctrl_2_0_bbox_2         |     1|
-|7     |design_1_axi_timer_0_0_bbox_3             |     1|
-|8     |design_1_calcPerceptron_0_0_bbox_4        |     1|
-|9     |design_1_calcPerceptron_0_bram_0_0_bbox_6 |     1|
-|10    |design_1_calcPerceptron_0_bram_0_bbox_5   |     1|
-|11    |design_1_calcPerceptron_0_bram_1_0_bbox_7 |     1|
-|12    |design_1_processing_system7_0_0_bbox_8    |     1|
-|13    |design_1_rst_ps7_0_100M_0_bbox_13         |     1|
-|14    |design_1_xbar_0_bbox_12                   |     1|
+|7     |design_1_axi_bram_ctrl_3_0_bbox_3         |     1|
+|8     |design_1_axi_timer_0_0_bbox_4             |     1|
+|9     |design_1_calcPerceptron_0_0_bbox_5        |     1|
+|10    |design_1_calcPerceptron_0_bram_0_0_bbox_7 |     1|
+|11    |design_1_calcPerceptron_0_bram_0_bbox_6   |     1|
+|12    |design_1_calcPerceptron_0_bram_1_0_bbox_8 |     1|
+|13    |design_1_calcPerceptron_0_bram_2_0_bbox_9 |     1|
+|14    |design_1_processing_system7_0_0_bbox_10   |     1|
+|15    |design_1_rst_ps7_0_100M_0_bbox_15         |     1|
+|16    |design_1_xbar_0_bbox_14                   |     1|
 +------+------------------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+----------------------------+------+
 |      |Instance             |Module                      |Cells |
 +------+---------------------+----------------------------+------+
-|1     |top                  |                            |  2670|
-|2     |  design_1_i         |design_1                    |  2670|
-|3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |  1614|
+|1     |top                  |                            |  3116|
+|2     |  design_1_i         |design_1                    |  3116|
+|3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |  1802|
 |4     |      m00_couplers   |m00_couplers_imp_15SPJYW    |   177|
 |5     |      m04_couplers   |m04_couplers_imp_17KQ732    |   177|
 |6     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   254|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15657 ; free virtual = 26522
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2151 ; free virtual = 22180
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2177.863 ; gain = 270.402 ; free physical = 15713 ; free virtual = 26578
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2177.863 ; gain = 400.152 ; free physical = 15713 ; free virtual = 26578
+Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 2184.895 ; gain = 271.434 ; free physical = 2250 ; free virtual = 22235
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:31 . Memory (MB): peak = 2184.895 ; gain = 407.184 ; free physical = 2250 ; free virtual = 22235
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2177.863 ; gain = 0.000 ; free physical = 15782 ; free virtual = 26647
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.10 . Memory (MB): peak = 2184.895 ; gain = 0.000 ; free physical = 2344 ; free virtual = 22304
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2177.863 ; gain = 0.000 ; free physical = 15723 ; free virtual = 26589
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2184.895 ; gain = 0.000 ; free physical = 2341 ; free virtual = 22245
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 45 Warnings, 0 Critical Warnings and 0 Errors encountered.
+65 Infos, 54 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 2177.863 ; gain = 664.531 ; free physical = 15847 ; free virtual = 26712
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2177.863 ; gain = 0.000 ; free physical = 15847 ; free virtual = 26712
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:42 . Memory (MB): peak = 2184.895 ; gain = 671.562 ; free physical = 2495 ; free virtual = 22369
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2184.895 ; gain = 0.000 ; free physical = 2495 ; free virtual = 22369
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 28 01:05:10 2020...
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 14 23:03:17 2020...

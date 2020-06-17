@@ -20,7 +20,7 @@
 <InvalidType>0</InvalidType>
 </RtlPorts>
 <RtlPorts>
-<name>bias</name>
+<name>b</name>
 <CType>
 <TypeName>float</TypeName>
 <TypeWidth>32</TypeWidth>

@@ -2,8 +2,7 @@
 <project>
   <core name="" type="" target="">
     <kernel name="calcPerceptron" language="c" vlnv="xilinx.com:hls:calcPerceptron:1.0" attributes="" hash="" preferredWorkGroupSizeMultiple="0" workGroupSize="1" debug="false" interrupt="true">
-      <port name="S_AXI_CRTL_BUS" mode="slave" range="0x1000" dataWidth="32" portType="addressable" base="0x00000000"/>
-      <arg name="bias" addressQualifier="0" id="0" port="S_AXI_CRTL_BUS" size="0x4" offset="0x10" hostOffset="0x0" hostSize="0x4" type="float"/>
+      <port name="S_AXI_CRTL_BUS" mode="slave" range="0x1000" portType="addressable" base="0x00000000"/>
       <compileWorkGroupSize x="1" y="1" z="1"/>
     </kernel>
   </core>

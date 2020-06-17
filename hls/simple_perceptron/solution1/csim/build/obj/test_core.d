@@ -47,4 +47,4 @@ obj/test_core.o: ../../../test_core.cpp \
  /opt/Xilinx/Vivado/2019.2/include/hls_mad_apfixed.h \
  /opt/Xilinx/Vivado/2019.2/include/hls_cbrt_apfixed.h \
  /opt/Xilinx/Vivado/2019.2/include/hls_hypot_apfixed.h \
- /opt/Xilinx/Vivado/2019.2/include/hls_ldexp_apfixed.h
+ /opt/Xilinx/Vivado/2019.2/include/hls_ldexp_apfixed.h ../../../weights.h

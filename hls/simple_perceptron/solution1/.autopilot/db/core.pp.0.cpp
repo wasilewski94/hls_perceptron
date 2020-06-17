@@ -26875,18 +26875,29 @@ namespace hls {
 };
 # 2 "simple_perceptron/core.cpp" 2
 
-void calcPerceptron(float x[100], float w[100], float bias, float res[100])
-{_ssdm_SpecArrayDimSize(x, 100);_ssdm_SpecArrayDimSize(w, 100);_ssdm_SpecArrayDimSize(res, 100);
+void calcPerceptron(float x[784], float w[12544], float b[16], float res[16])
+{_ssdm_SpecArrayDimSize(x, 784);_ssdm_SpecArrayDimSize(w, 12544);_ssdm_SpecArrayDimSize(b, 16);_ssdm_SpecArrayDimSize(res, 16);
 #pragma HLS INTERFACE s_axilite port=return bundle=CRTL_BUS
-#pragma HLS INTERFACE s_axilite port=&bias bundle=CRTL_BUS
+
 #pragma HLS INTERFACE bram port=&x
 #pragma HLS INTERFACE bram port=&w
 #pragma HLS INTERFACE bram port=&res
+#pragma HLS INTERFACE bram port=&b
 
 
- for (int idx = 0; idx < 100; idx++)
- {
-  res[idx] = 1.0 / (1 + hls::expf(-( x[idx] * w[idx] + bias)));
- }
+
+
+float sum = 0.0;
+
+
+
+for(int j = 0; j<16; j++){
+
+ for (int idx = 0; idx < 784; idx++) {
+   sum += x[idx] * w[idx + 784*j];
+  }
+  res[j] = 1.0 / (1 + hls::expf(-( sum + b[j])));
+  sum = 0.0;
+}
 
 }

@@ -84,8 +84,6 @@ u32 XCalcperceptron_IsReady(XCalcperceptron *InstancePtr);
 void XCalcperceptron_EnableAutoRestart(XCalcperceptron *InstancePtr);
 void XCalcperceptron_DisableAutoRestart(XCalcperceptron *InstancePtr);
 
-void XCalcperceptron_Set_bias(XCalcperceptron *InstancePtr, u32 Data);
-u32 XCalcperceptron_Get_bias(XCalcperceptron *InstancePtr);
 
 void XCalcperceptron_InterruptGlobalEnable(XCalcperceptron *InstancePtr);
 void XCalcperceptron_InterruptGlobalDisable(XCalcperceptron *InstancePtr);

@@ -36,8 +36,8 @@ using namespace sc_dt;
 // wrapc file define: "b"
 #define AUTOTB_TVIN_b  "../tv/cdatafile/c.calcPerceptron.autotvin_b.dat"
 // wrapc file define: "res"
-#define AUTOTB_TVOUT_res  "../tv/cdatafile/c.calcPerceptron.autotvout_res.dat"
 #define AUTOTB_TVIN_res  "../tv/cdatafile/c.calcPerceptron.autotvin_res.dat"
+#define AUTOTB_TVOUT_res  "../tv/cdatafile/c.calcPerceptron.autotvout_res.dat"
 
 #define INTER_TCL  "../tv/cdatafile/ref.tcl"
 
@@ -95,15 +95,15 @@ class INTER_TCL_FILE {
 
 extern void calcPerceptron (
 float x[784],
-float w[12544],
-float b[16],
-float res[16]);
+float w[12704],
+float b[26],
+volatile float res[26]);
 
 void AESL_WRAP_calcPerceptron (
 float x[784],
-float w[12544],
-float b[16],
-float res[16])
+float w[12704],
+float b[26],
+volatile float res[26])
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -130,7 +130,7 @@ float res[16])
 		{
 			aesl_fh.read(AUTOTB_TVOUT_PC_res, AESL_token); // data
 
-			sc_bv<32> *res_pc_buffer = new sc_bv<32>[16];
+			sc_bv<32> *res_pc_buffer = new sc_bv<32>[26];
 			int i = 0;
 
 			while (AESL_token != "[[/transaction]]")
@@ -203,7 +203,7 @@ float res[16])
 					// {
 						// celement: res(31, 0)
 						// {
-							sc_lv<32>* res_lv0_0_15_1 = new sc_lv<32>[16];
+							sc_lv<32>* res_lv0_0_25_1 = new sc_lv<32>[26];
 						// }
 					// }
 
@@ -212,12 +212,12 @@ float res[16])
 						int hls_map_index = 0;
 						// celement: res(31, 0)
 						{
-							// carray: (0) => (15) @ (1)
-							for (int i_0 = 0; i_0 <= 15; i_0 += 1)
+							// carray: (0) => (25) @ (1)
+							for (int i_0 = 0; i_0 <= 25; i_0 += 1)
 							{
 								if (&(res[0]) != NULL) // check the null address if the c port is array or others
 								{
-									res_lv0_0_15_1[hls_map_index].range(31, 0) = sc_bv<32>(res_pc_buffer[hls_map_index].range(31, 0));
+									res_lv0_0_25_1[hls_map_index].range(31, 0) = sc_bv<32>(res_pc_buffer[hls_map_index].range(31, 0));
 									hls_map_index++;
 								}
 							}
@@ -229,18 +229,18 @@ float res[16])
 						int hls_map_index = 0;
 						// celement: res(31, 0)
 						{
-							// carray: (0) => (15) @ (1)
-							for (int i_0 = 0; i_0 <= 15; i_0 += 1)
+							// carray: (0) => (25) @ (1)
+							for (int i_0 = 0; i_0 <= 25; i_0 += 1)
 							{
 								// sub                    : i_0
 								// ori_name               : res[i_0]
 								// sub_1st_elem           : 0
 								// ori_name_1st_elem      : res[0]
 								// output_left_conversion : *(int*)&res[i_0]
-								// output_type_conversion : (res_lv0_0_15_1[hls_map_index]).to_uint64()
+								// output_type_conversion : (res_lv0_0_25_1[hls_map_index]).to_uint64()
 								if (&(res[0]) != NULL) // check the null address if the c port is array or others
 								{
-									*(int*)&res[i_0] = (res_lv0_0_15_1[hls_map_index]).to_uint64();
+									*(int*)&res[i_0] = (res_lv0_0_25_1[hls_map_index]).to_uint64();
 									hls_map_index++;
 								}
 							}
@@ -336,7 +336,7 @@ float res[16])
 		sprintf(tvin_w, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_w, tvin_w);
 
-		sc_bv<32>* w_tvin_wrapc_buffer = new sc_bv<32>[12544];
+		sc_bv<32>* w_tvin_wrapc_buffer = new sc_bv<32>[12704];
 
 		// RTL Name: w
 		{
@@ -345,8 +345,8 @@ float res[16])
 				int hls_map_index = 0;
 				// celement: w(31, 0)
 				{
-					// carray: (0) => (12543) @ (1)
-					for (int i_0 = 0; i_0 <= 12543; i_0 += 1)
+					// carray: (0) => (12703) @ (1)
+					for (int i_0 = 0; i_0 <= 12703; i_0 += 1)
 					{
 						// sub                   : i_0
 						// ori_name              : w[i_0]
@@ -367,13 +367,13 @@ float res[16])
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 12544; i++)
+		for (int i = 0; i < 12704; i++)
 		{
 			sprintf(tvin_w, "%s\n", (w_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_w, tvin_w);
 		}
 
-		tcl_file.set_num(12544, &tcl_file.w_depth);
+		tcl_file.set_num(12704, &tcl_file.w_depth);
 		sprintf(tvin_w, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_w, tvin_w);
 
@@ -384,7 +384,7 @@ float res[16])
 		sprintf(tvin_b, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_b, tvin_b);
 
-		sc_bv<32>* b_tvin_wrapc_buffer = new sc_bv<32>[16];
+		sc_bv<32>* b_tvin_wrapc_buffer = new sc_bv<32>[26];
 
 		// RTL Name: b
 		{
@@ -393,8 +393,8 @@ float res[16])
 				int hls_map_index = 0;
 				// celement: b(31, 0)
 				{
-					// carray: (0) => (15) @ (1)
-					for (int i_0 = 0; i_0 <= 15; i_0 += 1)
+					// carray: (0) => (25) @ (1)
+					for (int i_0 = 0; i_0 <= 25; i_0 += 1)
 					{
 						// sub                   : i_0
 						// ori_name              : b[i_0]
@@ -415,13 +415,13 @@ float res[16])
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 16; i++)
+		for (int i = 0; i < 26; i++)
 		{
 			sprintf(tvin_b, "%s\n", (b_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_b, tvin_b);
 		}
 
-		tcl_file.set_num(16, &tcl_file.b_depth);
+		tcl_file.set_num(26, &tcl_file.b_depth);
 		sprintf(tvin_b, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_b, tvin_b);
 
@@ -432,7 +432,7 @@ float res[16])
 		sprintf(tvin_res, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVIN_res, tvin_res);
 
-		sc_bv<32>* res_tvin_wrapc_buffer = new sc_bv<32>[16];
+		sc_bv<32>* res_tvin_wrapc_buffer = new sc_bv<32>[26];
 
 		// RTL Name: res
 		{
@@ -441,8 +441,8 @@ float res[16])
 				int hls_map_index = 0;
 				// celement: res(31, 0)
 				{
-					// carray: (0) => (15) @ (1)
-					for (int i_0 = 0; i_0 <= 15; i_0 += 1)
+					// carray: (0) => (25) @ (1)
+					for (int i_0 = 0; i_0 <= 25; i_0 += 1)
 					{
 						// sub                   : i_0
 						// ori_name              : res[i_0]
@@ -463,13 +463,13 @@ float res[16])
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 16; i++)
+		for (int i = 0; i < 26; i++)
 		{
 			sprintf(tvin_res, "%s\n", (res_tvin_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVIN_res, tvin_res);
 		}
 
-		tcl_file.set_num(16, &tcl_file.res_depth);
+		tcl_file.set_num(26, &tcl_file.res_depth);
 		sprintf(tvin_res, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVIN_res, tvin_res);
 
@@ -487,7 +487,7 @@ float res[16])
 		sprintf(tvout_res, "[[transaction]] %d\n", AESL_transaction);
 		aesl_fh.write(AUTOTB_TVOUT_res, tvout_res);
 
-		sc_bv<32>* res_tvout_wrapc_buffer = new sc_bv<32>[16];
+		sc_bv<32>* res_tvout_wrapc_buffer = new sc_bv<32>[26];
 
 		// RTL Name: res
 		{
@@ -496,8 +496,8 @@ float res[16])
 				int hls_map_index = 0;
 				// celement: res(31, 0)
 				{
-					// carray: (0) => (15) @ (1)
-					for (int i_0 = 0; i_0 <= 15; i_0 += 1)
+					// carray: (0) => (25) @ (1)
+					for (int i_0 = 0; i_0 <= 25; i_0 += 1)
 					{
 						// sub                   : i_0
 						// ori_name              : res[i_0]
@@ -518,13 +518,13 @@ float res[16])
 		}
 
 		// dump tv to file
-		for (int i = 0; i < 16; i++)
+		for (int i = 0; i < 26; i++)
 		{
 			sprintf(tvout_res, "%s\n", (res_tvout_wrapc_buffer[i]).to_string(SC_HEX).c_str());
 			aesl_fh.write(AUTOTB_TVOUT_res, tvout_res);
 		}
 
-		tcl_file.set_num(16, &tcl_file.res_depth);
+		tcl_file.set_num(26, &tcl_file.res_depth);
 		sprintf(tvout_res, "[[/transaction]] \n");
 		aesl_fh.write(AUTOTB_TVOUT_res, tvout_res);
 
@@ -539,8 +539,8 @@ float res[16])
 		// release memory allocation: "b"
 		delete [] tvin_b;
 		// release memory allocation: "res"
-		delete [] tvout_res;
 		delete [] tvin_res;
+		delete [] tvout_res;
 
 		AESL_transaction++;
 

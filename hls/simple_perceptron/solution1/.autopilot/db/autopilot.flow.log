@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1 opened at Sun Jun 14 17:46:48 CEST 2020
+INFO-FLOW: Workspace /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1 opened at Fri Jun 19 16:03:12 CEST 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -56,7 +56,7 @@ Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_
 Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7z020-clg400-1 
 Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
-Command       ap_part_info done; 1.24 sec.
+Command       ap_part_info done; 1.4 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute         get_default_platform 
@@ -72,7 +72,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 1.34 sec.
+Command     set_part done; 1.5 sec.
 Execute     ap_part_info -data single -name xc7z020-clg400-1 
 Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
@@ -101,7 +101,7 @@ Execute     config_compile -unsafe_math_optimizations=0
 INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
 INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
 INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
-Command   open_solution done; 1.51 sec.
+Command   open_solution done; 1.69 sec.
 Execute   set_part xc7z020-clg400-1 
 Execute     ap_part_info -name xc7z020-clg400-1 -data single -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
@@ -118,6 +118,7 @@ Execute     add_library xilinx/zynq/zynq_fpv6
 Execute       get_default_platform 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
 Execute     get_default_platform 
+Command   set_part done; 0.12 sec.
 Execute   create_clock -period 10 -name default 
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
@@ -157,92 +158,94 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls  -fno-exceptions  -D__llvm__  -E "simple_perceptron/core.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp" 
 INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-exceptions -D__llvm__ -E simple_perceptron/core.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2019.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp
-Command       clang done; 1.71 sec.
+Command       clang done; 1.83 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 3.94 sec.
+Command       tidy_31 done; 4.9 sec.
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "/opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp"  -o "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2019.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/useless.bc
-Command       clang done; 3.81 sec.
-INFO-FLOW: Done: GCC PP time: 9.5 seconds per iteration
+Command       clang done; 4.62 sec.
+INFO-FLOW: Done: GCC PP time: 11.3 seconds per iteration
 Execute       source /opt/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
 Execute       source /opt/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
 Execute         source /opt/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/try/try.tcl 
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp std=gnu++98 -directive=/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 3.38 sec.
+Command       tidy_31 done; 4.36 sec.
 INFO-FLOW: Running: tidy-3.1 CDT preprocess
 Execute       tidy_31 xilinx-directive2pragma /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp std=gnu++98 -directive=/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/all.directive.json 
 INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/all.directive.json -quiet -fix-errors /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 3.38 sec.
+Command       tidy_31 done; 3.99 sec.
 Execute       get_config_dataflow -strict_mode 
 Execute       ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/xilinx-dataflow-lawyer.core.pp.0.cpp.diag.yml /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/xilinx-dataflow-lawyer.core.pp.0.cpp.out.log 2> /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/xilinx-dataflow-lawyer.core.pp.0.cpp.err.log 
-Command       ap_eval done; 4.05 sec.
+Command       ap_eval done; 4.46 sec.
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp std=gnu++98 
 Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/tidy-3.1.core.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/tidy-3.1.core.pp.0.cpp.out.log 2> /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/tidy-3.1.core.pp.0.cpp.err.log 
-Command         ap_eval done; 7.12 sec.
+Command         ap_eval done; 7.51 sec.
 Execute         source /opt/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
 Execute           source /opt/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
 Execute         ap_eval exec -ignorestderr /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/xilinx-legacy-rewriter.core.pp.0.cpp.out.log 2> /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/xilinx-legacy-rewriter.core.pp.0.cpp.err.log 
-Command         ap_eval done; 2.84 sec.
-Command       tidy_31 done; 10.51 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 17.9 seconds per iteration
+Command         ap_eval done; 3.21 sec.
+Command       tidy_31 done; 11.33 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 19.8 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 5.4 sec.
+Command       tidy_31 done; 6.98 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 INFO-FLOW: Processing labels
 Execute       clang -src /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "/opt/Xilinx/Vivado/2019.2/common/technology/autopilot" -I "/opt/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.bc" 
 INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain /opt/Xilinx/Vivado/2019.2/lnx64/tools/gcc -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I /opt/Xilinx/Vivado/2019.2/common/technology/autopilot -I /opt/Xilinx/Vivado/2019.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.bc
-Command       clang done; 3.83 sec.
+Command       clang done; 4.54 sec.
 INFO-FLOW: Linking Debug ...
 Execute       llvm-ld /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/core.g.bc -hls-opt -except-internalize calcPerceptron -L/opt/Xilinx/Vivado/2019.2/lnx64/lib -lhlsm -lhlsmc++ -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 1.56 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 4117 ; free virtual = 21778
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 4117 ; free virtual = 21778
+Command       llvm-ld done; 1.93 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1802 ; free virtual = 23841
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1802 ; free virtual = 23841
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.pp.bc -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.pp.0.bc -f 
-Command         transform done; 0.2 sec.
+Command         transform done; 0.29 sec.
 Execute         llvm-ld /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.pp.0.bc -disable-opt -L/opt/Xilinx/Vivado/2019.2/lnx64/lib -lfloatconversion -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 1.27 sec.
+Command         llvm-ld done; 1.35 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top calcPerceptron -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g.0.bc -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
-Command         transform done; 0.21 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 4037 ; free virtual = 21715
+Command         transform done; 0.23 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1728 ; free virtual = 23765
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g.1.bc -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g.2.prechk.bc -f 
 INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:24) automatically.
-Command         transform done; 0.18 sec.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+Command         transform done; 0.19 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g.2.prechk.bc -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 4019 ; free virtual = 21697
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1708 ; free virtual = 23748
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.g.1.bc to /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
 Execute         transform -hls -tmp /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -ptrArgReplace -mem2reg -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -dce -global-constprop -deadargelim -mem2reg -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -dce -ptrArgReplace -mem2reg -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -dce -norm-name -function-inline -complex-op-raise -inst-simplify -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.o.1.bc -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.o.1.tmp.bc -f 
-INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:21) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:25) in function 'calcPerceptron' automatically.
 INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
-INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:24) automatically.
-Command         transform done; 0.23 sec.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+Command         transform done; 0.24 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.o.1.tmp.bc -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 3962 ; free virtual = 21648
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1670 ; free virtual = 23714
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.o.2.bc -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
-INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:19:14) in function 'calcPerceptron'.
-INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:24:23)
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 3962 ; free virtual = 21648
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (simple_perceptron/core.cpp:23:14) in function 'calcPerceptron' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:28:23)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1670 ; free virtual = 23713
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 2.24 sec.
-Command     elaborate done; 44.1 sec.
+Command       opt_and_import_c done; 2.51 sec.
+Command     elaborate done; 51.81 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
@@ -267,19 +270,18 @@ INFO: [HLS 200-10] -------------------------------------------------------------
 Execute       set_default_model calcPerceptron 
 Execute       schedule -model calcPerceptron 
 INFO: [SCHED 204-11] Starting scheduling ...
-INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln22) to 3 in order to utilize available DSP registers.
-INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
-WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
-   between 'fadd' operation ('sum', simple_perceptron/core.cpp:22) and 'select' operation ('select_ln22', simple_perceptron/core.cpp:22).
-WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
-   between 'fadd' operation ('sum', simple_perceptron/core.cpp:22) and 'select' operation ('select_ln22', simple_perceptron/core.cpp:22).
-WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
-   between 'fadd' operation ('sum', simple_perceptron/core.cpp:22) and 'select' operation ('select_ln22', simple_perceptron/core.cpp:22).
-WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
-   between 'fadd' operation ('sum', simple_perceptron/core.cpp:22) and 'select' operation ('select_ln22', simple_perceptron/core.cpp:22).
-INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'fadd' operation ('sum', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'fadd' operation ('sum', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'fadd' operation ('sum', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'fadd' operation ('sum', simple_perceptron/core.cpp:26).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 11.
 INFO: [SCHED 204-11] Finished scheduling.
-INFO: [HLS 200-111]  Elapsed time: 46.04 seconds; current allocated memory: 225.891 MB.
+INFO: [HLS 200-111]  Elapsed time: 54 seconds; current allocated memory: 225.849 MB.
 Execute       syn_report -verbosereport -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.verbose.sched.rpt 
 Execute       db_write -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.sched.adb -f 
 INFO-FLOW: Finish scheduling calcPerceptron.
@@ -291,7 +293,7 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 226.291 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 226.216 MB.
 Execute       syn_report -verbosereport -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.verbose.bind.rpt 
 Execute       db_write -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.bind.adb -f 
 INFO-FLOW: Finish binding calcPerceptron.
@@ -309,8 +311,10 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/x' to 'bram
 INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/w' to 'bram'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/b' to 'bram'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/res' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/inputs' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/neurons' to 's_axilite & ap_none'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'calcPerceptron' to 's_axilite & ap_ctrl_hs'.
-INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CRTL_BUS.
+INFO: [RTGEN 206-100] Bundling port 'return', 'inputs' and 'neurons' to AXI-Lite port CTRL_BUS.
 WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_WEN_A' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_Din_A' to 0.
 WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_WEN_A' to 0.
@@ -321,9 +325,8 @@ INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fadd_32ns_32ns_32_5
 INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'calcPerceptron'.
-INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 227.272 MB.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 227.194 MB.
 Execute       source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.rtl_wrap.cfg.tcl 
 Execute       gen_rtl calcPerceptron -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/syn/systemc/calcPerceptron -synmodules calcPerceptron 
 Execute       gen_rtl calcPerceptron -istop -style xilinx -f -lang vhdl -o /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/syn/vhdl/calcPerceptron 
@@ -353,19 +356,16 @@ INFO-FLOW: Found component calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.
 INFO-FLOW: Append model calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1
 INFO-FLOW: Found component calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.
 INFO-FLOW: Append model calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1
-INFO-FLOW: Found component calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1.
-INFO-FLOW: Append model calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1
-INFO-FLOW: Found component calcPerceptron_CRTL_BUS_s_axi.
-INFO-FLOW: Append model calcPerceptron_CRTL_BUS_s_axi
+INFO-FLOW: Found component calcPerceptron_CTRL_BUS_s_axi.
+INFO-FLOW: Append model calcPerceptron_CTRL_BUS_s_axi
 INFO-FLOW: Append model calcPerceptron
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1 calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1 calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1 calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1 calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1 calcPerceptron_CRTL_BUS_s_axi calcPerceptron
+INFO-FLOW: All models in this session: calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1 calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1 calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1 calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1 calcPerceptron_CTRL_BUS_s_axi calcPerceptron
 INFO-FLOW: To file: write model calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1
 INFO-FLOW: To file: write model calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1
 INFO-FLOW: To file: write model calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1
 INFO-FLOW: To file: write model calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1
-INFO-FLOW: To file: write model calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1
-INFO-FLOW: To file: write model calcPerceptron_CRTL_BUS_s_axi
+INFO-FLOW: To file: write model calcPerceptron_CTRL_BUS_s_axi
 INFO-FLOW: To file: write model calcPerceptron
 INFO-FLOW: Finished generating RTL model list.
 
@@ -401,6 +401,8 @@ Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/u
 Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.11 sec.
+Command       ap_source done; 0.11 sec.
 Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -419,12 +421,9 @@ Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info 
-Execute         source ./CRTL_BUS.slave.tcl 
+Execute         source ./CTRL_BUS.slave.tcl 
 Execute         is_m_axi_addr64 
-Command       ap_source done; 0.17 sec.
+Command       ap_source done; 0.13 sec.
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1
 Execute       source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl
@@ -499,8 +498,8 @@ Execute       ap_part_info -name xc7z020-clg400-1 -data info -quiet
 Execute       source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.constraint.tcl 
 Execute       source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
 INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=0
-INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=4
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=7 #gSsdmPorts=0
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=6
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=6 #gSsdmPorts=0
 Execute       source /opt/Xilinx/Vivado/2019.2/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
 Execute       source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
 Execute       source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
@@ -533,14 +532,14 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 3944 ; free virtual = 21646
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:53 ; elapsed = 00:00:55 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1696 ; free virtual = 23738
 INFO: [VHDL 208-304] Generating VHDL RTL for calcPerceptron.
 INFO: [VLOG 209-307] Generating Verilog RTL for calcPerceptron.
-Command     autosyn done; 1.26 sec.
-Command   csynth_design done; 45.36 sec.
-Command ap_source done; 47 sec.
+Command     autosyn done; 1.32 sec.
+Command   csynth_design done; 53.14 sec.
+Command ap_source done; 54.97 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1 opened at Sun Jun 14 17:49:50 CEST 2020
+INFO-FLOW: Workspace /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1 opened at Fri Jun 19 16:04:33 CEST 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -584,8 +583,8 @@ Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/uti
 Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.11 sec.
-Command     ap_source done; 0.11 sec.
+Command       ap_source done; 0.12 sec.
+Command     ap_source done; 0.12 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
@@ -600,7 +599,7 @@ Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_
 Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7z020-clg400-1 
 Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
-Command       ap_part_info done; 1.37 sec.
+Command       ap_part_info done; 1.5 sec.
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
 Execute         get_default_platform 
@@ -616,7 +615,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
 Execute       ap_part_info -name xc7z020-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 1.48 sec.
+Command     set_part done; 1.64 sec.
 Execute     ap_part_info -data single -name xc7z020-clg400-1 
 Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info 
@@ -645,233 +644,7 @@ Execute     config_compile -unsafe_math_optimizations=0
 INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
 INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
 INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
-Command   open_solution done; 1.65 sec.
-Execute   cosim_design -trace_level all 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
-INFO-FLOW: DBG:CMD: read_platform_lib /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl
-Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/common.gen 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/APCoreGen.gen 
-Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op.gen 
-Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/op_simcore.gen 
-Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/generic/autopilot/interface.gen 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
-Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
-INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.rtl_wrap.cfg.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     is_encrypted /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/weights.h 
-Execute     is_encrypted /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp 
-Execute     is_encrypted /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.cpp 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-INFO: [COSIM 212-47] Using XSIM for RTL simulation.
-INFO: [COSIM 212-14] Instrumenting C test bench ...
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-INFO-FLOW: TB processing: /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/test_core.cpp_pre.cpp
-Execute     tidy_31 xilinx-tb-xfmat /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/test_core.cpp_pre.cpp std=c++11 
-INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/test_core.cpp_pre.cpp -- -std=c++11 -fhls -ferror-limit=0
-Command     tidy_31 done; 4.89 sec.
-Execute     tidy_31 xilinx-tb31-process /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/test_core.cpp_pre.cpp.tb.cpp std=c++11 
-INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/test_core.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
-Command     tidy_31 done; 6.31 sec.
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-INFO-FLOW: TB processing: /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.cpp /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp
-Execute     tidy_31 xilinx-tb-xfmat /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp std=c++11 
-INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb-xfmat -quiet -fix-errors /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp -- -std=c++11 -fhls -ferror-limit=0
-Command     tidy_31 done; 4.84 sec.
-Execute     tidy_31 xilinx-tb31-process /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp.tb.cpp std=c++11 
-INFO-FLOW: exec /opt/Xilinx/Vivado/2019.2/lnx64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-tb31-process -quiet -fix-errors /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/core.cpp_pre.cpp.tb.cpp -- -std=c++11 -fhls -ferror-limit=0
-Command     tidy_31 done; 5.22 sec.
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/./sim/autowrap/testbench/tb.status.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/global.setting.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.rtl_wrap.cfg.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.rtl_wrap.cfg.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.rtl_wrap.cfg.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-Execute     source .run_sim.tcl 
-INFO: [COSIM 212-302] Starting C TB testing ... 
-Command     ap_source done; 0.42 sec.
-INFO: [COSIM 212-333] Generating C post check test bench ...
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-INFO: [COSIM 212-12] Generating RTL test bench ...
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source ../tv/cdatafile/ref.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source ../tv/cdatafile/ref.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
-Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
-Execute     source .run_sim.tcl 
-Execute       source check_sim.tcl 
-Execute       source .sim.status.tcl 
-INFO: [COSIM 212-323] Starting verilog simulation. 
-INFO: [COSIM 212-15] Starting XSIM ...
-INFO: [COSIM 212-316] Starting C post checking ...
-Command     ap_source done; 494.15 sec.
-INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
-INFO: [COSIM 212-211] II is measurable only when transaction number is greater than 1 in RTL simulation. Otherwise, they will be marked as all NA. If user wants to calculate them, please make sure there are at least 2 transactions in RTL simulation.
-Command   cosim_design done; 552.87 sec.
-Command ap_source done; 554.53 sec.
-Execute cleanup_all 
-INFO-FLOW: Workspace /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1 opened at Sun Jun 14 19:41:44 CEST 2020
-Execute     config_clock -quiet -name default -period 10 -default=false 
-INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
-Execute     open_platform DefaultPlatform 
-Execute     import_lib /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.lib 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.lib 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.lib 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.lib 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.lib 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.lib 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.lib 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.lib 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.lib 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.lib 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.lib 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/dsp48e1.hlp 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
-Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq.gen 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/plb46.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/fsl.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/axi4.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/nativeAXI4.gen 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.gen 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/dds_compiler.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/util.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.11 sec.
-Command     ap_source done; 0.11 sec.
-Execute     open_platform DefaultPlatform 
-Execute     import_lib /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.lib 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.hlp 
-Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx.hlp 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/target_info.tcl 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/xilinx_interface.hlp 
-Execute             source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/maxi.hlp 
-Execute             source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/interface/saxilite.hlp 
-Execute           source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.hlp 
-Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
-Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
-Execute     set_part xc7z020-clg400-1 
-Execute       ap_part_info -name xc7z020-clg400-1 -data single -quiet 
-Command       ap_part_info done; 1.38 sec.
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-Execute       add_library xilinx/zynq/zynq:xc7z020:-clg400:-1 
-Execute         get_default_platform 
-Execute         ap_part_info -data single -name xc7z020-clg400-1 
-Execute         ap_part_info -name xc7z020-clg400-1 -data resources 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info 
-Execute         config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
-Execute         ap_part_info -name xc7z020-clg400-1 -data info 
-Execute         config_chip_info -quiet -speed slow 
-Execute       add_library xilinx/zynq/zynq_fpv6 
-Execute         get_default_platform 
-INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
-Execute       ap_part_info -name xc7z020-clg400-1 -data info 
-Execute       get_default_platform 
-Command     set_part done; 1.49 sec.
-Execute     ap_part_info -data single -name xc7z020-clg400-1 
-Execute     ap_part_info -name xc7z020-clg400-1 -data resources 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-Execute     config_chip_info -quiet -resource {SLICE 13300} {LUT 53200} {FF 106400} {DSP48E 220} {BRAM 280} {URAM 0} 
-Execute     ap_part_info -name xc7z020-clg400-1 -data info 
-Execute     config_chip_info -quiet -speed slow 
-Execute     config_export -format=ip_catalog 
-Execute     config_export -rtl=verilog 
-Execute     config_export -vivado_optimization_level=0 
-Execute       get_config_export -vivado_impl_strategy 
-Execute       get_config_export -vivado_phys_opt 
-Execute     config_export -vivado_phys_opt=none 
-Execute     config_export -vivado_report_level=0 
-Execute     config_schedule -effort=medium 
-Execute     config_schedule -enable_dsp_full_reg=1 
-Execute     config_schedule -relax_ii_for_timing=1 
-Execute     config_schedule -verbose=0 
-Execute     config_compile -name_max_length=80 
-INFO: [XFORM 203-1161] The maximum of name length is set into 80.
-Execute     config_compile -no_signed_zeros=0 
-INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
-Execute     config_compile -pipeline_loops=64 
-INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
-Execute     config_compile -unsafe_math_optimizations=0 
-INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
-INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
-INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
-Command   open_solution done; 1.67 sec.
+Command   open_solution done; 1.81 sec.
 Execute   export_design -rtl verilog -format ip_catalog 
 Execute     get_config_export -acc 
 Execute     get_config_export -clock_margin 
@@ -924,6 +697,8 @@ Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/uti
 Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfft.gen 
 Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/ip/xfir.gen 
 Execute         source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.11 sec.
 Execute     source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -1066,7 +841,6 @@ Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet
 Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.constraint.tcl 
 Execute     source /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/.autopilot/db/calcPerceptron.tbgen.tcl 
-INFO-FLOW: DBG:CMD:       copy-tb-files /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/impl/.verilog/sim_tbs
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
 Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
@@ -1097,6 +871,6 @@ Execute       source /opt/Xilinx/Vivado/2019.2/common/technology/xilinx/common/x
 Execute     ap_part_info -name xc7z020-clg400-1 -data names -quiet 
 Execute     ap_part_info -name xc7z020-clg400-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:     exec /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/impl/ip/pack.sh
-Command   export_design done; 24.01 sec.
-Command ap_source done; 25.68 sec.
+Command   export_design done; 25.83 sec.
+Command ap_source done; 27.65 sec.
 Execute cleanup_all 

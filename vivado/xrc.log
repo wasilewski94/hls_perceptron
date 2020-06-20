@@ -1,8 +1,14 @@
-Mon Jun 15 22:24:57 2020: Server was asked to start on port: '39465'
-Mon Jun 15 22:24:57 2020: Server is using token UUID: '928891d7-7419-4e62-b2a1-82dd52bec458'
-Mon Jun 15 22:24:57 2020: Attempting to start server on port '39465'
-Mon Jun 15 22:24:57 2020: XRC main fifo: created main fifo '/tmp/xrcmain928891d7-7419-4e62-b2a1-82dd52bec458', fd read = 10
-Mon Jun 15 22:24:57 2020: Running Rule Check Server
-Mon Jun 15 22:24:57 2020: Version 1.5.1
-Mon Jun 15 22:24:58 2020: Rule Check Server: Accepted socket connection from client
-Mon Jun 15 22:24:58 2020: EXCHANGE_TOKEN received, server token: 928891d7-7419-4e62-b2a1-82dd52bec458, passed token: 928891d7-7419-4e62-b2a1-82dd52bec458
+Sat Jun 20 00:31:07 2020: Server was asked to start on port: '42297'
+Sat Jun 20 00:31:07 2020: Server is using token UUID: '4e2554ab-3201-4374-b99e-8cfacd6cbee8'
+Sat Jun 20 00:31:07 2020: Attempting to start server on port '42297'
+Sat Jun 20 00:31:07 2020: XRC main fifo: created main fifo '/tmp/xrcmain4e2554ab-3201-4374-b99e-8cfacd6cbee8', fd read = 11
+Sat Jun 20 00:31:07 2020: Running Rule Check Server
+Sat Jun 20 00:31:07 2020: Version 1.5.1
+Sat Jun 20 00:31:07 2020: Rule Check Server: Accepted socket connection from client
+Sat Jun 20 00:31:07 2020: EXCHANGE_TOKEN received, server token: 4e2554ab-3201-4374-b99e-8cfacd6cbee8, passed token: 4e2554ab-3201-4374-b99e-8cfacd6cbee8
+Sun Jun 21 00:11:28 2020: STOP_SERVER received, server token: 4e2554ab-3201-4374-b99e-8cfacd6cbee8, passed token: 4e2554ab-3201-4374-b99e-8cfacd6cbee8
+Sun Jun 21 00:11:28 2020: Socket received request to stop server.
+Sun Jun 21 00:11:28 2020: SERVER: destructor for server bound to port 42297
+Sun Jun 21 00:11:28 2020: XRC main fifo: Good unlink of /tmp/xrcmain4e2554ab-3201-4374-b99e-8cfacd6cbee8
+Sun Jun 21 00:11:28 2020: Server exiting with status 0.
+Sun Jun 21 00:11:28 2020: Closing log file.

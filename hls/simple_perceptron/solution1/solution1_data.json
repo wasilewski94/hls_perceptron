@@ -44,7 +44,7 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["12544"],
+        "arraySizes": ["12704"],
         "interfaceRef": "w"
       }
     },
@@ -54,7 +54,7 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["16"],
+        "arraySizes": ["26"],
         "interfaceRef": "b"
       }
     },
@@ -64,8 +64,26 @@
         "kinds": ["array"],
         "dataType": "float",
         "dataWidth": "32",
-        "arraySizes": ["16"],
+        "arraySizes": ["26"],
         "interfaceRef": "res"
+      }
+    },
+    "inputs": {
+      "index": "4",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_CTRL_BUS",
+        "registerRefs": ["inputs"]
+      }
+    },
+    "neurons": {
+      "index": "5",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_CTRL_BUS",
+        "registerRefs": ["neurons"]
       }
     }
   },
@@ -77,7 +95,7 @@
     "ClockPeriod": "10",
     "IsCombLogic": "0",
     "II": "x",
-    "Latency": "62763",
+    "Latency": "undef",
     "Uncertainty": "1.25"
   },
   "Xdc": {"OocClocks": ["create_clock -name ap_clk -period 10.000 [get_ports ap_clk]"]},
@@ -95,21 +113,19 @@
   "Files": {
     "CSource": ["..\/core.cpp"],
     "Vhdl": [
-      "impl\/vhdl\/calcPerceptron_CRTL_BUS_s_axi.vhd",
+      "impl\/vhdl\/calcPerceptron_CTRL_BUS_s_axi.vhd",
       "impl\/vhdl\/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd",
       "impl\/vhdl\/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd",
-      "impl\/vhdl\/calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1.vhd",
       "impl\/vhdl\/calcPerceptron.vhd"
     ],
     "Verilog": [
-      "impl\/verilog\/calcPerceptron_CRTL_BUS_s_axi.v",
+      "impl\/verilog\/calcPerceptron_CTRL_BUS_s_axi.v",
       "impl\/verilog\/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.v",
       "impl\/verilog\/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.v",
       "impl\/verilog\/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.v",
       "impl\/verilog\/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.v",
-      "impl\/verilog\/calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1.v",
       "impl\/verilog\/calcPerceptron.v"
     ],
     "SwDriver": [
@@ -165,7 +181,7 @@
       "ctype": {"CLK": {"Type": "bool"}},
       "bundle_name": "ap_clk",
       "bundle_role": "default",
-      "buses": "s_axi_CRTL_BUS",
+      "buses": "s_axi_CTRL_BUS",
       "reset": "ap_rst_n"
     },
     "ap_rst_n": {
@@ -211,7 +227,7 @@
     "interrupt": {
       "type": "interrupt",
       "ctype": {"INTERRUPT": {"Type": "bool"}},
-      "bundle_name": "CRTL_BUS",
+      "bundle_name": "CTRL_BUS",
       "bundle_role": "interrupt"
     },
     "res": {
@@ -247,13 +263,13 @@
         }
       }
     },
-    "s_axi_CRTL_BUS": {
+    "s_axi_CTRL_BUS": {
       "type": "axi4lite",
       "is_adaptor": "true",
       "mode": "slave",
-      "port_prefix": "s_axi_CRTL_BUS",
-      "param_prefix": "C_S_AXI_CRTL_BUS",
-      "addr_bits": "4",
+      "port_prefix": "s_axi_CTRL_BUS",
+      "param_prefix": "C_S_AXI_CTRL_BUS",
+      "addr_bits": "5",
       "registers": [
         {
           "offset": "0x00",
@@ -410,6 +426,36 @@
               "description": "Reserved.  0s on read."
             }
           ]
+        },
+        {
+          "offset": "0x10",
+          "name": "inputs",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of inputs",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "inputs",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of inputs"
+            }]
+        },
+        {
+          "offset": "0x18",
+          "name": "neurons",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of neurons",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "neurons",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of neurons"
+            }]
         }
       ],
       "ctype": {
@@ -433,10 +479,10 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "4"
+          "Width": "5"
         },
         "WDATA": {
-          "Type": "null",
+          "Type": "integer signed",
           "Width": "32"
         },
         "WSTRB": {
@@ -445,17 +491,17 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "4"
+          "Width": "5"
         },
         "RDATA": {
-          "Type": "null",
+          "Type": "integer signed",
           "Width": "32"
         }
       },
       "data_width": "32",
       "port_width": {
-        "ARADDR": "4",
-        "AWADDR": "4",
+        "ARADDR": "5",
+        "AWADDR": "5",
         "RDATA": "32",
         "WDATA": "32",
         "WSTRB": "4"
@@ -529,71 +575,71 @@
     }
   },
   "RtlPorts": {
-    "s_axi_CRTL_BUS_AWVALID": {
+    "s_axi_CTRL_BUS_AWVALID": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_AWREADY": {
+    "s_axi_CTRL_BUS_AWREADY": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_AWADDR": {
+    "s_axi_CTRL_BUS_AWADDR": {
       "dir": "in",
-      "width": "4"
+      "width": "5"
     },
-    "s_axi_CRTL_BUS_WVALID": {
+    "s_axi_CTRL_BUS_WVALID": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_WREADY": {
+    "s_axi_CTRL_BUS_WREADY": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_WDATA": {
+    "s_axi_CTRL_BUS_WDATA": {
       "dir": "in",
       "width": "32"
     },
-    "s_axi_CRTL_BUS_WSTRB": {
+    "s_axi_CTRL_BUS_WSTRB": {
       "dir": "in",
       "width": "4"
     },
-    "s_axi_CRTL_BUS_ARVALID": {
+    "s_axi_CTRL_BUS_ARVALID": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_ARREADY": {
+    "s_axi_CTRL_BUS_ARREADY": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_ARADDR": {
+    "s_axi_CTRL_BUS_ARADDR": {
       "dir": "in",
-      "width": "4"
+      "width": "5"
     },
-    "s_axi_CRTL_BUS_RVALID": {
+    "s_axi_CTRL_BUS_RVALID": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_RREADY": {
+    "s_axi_CTRL_BUS_RREADY": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_RDATA": {
+    "s_axi_CTRL_BUS_RDATA": {
       "dir": "out",
       "width": "32"
     },
-    "s_axi_CRTL_BUS_RRESP": {
+    "s_axi_CTRL_BUS_RRESP": {
       "dir": "out",
       "width": "2"
     },
-    "s_axi_CRTL_BUS_BVALID": {
+    "s_axi_CTRL_BUS_BVALID": {
       "dir": "out",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_BREADY": {
+    "s_axi_CTRL_BUS_BREADY": {
       "dir": "in",
       "width": "1"
     },
-    "s_axi_CRTL_BUS_BRESP": {
+    "s_axi_CTRL_BUS_BRESP": {
       "dir": "out",
       "width": "2"
     },
@@ -734,10 +780,10 @@
       }},
     "Metrics": {"calcPerceptron": {
         "Latency": {
-          "LatencyBest": "62763",
-          "LatencyAvg": "62763",
-          "LatencyWorst": "62763",
-          "PipelineII": "62764",
+          "LatencyBest": "",
+          "LatencyAvg": "",
+          "LatencyWorst": "",
+          "PipelineII": "",
           "PipelineDepth": "",
           "PipelineType": "none"
         },
@@ -748,16 +794,23 @@
         },
         "Loops": [{
             "Name": "Loop 1",
-            "TripCount": "12544",
-            "Latency": "62761",
-            "PipelineII": "5",
-            "PipelineDepth": "47"
+            "TripCount": "",
+            "Latency": "",
+            "PipelineII": "",
+            "PipelineDepth": "",
+            "Loops": [{
+                "Name": "Loop 1.1",
+                "TripCount": "",
+                "Latency": "",
+                "PipelineII": "5",
+                "PipelineDepth": "11"
+              }]
           }],
         "Area": {
           "BRAM_18K": "0",
-          "DSP48E": "21",
-          "FF": "1517",
-          "LUT": "2330",
+          "DSP48E": "20",
+          "FF": "1555",
+          "LUT": "2527",
           "URAM": "0"
         }
       }}
@@ -772,7 +825,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-06-14 17:47:35 CEST",
+    "Time": "2020-06-19 16:04:07 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

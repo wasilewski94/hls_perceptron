@@ -7,7 +7,7 @@
 
 module calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1
 #(parameter
-    ID         = 3,
+    ID         = 8,
     NUM_STAGE  = 10,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

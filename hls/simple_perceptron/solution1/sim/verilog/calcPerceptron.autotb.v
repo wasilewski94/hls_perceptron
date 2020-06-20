@@ -36,11 +36,11 @@ module `AUTOTB_TOP;
 
 parameter AUTOTB_TRANSACTION_NUM = 1;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 62763;
+parameter LATENCY_ESTIMATION = 63917;
 parameter LENGTH_x = 784;
-parameter LENGTH_w = 12544;
-parameter LENGTH_b = 16;
-parameter LENGTH_res = 16;
+parameter LENGTH_w = 12704;
+parameter LENGTH_b = 26;
+parameter LENGTH_res = 26;
 
 task read_token;
     input integer fp;
@@ -102,6 +102,13 @@ wire [31 : 0] w_DIN_A;
 wire [31 : 0] w_DOUT_A;
 wire  w_CLK_A;
 wire  w_RST_A;
+wire [31 : 0] w_ADDR_B;
+wire  w_EN_B;
+wire [3 : 0] w_WEN_B;
+wire [31 : 0] w_DIN_B;
+wire [31 : 0] w_DOUT_B;
+wire  w_CLK_B;
+wire  w_RST_B;
 wire [31 : 0] b_ADDR_A;
 wire  b_EN_A;
 wire [3 : 0] b_WEN_A;
@@ -116,6 +123,13 @@ wire [31 : 0] res_DIN_A;
 wire [31 : 0] res_DOUT_A;
 wire  res_CLK_A;
 wire  res_RST_A;
+wire [31 : 0] res_ADDR_B;
+wire  res_EN_B;
+wire [3 : 0] res_WEN_B;
+wire [31 : 0] res_DIN_B;
+wire [31 : 0] res_DOUT_B;
+wire  res_CLK_B;
+wire  res_RST_B;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -177,6 +191,13 @@ wire ap_rst_n_n;
     .w_Dout_A(w_DOUT_A),
     .w_Clk_A(w_CLK_A),
     .w_Rst_A(w_RST_A),
+    .w_Addr_B(w_ADDR_B),
+    .w_EN_B(w_EN_B),
+    .w_WEN_B(w_WEN_B),
+    .w_Din_B(w_DIN_B),
+    .w_Dout_B(w_DOUT_B),
+    .w_Clk_B(w_CLK_B),
+    .w_Rst_B(w_RST_B),
     .b_Addr_A(b_ADDR_A),
     .b_EN_A(b_EN_A),
     .b_WEN_A(b_WEN_A),
@@ -190,7 +211,14 @@ wire ap_rst_n_n;
     .res_Din_A(res_DIN_A),
     .res_Dout_A(res_DOUT_A),
     .res_Clk_A(res_CLK_A),
-    .res_Rst_A(res_RST_A));
+    .res_Rst_A(res_RST_A),
+    .res_Addr_B(res_ADDR_B),
+    .res_EN_B(res_EN_B),
+    .res_WEN_B(res_WEN_B),
+    .res_Din_B(res_DIN_B),
+    .res_Dout_B(res_DOUT_B),
+    .res_Clk_B(res_CLK_B),
+    .res_Rst_B(res_RST_B));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -338,6 +366,11 @@ assign bramw_EN_A = w_EN_A;
 assign w_DOUT_A = bramw_Dout_A;
 assign bramw_WEN_A = 0;
 assign bramw_Din_A = 0;
+assign bramw_Clk_B = w_CLK_B;
+assign bramw_Rst_B = w_RST_B;
+assign bramw_Addr_B = w_ADDR_B;
+assign bramw_EN_B = w_EN_B;
+assign w_DOUT_B = bramw_Dout_B;
 assign bramw_WEN_B = 0;
 assign bramw_Din_B = 0;
 assign bramw_ready=    ready;
@@ -425,12 +458,18 @@ assign bramres_Clk_A = res_CLK_A;
 assign bramres_Rst_A = res_RST_A;
 assign bramres_Addr_A = res_ADDR_A;
 assign bramres_EN_A = res_EN_A;
+assign res_DOUT_A = bramres_Dout_A;
 assign bramres_WEN_A = res_WEN_A;
 assign bramres_Din_A = res_DIN_A;
+assign bramres_Clk_B = res_CLK_B;
+assign bramres_Rst_B = res_RST_B;
+assign bramres_Addr_B = res_ADDR_B;
+assign bramres_EN_B = res_EN_B;
+assign res_DOUT_B = bramres_Dout_B;
 assign bramres_WEN_B = 0;
 assign bramres_Din_B = 0;
-assign bramres_ready= ready_initial | bramres_done;
-assign bramres_done =    AESL_done_delay;
+assign bramres_ready= ready;
+assign bramres_done = interface_done;
 
 
 AESL_axi_slave_CRTL_BUS AESL_AXI_SLAVE_CRTL_BUS(

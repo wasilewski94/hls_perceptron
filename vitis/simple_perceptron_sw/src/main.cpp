@@ -10,10 +10,18 @@
 #include <xparameters.h>
 #include <math.h>
 
+#include "weights.h"
+#include "inputs.h"
+#include "biases.h"
+
+extern const float weights[12704];
+extern const float X[7840];
+extern const float biases[26];
 
 float *XVecHW = (float *)0x40000000;
 float *resHW = (float *)0x42000000;
 float *WVecHW = (float *)0x44000000;
+float *bHW = (float *)0x46000000;
 
 
 XCalcperceptron calcPerceptron;
@@ -30,87 +38,73 @@ void init_PerceptronCore() {
 	}
 }
 
+void init_load_data(int sample) {
 
-unsigned int float_to_u32(float val) {
-	unsigned int result;
-	union float_bytes {
-		float v;
-		unsigned char bytes[4];
-	} data;
-	data.v = val;
+	for(int i=0; i<784; i++) {
+		XVecHW[i] = X[i + sample*784];
+	}
 
-	result = (data.bytes[3] << 24) + (data.bytes[2] <<16) + (data.bytes[1] << 8) + (data.bytes[0]);
-	return result;
+	for(int i=0; i<12704; i++) {
+		WVecHW[i] = weights[i];
+	}
+
+	for(int i=0; i<26; i++) {
+		bHW[i] = biases[i];
+	}
+
+	XCalcperceptron_Set_inputs(&calcPerceptron, 784);
+	XCalcperceptron_Set_neurons(&calcPerceptron, 16);
+//	printf("getInputs = %d\n", XCalcperceptron_Get_inputs(&calcPerceptron));
+//	printf("getNeurons = %d\n", XCalcperceptron_Get_neurons(&calcPerceptron));
+
+}
+
+void load_2_layer_data() {
+
+	// save the 1st layer output to XVecHW variable
+	for(int i=0; i<16; i++) {
+		XVecHW[i] = resHW[i];
+	}
+
+	// set weights for layer 2
+	for(int i=0; i<160; i++) {
+		WVecHW[i] = weights[i+12544];
+	}
+
+	// set biases for layer 2
+	for(int i=0; i<10; i++) {
+		bHW[i] = biases[i + 16];
+	}
+
+	XCalcperceptron_Set_inputs(&calcPerceptron, 16);
+	XCalcperceptron_Set_neurons(&calcPerceptron, 10);
 }
 
 int main() {
 
-	printf("Perceptron test\n");
-
+printf("Neural Network MNIST test for 10 digits\n");
 	init_PerceptronCore();
 
-	float bias = -0.008;
+for (int j=0; j<10;j++) {
 
-	float Weights[100] = {
-			0.246981, 0.117405, 0.093909, 0.084148, -0.062933,
-			0.059469, -0.001097, -0.069079, -0.082620, 0.022078,
-			-0.121930, -0.148492, -0.147534, -0.038065, -0.001991,
-			-0.002789, 0.016306, 0.075648, 0.073643, 0.047817,
-			-0.068736, -0.130499, 0.183542, -0.010175, -0.146292,
-			-0.201574, 0.025235, 0.054847, 0.168662, 0.081872,
-			0.039366, 0.116663, 0.040949, 0.054335, 0.029128,
-			0.062554, -0.033703, 0.008813, -0.026387, -0.079323,
-			-0.160883, -0.083825, 0.012166, -0.037238, -0.053369,
-			-0.117194, -0.021056, -0.101078, -0.129772, -0.071997,
-			0.016805, -0.112021, -0.192751, -0.178410, -0.144378,
-			-0.122421, 0.014276, 0.198882, 0.118526, 0.005658,
-			0.020629, 0.040992, 0.035095, -0.012944, 0.046719,
-			0.040889, -0.174580, -0.048117, -0.023244, 0.120926,
-			0.076765, -0.024464, -0.087209, -0.026035, -0.160679,
-			-0.210912, -0.293178, -0.227376, 0.034730, -0.219927,
-			-0.123490, -0.010861, -0.207343, -0.161672, -0.163780,
-			0.150256, 0.051043, 0.054785, -0.071503, -0.055345,
-			0.090890, 0.031127, 0.018844, -0.194341, -0.108139,
-			0.128574, 0.116233, 0.146617, 0.111831, 0.166209
-	};
-
-	float X[100] = {
-			0.000000, 0.000000, 0.329412, 0.725490, 0.623529,
-			0.592157, 0.235294, 0.141176, 0.000000, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.870588, 0.996078, 0.996078, 0.996078, 0.996078,
-			0.945098, 0.776471, 0.776471, 0.776471, 0.776471,
-			0.776471, 0.776471, 0.776471, 0.776471, 0.666667,
-			0.203922, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.262745, 0.447059,
-			0.282353, 0.447059, 0.639216, 0.890196, 0.996078,
-			0.882353, 0.996078, 0.996078, 0.996078, 0.980392,
-			0.898039, 0.996078, 0.996078, 0.549020, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.000000, 0.000000, 0.000000, 0.000000, 0.000000,
-			0.000000, 0.066667, 0.258824, 0.054902, 0.262745,
-			0.262745, 0.262745, 0.231373, 0.082353, 0.925490
-	};
-
-	for(int idx=0; idx<100; idx++) {
-		XVecHW[idx] = X[idx];
-		WVecHW[idx] = Weights[idx];
-	}
-
-	XCalcperceptron_Set_bias(&calcPerceptron, float_to_u32(bias));
+	printf("load initial data for sample %d\n", j);
+	init_load_data(j); //set sample 0-9
 
 	XCalcperceptron_Start(&calcPerceptron);
 	while(!XCalcperceptron_IsDone(&calcPerceptron));
 
-	for (int idx = 0; idx < 100; idx++) {
-		printf("HW: %f\n", resHW[idx]);
+
+	load_2_layer_data();
+
+	XCalcperceptron_Start(&calcPerceptron);
+	while(!XCalcperceptron_IsDone(&calcPerceptron));
+
+	for (int i = 0; i < 10; i++) {
+		printf("result[%d]: %f\n", i, resHW[i]);
 	}
 
+}
+	printf("End of test\n");
 
 	return 0;
 }

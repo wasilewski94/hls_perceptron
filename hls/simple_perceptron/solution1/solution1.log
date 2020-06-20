@@ -367,3 +367,1108 @@ Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 20845 ; free virtual = 28389
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 20845 ; free virtual = 28389
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 20767 ; free virtual = 28328
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 20748 ; free virtual = 28311
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:25) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:38) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 20694 ; free virtual = 28261
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:23:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:28:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:41:28)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 20693 ; free virtual = 28261
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln26) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 672 ; free virtual = 24503
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 672 ; free virtual = 24503
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 593 ; free virtual = 24449
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 574 ; free virtual = 24431
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:25) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:38) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 520 ; free virtual = 24380
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:23:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:28:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:41:28)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 517 ; free virtual = 24380
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln26) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln41', simple_perceptron/core.cpp:41) of variable 'tmp_4', simple_perceptron/core.cpp:41 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 755 ; free virtual = 24433
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 755 ; free virtual = 24433
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 691 ; free virtual = 24369
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 673 ; free virtual = 24352
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:25) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 620 ; free virtual = 24303
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:23:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:28:23)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 619 ; free virtual = 24302
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln26) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 45.55 seconds; current allocated memory: 225.871 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 226.271 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/x' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/w' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/b' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/res' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'calcPerceptron' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CRTL_BUS.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/b_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/b_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calcPerceptron'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 227.297 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.25 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 612 ; free virtual = 24300
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 811 ; free virtual = 24268
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 811 ; free virtual = 24268
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 712 ; free virtual = 24206
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 702 ; free virtual = 24188
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:24) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:38) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:28) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 642 ; free virtual = 24139
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:22:15) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:28:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:42:26)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 641 ; free virtual = 24138
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln25) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'select' operation ('select_ln25', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'select' operation ('select_ln25', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'select' operation ('select_ln25', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'select' operation ('select_ln25', simple_perceptron/core.cpp:25).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:39) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load_14', simple_perceptron/core.cpp:39) on array 'res'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1535 ; free virtual = 25042
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1535 ; free virtual = 25042
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1451 ; free virtual = 24978
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:29) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1433 ; free virtual = 24960
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:25) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:37) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:37) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:39) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:29) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1378 ; free virtual = 24910
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:23:15) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res2' (simple_perceptron/core.cpp:43:24)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1377 ; free virtual = 24909
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln26) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:26) and 'select' operation ('select_ln26', simple_perceptron/core.cpp:26).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('w2_load', simple_perceptron/core.cpp:40) on array 'w2' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'w2'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 8, Depth = 58.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 45.68 seconds; current allocated memory: 227.915 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.3 seconds; current allocated memory: 229.324 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/x' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/w' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/w2' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/b' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/res' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/res2' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'calcPerceptron' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CRTL_BUS.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w2_WEN_A' to 0.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 2801 ; free virtual = 26388
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 2801 ; free virtual = 26388
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2733 ; free virtual = 26329
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2715 ; free virtual = 26312
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:23) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:34) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:34) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2661 ; free virtual = 26261
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:21:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:26:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:39:28)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2659 ; free virtual = 26260
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln24) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1698 ; free virtual = 26049
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:40 ; elapsed = 00:00:41 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1698 ; free virtual = 26049
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1629 ; free virtual = 25986
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1611 ; free virtual = 25969
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:23) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:34) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:34) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1558 ; free virtual = 25919
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:21:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:26:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:39:28)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1557 ; free virtual = 25919
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln24) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 2288 ; free virtual = 26567
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:41 ; elapsed = 00:00:43 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 2288 ; free virtual = 26567
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2195 ; free virtual = 26495
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2192 ; free virtual = 26480
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:23) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2135 ; free virtual = 26427
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:21:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:26:23)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2132 ; free virtual = 26425
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln24) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 45.42 seconds; current allocated memory: 225.908 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 226.307 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/x' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/w' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/b' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/res' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'calcPerceptron' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CRTL_BUS.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/b_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/b_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calcPerceptron'.
+INFO: [HLS 200-111]  Elapsed time: 0.13 seconds; current allocated memory: 227.319 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.25 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 2118 ; free virtual = 26397
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1917 ; free virtual = 26556
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:40 ; elapsed = 00:00:42 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1917 ; free virtual = 26556
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1838 ; free virtual = 26494
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1820 ; free virtual = 26477
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:23) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1768 ; free virtual = 26428
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:21:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:26:23)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:42 ; elapsed = 00:00:44 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1768 ; free virtual = 26428
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln24) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 43.95 seconds; current allocated memory: 225.911 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 226.311 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/x' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/w' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/b' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'calcPerceptron/res' to 'bram'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'calcPerceptron' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'return' to AXI-Lite port CRTL_BUS.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/x_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/w_Din_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/b_WEN_A' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'calcPerceptron/b_Din_A' to 0.
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'calcPerceptron'.
+INFO: [HLS 200-111]  Elapsed time: 0.11 seconds; current allocated memory: 227.321 MB.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 115.25 MHz
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1790 ; free virtual = 26426
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 787 ; free virtual = 24554
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 787 ; free virtual = 24554
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 721 ; free virtual = 24501
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 703 ; free virtual = 24483
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:23) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:34) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:34) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:36) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:26) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 620 ; free virtual = 24432
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:21:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:26:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:39:28)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 618 ; free virtual = 24431
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln24) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:24) and 'select' operation ('select_ln24', simple_perceptron/core.cpp:24).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln39', simple_perceptron/core.cpp:39) of variable 'tmp_4', simple_perceptron/core.cpp:39 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:37) on array 'res'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1356 ; free virtual = 24153
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:45 ; elapsed = 00:00:46 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 1356 ; free virtual = 24153
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1271 ; free virtual = 24091
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:27) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1251 ; free virtual = 24073
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:24) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:37) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:37) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:39) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:27) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:47 ; elapsed = 00:00:48 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1204 ; free virtual = 24023
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop-1' (simple_perceptron/core.cpp:22:14) in function 'calcPerceptron'.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:27:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:42:28)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 967.262 ; gain = 526.355 ; free physical = 1203 ; free virtual = 24022
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP48 latency (root=mul_ln25) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'select' operation ('select_ln25', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'select' operation ('select_ln25', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'select' operation ('select_ln25', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 1): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'select' operation ('select_ln25', simple_perceptron/core.cpp:25).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 47.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020-clg400-1'
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1171] Pipeline the innermost loop with trip count more than 64 or its parent loop when its trip count is less than or equal 64.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1172] Optimizing floating point zeros and discarding its signedness.
+INFO: [XFORM 203-1173] Reordering floating point operations aggressively.
+INFO: [XFORM 203-1176] Optimizing floating point comparison without checking NaN.
+INFO: [XFORM 203-1161] The maximum of name length is set into 80.
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+INFO: [HLS 200-10] Analyzing design file 'simple_perceptron/core.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 2087 ; free virtual = 24008
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 963.941 ; gain = 523.035 ; free physical = 2087 ; free virtual = 24008
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 967.266 ; gain = 526.359 ; free physical = 2011 ; free virtual = 23947
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:27) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 967.266 ; gain = 526.359 ; free physical = 1991 ; free virtual = 23929
+INFO: [XFORM 203-510] Pipelining loop 'Loop-2.1' (simple_perceptron/core.cpp:24) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'Loop-3' (simple_perceptron/core.cpp:37) in function 'calcPerceptron' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop-2' (simple_perceptron/core.cpp:37) in function 'calcPerceptron' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1' (simple_perceptron/core.cpp:39) in function 'calcPerceptron' completely with a factor of 16.
+INFO: [XFORM 203-602] Inlining function 'exp_reduce_::exp' into 'hls::expf' (/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20) automatically.
+INFO: [XFORM 203-602] Inlining function 'hls::expf' into 'calcPerceptron' (simple_perceptron/core.cpp:27) automatically.
+INFO: [XFORM 203-11] Balancing expressions in function 'calcPerceptron' (simple_perceptron/core.cpp:3)...16 expression(s) balanced.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 967.266 ; gain = 526.359 ; free physical = 1937 ; free virtual = 23879
+WARNING: [XFORM 203-542] Cannot flatten a loop nest 'Loop-1' (simple_perceptron/core.cpp:22:14) in function 'calcPerceptron' : 
+
+the outer loop is not a perfect loop because there is nontrivial logic before entering the inner loop.
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:27:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (simple_perceptron/core.cpp:42:28)
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 967.266 ; gain = 526.359 ; free physical = 1936 ; free virtual = 23879
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'calcPerceptron' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'calcPerceptron' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1.1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 1)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'fadd' operation ('sum', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 2)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'fadd' operation ('sum', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 3)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'fadd' operation ('sum', simple_perceptron/core.cpp:25).
+WARNING: [SCHED 204-68] Unable to enforce a carried constraint (II = 4)
+   between 'fadd' operation ('sum', simple_perceptron/core.cpp:25) and 'fadd' operation ('sum', simple_perceptron/core.cpp:25).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 5, Depth = 11.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 2'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 35, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-68] The II Violation in module 'calcPerceptron' (Loop: Loop 2): Unable to enforce a carried dependence constraint (II = 51, distance = 1, offset = 1)
+   between 'store' operation ('res_addr_16_write_ln42', simple_perceptron/core.cpp:42) of variable 'tmp_4', simple_perceptron/core.cpp:42 on array 'res' and 'load' operation ('res_load_14', simple_perceptron/core.cpp:40) on array 'res'.
+WARNING: [SCHED 204-69] Unable to schedule 'load' operation ('w_load_13', simple_perceptron/core.cpp:40) on array 'w' due to limited memory ports. Please consider using a memory core with more ports or partitioning the array 'w'.
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================
+==============================================================
+Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.2 (64-bit)
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+==============================================================

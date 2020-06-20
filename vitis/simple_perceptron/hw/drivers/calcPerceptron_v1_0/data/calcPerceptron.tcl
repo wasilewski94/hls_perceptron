@@ -6,16 +6,16 @@ proc generate {drv_handle} {
     xdefine_include_file $drv_handle "xparameters.h" "XCalcperceptron" \
         "NUM_INSTANCES" \
         "DEVICE_ID" \
-        "C_S_AXI_CRTL_BUS_BASEADDR" \
-        "C_S_AXI_CRTL_BUS_HIGHADDR"
+        "C_S_AXI_CTRL_BUS_BASEADDR" \
+        "C_S_AXI_CTRL_BUS_HIGHADDR"
 
     xdefine_config_file $drv_handle "xcalcperceptron_g.c" "XCalcperceptron" \
         "DEVICE_ID" \
-        "C_S_AXI_CRTL_BUS_BASEADDR"
+        "C_S_AXI_CTRL_BUS_BASEADDR"
 
     xdefine_canonical_xpars $drv_handle "xparameters.h" "XCalcperceptron" \
         "DEVICE_ID" \
-        "C_S_AXI_CRTL_BUS_BASEADDR" \
-        "C_S_AXI_CRTL_BUS_HIGHADDR"
+        "C_S_AXI_CTRL_BUS_BASEADDR" \
+        "C_S_AXI_CTRL_BUS_HIGHADDR"
 }
 

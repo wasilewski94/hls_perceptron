@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="calcPerceptron" xd:componentRef="calcPerceptron" xd:initiationInterval="62764" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
-  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CRTL_BUS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
+<xd:acceleratorMap xmlns:xd="http://www.xilinx.com/xidane" xd:functionName="calcPerceptron" xd:componentRef="calcPerceptron" xd:initiationInterval="x" xd:clockPeriod="10.000" xd:sequential="true" xd:hostMachine="64" xd:reset="control">
+  <xd:controlReg xd:name="control" xd:interfaceRef="s_axi_CTRL_BUS" xd:busTypeRef="axilite" xd:type="generic_axi_lite" xd:offset="0x0"/>
   <xd:arg xd:name="x[]" xd:originalName="x" xd:direction="in" xd:interfaceRef="x_PORTA" xd:busTypeRef="bram" xd:arraySize="784" xd:dataWidth="32"/>
-  <xd:arg xd:name="w[]" xd:originalName="w" xd:direction="in" xd:interfaceRef="w_PORTA" xd:busTypeRef="bram" xd:arraySize="12544" xd:dataWidth="32"/>
-  <xd:arg xd:name="b[]" xd:originalName="b" xd:direction="in" xd:interfaceRef="b_PORTA" xd:busTypeRef="bram" xd:arraySize="16" xd:dataWidth="32"/>
-  <xd:arg xd:name="res[]" xd:originalName="res" xd:direction="out" xd:interfaceRef="res_PORTA" xd:busTypeRef="bram" xd:arraySize="16" xd:dataWidth="32"/>
-  <xd:latencyEstimates xd:best-case="62763" xd:worst-case="62763" xd:average-case="62763"/>
-  <xd:resourceEstimates xd:LUT="2330" xd:FF="1517" xd:BRAM="0" xd:DSP="21"/>
+  <xd:arg xd:name="w[]" xd:originalName="w" xd:direction="in" xd:interfaceRef="w_PORTA" xd:busTypeRef="bram" xd:arraySize="12704" xd:dataWidth="32"/>
+  <xd:arg xd:name="b[]" xd:originalName="b" xd:direction="in" xd:interfaceRef="b_PORTA" xd:busTypeRef="bram" xd:arraySize="26" xd:dataWidth="32"/>
+  <xd:arg xd:name="res[]" xd:originalName="res" xd:direction="out" xd:interfaceRef="res_PORTA" xd:busTypeRef="bram" xd:arraySize="26" xd:dataWidth="32"/>
+  <xd:arg xd:name="inputs" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_CTRL_BUS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="neurons" xd:originalName="neurons" xd:direction="in" xd:interfaceRef="s_axi_CTRL_BUS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
+  <xd:resourceEstimates xd:LUT="2527" xd:FF="1555" xd:BRAM="0" xd:DSP="20"/>
 </xd:acceleratorMap>

@@ -26875,9 +26875,11 @@ namespace hls {
 };
 # 2 "simple_perceptron/core.cpp" 2
 
-void calcPerceptron(float x[784], float w[12544], float b[16], float res[16])
-{_ssdm_SpecArrayDimSize(x, 784);_ssdm_SpecArrayDimSize(w, 12544);_ssdm_SpecArrayDimSize(b, 16);_ssdm_SpecArrayDimSize(res, 16);
-_ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "CRTL_BUS", "", "", 0, 0, 0, 0, "", "");
+void calcPerceptron(float x[784], float w[12704], float b[26], float res[26], int inputs, int neurons)
+{_ssdm_SpecArrayDimSize(x, 784);_ssdm_SpecArrayDimSize(w, 12704);_ssdm_SpecArrayDimSize(b, 26);_ssdm_SpecArrayDimSize(res, 26);
+_ssdm_op_SpecInterface(0, "s_axilite", 0, 0, "", 0, 0, "CTRL_BUS", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(inputs, "s_axilite", 0, 0, "", 0, 0, "CTRL_BUS", "", "", 0, 0, 0, 0, "", "");
+_ssdm_op_SpecInterface(neurons, "s_axilite", 0, 0, "", 0, 0, "CTRL_BUS", "", "", 0, 0, 0, 0, "", "");
 
 _ssdm_op_SpecInterface(x, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
 _ssdm_op_SpecInterface(w, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", "");
@@ -26887,17 +26889,19 @@ _ssdm_op_SpecInterface(b, "bram", 0, 0, "", 0, 0, "", "", "", 0, 0, 0, 0, "", ""
 
 
 
+
 float sum = 0.0;
 
 
 
-for(int j = 0; j<16; j++){
 
- for (int idx = 0; idx < 784; idx++) {
-   sum += x[idx] * w[idx + 784*j];
+for(int j = 0; j<neurons; j++){
+
+ for (int i = 0; i < inputs; i++) {
+   sum += x[i] * w[i + inputs*j];
   }
   res[j] = 1.0 / (1 + hls::expf(-( sum + b[j])));
   sum = 0.0;
 }
-
+# 45 "simple_perceptron/core.cpp"
 }

@@ -23,7 +23,7 @@ set Const1 "0"
 set Volatile1 "0"
 set Pointer1 "0"
 set Reference1 "0"
-set Dims1 [list 12544]
+set Dims1 [list 12704]
 set Interface1 "wire"
 set DataType1 "float"
 set Port1 [list $PortName1 $Interface1 $DataType1 $Pointer1 $Dims1 $Const1 $Volatile1 $ArrayOpt1]
@@ -35,7 +35,7 @@ set Const2 "0"
 set Volatile2 "0"
 set Pointer2 "0"
 set Reference2 "0"
-set Dims2 [list 16]
+set Dims2 [list 26]
 set Interface2 "wire"
 set DataType2 "float"
 set Port2 [list $PortName2 $Interface2 $DataType2 $Pointer2 $Dims2 $Const2 $Volatile2 $ArrayOpt2]
@@ -47,11 +47,35 @@ set Const3 "0"
 set Volatile3 "0"
 set Pointer3 "0"
 set Reference3 "0"
-set Dims3 [list 16]
+set Dims3 [list 26]
 set Interface3 "wire"
 set DataType3 "float"
 set Port3 [list $PortName3 $Interface3 $DataType3 $Pointer3 $Dims3 $Const3 $Volatile3 $ArrayOpt3]
 lappend PortList $Port3
+set PortName4 "inputs"
+set BitWidth4 "32"
+set ArrayOpt4 ""
+set Const4 "0"
+set Volatile4 "0"
+set Pointer4 "0"
+set Reference4 "0"
+set Dims4 [list 0]
+set Interface4 "wire"
+set DataType4 "int"
+set Port4 [list $PortName4 $Interface4 $DataType4 $Pointer4 $Dims4 $Const4 $Volatile4 $ArrayOpt4]
+lappend PortList $Port4
+set PortName5 "neurons"
+set BitWidth5 "32"
+set ArrayOpt5 ""
+set Const5 "0"
+set Volatile5 "0"
+set Pointer5 "0"
+set Reference5 "0"
+set Dims5 [list 0]
+set Interface5 "wire"
+set DataType5 "int"
+set Port5 [list $PortName5 $Interface5 $DataType5 $Pointer5 $Dims5 $Const5 $Volatile5 $ArrayOpt5]
+lappend PortList $Port5
 set globalAPint "" 
 set returnAPInt "" 
 set hasCPPAPInt 0 

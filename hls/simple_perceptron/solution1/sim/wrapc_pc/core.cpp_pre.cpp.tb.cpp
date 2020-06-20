@@ -83577,7 +83577,7 @@ namespace hls {
 };
 # 2 "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.cpp" 2
 
-void calcPerceptron(float x[784], float w[12544], float b[16], float res[16])
+void calcPerceptron(float x[784], float w[12704], float b[26], volatile float res[26])
 {
 #pragma HLS INTERFACE s_axilite port=return bundle=CRTL_BUS
 
@@ -83590,16 +83590,38 @@ void calcPerceptron(float x[784], float w[12544], float b[16], float res[16])
 
 
 float sum = 0.0;
+volatile int valid = 0;
+
+
 
 
 
 for(int j = 0; j<16; j++){
 
- for (int idx = 0; idx < 784; idx++) {
-   sum += x[idx] * w[idx + 784*j];
+ for (int i = 0; i < 784; i++) {
+   sum += x[i] * w[i + 784*j];
   }
   res[j] = 1.0 / (1 + hls::expf(-( sum + b[j])));
   sum = 0.0;
+
+ if(j == 15) { valid = 1;}
 }
+
+
+if(valid == 1) {
+ sum = 0.0;
+
+ for(int j = 0; j<10; j++){
+
+  for (int i = 0; i < 16; i++) {
+    sum += res[i] * w[12544 + i + 16*j];
+  }
+  res[j + 16] = 1.0 / (1 + hls::expf(-( sum + b[j + 16])));
+  sum = 0.0;
+ }
+
+}
+
+
 
 }

@@ -1,6 +1,814 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Jun 19 16:05:31 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006191516) to (Rev. 2006191604)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_calcPerceptron_0_0'.
+
+
+-Upgrade has removed interface 's_axi_CRTL_BUS'
+
+-Upgrade has added interface 's_axi_CTRL_BUS' (xilinx.com:interface:aximm:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_calcPerceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 's_axi_CRTL_BUS_ARADDR'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_ARREADY'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_ARVALID'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_AWADDR'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_AWREADY'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_AWVALID'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_BREADY'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_BRESP'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_BVALID'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_RDATA'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_RREADY'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_RRESP'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_RVALID'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_WDATA'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_WREADY'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_WSTRB'
+
+-Upgrade has removed port 's_axi_CRTL_BUS_WVALID'
+
+-Upgrade has added port 's_axi_CTRL_BUS_ARADDR'
+
+-Upgrade has added port 's_axi_CTRL_BUS_ARREADY'
+
+-Upgrade has added port 's_axi_CTRL_BUS_ARVALID'
+
+-Upgrade has added port 's_axi_CTRL_BUS_AWADDR'
+
+-Upgrade has added port 's_axi_CTRL_BUS_AWREADY'
+
+-Upgrade has added port 's_axi_CTRL_BUS_AWVALID'
+
+-Upgrade has added port 's_axi_CTRL_BUS_BREADY'
+
+-Upgrade has added port 's_axi_CTRL_BUS_BRESP'
+
+-Upgrade has added port 's_axi_CTRL_BUS_BVALID'
+
+-Upgrade has added port 's_axi_CTRL_BUS_RDATA'
+
+-Upgrade has added port 's_axi_CTRL_BUS_RREADY'
+
+-Upgrade has added port 's_axi_CTRL_BUS_RRESP'
+
+-Upgrade has added port 's_axi_CTRL_BUS_RVALID'
+
+-Upgrade has added port 's_axi_CTRL_BUS_WDATA'
+
+-Upgrade has added port 's_axi_CTRL_BUS_WREADY'
+
+-Upgrade has added port 's_axi_CTRL_BUS_WSTRB'
+
+-Upgrade has added port 's_axi_CTRL_BUS_WVALID'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Jun 19 15:17:59 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006191427) to (Rev. 2006191516)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_calcPerceptron_0_0'.
+
+
+-Upgrade has removed interface 'res_PORTB'
+
+-Upgrade has removed interface 'w_PORTB'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_calcPerceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'res_Addr_B'
+
+-Upgrade has removed port 'res_Clk_B'
+
+-Upgrade has removed port 'res_Din_B'
+
+-Upgrade has removed port 'res_Dout_B'
+
+-Upgrade has removed port 'res_EN_B'
+
+-Upgrade has removed port 'res_Rst_B'
+
+-Upgrade has removed port 'res_WEN_B'
+
+-Upgrade has removed port 'w_Addr_B'
+
+-Upgrade has removed port 'w_Clk_B'
+
+-Upgrade has removed port 'w_Din_B'
+
+-Upgrade has removed port 'w_Dout_B'
+
+-Upgrade has removed port 'w_EN_B'
+
+-Upgrade has removed port 'w_Rst_B'
+
+-Upgrade has removed port 'w_WEN_B'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Jun 19 14:28:10 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006191304) to (Rev. 2006191427)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Jun 19 13:08:55 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006191126) to (Rev. 2006191304)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Jun 19 11:27:18 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006191010) to (Rev. 2006191126)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_calcPerceptron_0_0'.
+
+
+-Upgrade has added interface 'res_PORTB' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'w_PORTB' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_calcPerceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'res_Addr_B'
+
+-Upgrade has added port 'res_Clk_B'
+
+-Upgrade has added port 'res_Din_B'
+
+-Upgrade has added port 'res_Dout_B'
+
+-Upgrade has added port 'res_EN_B'
+
+-Upgrade has added port 'res_Rst_B'
+
+-Upgrade has added port 'res_WEN_B'
+
+-Upgrade has added port 'w_Addr_B'
+
+-Upgrade has added port 'w_Clk_B'
+
+-Upgrade has added port 'w_Din_B'
+
+-Upgrade has added port 'w_Dout_B'
+
+-Upgrade has added port 'w_EN_B'
+
+-Upgrade has added port 'w_Rst_B'
+
+-Upgrade has added port 'w_WEN_B'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Jun 19 10:10:55 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006190109) to (Rev. 2006191010)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Jun 19 01:10:56 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006190105) to (Rev. 2006190109)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_calcPerceptron_0_0'.
+
+
+-Upgrade has removed interface 'res_PORTB'
+
+-Upgrade has removed interface 'w_PORTB'
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_calcPerceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'res_Addr_B'
+
+-Upgrade has removed port 'res_Clk_B'
+
+-Upgrade has removed port 'res_Din_B'
+
+-Upgrade has removed port 'res_Dout_B'
+
+-Upgrade has removed port 'res_EN_B'
+
+-Upgrade has removed port 'res_Rst_B'
+
+-Upgrade has removed port 'res_WEN_B'
+
+-Upgrade has removed port 'w_Addr_B'
+
+-Upgrade has removed port 'w_Clk_B'
+
+-Upgrade has removed port 'w_Din_B'
+
+-Upgrade has removed port 'w_Dout_B'
+
+-Upgrade has removed port 'w_EN_B'
+
+-Upgrade has removed port 'w_Rst_B'
+
+-Upgrade has removed port 'w_WEN_B'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Fri Jun 19 01:05:59 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006182352) to (Rev. 2006190105)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Thu Jun 18 23:53:59 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006182332) to (Rev. 2006182352)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_calcPerceptron_0_0'.
+
+
+-Upgrade has removed interface 'res2_PORTA'
+
+-Upgrade has removed interface 'res_address0'
+
+-Upgrade has removed interface 'res_address1'
+
+-Upgrade has removed interface 'res_d0'
+
+-Upgrade has removed interface 'res_q0'
+
+-Upgrade has removed interface 'res_q1'
+
+-Upgrade has removed interface 'w2_PORTA'
+
+-Upgrade has removed interface 'w2_PORTB'
+
+-Upgrade has added interface 'res_PORTA' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'res_PORTB' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'w_PORTB' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_calcPerceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'res2_Addr_A'
+
+-Upgrade has removed port 'res2_Clk_A'
+
+-Upgrade has removed port 'res2_Din_A'
+
+-Upgrade has removed port 'res2_Dout_A'
+
+-Upgrade has removed port 'res2_EN_A'
+
+-Upgrade has removed port 'res2_Rst_A'
+
+-Upgrade has removed port 'res2_WEN_A'
+
+-Upgrade has removed port 'res_address0'
+
+-Upgrade has removed port 'res_address1'
+
+-Upgrade has removed port 'res_ce0'
+
+-Upgrade has removed port 'res_ce1'
+
+-Upgrade has removed port 'res_d0'
+
+-Upgrade has removed port 'res_q0'
+
+-Upgrade has removed port 'res_q1'
+
+-Upgrade has removed port 'res_we0'
+
+-Upgrade has removed port 'w2_Addr_A'
+
+-Upgrade has removed port 'w2_Addr_B'
+
+-Upgrade has removed port 'w2_Clk_A'
+
+-Upgrade has removed port 'w2_Clk_B'
+
+-Upgrade has removed port 'w2_Din_A'
+
+-Upgrade has removed port 'w2_Din_B'
+
+-Upgrade has removed port 'w2_Dout_A'
+
+-Upgrade has removed port 'w2_Dout_B'
+
+-Upgrade has removed port 'w2_EN_A'
+
+-Upgrade has removed port 'w2_EN_B'
+
+-Upgrade has removed port 'w2_Rst_A'
+
+-Upgrade has removed port 'w2_Rst_B'
+
+-Upgrade has removed port 'w2_WEN_A'
+
+-Upgrade has removed port 'w2_WEN_B'
+
+-Upgrade has added port 'res_Addr_A'
+
+-Upgrade has added port 'res_Addr_B'
+
+-Upgrade has added port 'res_Clk_A'
+
+-Upgrade has added port 'res_Clk_B'
+
+-Upgrade has added port 'res_Din_A'
+
+-Upgrade has added port 'res_Din_B'
+
+-Upgrade has added port 'res_Dout_A'
+
+-Upgrade has added port 'res_Dout_B'
+
+-Upgrade has added port 'res_EN_A'
+
+-Upgrade has added port 'res_EN_B'
+
+-Upgrade has added port 'res_Rst_A'
+
+-Upgrade has added port 'res_Rst_B'
+
+-Upgrade has added port 'res_WEN_A'
+
+-Upgrade has added port 'res_WEN_B'
+
+-Upgrade has added port 'w_Addr_B'
+
+-Upgrade has added port 'w_Clk_B'
+
+-Upgrade has added port 'w_Din_B'
+
+-Upgrade has added port 'w_Dout_B'
+
+-Upgrade has added port 'w_EN_B'
+
+-Upgrade has added port 'w_Rst_B'
+
+-Upgrade has added port 'w_WEN_B'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Thu Jun 18 23:33:46 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006182213) to (Rev. 2006182332)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_calcPerceptron_0_0'.
+
+
+-Upgrade has removed interface 'res_PORTA'
+
+-Upgrade has removed interface 'res_PORTB'
+
+-Upgrade has removed interface 'w_PORTB'
+
+-Upgrade has added interface 'res2_PORTA' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'res_address0' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'res_address1' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'res_d0' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'res_q0' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'res_q1' (xilinx.com:signal:data:1.0)
+
+-Upgrade has added interface 'w2_PORTA' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'w2_PORTB' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_calcPerceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has removed port 'res_Addr_A'
+
+-Upgrade has removed port 'res_Addr_B'
+
+-Upgrade has removed port 'res_Clk_A'
+
+-Upgrade has removed port 'res_Clk_B'
+
+-Upgrade has removed port 'res_Din_A'
+
+-Upgrade has removed port 'res_Din_B'
+
+-Upgrade has removed port 'res_Dout_A'
+
+-Upgrade has removed port 'res_Dout_B'
+
+-Upgrade has removed port 'res_EN_A'
+
+-Upgrade has removed port 'res_EN_B'
+
+-Upgrade has removed port 'res_Rst_A'
+
+-Upgrade has removed port 'res_Rst_B'
+
+-Upgrade has removed port 'res_WEN_A'
+
+-Upgrade has removed port 'res_WEN_B'
+
+-Upgrade has removed port 'w_Addr_B'
+
+-Upgrade has removed port 'w_Clk_B'
+
+-Upgrade has removed port 'w_Din_B'
+
+-Upgrade has removed port 'w_Dout_B'
+
+-Upgrade has removed port 'w_EN_B'
+
+-Upgrade has removed port 'w_Rst_B'
+
+-Upgrade has removed port 'w_WEN_B'
+
+-Upgrade has added port 'res2_Addr_A'
+
+-Upgrade has added port 'res2_Clk_A'
+
+-Upgrade has added port 'res2_Din_A'
+
+-Upgrade has added port 'res2_Dout_A'
+
+-Upgrade has added port 'res2_EN_A'
+
+-Upgrade has added port 'res2_Rst_A'
+
+-Upgrade has added port 'res2_WEN_A'
+
+-Upgrade has added port 'res_address0'
+
+-Upgrade has added port 'res_address1'
+
+-Upgrade has added port 'res_ce0'
+
+-Upgrade has added port 'res_ce1'
+
+-Upgrade has added port 'res_d0'
+
+-Upgrade has added port 'res_q0'
+
+-Upgrade has added port 'res_q1'
+
+-Upgrade has added port 'res_we0'
+
+-Upgrade has added port 'w2_Addr_A'
+
+-Upgrade has added port 'w2_Addr_B'
+
+-Upgrade has added port 'w2_Clk_A'
+
+-Upgrade has added port 'w2_Clk_B'
+
+-Upgrade has added port 'w2_Din_A'
+
+-Upgrade has added port 'w2_Din_B'
+
+-Upgrade has added port 'w2_Dout_A'
+
+-Upgrade has added port 'w2_Dout_B'
+
+-Upgrade has added port 'w2_EN_A'
+
+-Upgrade has added port 'w2_EN_B'
+
+-Upgrade has added port 'w2_Rst_A'
+
+-Upgrade has added port 'w2_Rst_B'
+
+-Upgrade has added port 'w2_WEN_A'
+
+-Upgrade has added port 'w2_WEN_B'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Thu Jun 18 22:15:47 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006181638) to (Rev. 2006182213)
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Thu Jun 18 16:40:19 2020
+| Host         : legion running 64-bit Ubuntu 18.04.4 LTS
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_1_calcPerceptron_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_1_calcPerceptron_0_0 (xilinx.com:hls:calcPerceptron:1.0) from (Rev. 2006141941) to (Rev. 2006181638)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Interface Information
+------------------------
+
+Detected external interface differences while upgrading 'design_1_calcPerceptron_0_0'.
+
+
+-Upgrade has added interface 'res_PORTB' (xilinx.com:interface:bram:1.0)
+
+-Upgrade has added interface 'w_PORTB' (xilinx.com:interface:bram:1.0)
+
+
+3. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_1_calcPerceptron_0_0'. These changes may impact your design.
+
+
+-Upgrade has added port 'res_Addr_B'
+
+-Upgrade has added port 'res_Clk_B'
+
+-Upgrade has added port 'res_Din_B'
+
+-Upgrade has added port 'res_Dout_B'
+
+-Upgrade has added port 'res_EN_B'
+
+-Upgrade has added port 'res_Rst_B'
+
+-Upgrade has added port 'res_WEN_B'
+
+-Upgrade has added port 'w_Addr_B'
+
+-Upgrade has added port 'w_Clk_B'
+
+-Upgrade has added port 'w_Din_B'
+
+-Upgrade has added port 'w_Dout_B'
+
+-Upgrade has added port 'w_EN_B'
+
+-Upgrade has added port 'w_Rst_B'
+
+-Upgrade has added port 'w_WEN_B'
+
+
+
+
+
+
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
 | Date         : Sun Jun 14 19:45:19 2020
 | Host         : legion running 64-bit Ubuntu 18.04.4 LTS
 | Command      : upgrade_ip

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <hls_math.h>
-void calcPerceptron(float x[784], float w[12544], float b[16], float res[16]);
+void calcPerceptron(float x[784], float w[12704], float b[26], float res[26], int inputs, int neurons);
 
 int main()
 {
@@ -80,21 +80,22 @@ int main()
 			0.000000, 0.000000, 0.000000
 		};
 
-	float WVec[12544] = {
+	float WVec[12704] = {
 #include "weights.h"
 		};
 
-	float res[16];
+	float res[26];
 
-	float b[16] = {-0.7458543,0.27427137,0.18666893,0.44869614,-0.7834328,0.5154182,-0.23622452,1.1819165,-0.3144916,0.43130285,-0.071744345,0.1845918,0.38713002,-0.056436814,-1.1368202,0.5369312,};
+	float b[26] = {0.12564191, 0.22573280, 0.18799211, 0.12878287, 0.70825469, -0.20359279, -0.12273013, -0.18484776, 1.20270431, 0.10504688, 0.99904370, 0.02720368, -0.32905170, -0.88461262, 0.38789693, -0.00049191, -1.17638707, -1.18829846, -0.90494120, -0.97184116, -1.11504745, -0.73442352, -1.15790367, -1.35286653, -1.06330061, -0.64813447};
 
 	// Call the DUT
-	calcPerceptron(XVec, WVec, b, res);
+	calcPerceptron(XVec, WVec, b, res, 784, 16);
 
 	// Print the results
-	for (int idx = 0; idx < 16; idx++)
+	for (int i = 0; i < 26; i++)
 	{
-		printf("Result[%d]=%f\n",idx,res[idx]);
+		printf("Result[%d]=%f\n", i%16, res[i]);
 	}
+
 	return 0;
 }

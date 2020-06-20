@@ -37,12 +37,12 @@ typedef uint32_t u32;
 #else
 typedef struct {
     u16 DeviceId;
-    u32 Crtl_bus_BaseAddress;
+    u32 Ctrl_bus_BaseAddress;
 } XCalcperceptron_Config;
 #endif
 
 typedef struct {
-    u32 Crtl_bus_BaseAddress;
+    u32 Ctrl_bus_BaseAddress;
     u32 IsReady;
 } XCalcperceptron;
 
@@ -84,8 +84,10 @@ u32 XCalcperceptron_IsReady(XCalcperceptron *InstancePtr);
 void XCalcperceptron_EnableAutoRestart(XCalcperceptron *InstancePtr);
 void XCalcperceptron_DisableAutoRestart(XCalcperceptron *InstancePtr);
 
-void XCalcperceptron_Set_bias(XCalcperceptron *InstancePtr, u32 Data);
-u32 XCalcperceptron_Get_bias(XCalcperceptron *InstancePtr);
+void XCalcperceptron_Set_inputs(XCalcperceptron *InstancePtr, u32 Data);
+u32 XCalcperceptron_Get_inputs(XCalcperceptron *InstancePtr);
+void XCalcperceptron_Set_neurons(XCalcperceptron *InstancePtr, u32 Data);
+u32 XCalcperceptron_Get_neurons(XCalcperceptron *InstancePtr);
 
 void XCalcperceptron_InterruptGlobalEnable(XCalcperceptron *InstancePtr);
 void XCalcperceptron_InterruptGlobalDisable(XCalcperceptron *InstancePtr);

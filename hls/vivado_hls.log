@@ -1,5 +1,5 @@
 INFO: [HLS 200-10] Running '/opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/vivado_hls'
-INFO: [HLS 200-10] For user 'wask' on host 'legion' (Linux_x86_64 version 5.3.0-59-generic) on Sun Jun 14 19:41:44 CEST 2020
+INFO: [HLS 200-10] For user 'wask' on host 'legion' (Linux_x86_64 version 5.3.0-59-generic) on Fri Jun 19 16:04:33 CEST 2020
 INFO: [HLS 200-10] On os Ubuntu 18.04.4 LTS
 INFO: [HLS 200-10] In directory '/home/wask/workspace/mgr/hls_perceptron/hls'
 Sourcing Tcl script '/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/export.tcl'
@@ -39,4 +39,4 @@ INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'calcPerceptron_ap
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 14 19:42:06 2020...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 19 16:04:57 2020...

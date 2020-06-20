@@ -4,30 +4,21 @@
 #include <sys/mman.h>
 #include <fcntl.h>
 
+#define XCALCPERCEPTRON_CTRL_BUS_ADDR_INPUTS_DATA  0x10
+#define XCALCPERCEPTRON_CTRL_BUS_ADDR_NEURONS_DATA 0x18
+
+#define XIL_COMPONENT_IS_READY     0x11111111U
 
 int main()
 {
     //files with weights, input, and biases
-    FILE *f_data;
+    FILE *f_weights;
     FILE *f_input;
     FILE *f_bias;
 
     float buffer;
 
-    if ((f_data = fopen("/tmp/weights.txt", "r")) == NULL) {
-        printf ("Can't open file: weights.txt\n");
-        return 0;
-    }
-
-    if ((f_input = fopen("/tmp/input.txt", "r")) == NULL) {
-        printf ("Can't open file: input.txt\n");
-        return 0;
-    }
-
-    if ((f_bias = fopen("/tmp/biases1.txt", "r")) == NULL) {
-        printf ("Can't open file: biases.txt\n");
-        return 0;
-    }
+    char *input_filenames[10] = {"/tmp/x0.txt","/tmp/x1.txt", "/tmp/x2.txt","/tmp/x3.txt", "/tmp/x4.txt","/tmp/x5.txt", "/tmp/x6.txt","/tmp/x7.txt", "/tmp/x8.txt","/tmp/x9.txt", };
 
     int fd_x;
     int fd_w;
@@ -104,7 +95,10 @@ int main()
         printf("Mmap calcPerceptron call failure.\n");
         return -1;
     }
-    volatile unsigned *regCrtl = (unsigned int *)(calcPerceptron_ptr);
+    volatile unsigned *regCtrl = (unsigned int *)(calcPerceptron_ptr);
+    volatile unsigned *reg_inputs = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_INPUTS_DATA);
+    volatile unsigned *reg_neurons = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_NEURONS_DATA);
+
 
     res_bram_ptr = mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, fd_res, 0);
     if (res_bram_ptr == MAP_FAILED) {
@@ -120,59 +114,141 @@ int main()
     }
     volatile float *bHW = (float *)(b_bram_ptr);
 
-
-    void bm_IP_Start() {
-    	unsigned int data = (*regCrtl & 0x80);
-    	*regCrtl = (data | 0x01);
+    void IP_Start() {
+    	unsigned int data = (*regCtrl & 0x80);
+    	*regCtrl = (data | 0x01);
     }
 
-    unsigned int bm_IP_IsDone() {
-    	unsigned int data = *regCrtl;
+    unsigned int IP_IsDone() {
+    	unsigned int data = *regCtrl;
     	return ((data >> 1) & 0x1);
     }
 
-    printf("Setting weigths values.\n");
-    int i = 0;
-    while (!feof (f_data)) {
-        fscanf (f_data, "%f", &buffer);
-        WVecHW[i] = buffer;
-        i++;
+    unsigned int IP_IsReady() {
+    	unsigned int data = *regCtrl;
+    	return ((data) & 0x1);
     }
-    fclose (f_data);
 
-
-    printf("Setting input values.\n");
-    i = 0;
-    while (!feof (f_input)) {
-        fscanf (f_input, "%f", &buffer);
-        XVecHW[i] = buffer;
-        i++;
+    void IP_set_inputs(volatile unsigned int data) {
+        // while(!(IP_IsReady() == XIL_COMPONENT_IS_READY));
+        *reg_inputs = data;
     }
-    fclose (f_input);
 
-
-    printf("Setting biases values.\n");
-    i = 0;
-    while (!feof (f_bias)) {
-        fscanf (f_bias, "%f", &buffer);
-        bHW[i] = buffer;
-        i++;
+    void IP_set_neurons(volatile unsigned int data) {
+        // while(!(IP_IsReady() == XIL_COMPONENT_IS_READY));
+        *reg_neurons = data;
     }
-    fclose (f_bias);
+
+    int load_digit_file(int n_sample) {
+
+        if ((f_input = fopen(input_filenames[n_sample], "r")) == NULL) {
+            printf ("Can't open file: %s\n", input_filenames[n_sample]);
+            return 0;
+        }
+
+        printf("Setting input values.\n");
+        int i = 0;
+        while (!feof (f_input)) {
+            fscanf (f_input, "%f", &buffer);
+            XVecHW[i] = buffer;
+            // printf("inputs[%d] %f\n", i, XVecHW[i]);
+            i++;
+        }
+
+        fclose (f_input);
+        return 1;
+    }
+
+    int init_load_data() {
+
+        if ((f_weights = fopen("/tmp/weights.txt", "r")) == NULL) {
+            printf ("Can't open file: weights.txt\n");
+            return 0;
+        }
+
+        printf("Setting weigths values.\n");
+        int i = 0;
+        while (!feof (f_weights)) {
+            fscanf (f_weights, "%f", &buffer);
+            WVecHW[i] = buffer;
+            i++;
+        }
+        fclose (f_weights);
+
+        if ((f_bias = fopen("/tmp/biases.txt", "r")) == NULL) {
+            printf ("Can't open file: biases.txt\n");
+            return 0;
+        }
+
+        printf("Setting biases values.\n");
+        i = 0;
+        while (!feof (f_bias)) {
+            fscanf (f_bias, "%f", &buffer);
+            bHW[i] = buffer;
+            i++;
+        }
+        fclose (f_bias);
+        return 1;
+    }
+
+    void load_2_layer_data() {
+        // set biases for layer 2
+        for(int i=0; i<10; i++) {
+            bHW[i] = bHW[i + 16];
+        }
+
+        // set weights for layer 2
+        for(int i=0; i<160; i++) {
+            WVecHW[i] = WVecHW[i+12544];
+        }
+
+        // save the 1st layer output to XVecHW variable
+        for(int i=0; i<16; i++) {
+            XVecHW[i] = result[i];
+        }
+    }
+
+// ---------------------------Start calculation----------------------
 
 
-    bm_IP_Start();
-    while(!bm_IP_IsDone());
+    for(int sample=0; sample<10; sample++) {
 
-    printf("All neurons from layer 1 calculated\n");
+        printf("load initial data for sample %d\n", sample);
+        if(!load_digit_file(sample)) {
+            return 0;
+        };
 
-	for (int i = 0; i < 16; i++) {
-		printf("Results: %f\n", result[i]);
-	}
+        if(!init_load_data()) {
+            return 0;
+        };
 
+        int inputs = 784;
+        int neurons = 16;
 
-    // todo 2nd layer, open files biases2.txt i weights2.txt and calculate the output
- // I might need another ip core
+        IP_set_inputs(inputs);
+        IP_set_neurons(neurons);
+
+        IP_Start();
+        while(!IP_IsDone());
+
+    // ----------------------------2nd layer--------------------------------
+
+        load_2_layer_data();
+
+        inputs = 16;
+        neurons = 10;
+
+        IP_set_inputs(16);
+        IP_set_neurons(10);
+
+        IP_Start();
+        while(!IP_IsDone());
+
+    	for (int i = 0; i < 10; i++) {
+    		printf("Results[%d]: %f\n", i, result[i]);
+    	}
+
+    }
 
 	printf("End of test\n");
 

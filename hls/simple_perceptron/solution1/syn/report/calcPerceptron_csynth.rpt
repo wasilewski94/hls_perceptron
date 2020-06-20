@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'calcPerceptron'
 ================================================================
-* Date:           Sun Jun 14 17:47:35 2020
+* Date:           Fri Jun 19 16:04:06 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        simple_perceptron
@@ -25,24 +25,25 @@
 
 + Latency: 
     * Summary: 
-    +---------+---------+----------+----------+-------+-------+---------+
-    |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
-    |   min   |   max   |    min   |    max   |  min  |  max  |   Type  |
-    +---------+---------+----------+----------+-------+-------+---------+
-    |    62763|    62763| 0.628 ms | 0.628 ms |  62763|  62763|   none  |
-    +---------+---------+----------+----------+-------+-------+---------+
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |        ?|        ?|         ?|         ?|    ?|    ?|   none  |
+    +---------+---------+----------+----------+-----+-----+---------+
 
     + Detail: 
         * Instance: 
         N/A
 
         * Loop: 
-        +----------+---------+---------+----------+-----------+-----------+-------+----------+
-        |          |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
-        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
-        +----------+---------+---------+----------+-----------+-----------+-------+----------+
-        |- Loop 1  |    62761|    62761|        47|          5|          1|  12544|    yes   |
-        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |             |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name  |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Loop 1     |        ?|        ?|         ?|          -|          -|     ?|    no    |
+        | + Loop 1.1  |        ?|        ?|        11|          5|          1|     ?|    yes   |
+        +-------------+---------+---------+----------+-----------+-----------+------+----------+
 
 
 
@@ -53,15 +54,15 @@
 +-----------------+---------+-------+--------+-------+-----+
 |       Name      | BRAM_18K| DSP48E|   FF   |  LUT  | URAM|
 +-----------------+---------+-------+--------+-------+-----+
-|DSP              |        -|      1|       -|      -|    -|
-|Expression       |        -|      -|       0|    169|    -|
+|DSP              |        -|      -|       -|      -|    -|
+|Expression       |        -|      -|       0|    225|    -|
 |FIFO             |        -|      -|       -|      -|    -|
-|Instance         |        0|     20|     896|   1892|    -|
+|Instance         |        0|     20|     972|   2020|    -|
 |Memory           |        -|      -|       -|      -|    -|
-|Multiplexer      |        -|      -|       -|    173|    -|
-|Register         |        0|      -|     621|     96|    -|
+|Multiplexer      |        -|      -|       -|    282|    -|
+|Register         |        -|      -|     583|      -|    -|
 +-----------------+---------+-------+--------+-------+-----+
-|Total            |        0|     21|    1517|   2330|    0|
+|Total            |        0|     20|    1555|   2527|    0|
 +-----------------+---------+-------+--------+-------+-----+
 |Available        |      280|    220|  106400|  53200|    0|
 +-----------------+---------+-------+--------+-------+-----+
@@ -73,21 +74,17 @@
     +-----------------------------------------------------+--------------------------------------------------+---------+-------+-----+-----+-----+
     |                       Instance                      |                      Module                      | BRAM_18K| DSP48E|  FF | LUT | URAM|
     +-----------------------------------------------------+--------------------------------------------------+---------+-------+-----+-----+-----+
-    |calcPerceptron_CRTL_BUS_s_axi_U                      |calcPerceptron_CRTL_BUS_s_axi                     |        0|      0|   36|   40|    0|
+    |calcPerceptron_CTRL_BUS_s_axi_U                      |calcPerceptron_CTRL_BUS_s_axi                     |        0|      0|  112|  168|    0|
     |calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1     |calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1     |        0|      2|  205|  390|    0|
     |calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4     |calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1     |        0|      7|  277|  924|    0|
     |calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1_U2      |calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1      |        0|      3|  143|  321|    0|
     |calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3  |calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1  |        0|      8|  235|  217|    0|
     +-----------------------------------------------------+--------------------------------------------------+---------+-------+-----+-----+-----+
-    |Total                                                |                                                  |        0|     20|  896| 1892|    0|
+    |Total                                                |                                                  |        0|     20|  972| 2020|    0|
     +-----------------------------------------------------+--------------------------------------------------+---------+-------+-----+-----+-----+
 
     * DSP48E: 
-    +---------------------------------------------------+------------------------------------------------+--------------+
-    |                      Instance                     |                     Module                     |  Expression  |
-    +---------------------------------------------------+------------------------------------------------+--------------+
-    |calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1_U5  |calcPerceptron_mac_muladd_5ns_11ns_10ns_14_4_1  | i0 * i1 + i2 |
-    +---------------------------------------------------+------------------------------------------------+--------------+
+    N/A
 
     * Memory: 
     N/A
@@ -96,90 +93,69 @@
     N/A
 
     * Expression: 
-    +-------------------------+----------+-------+---+----+------------+------------+
-    |      Variable Name      | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
-    +-------------------------+----------+-------+---+----+------------+------------+
-    |add_ln19_1_fu_210_p2     |     +    |      0|  0|  15|           5|           1|
-    |add_ln19_fu_190_p2       |     +    |      0|  0|  19|          14|           1|
-    |idx_fu_240_p2            |     +    |      0|  0|  14|          10|           1|
-    |icmp_ln19_fu_184_p2      |   icmp   |      0|  0|  13|          14|          13|
-    |icmp_ln21_fu_196_p2      |   icmp   |      0|  0|  13|          10|           9|
-    |ifzero_fu_253_p2         |   icmp   |      0|  0|  13|          10|           9|
-    |select_ln22_1_fu_202_p3  |  select  |      0|  0|  10|           1|           1|
-    |select_ln22_2_fu_216_p3  |  select  |      0|  0|   5|           1|           5|
-    |select_ln22_fu_245_p3    |  select  |      0|  0|  32|           1|           1|
-    |ap_enable_pp0            |    xor   |      0|  0|   2|           1|           2|
-    |xor_ln24_fu_265_p2       |    xor   |      0|  0|  33|          32|          33|
-    +-------------------------+----------+-------+---+----+------------+------------+
-    |Total                    |          |      0|  0| 169|          99|          76|
-    +-------------------------+----------+-------+---+----+------------+------------+
+    +---------------------+----------+-------+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |add_ln23_fu_192_p2   |     +    |      0|  0|  39|          32|          32|
+    |add_ln26_fu_232_p2   |     +    |      0|  0|  39|          32|          32|
+    |i_fu_221_p2          |     +    |      0|  0|  38|          31|           1|
+    |j_fu_206_p2          |     +    |      0|  0|  38|          31|           1|
+    |icmp_ln23_fu_201_p2  |   icmp   |      0|  0|  18|          32|          32|
+    |icmp_ln25_fu_216_p2  |   icmp   |      0|  0|  18|          32|          32|
+    |ap_enable_pp0        |    xor   |      0|  0|   2|           1|           2|
+    |xor_ln28_fu_252_p2   |    xor   |      0|  0|  33|          32|          33|
+    +---------------------+----------+-------+---+----+------------+------------+
+    |Total                |          |      0|  0| 225|         223|         165|
+    +---------------------+----------+-------+---+----+------------+------------+
 
     * Multiplexer: 
-    +-----------------------------------------+----+-----------+-----+-----------+
-    |                   Name                  | LUT| Input Size| Bits| Total Bits|
-    +-----------------------------------------+----+-----------+-----+-----------+
-    |ap_NS_fsm                                |  41|          8|    1|          8|
-    |ap_enable_reg_pp0_iter9                  |   9|          2|    1|          2|
-    |ap_phi_mux_idx_0_phi_fu_158_p4           |   9|          2|   10|         20|
-    |ap_phi_mux_indvar_flatten_phi_fu_124_p4  |   9|          2|   14|         28|
-    |ap_phi_mux_j_0_phi_fu_135_p4             |   9|          2|    5|         10|
-    |ap_phi_mux_sum_1_phi_fu_146_p4           |   9|          2|   32|         64|
-    |grp_fu_165_p0                            |  21|          4|   32|        128|
-    |grp_fu_165_p1                            |  21|          4|   32|        128|
-    |idx_0_reg_154                            |   9|          2|   10|         20|
-    |indvar_flatten_reg_120                   |   9|          2|   14|         28|
-    |j_0_reg_131                              |   9|          2|    5|         10|
-    |res_WEN_A                                |   9|          2|    4|          8|
-    |sum_1_reg_142                            |   9|          2|   32|         64|
-    +-----------------------------------------+----+-----------+-----+-----------+
-    |Total                                    | 173|         36|  192|        518|
-    +-----------------------------------------+----+-----------+-----+-----------+
+    +------------------------------+-----+-----------+-----+-----------+
+    |             Name             | LUT | Input Size| Bits| Total Bits|
+    +------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                     |  177|         40|    1|         40|
+    |ap_enable_reg_pp0_iter2       |    9|          2|    1|          2|
+    |ap_phi_mux_i_0_phi_fu_160_p4  |    9|          2|   31|         62|
+    |grp_fu_167_p0                 |   21|          4|   32|        128|
+    |grp_fu_167_p1                 |   21|          4|   32|        128|
+    |i_0_reg_156                   |    9|          2|   31|         62|
+    |j_0_reg_120                   |    9|          2|   31|         62|
+    |phi_mul_reg_132               |    9|          2|   32|         64|
+    |res_WEN_A                     |    9|          2|    4|          8|
+    |sum_1_reg_144                 |    9|          2|   32|         64|
+    +------------------------------+-----+-----------+-----+-----------+
+    |Total                         |  282|         62|  227|        620|
+    +------------------------------+-----+-----------+-----+-----------+
 
     * Register: 
-    +-------------------------------------+----+----+-----+-----------+
-    |                 Name                | FF | LUT| Bits| Const Bits|
-    +-------------------------------------+----+----+-----+-----------+
-    |add_ln19_reg_289                     |  14|   0|   14|          0|
-    |ap_CS_fsm                            |   7|   0|    7|          0|
-    |ap_enable_reg_pp0_iter0              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter1              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter2              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter3              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter4              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter5              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter6              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter7              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter8              |   1|   0|    1|          0|
-    |ap_enable_reg_pp0_iter9              |   1|   0|    1|          0|
-    |b_load_reg_371                       |  32|   0|   32|          0|
-    |icmp_ln19_reg_285                    |   1|   0|    1|          0|
-    |icmp_ln21_reg_294                    |   1|   0|    1|          0|
-    |icmp_ln21_reg_294_pp0_iter1_reg      |   1|   0|    1|          0|
-    |idx_0_reg_154                        |  10|   0|   10|          0|
-    |idx_reg_341                          |  10|   0|   10|          0|
-    |idx_reg_341_pp0_iter1_reg            |  10|   0|   10|          0|
-    |ifzero_reg_357                       |   1|   0|    1|          0|
-    |indvar_flatten_reg_120               |  14|   0|   14|          0|
-    |j_0_reg_131                          |   5|   0|    5|          0|
-    |select_ln22_1_reg_299                |  10|   0|   10|          0|
-    |select_ln22_2_reg_305                |   5|   0|    5|          0|
-    |select_ln22_2_reg_305_pp0_iter1_reg  |   5|   0|    5|          0|
-    |sum_1_reg_142                        |  32|   0|   32|          0|
-    |sum_reg_376                          |  32|   0|   32|          0|
-    |tmp_1_reg_402                        |  32|   0|   32|          0|
-    |tmp_3_reg_397                        |  32|   0|   32|          0|
-    |tmp_5_reg_347                        |  32|   0|   32|          0|
-    |tmp_i_i_reg_392                      |  32|   0|   32|          0|
-    |tmp_reg_382                          |  32|   0|   32|          0|
-    |w_load_reg_336                       |  32|   0|   32|          0|
-    |x_load_reg_321                       |  32|   0|   32|          0|
-    |zext_ln24_reg_361                    |   5|   0|   64|         59|
-    |icmp_ln19_reg_285                    |  64|  32|    1|          0|
-    |ifzero_reg_357                       |  64|  32|    1|          0|
-    |zext_ln24_reg_361                    |  64|  32|   64|         59|
-    +-------------------------------------+----+----+-----+-----------+
-    |Total                                | 621|  96|  554|        118|
-    +-------------------------------------+----+----+-----+-----------+
+    +---------------------------------+----+----+-----+-----------+
+    |               Name              | FF | LUT| Bits| Const Bits|
+    +---------------------------------+----+----+-----+-----------+
+    |add_ln23_reg_274                 |  32|   0|   32|          0|
+    |ap_CS_fsm                        |  39|   0|   39|          0|
+    |ap_enable_reg_pp0_iter0          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1          |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2          |   1|   0|    1|          0|
+    |b_load_reg_337                   |  32|   0|   32|          0|
+    |i_0_reg_156                      |  31|   0|   31|          0|
+    |i_reg_292                        |  31|   0|   31|          0|
+    |icmp_ln25_reg_288                |   1|   0|    1|          0|
+    |icmp_ln25_reg_288_pp0_iter1_reg  |   1|   0|    1|          0|
+    |inputs_read_reg_268              |  32|   0|   32|          0|
+    |j_0_reg_120                      |  31|   0|   31|          0|
+    |j_reg_283                        |  31|   0|   31|          0|
+    |neurons_read_reg_263             |  32|   0|   32|          0|
+    |phi_mul_reg_132                  |  32|   0|   32|          0|
+    |reg_187                          |  32|   0|   32|          0|
+    |sum_1_reg_144                    |  32|   0|   32|          0|
+    |tmp_1_reg_352                    |  32|   0|   32|          0|
+    |tmp_i_i_reg_347                  |  32|   0|   32|          0|
+    |tmp_reg_317                      |  32|   0|   32|          0|
+    |w_load_reg_312                   |  32|   0|   32|          0|
+    |x_load_reg_307                   |  32|   0|   32|          0|
+    |zext_ln28_reg_327                |  31|   0|   64|         33|
+    +---------------------------------+----+----+-----+-----------+
+    |Total                            | 583|   0|  616|         33|
+    +---------------------------------+----+----+-----+-----------+
 
 
 
@@ -190,23 +166,23 @@
 +------------------------+-----+-----+------------+----------------+--------------+
 |        RTL Ports       | Dir | Bits|  Protocol  |  Source Object |    C Type    |
 +------------------------+-----+-----+------------+----------------+--------------+
-|s_axi_CRTL_BUS_AWVALID  |  in |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_AWREADY  | out |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_AWADDR   |  in |    4|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_WVALID   |  in |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_WREADY   | out |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_WDATA    |  in |   32|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_WSTRB    |  in |    4|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_ARVALID  |  in |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_ARREADY  | out |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_ARADDR   |  in |    4|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_RVALID   | out |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_RREADY   |  in |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_RDATA    | out |   32|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_RRESP    | out |    2|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_BVALID   | out |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_BREADY   |  in |    1|    s_axi   |    CRTL_BUS    |  return void |
-|s_axi_CRTL_BUS_BRESP    | out |    2|    s_axi   |    CRTL_BUS    |  return void |
+|s_axi_CTRL_BUS_AWVALID  |  in |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_AWREADY  | out |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_AWADDR   |  in |    5|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_WVALID   |  in |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_WREADY   | out |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_WDATA    |  in |   32|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_WSTRB    |  in |    4|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_ARVALID  |  in |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_ARREADY  | out |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_ARADDR   |  in |    5|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_RVALID   | out |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_RREADY   |  in |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_RDATA    | out |   32|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_RRESP    | out |    2|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_BVALID   | out |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_BREADY   |  in |    1|    s_axi   |    CTRL_BUS    |    scalar    |
+|s_axi_CTRL_BUS_BRESP    | out |    2|    s_axi   |    CTRL_BUS    |    scalar    |
 |ap_clk                  |  in |    1| ap_ctrl_hs | calcPerceptron | return value |
 |ap_rst_n                |  in |    1| ap_ctrl_hs | calcPerceptron | return value |
 |interrupt               | out |    1| ap_ctrl_hs | calcPerceptron | return value |

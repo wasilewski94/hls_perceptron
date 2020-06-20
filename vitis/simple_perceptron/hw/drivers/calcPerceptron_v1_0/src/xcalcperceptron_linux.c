@@ -122,9 +122,9 @@ int XCalcperceptron_Initialize(XCalcperceptron *InstancePtr, const char* Instanc
         return XST_OPEN_DEVICE_FAILED;
     }
 
-    // NOTE: slave interface 'Crtl_bus' should be mapped to uioX/map0
-    InstancePtr->Crtl_bus_BaseAddress = (u32)mmap(NULL, InfoPtr->maps[0].size, PROT_READ|PROT_WRITE, MAP_SHARED, InfoPtr->uio_fd, 0 * getpagesize());
-    assert(InstancePtr->Crtl_bus_BaseAddress);
+    // NOTE: slave interface 'Ctrl_bus' should be mapped to uioX/map0
+    InstancePtr->Ctrl_bus_BaseAddress = (u32)mmap(NULL, InfoPtr->maps[0].size, PROT_READ|PROT_WRITE, MAP_SHARED, InfoPtr->uio_fd, 0 * getpagesize());
+    assert(InstancePtr->Ctrl_bus_BaseAddress);
 
     InstancePtr->IsReady = XIL_COMPONENT_IS_READY;
 
@@ -137,7 +137,7 @@ int XCalcperceptron_Release(XCalcperceptron *InstancePtr) {
     assert(InstancePtr != NULL);
     assert(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
 
-    munmap((void*)InstancePtr->Crtl_bus_BaseAddress, InfoPtr->maps[0].size);
+    munmap((void*)InstancePtr->Ctrl_bus_BaseAddress, InfoPtr->maps[0].size);
 
     close(InfoPtr->uio_fd);
 

@@ -1,4 +1,4 @@
-2020-06-14T09:42:42.00653800255-09:42:42 **** Incremental Build of configuration Debug for project simple_perceptron_sw_system ****
+2020-06-20T21:12:58.48656800255-21:12:58 **** Incremental Build of configuration Debug for project simple_perceptron_sw_system ****
 000-make all 
 000-Generating bif file for the system project
 000-Executing command '::scw::generate_bif -xpfm /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/simple_perceptron.xpfm -domains standalone_domain -bifpath /home/wask/workspace/vitis/simple_perceptron_sw_system/Debug/system.bif' on XSCT
@@ -6,5 +6,5 @@
 000-creating BOOT.BIN using /home/wask/workspace/vitis/simple_perceptron_sw/_ide/bitstream/design_1_wrapper.bit
 000-Running /opt/Xilinx/Vitis/2019.2/bin/bootgen  -image /home/wask/workspace/vitis/simple_perceptron_sw_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 00255-
-09:42:48 Build Finished (took 6s.480ms)
+21:13:05 Build Finished (took 6s.631ms)
 

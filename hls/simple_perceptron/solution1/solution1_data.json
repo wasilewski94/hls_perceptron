@@ -85,6 +85,24 @@
         "interfaceRef": "s_axi_CTRL_BUS",
         "registerRefs": ["neurons"]
       }
+    },
+    "w_offset": {
+      "index": "6",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_CTRL_BUS",
+        "registerRefs": ["w_offset"]
+      }
+    },
+    "b_offset": {
+      "index": "7",
+      "type": {
+        "dataType": "int",
+        "dataWidth": "32",
+        "interfaceRef": "s_axi_CTRL_BUS",
+        "registerRefs": ["b_offset"]
+      }
     }
   },
   "Return": {
@@ -269,7 +287,7 @@
       "mode": "slave",
       "port_prefix": "s_axi_CTRL_BUS",
       "param_prefix": "C_S_AXI_CTRL_BUS",
-      "addr_bits": "5",
+      "addr_bits": "6",
       "registers": [
         {
           "offset": "0x00",
@@ -456,6 +474,36 @@
               "reset_value": "0",
               "description": "Bit 31 to 0 Data signal of neurons"
             }]
+        },
+        {
+          "offset": "0x20",
+          "name": "w_offset",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of w_offset",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "w_offset",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of w_offset"
+            }]
+        },
+        {
+          "offset": "0x28",
+          "name": "b_offset",
+          "access": "W",
+          "reset_value": "0x0",
+          "description": "Data signal of b_offset",
+          "fields": [{
+              "offset": "0",
+              "width": "32",
+              "name": "b_offset",
+              "access": "W",
+              "reset_value": "0",
+              "description": "Bit 31 to 0 Data signal of b_offset"
+            }]
         }
       ],
       "ctype": {
@@ -479,7 +527,7 @@
         },
         "AWADDR": {
           "Type": "integer unsigned",
-          "Width": "5"
+          "Width": "6"
         },
         "WDATA": {
           "Type": "integer signed",
@@ -491,7 +539,7 @@
         },
         "ARADDR": {
           "Type": "integer unsigned",
-          "Width": "5"
+          "Width": "6"
         },
         "RDATA": {
           "Type": "integer signed",
@@ -500,8 +548,8 @@
       },
       "data_width": "32",
       "port_width": {
-        "ARADDR": "5",
-        "AWADDR": "5",
+        "ARADDR": "6",
+        "AWADDR": "6",
         "RDATA": "32",
         "WDATA": "32",
         "WSTRB": "4"
@@ -585,7 +633,7 @@
     },
     "s_axi_CTRL_BUS_AWADDR": {
       "dir": "in",
-      "width": "5"
+      "width": "6"
     },
     "s_axi_CTRL_BUS_WVALID": {
       "dir": "in",
@@ -613,7 +661,7 @@
     },
     "s_axi_CTRL_BUS_ARADDR": {
       "dir": "in",
-      "width": "5"
+      "width": "6"
     },
     "s_axi_CTRL_BUS_RVALID": {
       "dir": "out",
@@ -809,8 +857,8 @@
         "Area": {
           "BRAM_18K": "0",
           "DSP48E": "20",
-          "FF": "1555",
-          "LUT": "2527",
+          "FF": "1695",
+          "LUT": "2719",
           "URAM": "0"
         }
       }}
@@ -825,7 +873,7 @@
   },
   "GenData": {
     "DataVersion": "0.2",
-    "Time": "2020-06-19 16:04:07 CEST",
+    "Time": "2020-06-22 19:32:16 CEST",
     "ToolName": "vivado_hls",
     "ToolVersion": "2019.2"
   }

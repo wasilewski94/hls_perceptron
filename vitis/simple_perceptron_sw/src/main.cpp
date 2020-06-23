@@ -9,6 +9,7 @@
 #include <xcalcperceptron.h>
 #include <xparameters.h>
 #include <math.h>
+#include "AxiTimerHelper.h"
 
 #include "weights.h"
 #include "inputs.h"
@@ -54,7 +55,10 @@ void init_load_data(int sample) {
 
 	XCalcperceptron_Set_inputs(&calcPerceptron, 784);
 	XCalcperceptron_Set_neurons(&calcPerceptron, 16);
-//	printf("getInputs = %d\n", XCalcperceptron_Get_inputs(&calcPerceptron));
+	XCalcperceptron_Set_w_offset(&calcPerceptron, 0);
+	XCalcperceptron_Set_b_offset(&calcPerceptron, 0);
+
+	//	printf("getInputs = %d\n", XCalcperceptron_Get_inputs(&calcPerceptron));
 //	printf("getNeurons = %d\n", XCalcperceptron_Get_neurons(&calcPerceptron));
 
 }
@@ -66,44 +70,58 @@ void load_2_layer_data() {
 		XVecHW[i] = resHW[i];
 	}
 
-	// set weights for layer 2
-	for(int i=0; i<160; i++) {
-		WVecHW[i] = weights[i+12544];
-	}
+//	// set weights for layer 2
+//	for(int i=0; i<160; i++) {
+//		WVecHW[i] = weights[i+12544];
+//	}
 
 	// set biases for layer 2
-	for(int i=0; i<10; i++) {
-		bHW[i] = biases[i + 16];
-	}
+//	for(int i=0; i<10; i++) {
+//		bHW[i] = biases[i + 16];
+//	}
 
 	XCalcperceptron_Set_inputs(&calcPerceptron, 16);
 	XCalcperceptron_Set_neurons(&calcPerceptron, 10);
+	XCalcperceptron_Set_w_offset(&calcPerceptron, 12544);
+	XCalcperceptron_Set_b_offset(&calcPerceptron, 16);
+
 }
 
 int main() {
 
-printf("Neural Network MNIST test for 10 digits\n");
+	AxiTimerHelper myTimer;
+
+// first layer -> set offset to 0
+	printf("Neural Network MNIST test for 10 digits\n");
 	init_PerceptronCore();
 
-for (int j=0; j<10;j++) {
+	for (int j=0; j<10;j++) {
 
-	printf("load initial data for sample %d\n", j);
-	init_load_data(j); //set sample 0-9
+		printf("load initial data for sample %d\n", j);
 
-	XCalcperceptron_Start(&calcPerceptron);
-	while(!XCalcperceptron_IsDone(&calcPerceptron));
+		init_load_data(j); //set sample 0-9
 
+		myTimer.startTimer();
+		XCalcperceptron_Start(&calcPerceptron);
+		while(!XCalcperceptron_IsDone(&calcPerceptron));
 
-	load_2_layer_data();
+		myTimer.stopTimer();
+		printf("1st layer - sample %d calculation finished, in %f seconds\n", j, myTimer.getElapsedTimerInSeconds());
 
-	XCalcperceptron_Start(&calcPerceptron);
-	while(!XCalcperceptron_IsDone(&calcPerceptron));
+		load_2_layer_data();
 
-	for (int i = 0; i < 10; i++) {
-		printf("result[%d]: %f\n", i, resHW[i]);
+		myTimer.startTimer();
+		XCalcperceptron_Start(&calcPerceptron);
+		while(!XCalcperceptron_IsDone(&calcPerceptron));
+		myTimer.stopTimer();
+
+		printf("2nd layer - sample %d calculation finished, in %f seconds\n", j, myTimer.getElapsedTimerInSeconds());
+
+		for (int i = 0; i < 10; i++) {
+			printf("result[%d]: %f\n", i, resHW[i]);
+		}
+
 	}
-
-}
 	printf("End of test\n");
 
 	return 0;

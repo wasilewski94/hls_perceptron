@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-// Date        : Fri Jun 19 16:08:26 2020
+// Date        : Mon Jun 22 19:38:35 2020
 // Host        : legion running 64-bit Ubuntu 18.04.4 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/design_1_calcPerceptron_0_0_stub.v
@@ -24,8 +24,8 @@ module design_1_calcPerceptron_0_0(s_axi_CTRL_BUS_AWADDR,
   x_Din_A, x_Dout_A, w_Clk_A, w_Rst_A, w_EN_A, w_WEN_A, w_Addr_A, w_Din_A, w_Dout_A, b_Clk_A, b_Rst_A, 
   b_EN_A, b_WEN_A, b_Addr_A, b_Din_A, b_Dout_A, res_Clk_A, res_Rst_A, res_EN_A, res_WEN_A, 
   res_Addr_A, res_Din_A, res_Dout_A)
-/* synthesis syn_black_box black_box_pad_pin="s_axi_CTRL_BUS_AWADDR[4:0],s_axi_CTRL_BUS_AWVALID,s_axi_CTRL_BUS_AWREADY,s_axi_CTRL_BUS_WDATA[31:0],s_axi_CTRL_BUS_WSTRB[3:0],s_axi_CTRL_BUS_WVALID,s_axi_CTRL_BUS_WREADY,s_axi_CTRL_BUS_BRESP[1:0],s_axi_CTRL_BUS_BVALID,s_axi_CTRL_BUS_BREADY,s_axi_CTRL_BUS_ARADDR[4:0],s_axi_CTRL_BUS_ARVALID,s_axi_CTRL_BUS_ARREADY,s_axi_CTRL_BUS_RDATA[31:0],s_axi_CTRL_BUS_RRESP[1:0],s_axi_CTRL_BUS_RVALID,s_axi_CTRL_BUS_RREADY,ap_clk,ap_rst_n,interrupt,x_Clk_A,x_Rst_A,x_EN_A,x_WEN_A[3:0],x_Addr_A[31:0],x_Din_A[31:0],x_Dout_A[31:0],w_Clk_A,w_Rst_A,w_EN_A,w_WEN_A[3:0],w_Addr_A[31:0],w_Din_A[31:0],w_Dout_A[31:0],b_Clk_A,b_Rst_A,b_EN_A,b_WEN_A[3:0],b_Addr_A[31:0],b_Din_A[31:0],b_Dout_A[31:0],res_Clk_A,res_Rst_A,res_EN_A,res_WEN_A[3:0],res_Addr_A[31:0],res_Din_A[31:0],res_Dout_A[31:0]" */;
-  input [4:0]s_axi_CTRL_BUS_AWADDR;
+/* synthesis syn_black_box black_box_pad_pin="s_axi_CTRL_BUS_AWADDR[5:0],s_axi_CTRL_BUS_AWVALID,s_axi_CTRL_BUS_AWREADY,s_axi_CTRL_BUS_WDATA[31:0],s_axi_CTRL_BUS_WSTRB[3:0],s_axi_CTRL_BUS_WVALID,s_axi_CTRL_BUS_WREADY,s_axi_CTRL_BUS_BRESP[1:0],s_axi_CTRL_BUS_BVALID,s_axi_CTRL_BUS_BREADY,s_axi_CTRL_BUS_ARADDR[5:0],s_axi_CTRL_BUS_ARVALID,s_axi_CTRL_BUS_ARREADY,s_axi_CTRL_BUS_RDATA[31:0],s_axi_CTRL_BUS_RRESP[1:0],s_axi_CTRL_BUS_RVALID,s_axi_CTRL_BUS_RREADY,ap_clk,ap_rst_n,interrupt,x_Clk_A,x_Rst_A,x_EN_A,x_WEN_A[3:0],x_Addr_A[31:0],x_Din_A[31:0],x_Dout_A[31:0],w_Clk_A,w_Rst_A,w_EN_A,w_WEN_A[3:0],w_Addr_A[31:0],w_Din_A[31:0],w_Dout_A[31:0],b_Clk_A,b_Rst_A,b_EN_A,b_WEN_A[3:0],b_Addr_A[31:0],b_Din_A[31:0],b_Dout_A[31:0],res_Clk_A,res_Rst_A,res_EN_A,res_WEN_A[3:0],res_Addr_A[31:0],res_Din_A[31:0],res_Dout_A[31:0]" */;
+  input [5:0]s_axi_CTRL_BUS_AWADDR;
   input s_axi_CTRL_BUS_AWVALID;
   output s_axi_CTRL_BUS_AWREADY;
   input [31:0]s_axi_CTRL_BUS_WDATA;
@@ -35,7 +35,7 @@ module design_1_calcPerceptron_0_0(s_axi_CTRL_BUS_AWADDR,
   output [1:0]s_axi_CTRL_BUS_BRESP;
   output s_axi_CTRL_BUS_BVALID;
   input s_axi_CTRL_BUS_BREADY;
-  input [4:0]s_axi_CTRL_BUS_ARADDR;
+  input [5:0]s_axi_CTRL_BUS_ARADDR;
   input s_axi_CTRL_BUS_ARVALID;
   output s_axi_CTRL_BUS_ARREADY;
   output [31:0]s_axi_CTRL_BUS_RDATA;

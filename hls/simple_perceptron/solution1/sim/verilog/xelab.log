@@ -1,14 +1,14 @@
 INFO: [XSIM 43-3496] Using init file passed via -initfile option "/opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini".
 Vivado Simulator 2019.2
 Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_calcPerceptron_top glbl -prj calcPerceptron.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s calcPerceptron 
+Running: /opt/Xilinx/Vivado/2019.2/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_calcPerceptron_top glbl -prj calcPerceptron.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm --initfile /opt/Xilinx/Vivado/2019.2/data/xsim/ip/xsim_ip.ini --lib ieee_proposed=./ieee_proposed -s calcPerceptron -debug wave 
 Multi-threading is on. Using 6 slave threads.
 Determining compilation order of HDL files.
 WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by Xilinx, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/glbl.v" into library work
 INFO: [VRFC 10-311] analyzing module glbl
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron_CRTL_BUS_s_axi.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module calcPerceptron_CRTL_BUS_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron_CTRL_BUS_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calcPerceptron_CTRL_BUS_s_axi
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module calcPerceptron
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/AESL_autobram_w.v" into library xil_defaultlib
@@ -21,20 +21,20 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_
 INFO: [VRFC 10-311] analyzing module calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module apatb_calcPerceptron_top
-INFO: [VRFC 10-2458] undeclared symbol bramx_Rst_A, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:299]
-INFO: [VRFC 10-2458] undeclared symbol bramx_Rst_B, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:306]
-INFO: [VRFC 10-2458] undeclared symbol bramw_Rst_A, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:344]
-INFO: [VRFC 10-2458] undeclared symbol bramw_Rst_B, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:351]
-INFO: [VRFC 10-2458] undeclared symbol bramb_Rst_A, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:394]
-INFO: [VRFC 10-2458] undeclared symbol bramb_Rst_B, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:401]
-INFO: [VRFC 10-2458] undeclared symbol bramres_Rst_A, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:439]
-INFO: [VRFC 10-2458] undeclared symbol bramres_Rst_B, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:446]
+INFO: [VRFC 10-2458] undeclared symbol bramx_Rst_A, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:280]
+INFO: [VRFC 10-2458] undeclared symbol bramx_Rst_B, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:287]
+INFO: [VRFC 10-2458] undeclared symbol bramw_Rst_A, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:325]
+INFO: [VRFC 10-2458] undeclared symbol bramw_Rst_B, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:332]
+INFO: [VRFC 10-2458] undeclared symbol bramb_Rst_A, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:370]
+INFO: [VRFC 10-2458] undeclared symbol bramb_Rst_B, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:377]
+INFO: [VRFC 10-2458] undeclared symbol bramres_Rst_A, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:415]
+INFO: [VRFC 10-2458] undeclared symbol bramres_Rst_B, assumed default net type wire [/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron.autotb.v:422]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/AESL_autobram_b.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_autobram_b
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/AESL_axi_slave_CRTL_BUS.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module AESL_axi_slave_CRTL_BUS
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/AESL_axi_slave_CTRL_BUS.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_axi_slave_CTRL_BUS
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/AESL_autobram_x.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module AESL_autobram_x
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/sim/verilog/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.v" into library xil_defaultlib
@@ -80,7 +80,7 @@ Compiling package ieee.vital_primitives
 Compiling package unisim.vpkg
 Compiling package floating_point_v7_1_9.flt_recipsqrt_sp_sqrt_r_rom
 Compiling package mult_gen_v12_0_16.dsp_pkg
-Compiling module xil_defaultlib.calcPerceptron_CRTL_BUS_s_axi
+Compiling module xil_defaultlib.calcPerceptron_CTRL_BUS_s_axi
 Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
 Compiling architecture synth of entity xbip_pipe_v3_0_6.xbip_pipe_v3_0_6_viv [\xbip_pipe_v3_0_6_viv(c_has_ce=1...]
 Compiling architecture rtl of entity floating_point_v7_1_9.delay [\delay(width=7,length=0)\]
@@ -365,7 +365,7 @@ Compiling module xil_defaultlib.AESL_autobram_x
 Compiling module xil_defaultlib.AESL_autobram_w
 Compiling module xil_defaultlib.AESL_autobram_b
 Compiling module xil_defaultlib.AESL_autobram_res
-Compiling module xil_defaultlib.AESL_axi_slave_CRTL_BUS
+Compiling module xil_defaultlib.AESL_axi_slave_CTRL_BUS
 Compiling module xil_defaultlib.apatb_calcPerceptron_top
 Compiling module work.glbl
 Built simulation snapshot calcPerceptron

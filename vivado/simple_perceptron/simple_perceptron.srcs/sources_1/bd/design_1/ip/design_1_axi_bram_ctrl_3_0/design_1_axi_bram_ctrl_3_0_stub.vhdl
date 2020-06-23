@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
--- Date        : Sun Apr 26 14:59:11 2020
+-- Date        : Mon Jun 22 19:37:40 2020
 -- Host        : legion running 64-bit Ubuntu 18.04.4 LTS
 -- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_axi_bram_ctrl_3_0 -prefix
 --               design_1_axi_bram_ctrl_3_0_ design_1_axi_bram_ctrl_0_0_stub.vhdl

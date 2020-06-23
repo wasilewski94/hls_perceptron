@@ -18,56 +18,56 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 27499 
+INFO: Helper process launched with PID 17248 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:10 . Memory (MB): peak = 1962.586 ; gain = 198.715 ; free physical = 875 ; free virtual = 22983
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1962.551 ; gain = 201.684 ; free physical = 12598 ; free virtual = 20595
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_calcPerceptron_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/synth/design_1_calcPerceptron_0_0.vhd:109]
-	Parameter C_S_AXI_CTRL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_CTRL_BUS_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_S_AXI_CTRL_BUS_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:12' bound to instance 'U0' of component 'calcPerceptron' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/synth/design_1_calcPerceptron_0_0.vhd:236]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:68]
-	Parameter C_S_AXI_CTRL_BUS_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:12' bound to instance 'U0' of component 'calcPerceptron' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/synth/design_1_calcPerceptron_0_0.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:68]
+	Parameter C_S_AXI_CTRL_BUS_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_S_AXI_CTRL_BUS_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:146]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:149]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:158]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:160]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:166]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:173]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:184]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:195]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:198]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:200]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:204]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:208]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:216]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:219]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:234]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:236]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:238]
-INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:241]
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:146]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:149]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:160]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:162]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:170]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:179]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:190]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:199]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:202]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:204]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:208]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:212]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:220]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:223]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:240]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:242]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:244]
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:247]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_CTRL_BUS_s_axi' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_CTRL_BUS_s_axi.vhd:9' bound to instance 'calcPerceptron_CTRL_BUS_s_axi_U' of component 'calcPerceptron_CTRL_BUS_s_axi' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:368]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_CTRL_BUS_s_axi' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_CTRL_BUS_s_axi.vhd:71]
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'calcPerceptron_CTRL_BUS_s_axi' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_CTRL_BUS_s_axi.vhd:9' bound to instance 'calcPerceptron_CTRL_BUS_s_axi_U' of component 'calcPerceptron_CTRL_BUS_s_axi' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:377]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_CTRL_BUS_s_axi' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_CTRL_BUS_s_axi.vhd:79]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_CTRL_BUS_s_axi' (1#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_CTRL_BUS_s_axi.vhd:71]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_CTRL_BUS_s_axi' (1#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_CTRL_BUS_s_axi.vhd:79]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 5 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1' of component 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:401]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:26]
+INFO: [Synth 8-3491] module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1' of component 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:412]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:26]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 5 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_ap_fadd_3_full_dsp_32' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fadd_3_full_dsp_32_u' of component 'calcPerceptron_ap_fadd_3_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fadd_3_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_fadd_3_full_dsp_32' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fadd_3_full_dsp_32_u' of component 'calcPerceptron_ap_fadd_3_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fadd_3_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:72]
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_HAS_ADD bound to: 1 - type: integer 
 	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
@@ -144,23 +144,23 @@ INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fadd_3_full_dsp_32' [
 	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:210]
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fadd_3_full_dsp_32' (19#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' (20#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:26]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fadd_3_full_dsp_32' (19#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fadd_3_full_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1' (20#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1.vhd:26]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 4 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:8' bound to instance 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1_U2' of component 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:416]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:26]
+INFO: [Synth 8-3491] module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:8' bound to instance 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1_U2' of component 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:427]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:26]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 4 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_ap_fmul_2_max_dsp_32' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fmul_2_max_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fmul_2_max_dsp_32_u' of component 'calcPerceptron_ap_fmul_2_max_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:56]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fmul_2_max_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_fmul_2_max_dsp_32' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fmul_2_max_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fmul_2_max_dsp_32_u' of component 'calcPerceptron_ap_fmul_2_max_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:56]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fmul_2_max_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fmul_2_max_dsp_32.vhd:72]
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_HAS_ADD bound to: 0 - type: integer 
 	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
@@ -237,23 +237,23 @@ INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fmul_2_max_dsp_32' [/
 	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fmul_2_max_dsp_32.vhd:210]
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fmul_2_max_dsp_32' (28#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fmul_2_max_dsp_32.vhd:72]
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1' (29#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:26]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fmul_2_max_dsp_32.vhd:210]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fmul_2_max_dsp_32' (28#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fmul_2_max_dsp_32.vhd:72]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1' (29#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:26]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 10 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3' of component 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:431]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:26]
+INFO: [Synth 8-3491] module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3' of component 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:442]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:26]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 10 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_ap_frecip_8_full_dsp_32' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_frecip_8_full_dsp_32_u' of component 'calcPerceptron_ap_frecip_8_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_frecip_8_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:70]
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_frecip_8_full_dsp_32' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_frecip_8_full_dsp_32_u' of component 'calcPerceptron_ap_frecip_8_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_frecip_8_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:70]
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_HAS_ADD bound to: 0 - type: integer 
 	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
@@ -330,26 +330,26 @@ INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_frecip_8_full_dsp_32'
 	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:205]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:205]
 WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
 INFO: [Synth 8-5811] Detected attribute (* ram_style  = "distributed" *) on module flt_recip_approx 
 WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_frecip_8_full_dsp_32' (43#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:70]
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' (44#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_frecip_8_full_dsp_32' (43#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_frecip_8_full_dsp_32.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1' (44#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:26]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 9 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4' of component 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:446]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:26]
+INFO: [Synth 8-3491] module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:8' bound to instance 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4' of component 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:457]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:26]
 	Parameter ID bound to: 1 - type: integer 
 	Parameter NUM_STAGE bound to: 9 - type: integer 
 	Parameter din0_WIDTH bound to: 32 - type: integer 
 	Parameter din1_WIDTH bound to: 32 - type: integer 
 	Parameter dout_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'calcPerceptron_ap_fexp_7_full_dsp_32' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fexp_7_full_dsp_32_u' of component 'calcPerceptron_ap_fexp_7_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:51]
-INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fexp_7_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:70]
+INFO: [Synth 8-3491] module 'calcPerceptron_ap_fexp_7_full_dsp_32' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:59' bound to instance 'calcPerceptron_ap_fexp_7_full_dsp_32_u' of component 'calcPerceptron_ap_fexp_7_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fexp_7_full_dsp_32' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:70]
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_HAS_ADD bound to: 0 - type: integer 
 	Parameter C_HAS_SUBTRACT bound to: 0 - type: integer 
@@ -426,11 +426,11 @@ INFO: [Synth 8-638] synthesizing module 'calcPerceptron_ap_fexp_7_full_dsp_32' [
 	Parameter C_RESULT_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_RESULT_TUSER_WIDTH bound to: 1 - type: integer 
 	Parameter C_FIXED_DATA_UNSIGNED bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:205]
+INFO: [Synth 8-3491] module 'floating_point_v7_1_9' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/f7b4/hdl/floating_point_v7_1_rfs.vhd:94207' bound to instance 'U0' of component 'floating_point_v7_1_9' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:205]
 WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fexp_7_full_dsp_32' (59#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:70]
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' (60#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:26]
-INFO: [Synth 8-256] done synthesizing module 'calcPerceptron' (61#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_ap_fexp_7_full_dsp_32' (59#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/ip/calcPerceptron_ap_fexp_7_full_dsp_32.vhd:70]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1' (60#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:26]
+INFO: [Synth 8-256] done synthesizing module 'calcPerceptron' (61#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:68]
 INFO: [Synth 8-256] done synthesizing module 'design_1_calcPerceptron_0_0' (62#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_calcPerceptron_0_0/synth/design_1_calcPerceptron_0_0.vhd:109]
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CLK
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized3 has unconnected port CE
@@ -534,7 +534,7 @@ WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized126 has unconn
 WARNING: [Synth 8-3331] design xbip_pipe_v3_0_6_viv__parameterized126 has unconnected port SSET
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2225.305 ; gain = 461.434 ; free physical = 772 ; free virtual = 22868
+Finished RTL Elaboration : Time (s): cpu = 00:00:32 ; elapsed = 00:00:51 . Memory (MB): peak = 2225.270 ; gain = 464.402 ; free physical = 13689 ; free virtual = 21711
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -547,12 +547,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 2225.305 ; gain = 461.434 ; free physical = 758 ; free virtual = 22853
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:52 . Memory (MB): peak = 2225.270 ; gain = 464.402 ; free physical = 13703 ; free virtual = 21702
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:32 . Memory (MB): peak = 2225.305 ; gain = 461.434 ; free physical = 758 ; free virtual = 22853
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:52 . Memory (MB): peak = 2225.270 ; gain = 464.402 ; free physical = 13703 ; free virtual = 21702
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2225.305 ; gain = 0.000 ; free physical = 785 ; free virtual = 22835
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.18 . Memory (MB): peak = 2225.270 ; gain = 0.000 ; free physical = 13896 ; free virtual = 21894
 INFO: [Netlist 29-17] Analyzing 249 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -565,28 +565,28 @@ Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptr
 Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2346.148 ; gain = 0.000 ; free physical = 660 ; free virtual = 22733
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2349.113 ; gain = 0.000 ; free physical = 15015 ; free virtual = 23011
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   FDE => FDRE: 5 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2346.148 ; gain = 0.000 ; free physical = 668 ; free virtual = 22741
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.16 . Memory (MB): peak = 2349.113 ; gain = 0.000 ; free physical = 14996 ; free virtual = 22989
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 741 ; free virtual = 22826
+Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17113 ; free virtual = 25125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 741 ; free virtual = 22826
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17113 ; free virtual = 25125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:41 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 741 ; free virtual = 22826
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:01:05 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17112 ; free virtual = 25125
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'calcPerceptron_CTRL_BUS_s_axi'
 INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'calcPerceptron_CTRL_BUS_s_axi'
@@ -618,7 +618,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'calcPerceptron_CTRL_BUS_s_axi'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:45 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 725 ; free virtual = 22819
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:48 ; elapsed = 00:01:10 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 16658 ; free virtual = 24666
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_DELAY' (delay__parameterized0) to 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/SUB_ADD_IP_DELAY'
 INFO: [Synth 8-223] decloning instance 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_DIVIDE_BY_ZERO' (delay__parameterized0) to 'U0/calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/calcPerceptron_ap_fadd_3_full_dsp_32_u/U0/i_synth/DELAY_ACCUM_OVERFLOW'
@@ -671,9 +671,11 @@ INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for R
 INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
 INFO: [Synth 8-5542] Attribute ram_style/rom_style = distributed specified for ROM  "p_0_out". This will be implemented in logic
 INFO: [Synth 8-5587] ROM size for "p_0_out" is below threshold of ROM address width. It will be mapped to LUTs
-INFO: [Synth 8-4471] merging register 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1_U2/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:70]
-INFO: [Synth 8-4471] merging register 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:63]
-INFO: [Synth 8-4471] merging register 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a39b/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:63]
+INFO: [Synth 8-4471] merging register 'calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1_U2/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1.vhd:70]
+INFO: [Synth 8-4471] merging register 'calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1.vhd:63]
+INFO: [Synth 8-4471] merging register 'calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4/ce_r_reg' into 'calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1.vhd:63]
+WARNING: [Synth 8-3936] Found unconnected internal register 'w_offset_read_reg_298_reg' and it is trimmed from '32' to '30' bits. [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:602]
+WARNING: [Synth 8-3936] Found unconnected internal register 'b_offset_read_reg_293_reg' and it is trimmed from '32' to '30' bits. [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/59d4/hdl/vhdl/calcPerceptron.vhd:599]
 INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4/din1_buf1_reg[0]' (FD) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3/din1_buf1_reg[0]'
 INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4/din1_buf1_reg[1]' (FD) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3/din1_buf1_reg[1]'
 INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4/din1_buf1_reg[2]' (FD) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3/din1_buf1_reg[2]'
@@ -747,13 +749,13 @@ INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_
 INFO: [Synth 8-3886] merging instance 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/a2_ma3_delay_balance/i_pipe/opt_has_pipe.first_q_reg[7]' (FDE) to 'U0/calcPerceptron_frecip_32ns_32ns_32_10_full_dsp_1_U3/calcPerceptron_ap_frecip_8_full_dsp_32_u/U0/i_synth/RECIP_OP.OP/i_sp_or_dp.evaluation/a_delay_balance/i_pipe/opt_has_pipe.first_q_reg[21]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1/ce_r_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4/dout_r_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\tmp_i_i_reg_347_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\tmp_i_i_reg_387_reg[31] )
 WARNING: [Synth 8-3332] Sequential element (calcPerceptron_CTRL_BUS_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module calcPerceptron.
 WARNING: [Synth 8-3332] Sequential element (calcPerceptron_CTRL_BUS_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module calcPerceptron.
 INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[1]) is unused and will be removed from module floating_point_v7_1_9_viv.
 INFO: [Synth 8-3332] Sequential element (ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.NORM_RND/FULL_USAGE_DSP.LOD/dist_norm_reg[0]) is unused and will be removed from module floating_point_v7_1_9_viv.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:58 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 666 ; free virtual = 22769
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:26 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17997 ; free virtual = 26014
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -765,13 +767,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:56 ; elapsed = 00:01:08 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 475 ; free virtual = 22579
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:36 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17481 ; free virtual = 25493
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:57 ; elapsed = 00:01:09 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 467 ; free virtual = 22570
+Finished Timing Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:37 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17454 ; free virtual = 25471
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -783,7 +785,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:59 ; elapsed = 00:01:11 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 456 ; free virtual = 22559
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:39 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17421 ; free virtual = 25446
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -807,13 +809,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:15 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 479 ; free virtual = 22582
+Finished IO Insertion : Time (s): cpu = 00:01:18 ; elapsed = 00:01:43 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17856 ; free virtual = 25890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:15 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 479 ; free virtual = 22582
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:18 ; elapsed = 00:01:43 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17856 ; free virtual = 25891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -832,25 +834,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 471 ; free virtual = 22574
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:19 ; elapsed = 00:01:43 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17861 ; free virtual = 25888
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 471 ; free virtual = 22574
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:19 ; elapsed = 00:01:44 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17861 ; free virtual = 25888
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 471 ; free virtual = 22574
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:19 ; elapsed = 00:01:44 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17860 ; free virtual = 25886
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 471 ; free virtual = 22574
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:19 ; elapsed = 00:01:44 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17860 ; free virtual = 25886
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -866,7 +868,7 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |CARRY4     |    51|
+|1     |CARRY4     |    59|
 |2     |DSP48E1    |     1|
 |3     |DSP48E1_1  |     2|
 |4     |DSP48E1_10 |     2|
@@ -881,52 +883,52 @@ Report Cell Usage:
 |13    |DSP48E1_8  |     2|
 |14    |DSP48E1_9  |     2|
 |15    |LUT1       |    17|
-|16    |LUT2       |   151|
-|17    |LUT3       |   277|
-|18    |LUT4       |   219|
-|19    |LUT5       |   256|
-|20    |LUT6       |   686|
+|16    |LUT2       |   179|
+|17    |LUT3       |   342|
+|18    |LUT4       |   196|
+|19    |LUT5       |   285|
+|20    |LUT6       |   719|
 |21    |MUXCY      |   143|
 |22    |MUXF7      |   193|
 |23    |MUXF8      |     2|
 |24    |SRL16E     |    49|
 |25    |XORCY      |    34|
 |26    |FDE        |     5|
-|27    |FDRE       |  1381|
+|27    |FDRE       |  1506|
 |28    |FDSE       |    15|
 +------+-----------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 471 ; free virtual = 22574
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:19 ; elapsed = 00:01:44 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17859 ; free virtual = 25885
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 331 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:12 . Memory (MB): peak = 2346.148 ; gain = 461.434 ; free physical = 539 ; free virtual = 22642
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:16 . Memory (MB): peak = 2346.148 ; gain = 582.277 ; free physical = 539 ; free virtual = 22642
+Synthesis finished with 0 errors, 0 critical warnings and 333 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:14 ; elapsed = 00:01:38 . Memory (MB): peak = 2349.113 ; gain = 464.402 ; free physical = 17930 ; free virtual = 25956
+Synthesis Optimization Complete : Time (s): cpu = 00:01:19 ; elapsed = 00:01:44 . Memory (MB): peak = 2349.113 ; gain = 588.246 ; free physical = 17930 ; free virtual = 25956
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2346.148 ; gain = 0.000 ; free physical = 606 ; free virtual = 22709
-INFO: [Netlist 29-17] Analyzing 448 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2349.113 ; gain = 0.000 ; free physical = 17998 ; free virtual = 26019
+INFO: [Netlist 29-17] Analyzing 456 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2346.148 ; gain = 0.000 ; free physical = 558 ; free virtual = 22645
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2352.082 ; gain = 0.000 ; free physical = 17943 ; free virtual = 25959
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 46 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 41 instances
   FDE => FDRE: 5 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-183 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+183 Infos, 107 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:13 ; elapsed = 00:01:27 . Memory (MB): peak = 2346.148 ; gain = 834.781 ; free physical = 755 ; free virtual = 22840
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2346.148 ; gain = 0.000 ; free physical = 755 ; free virtual = 22840
+synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:01:57 . Memory (MB): peak = 2352.082 ; gain = 841.719 ; free physical = 18137 ; free virtual = 26154
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2352.082 ; gain = 0.000 ; free physical = 18135 ; free virtual = 26151
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/design_1_calcPerceptron_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_calcPerceptron_0_0, cache-ID = b3314ec7f571dca5
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_calcPerceptron_0_0, cache-ID = ff99005fbbe29f57
 INFO: [Coretcl 2-1174] Renamed 241 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2370.160 ; gain = 0.000 ; free physical = 746 ; free virtual = 22882
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2376.094 ; gain = 0.000 ; free physical = 18071 ; free virtual = 26093
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_calcPerceptron_0_0_synth_1/design_1_calcPerceptron_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_calcPerceptron_0_0_utilization_synth.rpt -pb design_1_calcPerceptron_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 19 16:08:27 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 22 19:38:36 2020...

@@ -1,4 +1,4 @@
-Running: xsim.dir/calcPerceptron/xsimk -simmode gui -wdb calcPerceptron.wdb -simrunnum 0 -socket 41177
+Running: xsim.dir/calcPerceptron/xsimk -simmode gui -wdb calcPerceptron.wdb -simrunnum 0 -socket 52525
 Design successfully loaded
-Design Loading Memory Usage: 49256 KB (Peak: 49256 KB)
-Design Loading CPU Usage: 20 ms
+Design Loading Memory Usage: 52776 KB (Peak: 52776 KB)
+Design Loading CPU Usage: 10 ms

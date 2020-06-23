@@ -70,15 +70,14 @@ print('Test accuracy:', score[1])
 
 weights = model.get_weights()
 
-# predictions = model.predict(x_test)
-#
-# for i in range(10):
-#   print(predictions[i])
-#   print(np.argmax(predictions[i]))
-#
-#   fig = plt.figure
-#   plt.imshow(x_draw[i], cmap='gray')
-#   plt.show()
+predictions = model.predict(x_test)
+
+for i in range(100):
+  recognized_digit = np.argmax(predictions[i])
+  print("x_test no. " + str(i) + " recognized digit: " + str(recognized_digit) + " with output = " + str(predictions[i][recognized_digit]))
+  # fig = plt.figure
+  # plt.imshow(x_draw[i], cmap='gray')
+  # plt.show()
 
 x_test = x_test.reshape(x_test.shape[0], 784)
 
@@ -101,10 +100,10 @@ x_test = x_test.reshape(x_test.shape[0], 784)
 # save 10 digits images
 
 input_filenames = list()
-for i in range(10):
-    input_filenames.append("x" + str(i) + ".txt")
+for i in range(10000):
+    input_filenames.append("x/" + "x" + str(i) + ".txt")
 
-for i in range(10):
+for i in range(10000):
   with open(input_filenames[i], 'w') as f:
     for j in range(784):
       f.write("%5.8f\n" % x_test[i][j])
@@ -166,6 +165,31 @@ with open('biases.h', 'w') as f:
     f.write(" };")
 
 
+# ----------------------------for VIvado HLS ---------------------------
+
+with open('hls_weights.h', 'w') as f:
+  for i in range(weights1.shape[1]):
+    for j in range(weights1.shape[0]):
+      f.write("%5.8f, " % weights1[j,i])
+    f.write("\n")
+#2nd layer weights
+  for i in range(weights2.shape[1]):
+    for j in range(weights2.shape[0]):
+      f.write("%5.8f, " % weights2[j,i])
+    f.write("\n")
+
+
+with open('hls_biases.h', 'w') as f:
+    for i in range(biases1.shape[0]):
+        f.write("%5.8f, " % biases1[i])
+    for i in range(biases2.shape[0]):
+        f.write("%5.8f, " % biases2[i])
+
+#inputs for Vitis simulation run
+with open('hls_input.h', 'w') as f:
+    for j in range(784):
+      f.write("%5.8f, " % x_test[0][j])
+
 # save results to file
 
 results1layer = np.zeros(16)
@@ -189,15 +213,15 @@ with open('results.txt', 'w') as f:
     for i in range(10):
         f.write("%s | %5.8f\n" % (i, results2layer[i]))
 
-print("\noutput for next 9 images:\n")
-for j in range(9):
-    print("x_test no.", j+1)
-    for i in range(16):
-        results1layer[i] = sigmoid(np.dot(x_test[j+1], weights1[:,i]) + biases1[i])
-    for i in range(10):
-        results2layer[i] = sigmoid(np.dot(results1layer, weights2[:,i]) + biases2[i])
-        results[j] = results2layer[i]
-        print(i, "|", format(results2layer[i], '.8f'))
+# print("\noutput for next 9 images:\n")
+# for j in range(9):
+#     print("x_test no.", j+1)
+#     for i in range(16):
+#         results1layer[i] = sigmoid(np.dot(x_test[j+1], weights1[:,i]) + biases1[i])
+#     for i in range(10):
+#         results2layer[i] = sigmoid(np.dot(results1layer, weights2[:,i]) + biases2[i])
+#         results[j] = results2layer[i]
+#         print(i, "|", format(results2layer[i], '.8f'))
 
 # def softmax(x):
 #   e_x = np.exp(x)

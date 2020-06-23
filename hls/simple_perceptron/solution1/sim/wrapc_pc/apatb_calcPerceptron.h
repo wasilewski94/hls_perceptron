@@ -7,4 +7,6 @@ extern void AESL_WRAP_calcPerceptron (
 float x[784],
 float w[12704],
 float b[26],
-volatile float res[26]);
+float res[26],
+int inputs,
+int neurons);

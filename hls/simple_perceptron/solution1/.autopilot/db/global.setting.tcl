@@ -43,7 +43,7 @@ set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c ../core.cpp}
 set SourceFlags {sc {} c {{}}}
 set DirectiveFile /home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1/solution1.directive
-set TBFiles {verilog {../weights.h ../test_core.cpp} bc {../weights.h ../test_core.cpp} sc {../weights.h ../test_core.cpp} vhdl {../weights.h ../test_core.cpp} c {} cas {../weights.h ../test_core.cpp}}
+set TBFiles {verilog {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h} bc {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h} sc {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h} vhdl {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h} c {} cas {../test_core.cpp ../hls_weights.h ../hls_input.h ../hls_biases.h}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set TVOutFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

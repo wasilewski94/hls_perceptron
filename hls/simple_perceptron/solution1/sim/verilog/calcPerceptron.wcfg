@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="calcPerceptron.wdb" id="1">
+         <top_modules>
+            <top_module name="apatb_calcPerceptron_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+   </zoom_setting>
+   <column_width_setting>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="group" fp_name="group1">
+      <obj_property name="label">Design Top Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group2">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group3">
+            <obj_property name="label">inputs__neurons__return(axi_slave)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/interrupt">
+               <obj_property name="ElementShortName">interrupt</obj_property>
+               <obj_property name="ObjectShortName">interrupt</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_BRESP">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_BRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_BRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_BREADY">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_BREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_BREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_BVALID">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_BVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_BVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_RRESP">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_RRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_RRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_RDATA">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_RDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_RDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_RREADY">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_RREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_RREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_RVALID">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_RVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_RVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_ARREADY">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_ARREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_ARREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_ARVALID">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_ARVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_ARVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_ARADDR">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_ARADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_ARADDR[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_WSTRB">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_WSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_WSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_WDATA">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_WDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_WDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_WREADY">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_WREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_WREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_WVALID">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_WVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_WVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_AWREADY">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_AWREADY</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_AWREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_AWVALID">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_AWVALID</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_AWVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/s_axi_CTRL_BUS_AWADDR">
+               <obj_property name="ElementShortName">s_axi_CTRL_BUS_AWADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">s_axi_CTRL_BUS_AWADDR[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group22">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group23">
+            <obj_property name="label">res(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/res_Rst_A">
+               <obj_property name="ElementShortName">res_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">res_Rst_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/res_Clk_A">
+               <obj_property name="ElementShortName">res_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">res_Clk_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/res_Dout_A">
+               <obj_property name="ElementShortName">res_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">res_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/res_Din_A">
+               <obj_property name="ElementShortName">res_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">res_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/res_WEN_A">
+               <obj_property name="ElementShortName">res_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">res_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/res_EN_A">
+               <obj_property name="ElementShortName">res_EN_A</obj_property>
+               <obj_property name="ObjectShortName">res_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/res_Addr_A">
+               <obj_property name="ElementShortName">res_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">res_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group31">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group32">
+            <obj_property name="label">b(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/b_Rst_A">
+               <obj_property name="ElementShortName">b_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">b_Rst_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/b_Clk_A">
+               <obj_property name="ElementShortName">b_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">b_Clk_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/b_Dout_A">
+               <obj_property name="ElementShortName">b_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/b_Din_A">
+               <obj_property name="ElementShortName">b_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/b_WEN_A">
+               <obj_property name="ElementShortName">b_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">b_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/b_EN_A">
+               <obj_property name="ElementShortName">b_EN_A</obj_property>
+               <obj_property name="ObjectShortName">b_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/b_Addr_A">
+               <obj_property name="ElementShortName">b_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group40">
+            <obj_property name="label">w(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/w_Rst_A">
+               <obj_property name="ElementShortName">w_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">w_Rst_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/w_Clk_A">
+               <obj_property name="ElementShortName">w_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">w_Clk_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/w_Dout_A">
+               <obj_property name="ElementShortName">w_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">w_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/w_Din_A">
+               <obj_property name="ElementShortName">w_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">w_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/w_WEN_A">
+               <obj_property name="ElementShortName">w_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">w_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/w_EN_A">
+               <obj_property name="ElementShortName">w_EN_A</obj_property>
+               <obj_property name="ObjectShortName">w_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/w_Addr_A">
+               <obj_property name="ElementShortName">w_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">w_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group48">
+            <obj_property name="label">x(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/x_Rst_A">
+               <obj_property name="ElementShortName">x_Rst_A</obj_property>
+               <obj_property name="ObjectShortName">x_Rst_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/x_Clk_A">
+               <obj_property name="ElementShortName">x_Clk_A</obj_property>
+               <obj_property name="ObjectShortName">x_Clk_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/x_Dout_A">
+               <obj_property name="ElementShortName">x_Dout_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">x_Dout_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/x_Din_A">
+               <obj_property name="ElementShortName">x_Din_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">x_Din_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/x_WEN_A">
+               <obj_property name="ElementShortName">x_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">x_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/x_EN_A">
+               <obj_property name="ElementShortName">x_EN_A</obj_property>
+               <obj_property name="ObjectShortName">x_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/x_Addr_A">
+               <obj_property name="ElementShortName">x_Addr_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">x_Addr_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group56">
+         <obj_property name="label">Block-level IO Handshake(internal)</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/ap_done">
+            <obj_property name="ElementShortName">ap_done</obj_property>
+            <obj_property name="ObjectShortName">ap_done</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/ap_idle">
+            <obj_property name="ElementShortName">ap_idle</obj_property>
+            <obj_property name="ObjectShortName">ap_idle</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/ap_ready">
+            <obj_property name="ElementShortName">ap_ready</obj_property>
+            <obj_property name="ObjectShortName">ap_ready</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/ap_start">
+            <obj_property name="ElementShortName">ap_start</obj_property>
+            <obj_property name="ObjectShortName">ap_start</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group61">
+         <obj_property name="label">Reset</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/ap_rst_n">
+            <obj_property name="ElementShortName">ap_rst_n</obj_property>
+            <obj_property name="ObjectShortName">ap_rst_n</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group63">
+         <obj_property name="label">Clock</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/AESL_inst_calcPerceptron/ap_clk">
+            <obj_property name="ElementShortName">ap_clk</obj_property>
+            <obj_property name="ObjectShortName">ap_clk</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group65">
+      <obj_property name="label">Test Bench Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="group" fp_name="group66">
+         <obj_property name="label">Internal Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group67">
+            <obj_property name="label">Simulation Status</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/AUTOTB_TRANSACTION_NUM">
+               <obj_property name="ElementShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="ObjectShortName">AUTOTB_TRANSACTION_NUM[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/ready_cnt">
+               <obj_property name="ElementShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">ready_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/done_cnt">
+               <obj_property name="ElementShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="ObjectShortName">done_cnt[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group68">
+            <obj_property name="label">Port Depth</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/LENGTH_x">
+               <obj_property name="ElementShortName">LENGTH_x[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_x[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/LENGTH_w">
+               <obj_property name="ElementShortName">LENGTH_w[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_w[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/LENGTH_b">
+               <obj_property name="ElementShortName">LENGTH_b[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_b[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/LENGTH_res">
+               <obj_property name="ElementShortName">LENGTH_res[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_res[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/LENGTH_inputs">
+               <obj_property name="ElementShortName">LENGTH_inputs[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_inputs[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/LENGTH_neurons">
+               <obj_property name="ElementShortName">LENGTH_neurons[31:0]</obj_property>
+               <obj_property name="ObjectShortName">LENGTH_neurons[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group78">
+         <obj_property name="label">C InOuts</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group79">
+            <obj_property name="label">inputs__neurons__return(axi_slave)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_INTERRUPT">
+               <obj_property name="ElementShortName">CTRL_BUS_INTERRUPT</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_INTERRUPT</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_BRESP">
+               <obj_property name="ElementShortName">CTRL_BUS_BRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_BRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_BREADY">
+               <obj_property name="ElementShortName">CTRL_BUS_BREADY</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_BREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_BVALID">
+               <obj_property name="ElementShortName">CTRL_BUS_BVALID</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_BVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_RRESP">
+               <obj_property name="ElementShortName">CTRL_BUS_RRESP[1:0]</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_RRESP[1:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_RDATA">
+               <obj_property name="ElementShortName">CTRL_BUS_RDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_RDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_RREADY">
+               <obj_property name="ElementShortName">CTRL_BUS_RREADY</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_RREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_RVALID">
+               <obj_property name="ElementShortName">CTRL_BUS_RVALID</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_RVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_ARREADY">
+               <obj_property name="ElementShortName">CTRL_BUS_ARREADY</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_ARREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_ARVALID">
+               <obj_property name="ElementShortName">CTRL_BUS_ARVALID</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_ARVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_ARADDR">
+               <obj_property name="ElementShortName">CTRL_BUS_ARADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_ARADDR[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_WSTRB">
+               <obj_property name="ElementShortName">CTRL_BUS_WSTRB[3:0]</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_WSTRB[3:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_WDATA">
+               <obj_property name="ElementShortName">CTRL_BUS_WDATA[31:0]</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_WDATA[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_WREADY">
+               <obj_property name="ElementShortName">CTRL_BUS_WREADY</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_WREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_WVALID">
+               <obj_property name="ElementShortName">CTRL_BUS_WVALID</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_WVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_AWREADY">
+               <obj_property name="ElementShortName">CTRL_BUS_AWREADY</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_AWREADY</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_AWVALID">
+               <obj_property name="ElementShortName">CTRL_BUS_AWVALID</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_AWVALID</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/CTRL_BUS_AWADDR">
+               <obj_property name="ElementShortName">CTRL_BUS_AWADDR[4:0]</obj_property>
+               <obj_property name="ObjectShortName">CTRL_BUS_AWADDR[4:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group98">
+         <obj_property name="label">C Outputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group99">
+            <obj_property name="label">res(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/res_RST_A">
+               <obj_property name="ElementShortName">res_RST_A</obj_property>
+               <obj_property name="ObjectShortName">res_RST_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/res_CLK_A">
+               <obj_property name="ElementShortName">res_CLK_A</obj_property>
+               <obj_property name="ObjectShortName">res_CLK_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/res_DOUT_A">
+               <obj_property name="ElementShortName">res_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">res_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/res_DIN_A">
+               <obj_property name="ElementShortName">res_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">res_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/res_WEN_A">
+               <obj_property name="ElementShortName">res_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">res_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/res_EN_A">
+               <obj_property name="ElementShortName">res_EN_A</obj_property>
+               <obj_property name="ObjectShortName">res_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/res_ADDR_A">
+               <obj_property name="ElementShortName">res_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">res_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group107">
+         <obj_property name="label">C Inputs</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="group" fp_name="group108">
+            <obj_property name="label">b(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/b_RST_A">
+               <obj_property name="ElementShortName">b_RST_A</obj_property>
+               <obj_property name="ObjectShortName">b_RST_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/b_CLK_A">
+               <obj_property name="ElementShortName">b_CLK_A</obj_property>
+               <obj_property name="ObjectShortName">b_CLK_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/b_DOUT_A">
+               <obj_property name="ElementShortName">b_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/b_DIN_A">
+               <obj_property name="ElementShortName">b_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/b_WEN_A">
+               <obj_property name="ElementShortName">b_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">b_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/b_EN_A">
+               <obj_property name="ElementShortName">b_EN_A</obj_property>
+               <obj_property name="ObjectShortName">b_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/b_ADDR_A">
+               <obj_property name="ElementShortName">b_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">b_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group116">
+            <obj_property name="label">w(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/w_RST_A">
+               <obj_property name="ElementShortName">w_RST_A</obj_property>
+               <obj_property name="ObjectShortName">w_RST_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/w_CLK_A">
+               <obj_property name="ElementShortName">w_CLK_A</obj_property>
+               <obj_property name="ObjectShortName">w_CLK_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/w_DOUT_A">
+               <obj_property name="ElementShortName">w_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">w_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/w_DIN_A">
+               <obj_property name="ElementShortName">w_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">w_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/w_WEN_A">
+               <obj_property name="ElementShortName">w_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">w_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/w_EN_A">
+               <obj_property name="ElementShortName">w_EN_A</obj_property>
+               <obj_property name="ObjectShortName">w_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/w_ADDR_A">
+               <obj_property name="ElementShortName">w_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">w_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group124">
+            <obj_property name="label">x(bram)</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/x_RST_A">
+               <obj_property name="ElementShortName">x_RST_A</obj_property>
+               <obj_property name="ObjectShortName">x_RST_A</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/x_CLK_A">
+               <obj_property name="ElementShortName">x_CLK_A</obj_property>
+               <obj_property name="ObjectShortName">x_CLK_A</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/x_DOUT_A">
+               <obj_property name="ElementShortName">x_DOUT_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">x_DOUT_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/x_DIN_A">
+               <obj_property name="ElementShortName">x_DIN_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">x_DIN_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/x_WEN_A">
+               <obj_property name="ElementShortName">x_WEN_A[3:0]</obj_property>
+               <obj_property name="ObjectShortName">x_WEN_A[3:0]</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/apatb_calcPerceptron_top/x_EN_A">
+               <obj_property name="ElementShortName">x_EN_A</obj_property>
+               <obj_property name="ObjectShortName">x_EN_A</obj_property>
+               <obj_property name="CustomSignalColor">#ffff00</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/apatb_calcPerceptron_top/x_ADDR_A">
+               <obj_property name="ElementShortName">x_ADDR_A[31:0]</obj_property>
+               <obj_property name="ObjectShortName">x_ADDR_A[31:0]</obj_property>
+               <obj_property name="Radix">HEXRADIX</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

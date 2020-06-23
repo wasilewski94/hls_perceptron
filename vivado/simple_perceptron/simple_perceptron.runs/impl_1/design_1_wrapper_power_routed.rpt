@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
-| Date             : Fri Jun 19 16:11:49 2020
+| Date             : Mon Jun 22 19:41:36 2020
 | Host             : legion running 64-bit Ubuntu 18.04.4 LTS
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.739        |
+| Total On-Chip Power (W)  | 1.743        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.595        |
+| Dynamic (W)              | 1.598        |
 | Device Static (W)        | 0.145        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 64.9         |
@@ -52,20 +52,20 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.019 |        4 |       --- |             --- |
-| Slice Logic             |     0.021 |    11188 |       --- |             --- |
-|   LUT as Logic          |     0.019 |     3973 |     53200 |            7.47 |
-|   Register              |    <0.001 |     4730 |    106400 |            4.45 |
+| Clocks                  |     0.020 |        4 |       --- |             --- |
+| Slice Logic             |     0.021 |    11388 |       --- |             --- |
+|   LUT as Logic          |     0.019 |     4041 |     53200 |            7.60 |
+|   Register              |    <0.001 |     4824 |    106400 |            4.53 |
 |   F7/F8 Muxes           |    <0.001 |      314 |     53200 |            0.59 |
-|   CARRY4                |    <0.001 |      192 |     13300 |            1.44 |
-|   LUT as Shift Register |    <0.001 |      192 |     17400 |            1.10 |
+|   CARRY4                |    <0.001 |      195 |     13300 |            1.47 |
+|   LUT as Shift Register |    <0.001 |      191 |     17400 |            1.10 |
 |   Others                |     0.000 |      680 |       --- |             --- |
-| Signals                 |     0.028 |     8333 |       --- |             --- |
+| Signals                 |     0.030 |     8475 |       --- |             --- |
 | Block RAM               |     0.020 |       22 |       140 |           15.71 |
 | DSPs                    |     0.016 |       20 |       220 |            9.09 |
 | PS7                     |     1.491 |        1 |       --- |             --- |
 | Static Power            |     0.145 |          |           |                 |
-| Total                   |     1.739 |          |           |                 |
+| Total                   |     1.743 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.118 |       0.102 |      0.016 |
+| Vccint    |       1.000 |     0.121 |       0.105 |      0.016 |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.015 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -151,8 +151,8 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| design_1_wrapper            |     1.595 |
-|   design_1_i                |     1.595 |
+| design_1_wrapper            |     1.598 |
+|   design_1_i                |     1.598 |
 |     axi_bram_ctrl_0         |     0.002 |
 |       U0                    |     0.002 |
 |     axi_bram_ctrl_1         |     0.002 |
@@ -163,8 +163,8 @@ Table of Contents
 |       U0                    |     0.002 |
 |     axi_timer_0             |     0.004 |
 |       U0                    |     0.004 |
-|     calcPerceptron_0        |     0.050 |
-|       U0                    |     0.050 |
+|     calcPerceptron_0        |     0.053 |
+|       U0                    |     0.053 |
 |     calcPerceptron_0_bram   |     0.002 |
 |       U0                    |     0.002 |
 |     calcPerceptron_0_bram_0 |     0.002 |
@@ -176,9 +176,9 @@ Table of Contents
 |     processing_system7_0    |     1.493 |
 |       inst                  |     1.493 |
 |     ps7_0_axi_periph        |     0.019 |
-|       m00_couplers          |     0.004 |
+|       m00_couplers          |     0.005 |
 |       m04_couplers          |     0.004 |
-|       xbar                  |     0.010 |
+|       xbar                  |     0.011 |
 +-----------------------------+-----------+
 
 

@@ -5,7 +5,7 @@
 `timescale 1ns/1ps
 module calcPerceptron_CTRL_BUS_s_axi
 #(parameter
-    C_S_AXI_ADDR_WIDTH = 5,
+    C_S_AXI_ADDR_WIDTH = 6,
     C_S_AXI_DATA_WIDTH = 32
 )(
     input  wire                          ACLK,
@@ -34,7 +34,9 @@ module calcPerceptron_CTRL_BUS_s_axi
     input  wire                          ap_ready,
     input  wire                          ap_idle,
     output wire [31:0]                   inputs,
-    output wire [31:0]                   neurons
+    output wire [31:0]                   neurons,
+    output wire [31:0]                   w_offset,
+    output wire [31:0]                   b_offset
 );
 //------------------------Address Info-------------------
 // 0x00 : Control signals
@@ -61,26 +63,36 @@ module calcPerceptron_CTRL_BUS_s_axi
 // 0x18 : Data signal of neurons
 //        bit 31~0 - neurons[31:0] (Read/Write)
 // 0x1c : reserved
+// 0x20 : Data signal of w_offset
+//        bit 31~0 - w_offset[31:0] (Read/Write)
+// 0x24 : reserved
+// 0x28 : Data signal of b_offset
+//        bit 31~0 - b_offset[31:0] (Read/Write)
+// 0x2c : reserved
 // (SC = Self Clear, COR = Clear on Read, TOW = Toggle on Write, COH = Clear on Handshake)
 
 //------------------------Parameter----------------------
 localparam
-    ADDR_AP_CTRL        = 5'h00,
-    ADDR_GIE            = 5'h04,
-    ADDR_IER            = 5'h08,
-    ADDR_ISR            = 5'h0c,
-    ADDR_INPUTS_DATA_0  = 5'h10,
-    ADDR_INPUTS_CTRL    = 5'h14,
-    ADDR_NEURONS_DATA_0 = 5'h18,
-    ADDR_NEURONS_CTRL   = 5'h1c,
-    WRIDLE              = 2'd0,
-    WRDATA              = 2'd1,
-    WRRESP              = 2'd2,
-    WRRESET             = 2'd3,
-    RDIDLE              = 2'd0,
-    RDDATA              = 2'd1,
-    RDRESET             = 2'd2,
-    ADDR_BITS         = 5;
+    ADDR_AP_CTRL         = 6'h00,
+    ADDR_GIE             = 6'h04,
+    ADDR_IER             = 6'h08,
+    ADDR_ISR             = 6'h0c,
+    ADDR_INPUTS_DATA_0   = 6'h10,
+    ADDR_INPUTS_CTRL     = 6'h14,
+    ADDR_NEURONS_DATA_0  = 6'h18,
+    ADDR_NEURONS_CTRL    = 6'h1c,
+    ADDR_W_OFFSET_DATA_0 = 6'h20,
+    ADDR_W_OFFSET_CTRL   = 6'h24,
+    ADDR_B_OFFSET_DATA_0 = 6'h28,
+    ADDR_B_OFFSET_CTRL   = 6'h2c,
+    WRIDLE               = 2'd0,
+    WRDATA               = 2'd1,
+    WRRESP               = 2'd2,
+    WRRESET              = 2'd3,
+    RDIDLE               = 2'd0,
+    RDDATA               = 2'd1,
+    RDRESET              = 2'd2,
+    ADDR_BITS         = 6;
 
 //------------------------Local signal-------------------
     reg  [1:0]                    wstate = WRRESET;
@@ -105,6 +117,8 @@ localparam
     reg  [1:0]                    int_isr = 2'b0;
     reg  [31:0]                   int_inputs = 'b0;
     reg  [31:0]                   int_neurons = 'b0;
+    reg  [31:0]                   int_w_offset = 'b0;
+    reg  [31:0]                   int_b_offset = 'b0;
 
 //------------------------Instantiation------------------
 
@@ -218,6 +232,12 @@ always @(posedge ACLK) begin
                 ADDR_NEURONS_DATA_0: begin
                     rdata <= int_neurons[31:0];
                 end
+                ADDR_W_OFFSET_DATA_0: begin
+                    rdata <= int_w_offset[31:0];
+                end
+                ADDR_B_OFFSET_DATA_0: begin
+                    rdata <= int_b_offset[31:0];
+                end
             endcase
         end
     end
@@ -229,6 +249,8 @@ assign interrupt = int_gie & (|int_isr);
 assign ap_start  = int_ap_start;
 assign inputs    = int_inputs;
 assign neurons   = int_neurons;
+assign w_offset  = int_w_offset;
+assign b_offset  = int_b_offset;
 // int_ap_start
 always @(posedge ACLK) begin
     if (ARESET)
@@ -342,6 +364,26 @@ always @(posedge ACLK) begin
     else if (ACLK_EN) begin
         if (w_hs && waddr == ADDR_NEURONS_DATA_0)
             int_neurons[31:0] <= (WDATA[31:0] & wmask) | (int_neurons[31:0] & ~wmask);
+    end
+end
+
+// int_w_offset[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_w_offset[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_W_OFFSET_DATA_0)
+            int_w_offset[31:0] <= (WDATA[31:0] & wmask) | (int_w_offset[31:0] & ~wmask);
+    end
+end
+
+// int_b_offset[31:0]
+always @(posedge ACLK) begin
+    if (ARESET)
+        int_b_offset[31:0] <= 0;
+    else if (ACLK_EN) begin
+        if (w_hs && waddr == ADDR_B_OFFSET_DATA_0)
+            int_b_offset[31:0] <= (WDATA[31:0] & wmask) | (int_b_offset[31:0] & ~wmask);
     end
 end
 

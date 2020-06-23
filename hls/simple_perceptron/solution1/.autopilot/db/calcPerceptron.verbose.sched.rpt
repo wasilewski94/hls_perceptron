@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'calcPerceptron'
 ================================================================
-* Date:           Fri Jun 19 16:04:06 2020
+* Date:           Mon Jun 22 19:32:15 2020
 
 * Version:        2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)
 * Project:        simple_perceptron
@@ -135,179 +135,188 @@ ST_1 : Operation 48 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBits
 ST_1 : Operation 49 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap([26 x float]* %res) nounwind, !map !102"   --->   Operation 49 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 50 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %inputs) nounwind, !map !106"   --->   Operation 50 'specbitsmap' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 51 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %neurons) nounwind, !map !112"   --->   Operation 51 'specbitsmap' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @calcPerceptron_str) nounwind"   --->   Operation 52 'spectopmodule' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 53 [1/1] (1.00ns)   --->   "%neurons_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %neurons) nounwind" [simple_perceptron/core.cpp:3]   --->   Operation 53 'read' 'neurons_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 54 [1/1] (1.00ns)   --->   "%inputs_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %inputs) nounwind" [simple_perceptron/core.cpp:3]   --->   Operation 54 'read' 'inputs_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
-ST_1 : Operation 55 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:5]   --->   Operation 55 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 56 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %inputs, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:6]   --->   Operation 56 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 57 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %neurons, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:7]   --->   Operation 57 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 58 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([784 x float]* %x, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:9]   --->   Operation 58 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([12704 x float]* %w, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:10]   --->   Operation 59 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([26 x float]* %res, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:11]   --->   Operation 60 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([26 x float]* %b, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:12]   --->   Operation 61 'specinterface' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 62 [1/1] (1.76ns)   --->   "br label %1" [simple_perceptron/core.cpp:23]   --->   Operation 62 'br' <Predicate = true> <Delay = 1.76>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %w_offset) nounwind, !map !116"   --->   Operation 52 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %b_offset) nounwind, !map !120"   --->   Operation 53 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([15 x i8]* @calcPerceptron_str) nounwind"   --->   Operation 54 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (1.00ns)   --->   "%b_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %b_offset) nounwind" [simple_perceptron/core.cpp:3]   --->   Operation 55 'read' 'b_offset_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 56 [1/1] (1.00ns)   --->   "%w_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %w_offset) nounwind" [simple_perceptron/core.cpp:3]   --->   Operation 56 'read' 'w_offset_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 57 [1/1] (1.00ns)   --->   "%neurons_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %neurons) nounwind" [simple_perceptron/core.cpp:3]   --->   Operation 57 'read' 'neurons_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 58 [1/1] (1.00ns)   --->   "%inputs_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %inputs) nounwind" [simple_perceptron/core.cpp:3]   --->   Operation 58 'read' 'inputs_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:5]   --->   Operation 59 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %inputs, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:6]   --->   Operation 60 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %neurons, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:7]   --->   Operation 61 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %w_offset, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:8]   --->   Operation 62 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %b_offset, [10 x i8]* @p_str, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [9 x i8]* @p_str2, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:9]   --->   Operation 63 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([784 x float]* %x, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:11]   --->   Operation 64 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 65 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([12704 x float]* %w, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:12]   --->   Operation 65 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 66 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([26 x float]* %res, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:13]   --->   Operation 66 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 67 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface([26 x float]* %b, [5 x i8]* @p_str3, i32 0, i32 0, [1 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1, [1 x i8]* @p_str1, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str1, [1 x i8]* @p_str1) nounwind" [simple_perceptron/core.cpp:14]   --->   Operation 67 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 68 [1/1] (1.76ns)   --->   "br label %1" [simple_perceptron/core.cpp:29]   --->   Operation 68 'br' <Predicate = true> <Delay = 1.76>
 
 State 2 <SV = 1> <Delay = 3.46>
-ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%j_0 = phi i31 [ 0, %0 ], [ %j, %3 ]"   --->   Operation 63 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%phi_mul = phi i32 [ 0, %0 ], [ %add_ln23, %3 ]" [simple_perceptron/core.cpp:23]   --->   Operation 64 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 65 [1/1] (2.55ns)   --->   "%add_ln23 = add i32 %phi_mul, %inputs_read" [simple_perceptron/core.cpp:23]   --->   Operation 65 'add' 'add_ln23' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%zext_ln23 = zext i31 %j_0 to i32" [simple_perceptron/core.cpp:23]   --->   Operation 66 'zext' 'zext_ln23' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 67 [1/1] (2.47ns)   --->   "%icmp_ln23 = icmp slt i32 %zext_ln23, %neurons_read" [simple_perceptron/core.cpp:23]   --->   Operation 67 'icmp' 'icmp_ln23' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 68 [1/1] (2.52ns)   --->   "%j = add i31 %j_0, 1" [simple_perceptron/core.cpp:23]   --->   Operation 68 'add' 'j' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 69 [1/1] (0.00ns)   --->   "br i1 %icmp_ln23, label %.preheader.preheader, label %4" [simple_perceptron/core.cpp:23]   --->   Operation 69 'br' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 70 [1/1] (1.76ns)   --->   "br label %.preheader"   --->   Operation 70 'br' <Predicate = (icmp_ln23)> <Delay = 1.76>
-ST_2 : Operation 71 [1/1] (0.00ns)   --->   "ret void" [simple_perceptron/core.cpp:45]   --->   Operation 71 'ret' <Predicate = (!icmp_ln23)> <Delay = 0.00>
+ST_2 : Operation 69 [1/1] (0.00ns)   --->   "%j_0 = phi i31 [ 0, %0 ], [ %j, %3 ]"   --->   Operation 69 'phi' 'j_0' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%phi_mul = phi i32 [ 0, %0 ], [ %add_ln29, %3 ]" [simple_perceptron/core.cpp:29]   --->   Operation 70 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 71 [1/1] (2.55ns)   --->   "%add_ln29 = add i32 %phi_mul, %inputs_read" [simple_perceptron/core.cpp:29]   --->   Operation 71 'add' 'add_ln29' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 72 [1/1] (0.00ns)   --->   "%zext_ln29 = zext i31 %j_0 to i32" [simple_perceptron/core.cpp:29]   --->   Operation 72 'zext' 'zext_ln29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 73 [1/1] (2.47ns)   --->   "%icmp_ln29 = icmp slt i32 %zext_ln29, %neurons_read" [simple_perceptron/core.cpp:29]   --->   Operation 73 'icmp' 'icmp_ln29' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 74 [1/1] (2.52ns)   --->   "%j = add i31 %j_0, 1" [simple_perceptron/core.cpp:29]   --->   Operation 74 'add' 'j' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 75 [1/1] (0.00ns)   --->   "br i1 %icmp_ln29, label %.preheader.preheader, label %4" [simple_perceptron/core.cpp:29]   --->   Operation 75 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 76 [1/1] (1.76ns)   --->   "br label %.preheader"   --->   Operation 76 'br' <Predicate = (icmp_ln29)> <Delay = 1.76>
+ST_2 : Operation 77 [1/1] (0.00ns)   --->   "ret void" [simple_perceptron/core.cpp:37]   --->   Operation 77 'ret' <Predicate = (!icmp_ln29)> <Delay = 0.00>
 
-State 3 <SV = 2> <Delay = 5.80>
-ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%sum_1 = phi float [ %sum, %2 ], [ 0.000000e+00, %.preheader.preheader ]"   --->   Operation 72 'phi' 'sum_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 73 [1/1] (0.00ns)   --->   "%i_0 = phi i31 [ %i, %2 ], [ 0, %.preheader.preheader ]"   --->   Operation 73 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 74 [1/1] (0.00ns)   --->   "%i_0_cast = zext i31 %i_0 to i32" [simple_perceptron/core.cpp:25]   --->   Operation 74 'zext' 'i_0_cast' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 75 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str40) nounwind"   --->   Operation 75 'specpipeline' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 76 [1/1] (2.47ns)   --->   "%icmp_ln25 = icmp slt i32 %i_0_cast, %inputs_read" [simple_perceptron/core.cpp:25]   --->   Operation 76 'icmp' 'icmp_ln25' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 77 [1/1] (2.52ns)   --->   "%i = add i31 %i_0, 1" [simple_perceptron/core.cpp:25]   --->   Operation 77 'add' 'i' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 78 [1/1] (0.00ns)   --->   "br i1 %icmp_ln25, label %2, label %3" [simple_perceptron/core.cpp:25]   --->   Operation 78 'br' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%zext_ln26 = zext i31 %i_0 to i64" [simple_perceptron/core.cpp:26]   --->   Operation 79 'zext' 'zext_ln26' <Predicate = (icmp_ln25)> <Delay = 0.00>
-ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%x_addr = getelementptr [784 x float]* %x, i64 0, i64 %zext_ln26" [simple_perceptron/core.cpp:26]   --->   Operation 80 'getelementptr' 'x_addr' <Predicate = (icmp_ln25)> <Delay = 0.00>
-ST_3 : Operation 81 [2/2] (3.25ns)   --->   "%x_load = load float* %x_addr, align 4" [simple_perceptron/core.cpp:26]   --->   Operation 81 'load' 'x_load' <Predicate = (icmp_ln25)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
-ST_3 : Operation 82 [1/1] (2.55ns)   --->   "%add_ln26 = add nsw i32 %phi_mul, %i_0_cast" [simple_perceptron/core.cpp:26]   --->   Operation 82 'add' 'add_ln26' <Predicate = (icmp_ln25)> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.52> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_3 : Operation 83 [1/1] (0.00ns)   --->   "%sext_ln26 = sext i32 %add_ln26 to i64" [simple_perceptron/core.cpp:26]   --->   Operation 83 'sext' 'sext_ln26' <Predicate = (icmp_ln25)> <Delay = 0.00>
-ST_3 : Operation 84 [1/1] (0.00ns)   --->   "%w_addr = getelementptr [12704 x float]* %w, i64 0, i64 %sext_ln26" [simple_perceptron/core.cpp:26]   --->   Operation 84 'getelementptr' 'w_addr' <Predicate = (icmp_ln25)> <Delay = 0.00>
-ST_3 : Operation 85 [2/2] (3.25ns)   --->   "%w_load = load float* %w_addr, align 4" [simple_perceptron/core.cpp:26]   --->   Operation 85 'load' 'w_load' <Predicate = (icmp_ln25)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
+State 3 <SV = 2> <Delay = 7.62>
+ST_3 : Operation 78 [1/1] (0.00ns)   --->   "%sum_1 = phi float [ %sum, %2 ], [ 0.000000e+00, %.preheader.preheader ]"   --->   Operation 78 'phi' 'sum_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 79 [1/1] (0.00ns)   --->   "%i_0 = phi i31 [ %i, %2 ], [ 0, %.preheader.preheader ]"   --->   Operation 79 'phi' 'i_0' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 80 [1/1] (0.00ns)   --->   "%i_0_cast = zext i31 %i_0 to i32" [simple_perceptron/core.cpp:30]   --->   Operation 80 'zext' 'i_0_cast' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str40) nounwind"   --->   Operation 81 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (2.47ns)   --->   "%icmp_ln30 = icmp slt i32 %i_0_cast, %inputs_read" [simple_perceptron/core.cpp:30]   --->   Operation 82 'icmp' 'icmp_ln30' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 83 [1/1] (2.52ns)   --->   "%i = add i31 %i_0, 1" [simple_perceptron/core.cpp:30]   --->   Operation 83 'add' 'i' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "br i1 %icmp_ln30, label %2, label %3" [simple_perceptron/core.cpp:30]   --->   Operation 84 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "%zext_ln31 = zext i31 %i_0 to i64" [simple_perceptron/core.cpp:31]   --->   Operation 85 'zext' 'zext_ln31' <Predicate = (icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "%x_addr = getelementptr [784 x float]* %x, i64 0, i64 %zext_ln31" [simple_perceptron/core.cpp:31]   --->   Operation 86 'getelementptr' 'x_addr' <Predicate = (icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 87 [2/2] (3.25ns)   --->   "%x_load = load float* %x_addr, align 4" [simple_perceptron/core.cpp:31]   --->   Operation 87 'load' 'x_load' <Predicate = (icmp_ln30)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
+ST_3 : Operation 88 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln31 = add i32 %i_0_cast, %w_offset_read" [simple_perceptron/core.cpp:31]   --->   Operation 88 'add' 'add_ln31' <Predicate = (icmp_ln30)> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 89 [1/1] (4.37ns) (root node of TernaryAdder)   --->   "%add_ln31_1 = add i32 %add_ln31, %phi_mul" [simple_perceptron/core.cpp:31]   --->   Operation 89 'add' 'add_ln31_1' <Predicate = (icmp_ln30)> <Delay = 4.37> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 2.18> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "%sext_ln31 = sext i32 %add_ln31_1 to i64" [simple_perceptron/core.cpp:31]   --->   Operation 90 'sext' 'sext_ln31' <Predicate = (icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "%w_addr = getelementptr [12704 x float]* %w, i64 0, i64 %sext_ln31" [simple_perceptron/core.cpp:31]   --->   Operation 91 'getelementptr' 'w_addr' <Predicate = (icmp_ln30)> <Delay = 0.00>
+ST_3 : Operation 92 [2/2] (3.25ns)   --->   "%w_load = load float* %w_addr, align 4" [simple_perceptron/core.cpp:31]   --->   Operation 92 'load' 'w_load' <Predicate = (icmp_ln30)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
 
 State 4 <SV = 3> <Delay = 3.25>
-ST_4 : Operation 86 [1/2] (3.25ns)   --->   "%x_load = load float* %x_addr, align 4" [simple_perceptron/core.cpp:26]   --->   Operation 86 'load' 'x_load' <Predicate = (icmp_ln25)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
-ST_4 : Operation 87 [1/2] (3.25ns)   --->   "%w_load = load float* %w_addr, align 4" [simple_perceptron/core.cpp:26]   --->   Operation 87 'load' 'w_load' <Predicate = (icmp_ln25)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
+ST_4 : Operation 93 [1/2] (3.25ns)   --->   "%x_load = load float* %x_addr, align 4" [simple_perceptron/core.cpp:31]   --->   Operation 93 'load' 'x_load' <Predicate = (icmp_ln30)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
+ST_4 : Operation 94 [1/2] (3.25ns)   --->   "%w_load = load float* %w_addr, align 4" [simple_perceptron/core.cpp:31]   --->   Operation 94 'load' 'w_load' <Predicate = (icmp_ln30)> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
 
 State 5 <SV = 4> <Delay = 5.70>
-ST_5 : Operation 88 [4/4] (5.70ns)   --->   "%tmp = fmul float %x_load, %w_load" [simple_perceptron/core.cpp:26]   --->   Operation 88 'fmul' 'tmp' <Predicate = (icmp_ln25)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 95 [4/4] (5.70ns)   --->   "%tmp = fmul float %x_load, %w_load" [simple_perceptron/core.cpp:31]   --->   Operation 95 'fmul' 'tmp' <Predicate = (icmp_ln30)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 6 <SV = 5> <Delay = 5.70>
-ST_6 : Operation 89 [3/4] (5.70ns)   --->   "%tmp = fmul float %x_load, %w_load" [simple_perceptron/core.cpp:26]   --->   Operation 89 'fmul' 'tmp' <Predicate = (icmp_ln25)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 96 [3/4] (5.70ns)   --->   "%tmp = fmul float %x_load, %w_load" [simple_perceptron/core.cpp:31]   --->   Operation 96 'fmul' 'tmp' <Predicate = (icmp_ln30)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 7 <SV = 6> <Delay = 5.70>
-ST_7 : Operation 90 [2/4] (5.70ns)   --->   "%tmp = fmul float %x_load, %w_load" [simple_perceptron/core.cpp:26]   --->   Operation 90 'fmul' 'tmp' <Predicate = (icmp_ln25)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 97 [2/4] (5.70ns)   --->   "%tmp = fmul float %x_load, %w_load" [simple_perceptron/core.cpp:31]   --->   Operation 97 'fmul' 'tmp' <Predicate = (icmp_ln30)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 8 <SV = 7> <Delay = 5.70>
-ST_8 : Operation 91 [1/4] (5.70ns)   --->   "%tmp = fmul float %x_load, %w_load" [simple_perceptron/core.cpp:26]   --->   Operation 91 'fmul' 'tmp' <Predicate = (icmp_ln25)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 98 [1/4] (5.70ns)   --->   "%tmp = fmul float %x_load, %w_load" [simple_perceptron/core.cpp:31]   --->   Operation 98 'fmul' 'tmp' <Predicate = (icmp_ln30)> <Delay = 5.70> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 3> <II = 1> <Delay = 5.70> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
 
 State 9 <SV = 8> <Delay = 7.25>
-ST_9 : Operation 92 [5/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:26]   --->   Operation 92 'fadd' 'sum' <Predicate = (icmp_ln25)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 99 [5/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:31]   --->   Operation 99 'fadd' 'sum' <Predicate = (icmp_ln30)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 10 <SV = 9> <Delay = 7.25>
-ST_10 : Operation 93 [4/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:26]   --->   Operation 93 'fadd' 'sum' <Predicate = (icmp_ln25)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 100 [4/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:31]   --->   Operation 100 'fadd' 'sum' <Predicate = (icmp_ln30)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 11 <SV = 10> <Delay = 7.25>
-ST_11 : Operation 94 [3/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:26]   --->   Operation 94 'fadd' 'sum' <Predicate = (icmp_ln25)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 101 [3/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:31]   --->   Operation 101 'fadd' 'sum' <Predicate = (icmp_ln30)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 12 <SV = 11> <Delay = 7.25>
-ST_12 : Operation 95 [2/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:26]   --->   Operation 95 'fadd' 'sum' <Predicate = (icmp_ln25)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 102 [2/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:31]   --->   Operation 102 'fadd' 'sum' <Predicate = (icmp_ln30)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 13 <SV = 12> <Delay = 7.25>
-ST_13 : Operation 96 [1/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:26]   --->   Operation 96 'fadd' 'sum' <Predicate = (icmp_ln25)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
-ST_13 : Operation 97 [1/1] (0.00ns)   --->   "br label %.preheader" [simple_perceptron/core.cpp:25]   --->   Operation 97 'br' <Predicate = (icmp_ln25)> <Delay = 0.00>
+ST_13 : Operation 103 [1/5] (7.25ns)   --->   "%sum = fadd float %tmp, %sum_1" [simple_perceptron/core.cpp:31]   --->   Operation 103 'fadd' 'sum' <Predicate = (icmp_ln30)> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 104 [1/1] (0.00ns)   --->   "br label %.preheader" [simple_perceptron/core.cpp:30]   --->   Operation 104 'br' <Predicate = (icmp_ln30)> <Delay = 0.00>
 
-State 14 <SV = 3> <Delay = 2.32>
-ST_14 : Operation 98 [1/1] (0.00ns)   --->   "%zext_ln28 = zext i31 %j_0 to i64" [simple_perceptron/core.cpp:28]   --->   Operation 98 'zext' 'zext_ln28' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 99 [1/1] (0.00ns)   --->   "%b_addr = getelementptr [26 x float]* %b, i64 0, i64 %zext_ln28" [simple_perceptron/core.cpp:28]   --->   Operation 99 'getelementptr' 'b_addr' <Predicate = true> <Delay = 0.00>
-ST_14 : Operation 100 [2/2] (2.32ns)   --->   "%b_load = load float* %b_addr, align 4" [simple_perceptron/core.cpp:28]   --->   Operation 100 'load' 'b_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
+State 14 <SV = 3> <Delay = 4.87>
+ST_14 : Operation 105 [1/1] (2.55ns)   --->   "%add_ln33 = add nsw i32 %zext_ln29, %b_offset_read" [simple_perceptron/core.cpp:33]   --->   Operation 105 'add' 'add_ln33' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 106 [1/1] (0.00ns)   --->   "%sext_ln33 = sext i32 %add_ln33 to i64" [simple_perceptron/core.cpp:33]   --->   Operation 106 'sext' 'sext_ln33' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 107 [1/1] (0.00ns)   --->   "%b_addr = getelementptr [26 x float]* %b, i64 0, i64 %sext_ln33" [simple_perceptron/core.cpp:33]   --->   Operation 107 'getelementptr' 'b_addr' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 108 [2/2] (2.32ns)   --->   "%b_load = load float* %b_addr, align 4" [simple_perceptron/core.cpp:33]   --->   Operation 108 'load' 'b_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
 
 State 15 <SV = 4> <Delay = 2.32>
-ST_15 : Operation 101 [1/2] (2.32ns)   --->   "%b_load = load float* %b_addr, align 4" [simple_perceptron/core.cpp:28]   --->   Operation 101 'load' 'b_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
+ST_15 : Operation 109 [1/2] (2.32ns)   --->   "%b_load = load float* %b_addr, align 4" [simple_perceptron/core.cpp:33]   --->   Operation 109 'load' 'b_load' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
 
 State 16 <SV = 5> <Delay = 7.25>
-ST_16 : Operation 102 [5/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:28]   --->   Operation 102 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 110 [5/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:33]   --->   Operation 110 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 17 <SV = 6> <Delay = 7.25>
-ST_17 : Operation 103 [4/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:28]   --->   Operation 103 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 111 [4/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:33]   --->   Operation 111 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 18 <SV = 7> <Delay = 7.25>
-ST_18 : Operation 104 [3/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:28]   --->   Operation 104 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 112 [3/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:33]   --->   Operation 112 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 19 <SV = 8> <Delay = 7.25>
-ST_19 : Operation 105 [2/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:28]   --->   Operation 105 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 113 [2/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:33]   --->   Operation 113 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 20 <SV = 9> <Delay = 7.25>
-ST_20 : Operation 106 [1/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:28]   --->   Operation 106 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 114 [1/5] (7.25ns)   --->   "%tmp_2 = fadd float %b_load, %sum_1" [simple_perceptron/core.cpp:33]   --->   Operation 114 'fadd' 'tmp_2' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 21 <SV = 10> <Delay = 8.67>
-ST_21 : Operation 107 [1/1] (0.00ns)   --->   "%bitcast_ln28 = bitcast float %tmp_2 to i32" [simple_perceptron/core.cpp:28]   --->   Operation 107 'bitcast' 'bitcast_ln28' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 108 [1/1] (0.99ns)   --->   "%xor_ln28 = xor i32 %bitcast_ln28, -2147483648" [simple_perceptron/core.cpp:28]   --->   Operation 108 'xor' 'xor_ln28' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
-ST_21 : Operation 109 [1/1] (0.00ns)   --->   "%bitcast_ln28_1 = bitcast i32 %xor_ln28 to float" [simple_perceptron/core.cpp:28]   --->   Operation 109 'bitcast' 'bitcast_ln28_1' <Predicate = true> <Delay = 0.00>
-ST_21 : Operation 110 [9/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 110 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_21 : Operation 115 [1/1] (0.00ns)   --->   "%bitcast_ln33 = bitcast float %tmp_2 to i32" [simple_perceptron/core.cpp:33]   --->   Operation 115 'bitcast' 'bitcast_ln33' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 116 [1/1] (0.99ns)   --->   "%xor_ln33 = xor i32 %bitcast_ln33, -2147483648" [simple_perceptron/core.cpp:33]   --->   Operation 116 'xor' 'xor_ln33' <Predicate = true> <Delay = 0.99> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.99> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 117 [1/1] (0.00ns)   --->   "%bitcast_ln33_1 = bitcast i32 %xor_ln33 to float" [simple_perceptron/core.cpp:33]   --->   Operation 117 'bitcast' 'bitcast_ln33_1' <Predicate = true> <Delay = 0.00>
+ST_21 : Operation 118 [9/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 118 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 22 <SV = 11> <Delay = 7.68>
-ST_22 : Operation 111 [8/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 111 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_22 : Operation 119 [8/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 119 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 23 <SV = 12> <Delay = 7.68>
-ST_23 : Operation 112 [7/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 112 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 120 [7/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 120 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 24 <SV = 13> <Delay = 7.68>
-ST_24 : Operation 113 [6/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 113 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_24 : Operation 121 [6/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 121 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 25 <SV = 14> <Delay = 7.68>
-ST_25 : Operation 114 [5/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 114 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_25 : Operation 122 [5/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 122 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 26 <SV = 15> <Delay = 7.68>
-ST_26 : Operation 115 [4/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 115 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_26 : Operation 123 [4/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 123 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 27 <SV = 16> <Delay = 7.68>
-ST_27 : Operation 116 [3/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 116 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_27 : Operation 124 [3/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 124 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 28 <SV = 17> <Delay = 7.68>
-ST_28 : Operation 117 [2/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 117 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_28 : Operation 125 [2/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 125 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 29 <SV = 18> <Delay = 7.68>
-ST_29 : Operation 118 [1/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln28_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28]   --->   Operation 118 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
+ST_29 : Operation 126 [1/9] (7.68ns)   --->   "%tmp_i_i = call float @llvm.exp.f32(float %bitcast_ln33_1) nounwind" [/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33]   --->   Operation 126 'fexp' 'tmp_i_i' <Predicate = true> <Delay = 7.68> <Core = "FExp">   --->   Core 127 'FExp' <Latency = 8> <II = 1> <Delay = 7.68> <FuncUnit> <Opcode : 'fexp'> <InPorts = 1> <OutPorts = 1>
 
 State 30 <SV = 19> <Delay = 7.25>
-ST_30 : Operation 119 [5/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:28]   --->   Operation 119 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 127 [5/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:33]   --->   Operation 127 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 31 <SV = 20> <Delay = 7.25>
-ST_31 : Operation 120 [4/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:28]   --->   Operation 120 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 128 [4/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:33]   --->   Operation 128 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 32 <SV = 21> <Delay = 7.25>
-ST_32 : Operation 121 [3/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:28]   --->   Operation 121 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 129 [3/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:33]   --->   Operation 129 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 33 <SV = 22> <Delay = 7.25>
-ST_33 : Operation 122 [2/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:28]   --->   Operation 122 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 130 [2/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:33]   --->   Operation 130 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 34 <SV = 23> <Delay = 7.25>
-ST_34 : Operation 123 [1/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:28]   --->   Operation 123 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 131 [1/5] (7.25ns)   --->   "%tmp_5 = fadd float %tmp_i_i, 1.000000e+00" [simple_perceptron/core.cpp:33]   --->   Operation 131 'fadd' 'tmp_5' <Predicate = true> <Delay = 7.25> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 4> <II = 1> <Delay = 7.25> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
 
 State 35 <SV = 24> <Delay = 7.98>
-ST_35 : Operation 124 [10/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 124 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_35 : Operation 132 [10/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 132 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 36 <SV = 25> <Delay = 7.98>
-ST_36 : Operation 125 [9/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 125 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_36 : Operation 133 [9/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 133 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 37 <SV = 26> <Delay = 7.98>
-ST_37 : Operation 126 [8/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 126 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_37 : Operation 134 [8/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 134 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 38 <SV = 27> <Delay = 7.98>
-ST_38 : Operation 127 [7/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 127 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_38 : Operation 135 [7/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 135 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 39 <SV = 28> <Delay = 7.98>
-ST_39 : Operation 128 [6/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 128 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_39 : Operation 136 [6/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 136 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 40 <SV = 29> <Delay = 7.98>
-ST_40 : Operation 129 [5/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 129 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_40 : Operation 137 [5/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 137 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 41 <SV = 30> <Delay = 7.98>
-ST_41 : Operation 130 [4/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 130 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_41 : Operation 138 [4/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 138 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 42 <SV = 31> <Delay = 7.98>
-ST_42 : Operation 131 [3/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 131 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_42 : Operation 139 [3/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 139 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 43 <SV = 32> <Delay = 7.98>
-ST_43 : Operation 132 [2/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 132 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_43 : Operation 140 [2/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 140 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 44 <SV = 33> <Delay = 7.98>
-ST_44 : Operation 133 [1/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:28]   --->   Operation 133 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
+ST_44 : Operation 141 [1/10] (7.98ns)   --->   "%tmp_1 = call float @_ssdm_op_FRecip.f32(float %tmp_5)" [simple_perceptron/core.cpp:33]   --->   Operation 141 'frecip' 'tmp_1' <Predicate = true> <Delay = 7.98> <Core = "FRecip">   --->   Core 110 'FRecip' <Latency = 9> <II = 1> <Delay = 7.98> <FuncUnit> <Opcode : 'frecip'> <InPorts = 1> <OutPorts = 1>
 
 State 45 <SV = 34> <Delay = 2.32>
-ST_45 : Operation 134 [1/1] (0.00ns)   --->   "%res_addr = getelementptr [26 x float]* %res, i64 0, i64 %zext_ln28" [simple_perceptron/core.cpp:28]   --->   Operation 134 'getelementptr' 'res_addr' <Predicate = true> <Delay = 0.00>
-ST_45 : Operation 135 [1/1] (2.32ns)   --->   "store float %tmp_1, float* %res_addr, align 4" [simple_perceptron/core.cpp:28]   --->   Operation 135 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
-ST_45 : Operation 136 [1/1] (0.00ns)   --->   "br label %1" [simple_perceptron/core.cpp:23]   --->   Operation 136 'br' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 142 [1/1] (0.00ns)   --->   "%zext_ln33 = zext i31 %j_0 to i64" [simple_perceptron/core.cpp:33]   --->   Operation 142 'zext' 'zext_ln33' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 143 [1/1] (0.00ns)   --->   "%res_addr = getelementptr [26 x float]* %res, i64 0, i64 %zext_ln33" [simple_perceptron/core.cpp:33]   --->   Operation 143 'getelementptr' 'res_addr' <Predicate = true> <Delay = 0.00>
+ST_45 : Operation 144 [1/1] (2.32ns)   --->   "store float %tmp_1, float* %res_addr, align 4" [simple_perceptron/core.cpp:33]   --->   Operation 144 'store' <Predicate = true> <Delay = 2.32> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 32> <Depth = 26> <RAM>
+ST_45 : Operation 145 [1/1] (0.00ns)   --->   "br label %1" [simple_perceptron/core.cpp:29]   --->   Operation 145 'br' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -317,190 +326,192 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
 
  <State 1>: 1.77ns
 The critical path consists of the following:
-	multiplexor before 'phi' operation ('j') with incoming values : ('j', simple_perceptron/core.cpp:23) [25]  (1.77 ns)
+	multiplexor before 'phi' operation ('j') with incoming values : ('j', simple_perceptron/core.cpp:29) [33]  (1.77 ns)
 
  <State 2>: 3.47ns
 The critical path consists of the following:
-	'icmp' operation ('icmp_ln23', simple_perceptron/core.cpp:23) [29]  (2.47 ns)
+	'icmp' operation ('icmp_ln29', simple_perceptron/core.cpp:29) [37]  (2.47 ns)
 	blocking operation 0.993 ns on control path)
 
- <State 3>: 5.81ns
+ <State 3>: 7.62ns
 The critical path consists of the following:
-	'phi' operation ('i') with incoming values : ('i', simple_perceptron/core.cpp:25) [36]  (0 ns)
-	'add' operation ('add_ln26', simple_perceptron/core.cpp:26) [46]  (2.55 ns)
-	'getelementptr' operation ('w_addr', simple_perceptron/core.cpp:26) [48]  (0 ns)
-	'load' operation ('w_load', simple_perceptron/core.cpp:26) on array 'w' [49]  (3.25 ns)
+	'phi' operation ('i') with incoming values : ('i', simple_perceptron/core.cpp:30) [44]  (0 ns)
+	'add' operation ('add_ln31', simple_perceptron/core.cpp:31) [54]  (0 ns)
+	'add' operation ('add_ln31_1', simple_perceptron/core.cpp:31) [55]  (4.37 ns)
+	'getelementptr' operation ('w_addr', simple_perceptron/core.cpp:31) [57]  (0 ns)
+	'load' operation ('w_load', simple_perceptron/core.cpp:31) on array 'w' [58]  (3.25 ns)
 
  <State 4>: 3.25ns
 The critical path consists of the following:
-	'load' operation ('x_load', simple_perceptron/core.cpp:26) on array 'x' [45]  (3.25 ns)
+	'load' operation ('x_load', simple_perceptron/core.cpp:31) on array 'x' [53]  (3.25 ns)
 
  <State 5>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp', simple_perceptron/core.cpp:26) [50]  (5.7 ns)
+	'fmul' operation ('tmp', simple_perceptron/core.cpp:31) [59]  (5.7 ns)
 
  <State 6>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp', simple_perceptron/core.cpp:26) [50]  (5.7 ns)
+	'fmul' operation ('tmp', simple_perceptron/core.cpp:31) [59]  (5.7 ns)
 
  <State 7>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp', simple_perceptron/core.cpp:26) [50]  (5.7 ns)
+	'fmul' operation ('tmp', simple_perceptron/core.cpp:31) [59]  (5.7 ns)
 
  <State 8>: 5.7ns
 The critical path consists of the following:
-	'fmul' operation ('tmp', simple_perceptron/core.cpp:26) [50]  (5.7 ns)
+	'fmul' operation ('tmp', simple_perceptron/core.cpp:31) [59]  (5.7 ns)
 
  <State 9>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', simple_perceptron/core.cpp:26) [51]  (7.26 ns)
+	'fadd' operation ('sum', simple_perceptron/core.cpp:31) [60]  (7.26 ns)
 
  <State 10>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', simple_perceptron/core.cpp:26) [51]  (7.26 ns)
+	'fadd' operation ('sum', simple_perceptron/core.cpp:31) [60]  (7.26 ns)
 
  <State 11>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', simple_perceptron/core.cpp:26) [51]  (7.26 ns)
+	'fadd' operation ('sum', simple_perceptron/core.cpp:31) [60]  (7.26 ns)
 
  <State 12>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', simple_perceptron/core.cpp:26) [51]  (7.26 ns)
+	'fadd' operation ('sum', simple_perceptron/core.cpp:31) [60]  (7.26 ns)
 
  <State 13>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('sum', simple_perceptron/core.cpp:26) [51]  (7.26 ns)
+	'fadd' operation ('sum', simple_perceptron/core.cpp:31) [60]  (7.26 ns)
 
- <State 14>: 2.32ns
+ <State 14>: 4.87ns
 The critical path consists of the following:
-	'getelementptr' operation ('b_addr', simple_perceptron/core.cpp:28) [55]  (0 ns)
-	'load' operation ('b_load', simple_perceptron/core.cpp:28) on array 'b' [56]  (2.32 ns)
+	'add' operation ('add_ln33', simple_perceptron/core.cpp:33) [63]  (2.55 ns)
+	'getelementptr' operation ('b_addr', simple_perceptron/core.cpp:33) [65]  (0 ns)
+	'load' operation ('b_load', simple_perceptron/core.cpp:33) on array 'b' [66]  (2.32 ns)
 
  <State 15>: 2.32ns
 The critical path consists of the following:
-	'load' operation ('b_load', simple_perceptron/core.cpp:28) on array 'b' [56]  (2.32 ns)
+	'load' operation ('b_load', simple_perceptron/core.cpp:33) on array 'b' [66]  (2.32 ns)
 
  <State 16>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:28) [57]  (7.26 ns)
+	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:33) [67]  (7.26 ns)
 
  <State 17>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:28) [57]  (7.26 ns)
+	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:33) [67]  (7.26 ns)
 
  <State 18>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:28) [57]  (7.26 ns)
+	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:33) [67]  (7.26 ns)
 
  <State 19>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:28) [57]  (7.26 ns)
+	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:33) [67]  (7.26 ns)
 
  <State 20>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:28) [57]  (7.26 ns)
+	'fadd' operation ('tmp_2', simple_perceptron/core.cpp:33) [67]  (7.26 ns)
 
  <State 21>: 8.68ns
 The critical path consists of the following:
-	'xor' operation ('xor_ln28', simple_perceptron/core.cpp:28) [59]  (0.993 ns)
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'xor' operation ('xor_ln33', simple_perceptron/core.cpp:33) [69]  (0.993 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 22>: 7.68ns
 The critical path consists of the following:
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 23>: 7.68ns
 The critical path consists of the following:
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 24>: 7.68ns
 The critical path consists of the following:
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 25>: 7.68ns
 The critical path consists of the following:
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 26>: 7.68ns
 The critical path consists of the following:
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 27>: 7.68ns
 The critical path consists of the following:
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 28>: 7.68ns
 The critical path consists of the following:
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 29>: 7.68ns
 The critical path consists of the following:
-	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:28) [61]  (7.68 ns)
+	'fexp' operation ('tmp_i_i', /wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/common/hls_exp_float.cpp:16->/wrk/2019.2/continuous/2019_11_06_2708876/src/products/hls/hls_lib/hlsmath/src/c++/expfloat.cpp:20->simple_perceptron/core.cpp:33) [71]  (7.68 ns)
 
  <State 30>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:28) [62]  (7.26 ns)
+	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:33) [72]  (7.26 ns)
 
  <State 31>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:28) [62]  (7.26 ns)
+	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:33) [72]  (7.26 ns)
 
  <State 32>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:28) [62]  (7.26 ns)
+	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:33) [72]  (7.26 ns)
 
  <State 33>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:28) [62]  (7.26 ns)
+	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:33) [72]  (7.26 ns)
 
  <State 34>: 7.26ns
 The critical path consists of the following:
-	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:28) [62]  (7.26 ns)
+	'fadd' operation ('tmp_5', simple_perceptron/core.cpp:33) [72]  (7.26 ns)
 
  <State 35>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 36>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 37>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 38>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 39>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 40>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 41>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 42>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 43>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 44>: 7.99ns
 The critical path consists of the following:
-	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:28) [63]  (7.99 ns)
+	'frecip' operation ('tmp_1', simple_perceptron/core.cpp:33) [73]  (7.99 ns)
 
  <State 45>: 2.32ns
 The critical path consists of the following:
-	'getelementptr' operation ('res_addr', simple_perceptron/core.cpp:28) [64]  (0 ns)
-	'store' operation ('store_ln28', simple_perceptron/core.cpp:28) of variable 'tmp_1', simple_perceptron/core.cpp:28 on array 'res' [65]  (2.32 ns)
+	'getelementptr' operation ('res_addr', simple_perceptron/core.cpp:33) [75]  (0 ns)
+	'store' operation ('store_ln33', simple_perceptron/core.cpp:33) of variable 'tmp_1', simple_perceptron/core.cpp:33 on array 'res' [76]  (2.32 ns)
 
 
 ============================================================

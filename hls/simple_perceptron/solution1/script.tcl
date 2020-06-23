@@ -6,8 +6,10 @@
 open_project simple_perceptron
 set_top calcPerceptron
 add_files simple_perceptron/core.cpp
-add_files -tb simple_perceptron/test_core.cpp -cflags "-Wno-unknown-pragmas"
-add_files -tb simple_perceptron/weights.h -cflags "-Wno-unknown-pragmas"
+add_files -tb simple_perceptron/test_core.cpp -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb simple_perceptron/hls_weights.h -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb simple_perceptron/hls_input.h -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
+add_files -tb simple_perceptron/hls_biases.h -cflags "-Wno-unknown-pragmas" -csimflags "-Wno-unknown-pragmas"
 open_solution "solution1"
 set_part {xc7z020-clg400-1}
 create_clock -period 10 -name default
@@ -17,5 +19,5 @@ config_compile -name_max_length 80 -no_signed_zeros=0 -pipeline_loops 64 -unsafe
 #source "./simple_perceptron/solution1/directives.tcl"
 csim_design
 csynth_design
-cosim_design
+cosim_design -trace_level all
 export_design -rtl verilog -format ip_catalog

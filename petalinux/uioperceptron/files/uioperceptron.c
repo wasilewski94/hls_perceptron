@@ -3,22 +3,37 @@
 #include <unistd.h>
 #include <sys/mman.h>
 #include <fcntl.h>
+#include <string.h>
+#include <sys/time.h>
 
 #define XCALCPERCEPTRON_CTRL_BUS_ADDR_INPUTS_DATA  0x10
 #define XCALCPERCEPTRON_CTRL_BUS_ADDR_NEURONS_DATA 0x18
 
+#define XCALCPERCEPTRON_CTRL_BUS_ADDR_W_OFFSET_DATA 0x20
+#define XCALCPERCEPTRON_CTRL_BUS_ADDR_B_OFFSET_DATA 0x28
+
 #define XIL_COMPONENT_IS_READY     0x11111111U
 
-int main()
+
+int main(int argc, char* argv[])
 {
     //files with weights, input, and biases
     FILE *f_weights;
     FILE *f_input;
     FILE *f_bias;
 
-    float buffer;
+    struct timeval t1, t2;
+    double elapsedTime;
 
-    char *input_filenames[10] = {"/tmp/x0.txt","/tmp/x1.txt", "/tmp/x2.txt","/tmp/x3.txt", "/tmp/x4.txt","/tmp/x5.txt", "/tmp/x6.txt","/tmp/x7.txt", "/tmp/x8.txt","/tmp/x9.txt", };
+    char xdir[20];
+    int test_samples = 10;
+    if(argc == 2) {
+        test_samples = atoi(argv[1]);
+    }     
+
+    float buffer;
+    float max_output;
+    int recognized_digit; 
 
     int fd_x;
     int fd_w;
@@ -41,7 +56,6 @@ int main()
     void *timer_ptr;
     void *calcPerceptron_ptr;
 
-    printf("Simple perceptron UIO test\n");
 
     // open the UIO device file to allow access to the device in user space
     fd_x = open(x_bram, O_RDWR);
@@ -99,6 +113,8 @@ int main()
     volatile unsigned *reg_inputs = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_INPUTS_DATA);
     volatile unsigned *reg_neurons = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_NEURONS_DATA);
 
+    volatile unsigned *reg_w_offset = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_W_OFFSET_DATA);
+    volatile unsigned *reg_b_offset = (unsigned int *)(calcPerceptron_ptr + XCALCPERCEPTRON_CTRL_BUS_ADDR_B_OFFSET_DATA);
 
     res_bram_ptr = mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_SHARED, fd_res, 0);
     if (res_bram_ptr == MAP_FAILED) {
@@ -139,19 +155,33 @@ int main()
         *reg_neurons = data;
     }
 
+    void IP_set_w_offset(volatile unsigned int data) {
+        // while(!(IP_IsReady() == XIL_COMPONENT_IS_READY));
+        *reg_w_offset = data;
+    }
+
+    void IP_set_b_offset(volatile unsigned int data) {
+        // while(!(IP_IsReady() == XIL_COMPONENT_IS_READY));
+        *reg_b_offset = data;
+    }
+
+
     int load_digit_file(int n_sample) {
 
-        if ((f_input = fopen(input_filenames[n_sample], "r")) == NULL) {
-            printf ("Can't open file: %s\n", input_filenames[n_sample]);
+        // set the path name
+        snprintf(xdir, 20, "/tmp/x/x%d.txt", n_sample); // puts n_sample number into xdir string
+        // printf("Reading file: %s\n", xdir);
+
+        if ((f_input = fopen(xdir, "r")) == NULL) {
+            printf ("Can't open file: %s\n", xdir);
             return 0;
         }
 
-        printf("Setting input values.\n");
+        // printf("Setting input values.\n");
         int i = 0;
         while (!feof (f_input)) {
             fscanf (f_input, "%f", &buffer);
             XVecHW[i] = buffer;
-            // printf("inputs[%d] %f\n", i, XVecHW[i]);
             i++;
         }
 
@@ -166,7 +196,7 @@ int main()
             return 0;
         }
 
-        printf("Setting weigths values.\n");
+        // printf("Setting weigths values.\n");
         int i = 0;
         while (!feof (f_weights)) {
             fscanf (f_weights, "%f", &buffer);
@@ -180,7 +210,7 @@ int main()
             return 0;
         }
 
-        printf("Setting biases values.\n");
+        // printf("Setting biases values.\n");
         i = 0;
         while (!feof (f_bias)) {
             fscanf (f_bias, "%f", &buffer);
@@ -193,14 +223,14 @@ int main()
 
     void load_2_layer_data() {
         // set biases for layer 2
-        for(int i=0; i<10; i++) {
-            bHW[i] = bHW[i + 16];
-        }
-
+        // for(int i=0; i<10; i++) {
+        //     bHW[i] = bHW[i + 16];
+        // }
+        //
         // set weights for layer 2
-        for(int i=0; i<160; i++) {
-            WVecHW[i] = WVecHW[i+12544];
-        }
+        // for(int i=0; i<160; i++) {
+        //     WVecHW[i] = WVecHW[i+12544];
+        // }
 
         // save the 1st layer output to XVecHW variable
         for(int i=0; i<16; i++) {
@@ -209,18 +239,18 @@ int main()
     }
 
 // ---------------------------Start calculation----------------------
+    printf("MNIST hand-written digits recognition Neural Network - test with %d samples\n", test_samples);
 
+    if(!init_load_data()) {
+        return 0;
+    }
 
-    for(int sample=0; sample<10; sample++) {
+    for(int sample=0; sample < test_samples; sample++) {
 
-        printf("load initial data for sample %d\n", sample);
+        // printf("load initial data for sample %d\n", sample);
         if(!load_digit_file(sample)) {
             return 0;
-        };
-
-        if(!init_load_data()) {
-            return 0;
-        };
+        }
 
         int inputs = 784;
         int neurons = 16;
@@ -228,8 +258,21 @@ int main()
         IP_set_inputs(inputs);
         IP_set_neurons(neurons);
 
+        IP_set_w_offset(0);
+        IP_set_b_offset(0);
+
+        gettimeofday(&t1, NULL); // start timer
+
         IP_Start();
         while(!IP_IsDone());
+
+        gettimeofday(&t2, NULL); // stop timer
+        
+        // compute and print the elapsed time in millisec
+        elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
+        elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
+        printf("1st layer calculation took %lf ms.\n", elapsedTime);
+
 
     // ----------------------------2nd layer--------------------------------
 
@@ -241,12 +284,33 @@ int main()
         IP_set_inputs(16);
         IP_set_neurons(10);
 
+        IP_set_w_offset(12544);
+        IP_set_b_offset(16);
+
+        gettimeofday(&t1, NULL); // start timer
+
         IP_Start();
         while(!IP_IsDone());
 
-    	for (int i = 0; i < 10; i++) {
-    		printf("Results[%d]: %f\n", i, result[i]);
+        gettimeofday(&t2, NULL); // stop timer
+        
+        // compute and print the elapsed time in millisec
+        elapsedTime = (t2.tv_sec - t1.tv_sec) * 1000.0;      // sec to ms
+        elapsedTime += (t2.tv_usec - t1.tv_usec) / 1000.0;   // us to ms
+        printf("2nd layer calculation took %lf ms.\n", elapsedTime);
+
+
+        // find max value and print it with the recognized digit (i index)
+        max_output = result[0];
+        recognized_digit = 0;
+         
+        for (int i = 0; i < 10; i++) {
+            if (max_output < result[i]) {
+                max_output = result[i];
+                recognized_digit = i;    
+            }
     	}
+    	printf("x_test[%d]: Recognized digit: %d with output = %f\n", sample, recognized_digit, max_output);
 
     }
 

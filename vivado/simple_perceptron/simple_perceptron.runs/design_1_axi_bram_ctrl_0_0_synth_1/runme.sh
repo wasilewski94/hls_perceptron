@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1'
+HD_PWD='/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

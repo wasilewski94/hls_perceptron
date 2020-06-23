@@ -84,6 +84,8 @@ proc check_tvin_file {} {
          "c.calcPerceptron.autotvin_w.dat"
          "c.calcPerceptron.autotvin_b.dat"
          "c.calcPerceptron.autotvin_res.dat"
+         "c.calcPerceptron.autotvin_inputs.dat"
+         "c.calcPerceptron.autotvin_neurons.dat"
          "c.calcPerceptron.autotvout_res.dat"
     }
     foreach rtlfile $rtlfilelist {

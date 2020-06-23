@@ -55,15 +55,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
                                 								
@@ -93,15 +91,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
                                 								
@@ -165,7 +161,11 @@
                         					
                     </folderInfo>
                     					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.456955855.1725037928" name="weights.h" rcbsApplicability="disable" resourcePath="testbench/weights.h" toolsToInvoke=""/>
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.456955855.1687899929" name="hls_input.h" rcbsApplicability="disable" resourcePath="testbench/hls_input.h" toolsToInvoke=""/>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.456955855.219145881" name="hls_biases.h" rcbsApplicability="disable" resourcePath="testbench/hls_biases.h" toolsToInvoke=""/>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.456955855.894405390" name="hls_weights.h" rcbsApplicability="disable" resourcePath="testbench/hls_weights.h" toolsToInvoke=""/>
                     					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.debug.456955855.1711950157" name="test_core.cpp" rcbsApplicability="disable" resourcePath="testbench/test_core.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.debug.366277123.878879881">
                         						
@@ -263,15 +263,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
                                 								
@@ -291,15 +289,13 @@
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/ap_sysc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/home/wask/workspace/mgr/hls_perceptron/hls"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/auto_cc/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/include/etc"/>
                                     									
-                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/wask/workspace/hls/lab_6_bram"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="/opt/Xilinx/Vivado/2019.2/lnx64/tools/systemc/include"/>
                                     								
                                 </option>
                                 								
@@ -353,7 +349,11 @@
                         					
                     </folderInfo>
                     					
-                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.163337223.824312051" name="weights.h" rcbsApplicability="disable" resourcePath="testbench/weights.h" toolsToInvoke=""/>
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.163337223.2123912282" name="hls_input.h" rcbsApplicability="disable" resourcePath="testbench/hls_input.h" toolsToInvoke=""/>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.163337223.1590911797" name="hls_biases.h" rcbsApplicability="disable" resourcePath="testbench/hls_biases.h" toolsToInvoke=""/>
+                    					
+                    <fileInfo id="cdt.managedbuild.config.gnu.exe.release.163337223.653769149" name="hls_weights.h" rcbsApplicability="disable" resourcePath="testbench/hls_weights.h" toolsToInvoke=""/>
                     					
                     <fileInfo id="cdt.managedbuild.config.gnu.exe.release.163337223.988631666" name="test_core.cpp" rcbsApplicability="disable" resourcePath="testbench/test_core.cpp" toolsToInvoke="cdt.managedbuild.tool.gnu.cpp.compiler.exe.release.1402262448.756826075">
                         						

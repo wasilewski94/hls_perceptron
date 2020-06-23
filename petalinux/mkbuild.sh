@@ -9,4 +9,3 @@ cp images/linux/BOOT.BIN images/linux/image.ub /media/wask/91A9-ABEC/
 echo "done copying"
 umount /media/wask/91A9-ABEC
 echo "you can insert sd card and boot petlinux"
-atom .

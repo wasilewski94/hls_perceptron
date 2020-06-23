@@ -36,8 +36,12 @@ using namespace sc_dt;
 // wrapc file define: "b"
 #define AUTOTB_TVIN_b  "../tv/cdatafile/c.calcPerceptron.autotvin_b.dat"
 // wrapc file define: "res"
-#define AUTOTB_TVIN_res  "../tv/cdatafile/c.calcPerceptron.autotvin_res.dat"
 #define AUTOTB_TVOUT_res  "../tv/cdatafile/c.calcPerceptron.autotvout_res.dat"
+#define AUTOTB_TVIN_res  "../tv/cdatafile/c.calcPerceptron.autotvin_res.dat"
+// wrapc file define: "inputs"
+#define AUTOTB_TVIN_inputs  "../tv/cdatafile/c.calcPerceptron.autotvin_inputs.dat"
+// wrapc file define: "neurons"
+#define AUTOTB_TVIN_neurons  "../tv/cdatafile/c.calcPerceptron.autotvin_neurons.dat"
 
 #define INTER_TCL  "../tv/cdatafile/ref.tcl"
 
@@ -52,6 +56,8 @@ class INTER_TCL_FILE {
 			w_depth = 0;
 			b_depth = 0;
 			res_depth = 0;
+			inputs_depth = 0;
+			neurons_depth = 0;
 			trans_num =0;
 		}
 
@@ -75,6 +81,8 @@ class INTER_TCL_FILE {
 			total_list << "{w " << w_depth << "}\n";
 			total_list << "{b " << b_depth << "}\n";
 			total_list << "{res " << res_depth << "}\n";
+			total_list << "{inputs " << inputs_depth << "}\n";
+			total_list << "{neurons " << neurons_depth << "}\n";
 			return total_list.str();
 		}
 
@@ -86,6 +94,8 @@ class INTER_TCL_FILE {
 		int w_depth;
 		int b_depth;
 		int res_depth;
+		int inputs_depth;
+		int neurons_depth;
 		int trans_num;
 
 	private:
@@ -97,13 +107,17 @@ extern void calcPerceptron (
 float x[784],
 float w[12704],
 float b[26],
-volatile float res[26]);
+float res[26],
+int inputs,
+int neurons);
 
 void AESL_WRAP_calcPerceptron (
 float x[784],
 float w[12704],
 float b[26],
-volatile float res[26])
+float res[26],
+int inputs,
+int neurons)
 {
 	refine_signal_handler();
 	fstream wrapc_switch_file_token;
@@ -279,6 +293,14 @@ volatile float res[26])
 		aesl_fh.touch(AUTOTB_TVIN_res);
 		char* tvout_res = new char[50];
 		aesl_fh.touch(AUTOTB_TVOUT_res);
+
+		// "inputs"
+		char* tvin_inputs = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_inputs);
+
+		// "neurons"
+		char* tvin_neurons = new char[50];
+		aesl_fh.touch(AUTOTB_TVIN_neurons);
 
 		CodeState = DUMP_INPUTS;
 		static INTER_TCL_FILE tcl_file(INTER_TCL);
@@ -476,10 +498,94 @@ volatile float res[26])
 		// release memory allocation
 		delete [] res_tvin_wrapc_buffer;
 
+		// [[transaction]]
+		sprintf(tvin_inputs, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_inputs, tvin_inputs);
+
+		sc_bv<32> inputs_tvin_wrapc_buffer;
+
+		// RTL Name: inputs
+		{
+			// bitslice(31, 0)
+			{
+				// celement: inputs(31, 0)
+				{
+					// carray: (0) => (0) @ (0)
+					{
+						// sub                   : 
+						// ori_name              : inputs
+						// sub_1st_elem          : 
+						// ori_name_1st_elem     : inputs
+						// regulate_c_name       : inputs
+						// input_type_conversion : inputs
+						if (&(inputs) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> inputs_tmp_mem;
+							inputs_tmp_mem = inputs;
+							inputs_tvin_wrapc_buffer.range(31, 0) = inputs_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 1; i++)
+		{
+			sprintf(tvin_inputs, "%s\n", (inputs_tvin_wrapc_buffer).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_inputs, tvin_inputs);
+		}
+
+		tcl_file.set_num(1, &tcl_file.inputs_depth);
+		sprintf(tvin_inputs, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_inputs, tvin_inputs);
+
+		// [[transaction]]
+		sprintf(tvin_neurons, "[[transaction]] %d\n", AESL_transaction);
+		aesl_fh.write(AUTOTB_TVIN_neurons, tvin_neurons);
+
+		sc_bv<32> neurons_tvin_wrapc_buffer;
+
+		// RTL Name: neurons
+		{
+			// bitslice(31, 0)
+			{
+				// celement: neurons(31, 0)
+				{
+					// carray: (0) => (0) @ (0)
+					{
+						// sub                   : 
+						// ori_name              : neurons
+						// sub_1st_elem          : 
+						// ori_name_1st_elem     : neurons
+						// regulate_c_name       : neurons
+						// input_type_conversion : neurons
+						if (&(neurons) != NULL) // check the null address if the c port is array or others
+						{
+							sc_lv<32> neurons_tmp_mem;
+							neurons_tmp_mem = neurons;
+							neurons_tvin_wrapc_buffer.range(31, 0) = neurons_tmp_mem.range(31, 0);
+						}
+					}
+				}
+			}
+		}
+
+		// dump tv to file
+		for (int i = 0; i < 1; i++)
+		{
+			sprintf(tvin_neurons, "%s\n", (neurons_tvin_wrapc_buffer).to_string(SC_HEX).c_str());
+			aesl_fh.write(AUTOTB_TVIN_neurons, tvin_neurons);
+		}
+
+		tcl_file.set_num(1, &tcl_file.neurons_depth);
+		sprintf(tvin_neurons, "[[/transaction]] \n");
+		aesl_fh.write(AUTOTB_TVIN_neurons, tvin_neurons);
+
 // [call_c_dut] ---------->
 
 		CodeState = CALL_C_DUT;
-		calcPerceptron(x, w, b, res);
+		calcPerceptron(x, w, b, res, inputs, neurons);
 
 		CodeState = DUMP_OUTPUTS;
 
@@ -539,8 +645,12 @@ volatile float res[26])
 		// release memory allocation: "b"
 		delete [] tvin_b;
 		// release memory allocation: "res"
-		delete [] tvin_res;
 		delete [] tvout_res;
+		delete [] tvin_res;
+		// release memory allocation: "inputs"
+		delete [] tvin_inputs;
+		// release memory allocation: "neurons"
+		delete [] tvin_neurons;
 
 		AESL_transaction++;
 

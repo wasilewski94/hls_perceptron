@@ -26875,33 +26875,30 @@ namespace hls {
 };
 # 2 "simple_perceptron/core.cpp" 2
 
-void calcPerceptron(float x[784], float w[12704], float b[26], float res[26], int inputs, int neurons)
+void calcPerceptron(float x[784], float w[12704], float b[26], float res[26], int inputs, int neurons, int w_offset, int b_offset)
 {_ssdm_SpecArrayDimSize(x, 784);_ssdm_SpecArrayDimSize(w, 12704);_ssdm_SpecArrayDimSize(b, 26);_ssdm_SpecArrayDimSize(res, 26);
 #pragma HLS INTERFACE s_axilite port=return bundle=CTRL_BUS
 #pragma HLS INTERFACE s_axilite port=&inputs bundle=CTRL_BUS
 #pragma HLS INTERFACE s_axilite port=&neurons bundle=CTRL_BUS
+#pragma HLS INTERFACE s_axilite port=&w_offset bundle=CTRL_BUS
+#pragma HLS INTERFACE s_axilite port=&b_offset bundle=CTRL_BUS
 
 #pragma HLS INTERFACE bram port=&x
 #pragma HLS INTERFACE bram port=&w
 #pragma HLS INTERFACE bram port=&res
 #pragma HLS INTERFACE bram port=&b
-
-
-
-
-
+# 24 "simple_perceptron/core.cpp"
 float sum = 0.0;
 
 
 
 
 for(int j = 0; j<neurons; j++){
-
  for (int i = 0; i < inputs; i++) {
-   sum += x[i] * w[i + inputs*j];
-  }
-  res[j] = 1.0 / (1 + hls::expf(-( sum + b[j])));
-  sum = 0.0;
+  sum += x[i] * w[i + inputs*j + w_offset];
+ }
+ res[j] = 1.0 / (1 + hls::expf(-( sum + b[j + b_offset])));
+ sum = 0.0;
 }
-# 45 "simple_perceptron/core.cpp"
+
 }

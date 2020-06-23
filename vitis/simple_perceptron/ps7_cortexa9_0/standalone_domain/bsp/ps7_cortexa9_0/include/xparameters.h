@@ -585,7 +585,7 @@
 #define XPAR_AXI_TIMER_0_DEVICE_ID 0U
 #define XPAR_AXI_TIMER_0_BASEADDR 0x42800000U
 #define XPAR_AXI_TIMER_0_HIGHADDR 0x4280FFFFU
-#define XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ 100000000U
+#define XPAR_AXI_TIMER_0_CLOCK_FREQ_HZ  100000000U
 
 
 /******************************************************************/

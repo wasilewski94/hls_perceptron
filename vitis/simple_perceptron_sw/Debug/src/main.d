@@ -13,6 +13,10 @@ src/main.o src/main.o: ../src/main.cpp \
  /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xpseudo_asm_gcc.h \
  /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xcalcperceptron_hw.h \
  /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xparameters.h \
+ ../src/AxiTimerHelper.h \
+ /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xil_types.h \
+ /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xtmrctr.h \
+ /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xtmrctr_l.h \
  ../src/weights.h ../src/inputs.h ../src/biases.h
 
 /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xcalcperceptron.h:
@@ -42,6 +46,14 @@ src/main.o src/main.o: ../src/main.cpp \
 /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xcalcperceptron_hw.h:
 
 /home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xparameters.h:
+
+../src/AxiTimerHelper.h:
+
+/home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xil_types.h:
+
+/home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xtmrctr.h:
+
+/home/wask/workspace/vitis/simple_perceptron/export/simple_perceptron/sw/simple_perceptron/standalone_domain/bspinclude/include/xtmrctr_l.h:
 
 ../src/weights.h:
 

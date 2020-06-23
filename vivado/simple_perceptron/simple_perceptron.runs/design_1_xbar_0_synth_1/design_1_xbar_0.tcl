@@ -18,7 +18,6 @@ proc create_report { reportName command } {
   }
 }
 set_param ced.repoPaths /home/wask/.Xilinx/Vivado/2019.2/xhub/ced_store
-set_param chipscope.maxJobs 2
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 create_project -in_memory -part xc7z020clg400-1

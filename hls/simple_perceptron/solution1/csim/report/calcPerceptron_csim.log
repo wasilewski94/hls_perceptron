@@ -1,32 +1,32 @@
 INFO: [SIM 2] *************** CSIM start ***************
 INFO: [SIM 4] CSIM will launch GCC as the compiler.
-   Compiling ../../../test_core.cpp in debug mode
+   Compiling ../../../core.cpp in debug mode
    Generating csim.exe
-Result[0]=0.999877
-Result[1]=0.999973
-Result[2]=0.095454
-Result[3]=0.638058
-Result[4]=0.000811
-Result[5]=0.007190
-Result[6]=0.643586
-Result[7]=0.950685
-Result[8]=0.939980
-Result[9]=0.000085
-Result[10]=0.982816
-Result[11]=0.012068
-Result[12]=0.970307
-Result[13]=0.999683
-Result[14]=0.693689
-Result[15]=0.999999
-Result[0]=0.000000
-Result[1]=0.000000
-Result[2]=0.000000
-Result[3]=0.000000
-Result[4]=0.000000
-Result[5]=0.000000
-Result[6]=0.000000
-Result[7]=0.000000
-Result[8]=0.000000
-Result[9]=0.000000
+Result[0]=0.062165
+Result[1]=0.999444
+Result[2]=0.002100
+Result[3]=0.981420
+Result[4]=0.029409
+Result[5]=0.999887
+Result[6]=0.211220
+Result[7]=0.000603
+Result[8]=0.983904
+Result[9]=0.999801
+Result[10]=0.000980
+Result[11]=0.534903
+Result[12]=0.996887
+Result[13]=0.999927
+Result[14]=0.040573
+Result[15]=0.999346
+Result[0]=0.000715
+Result[1]=0.000075
+Result[2]=0.003266
+Result[3]=0.001734
+Result[4]=0.000028
+Result[5]=0.000016
+Result[6]=0.000016
+Result[7]=0.556846
+Result[8]=0.000125
+Result[9]=0.001649
 INFO: [SIM 1] CSim done with 0 errors.
 INFO: [SIM 3] *************** CSIM finish ***************

@@ -7,7 +7,7 @@
 
 module calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1
 #(parameter
-    ID         = 9,
+    ID         = 4,
     NUM_STAGE  = 9,
     din0_WIDTH = 32,
     din1_WIDTH = 32,

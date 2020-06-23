@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'calcPerceptron'" level="0">
-<item name = "Date">Fri Jun 19 16:04:06 2020
+<item name = "Date">Mon Jun 22 19:32:15 2020
 </item>
 <item name = "Version">2019.2 (Build 2704478 on Wed Nov 06 22:10:23 MST 2019)</item>
 <item name = "Project">simple_perceptron</item>
@@ -49,21 +49,21 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 225, -</column>
+<column name="Expression">-, -, 0, 289, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">0, 20, 972, 2020, -</column>
+<column name="Instance">0, 20, 1048, 2148, -</column>
 <column name="Memory">-, -, -, -, -</column>
 <column name="Multiplexer">-, -, -, 282, -</column>
-<column name="Register">-, -, 583, -, -</column>
+<column name="Register">-, -, 647, -, -</column>
 <specialColumn name="Available">280, 220, 106400, 53200, 0</specialColumn>
-<specialColumn name="Utilization (%)">0, 9, 1, 4, 0</specialColumn>
+<specialColumn name="Utilization (%)">0, 9, 1, 5, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="calcPerceptron_CTRL_BUS_s_axi_U">calcPerceptron_CTRL_BUS_s_axi, 0, 0, 112, 168, 0</column>
+<column name="calcPerceptron_CTRL_BUS_s_axi_U">calcPerceptron_CTRL_BUS_s_axi, 0, 0, 188, 296, 0</column>
 <column name="calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1_U1">calcPerceptron_fadd_32ns_32ns_32_5_full_dsp_1, 0, 2, 205, 390, 0</column>
 <column name="calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1_U4">calcPerceptron_fexp_32ns_32ns_32_9_full_dsp_1, 0, 7, 277, 924, 0</column>
 <column name="calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1_U2">calcPerceptron_fmul_32ns_32ns_32_4_max_dsp_1, 0, 3, 143, 321, 0</column>
@@ -84,55 +84,59 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln23_fu_192_p2">+, 0, 0, 39, 32, 32</column>
-<column name="add_ln26_fu_232_p2">+, 0, 0, 39, 32, 32</column>
-<column name="i_fu_221_p2">+, 0, 0, 38, 31, 1</column>
-<column name="j_fu_206_p2">+, 0, 0, 38, 31, 1</column>
-<column name="icmp_ln23_fu_201_p2">icmp, 0, 0, 18, 32, 32</column>
-<column name="icmp_ln25_fu_216_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="add_ln29_fu_208_p2">+, 0, 0, 39, 32, 32</column>
+<column name="add_ln31_1_fu_253_p2">+, 0, 0, 32, 32, 32</column>
+<column name="add_ln31_fu_248_p2">+, 0, 0, 32, 32, 32</column>
+<column name="add_ln33_fu_264_p2">+, 0, 0, 39, 32, 32</column>
+<column name="i_fu_237_p2">+, 0, 0, 38, 31, 1</column>
+<column name="j_fu_222_p2">+, 0, 0, 38, 31, 1</column>
+<column name="icmp_ln29_fu_217_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="icmp_ln30_fu_232_p2">icmp, 0, 0, 18, 32, 32</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
-<column name="xor_ln28_fu_252_p2">xor, 0, 0, 33, 32, 33</column>
+<column name="xor_ln33_fu_277_p2">xor, 0, 0, 33, 32, 33</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
 <column name="ap_NS_fsm">177, 40, 1, 40</column>
 <column name="ap_enable_reg_pp0_iter2">9, 2, 1, 2</column>
-<column name="ap_phi_mux_i_0_phi_fu_160_p4">9, 2, 31, 62</column>
-<column name="grp_fu_167_p0">21, 4, 32, 128</column>
-<column name="grp_fu_167_p1">21, 4, 32, 128</column>
-<column name="i_0_reg_156">9, 2, 31, 62</column>
-<column name="j_0_reg_120">9, 2, 31, 62</column>
-<column name="phi_mul_reg_132">9, 2, 32, 64</column>
+<column name="ap_phi_mux_i_0_phi_fu_176_p4">9, 2, 31, 62</column>
+<column name="grp_fu_183_p0">21, 4, 32, 128</column>
+<column name="grp_fu_183_p1">21, 4, 32, 128</column>
+<column name="i_0_reg_172">9, 2, 31, 62</column>
+<column name="j_0_reg_136">9, 2, 31, 62</column>
+<column name="phi_mul_reg_148">9, 2, 32, 64</column>
 <column name="res_WEN_A">9, 2, 4, 8</column>
-<column name="sum_1_reg_144">9, 2, 32, 64</column>
+<column name="sum_1_reg_160">9, 2, 32, 64</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="add_ln23_reg_274">32, 0, 32, 0</column>
+<column name="add_ln29_reg_314">32, 0, 32, 0</column>
 <column name="ap_CS_fsm">39, 0, 39, 0</column>
 <column name="ap_enable_reg_pp0_iter0">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter1">1, 0, 1, 0</column>
 <column name="ap_enable_reg_pp0_iter2">1, 0, 1, 0</column>
-<column name="b_load_reg_337">32, 0, 32, 0</column>
-<column name="i_0_reg_156">31, 0, 31, 0</column>
-<column name="i_reg_292">31, 0, 31, 0</column>
-<column name="icmp_ln25_reg_288">1, 0, 1, 0</column>
-<column name="icmp_ln25_reg_288_pp0_iter1_reg">1, 0, 1, 0</column>
-<column name="inputs_read_reg_268">32, 0, 32, 0</column>
-<column name="j_0_reg_120">31, 0, 31, 0</column>
-<column name="j_reg_283">31, 0, 31, 0</column>
-<column name="neurons_read_reg_263">32, 0, 32, 0</column>
-<column name="phi_mul_reg_132">32, 0, 32, 0</column>
-<column name="reg_187">32, 0, 32, 0</column>
-<column name="sum_1_reg_144">32, 0, 32, 0</column>
-<column name="tmp_1_reg_352">32, 0, 32, 0</column>
-<column name="tmp_i_i_reg_347">32, 0, 32, 0</column>
-<column name="tmp_reg_317">32, 0, 32, 0</column>
-<column name="w_load_reg_312">32, 0, 32, 0</column>
-<column name="x_load_reg_307">32, 0, 32, 0</column>
-<column name="zext_ln28_reg_327">31, 0, 64, 33</column>
+<column name="b_load_reg_377">32, 0, 32, 0</column>
+<column name="b_offset_read_reg_293">32, 0, 32, 0</column>
+<column name="i_0_reg_172">31, 0, 31, 0</column>
+<column name="i_reg_337">31, 0, 31, 0</column>
+<column name="icmp_ln30_reg_333">1, 0, 1, 0</column>
+<column name="icmp_ln30_reg_333_pp0_iter1_reg">1, 0, 1, 0</column>
+<column name="inputs_read_reg_308">32, 0, 32, 0</column>
+<column name="j_0_reg_136">31, 0, 31, 0</column>
+<column name="j_reg_328">31, 0, 31, 0</column>
+<column name="neurons_read_reg_303">32, 0, 32, 0</column>
+<column name="phi_mul_reg_148">32, 0, 32, 0</column>
+<column name="reg_203">32, 0, 32, 0</column>
+<column name="sum_1_reg_160">32, 0, 32, 0</column>
+<column name="tmp_1_reg_392">32, 0, 32, 0</column>
+<column name="tmp_i_i_reg_387">32, 0, 32, 0</column>
+<column name="tmp_reg_362">32, 0, 32, 0</column>
+<column name="w_load_reg_357">32, 0, 32, 0</column>
+<column name="w_offset_read_reg_298">32, 0, 32, 0</column>
+<column name="x_load_reg_352">32, 0, 32, 0</column>
+<column name="zext_ln29_reg_319">31, 0, 32, 1</column>
 </table>
 </item>
 </section>
@@ -144,14 +148,14 @@
 <keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
 <column name="s_axi_CTRL_BUS_AWVALID">in, 1, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_AWREADY">out, 1, s_axi, CTRL_BUS, scalar</column>
-<column name="s_axi_CTRL_BUS_AWADDR">in, 5, s_axi, CTRL_BUS, scalar</column>
+<column name="s_axi_CTRL_BUS_AWADDR">in, 6, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_WVALID">in, 1, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_WREADY">out, 1, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_WDATA">in, 32, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_WSTRB">in, 4, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_ARVALID">in, 1, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_ARREADY">out, 1, s_axi, CTRL_BUS, scalar</column>
-<column name="s_axi_CTRL_BUS_ARADDR">in, 5, s_axi, CTRL_BUS, scalar</column>
+<column name="s_axi_CTRL_BUS_ARADDR">in, 6, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_RVALID">out, 1, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_RREADY">in, 1, s_axi, CTRL_BUS, scalar</column>
 <column name="s_axi_CTRL_BUS_RDATA">out, 32, s_axi, CTRL_BUS, scalar</column>

@@ -88,6 +88,10 @@ void XCalcperceptron_Set_inputs(XCalcperceptron *InstancePtr, u32 Data);
 u32 XCalcperceptron_Get_inputs(XCalcperceptron *InstancePtr);
 void XCalcperceptron_Set_neurons(XCalcperceptron *InstancePtr, u32 Data);
 u32 XCalcperceptron_Get_neurons(XCalcperceptron *InstancePtr);
+void XCalcperceptron_Set_w_offset(XCalcperceptron *InstancePtr, u32 Data);
+u32 XCalcperceptron_Get_w_offset(XCalcperceptron *InstancePtr);
+void XCalcperceptron_Set_b_offset(XCalcperceptron *InstancePtr, u32 Data);
+u32 XCalcperceptron_Get_b_offset(XCalcperceptron *InstancePtr);
 
 void XCalcperceptron_InterruptGlobalEnable(XCalcperceptron *InstancePtr);
 void XCalcperceptron_InterruptGlobalDisable(XCalcperceptron *InstancePtr);

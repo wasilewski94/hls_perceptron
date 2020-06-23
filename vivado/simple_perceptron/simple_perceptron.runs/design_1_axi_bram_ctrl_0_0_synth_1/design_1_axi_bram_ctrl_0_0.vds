@@ -2,16 +2,16 @@
 # Vivado v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:39:14 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Sun Apr 26 14:57:54 2020
-# Process ID: 23473
-# Current directory: /home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1
+# Start of session at: Mon Jun 22 19:36:19 2020
+# Process ID: 17157
+# Current directory: /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1
 # Command line: vivado -log design_1_axi_bram_ctrl_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_bram_ctrl_0_0.tcl
-# Log file: /home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/design_1_axi_bram_ctrl_0_0.vds
-# Journal file: /home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/vivado.jou
+# Log file: /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/design_1_axi_bram_ctrl_0_0.vds
+# Journal file: /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/vivado.jou
 #-----------------------------------------------------------
 source design_1_axi_bram_ctrl_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/wask/workspace/hls/lab_6_bram/simple_perceptron/solution1'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/solution1'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2019.2/data/ip'.
 Command: synth_design -top design_1_axi_bram_ctrl_0_0 -part xc7z020clg400-1 -mode out_of_context
 Starting synth_design
@@ -19,11 +19,11 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23546 
+INFO: Helper process launched with PID 17243 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:11 . Memory (MB): peak = 1960.586 ; gain = 202.715 ; free physical = 11441 ; free virtual = 20070
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1961.711 ; gain = 201.715 ; free physical = 12840 ; free virtual = 20806
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/synth/design_1_axi_bram_ctrl_0_0.vhd:108]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/synth/design_1_axi_bram_ctrl_0_0.vhd:108]
 	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
 	Parameter C_MEMORY_DEPTH bound to: 2048 - type: integer 
 	Parameter C_BRAM_ADDR_WIDTH bound to: 11 - type: integer 
@@ -42,8 +42,8 @@ INFO: [Synth 8-638] synthesizing module 'design_1_axi_bram_ctrl_0_0' [/home/wask
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
 	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
 	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31357' bound to instance 'U0' of component 'axi_bram_ctrl' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/synth/design_1_axi_bram_ctrl_0_0.vhd:263]
-INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31528]
+INFO: [Synth 8-3491] module 'axi_bram_ctrl' declared at '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31357' bound to instance 'U0' of component 'axi_bram_ctrl' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/synth/design_1_axi_bram_ctrl_0_0.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31528]
 	Parameter C_BRAM_INST_MODE bound to: EXTERNAL - type: string 
 	Parameter C_MEMORY_DEPTH bound to: 2048 - type: integer 
 	Parameter C_BRAM_ADDR_WIDTH bound to: 11 - type: integer 
@@ -62,7 +62,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl' [/home/wask/workspace/vi
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
 	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
 	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30527]
+INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30527]
 	Parameter C_BRAM_ADDR_WIDTH bound to: 11 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -79,7 +79,7 @@ INFO: [Synth 8-638] synthesizing module 'axi_bram_ctrl_top' [/home/wask/workspac
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
 	Parameter C_FAULT_INJECT bound to: 0 - type: integer 
 	Parameter C_ECC_ONOFF_RESET_VALUE bound to: 0 - type: integer 
-INFO: [Synth 8-638] synthesizing module 'full_axi' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29280]
+INFO: [Synth 8-638] synthesizing module 'full_axi' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29280]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ID_WIDTH bound to: 12 - type: integer 
@@ -101,12 +101,12 @@ INFO: [Synth 8-638] synthesizing module 'full_axi' [/home/wask/workspace/vivado/
 	Parameter C_ECC_STATUS_REGISTERS bound to: 0 - type: integer 
 	Parameter C_ECC_ONOFF_REGISTER bound to: 0 - type: integer 
 	Parameter C_CE_COUNTER_WIDTH bound to: 0 - type: integer 
-WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29350]
-INFO: [Synth 8-3919] null assignment ignored [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29350]
-INFO: [Synth 8-638] synthesizing module 'sng_port_arb' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11456]
+WARNING: [Synth 8-6774] Null subtype or type declaration found [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29350]
+INFO: [Synth 8-3919] null assignment ignored [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29350]
+INFO: [Synth 8-638] synthesizing module 'sng_port_arb' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11456]
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 13 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'sng_port_arb' (1#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11456]
-INFO: [Synth 8-638] synthesizing module 'wr_chnl' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24159]
+INFO: [Synth 8-256] done synthesizing module 'sng_port_arb' (1#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:11456]
+INFO: [Synth 8-638] synthesizing module 'wr_chnl' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24159]
 	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 2 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -118,64 +118,64 @@ INFO: [Synth 8-638] synthesizing module 'wr_chnl' [/home/wask/workspace/vivado/s
 	Parameter C_ECC bound to: 0 - type: integer 
 	Parameter C_ECC_WIDTH bound to: 0 - type: integer 
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-506] null port 'FaultInjectECC' ignored [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24126]
-INFO: [Synth 8-638] synthesizing module 'wrap_brst' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12455]
+INFO: [Synth 8-506] null port 'FaultInjectECC' ignored [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24126]
+INFO: [Synth 8-638] synthesizing module 'wrap_brst' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12455]
 	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 2 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'wrap_brst' (2#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12455]
-INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:133]
+INFO: [Synth 8-256] done synthesizing module 'wrap_brst' (2#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:12455]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:133]
 	Parameter C_DATA_BITS bound to: 12 - type: integer 
 	Parameter C_DEPTH bound to: 8 - type: integer 
 	Parameter C_XON bound to: 0 - type: bool 
-INFO: [Synth 8-3491] module 'FDR' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13695' bound to instance 'Data_Exists_DFF' of component 'FDR' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:230]
+INFO: [Synth 8-3491] module 'FDR' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13695' bound to instance 'Data_Exists_DFF' of component 'FDR' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:230]
 INFO: [Synth 8-6157] synthesizing module 'FDR' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13695]
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'FDR' (3#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13695]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
 INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903]
 INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (4#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303' bound to instance 'XORCY_I' of component 'XORCY' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303' bound to instance 'XORCY_I' of component 'XORCY' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
 INFO: [Synth 8-6157] synthesizing module 'XORCY' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303]
 INFO: [Synth 8-6155] done synthesizing module 'XORCY' (5#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708' bound to instance 'FDRE_I' of component 'FDRE' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708' bound to instance 'FDRE_I' of component 'FDRE' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
 INFO: [Synth 8-6157] synthesizing module 'FDRE' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'FDRE' (6#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303' bound to instance 'XORCY_I' of component 'XORCY' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708' bound to instance 'FDRE_I' of component 'FDRE' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303' bound to instance 'XORCY_I' of component 'XORCY' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708' bound to instance 'FDRE_I' of component 'FDRE' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
-INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
-INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303' bound to instance 'XORCY_I' of component 'XORCY' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
-INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708' bound to instance 'FDRE_I' of component 'FDRE' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303' bound to instance 'XORCY_I' of component 'XORCY' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708' bound to instance 'FDRE_I' of component 'FDRE' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303' bound to instance 'XORCY_I' of component 'XORCY' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708' bound to instance 'FDRE_I' of component 'FDRE' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:42903' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:247]
+INFO: [Synth 8-3491] module 'XORCY' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:82303' bound to instance 'XORCY_I' of component 'XORCY' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:254]
+INFO: [Synth 8-3491] module 'FDRE' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:13708' bound to instance 'FDRE_I' of component 'FDRE' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:260]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
 INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965]
 	Parameter INIT bound to: 16'b0000000000000000 
 	Parameter IS_CLK_INVERTED bound to: 1'b0 
 INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (7#1) [/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
-INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (8#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:133]
-WARNING: [Synth 8-6014] Unused sequential element curr_awsize_reg_reg was removed.  [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25318]
-WARNING: [Synth 8-6014] Unused sequential element curr_awlen_reg_1_or_2_reg was removed.  [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25596]
-INFO: [Synth 8-256] done synthesizing module 'wr_chnl' (9#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24159]
-WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30020]
-INFO: [Synth 8-638] synthesizing module 'rd_chnl' [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14746]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-3491] module 'SRL16E' declared at '/opt/Xilinx/Vivado/2019.2/scripts/rt/data/unisim_comp.v:77965' bound to instance 'SRL16E_I' of component 'SRL16E' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:271]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (8#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:133]
+WARNING: [Synth 8-6014] Unused sequential element curr_awsize_reg_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25318]
+WARNING: [Synth 8-6014] Unused sequential element curr_awlen_reg_1_or_2_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:25596]
+INFO: [Synth 8-256] done synthesizing module 'wr_chnl' (9#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:24159]
+WARNING: [Synth 8-6778] Component port with null array found, Will be ignored [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30020]
+INFO: [Synth 8-638] synthesizing module 'rd_chnl' [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14746]
 	Parameter C_AXI_ADDR_WIDTH bound to: 13 - type: integer 
 	Parameter C_BRAM_ADDR_ADJUST_FACTOR bound to: 2 - type: integer 
 	Parameter C_AXI_DATA_WIDTH bound to: 32 - type: integer 
@@ -188,16 +188,16 @@ INFO: [Synth 8-638] synthesizing module 'rd_chnl' [/home/wask/workspace/vivado/s
 	Parameter C_ECC bound to: 0 - type: integer 
 	Parameter C_ECC_WIDTH bound to: 0 - type: integer 
 	Parameter C_ECC_TYPE bound to: 0 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15207]
-WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.curr_arsize_reg_reg was removed.  [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15998]
-WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.no_ar_ack_reg was removed.  [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:19903]
-WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.do_cmplt_burst_reg was removed.  [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:21244]
-WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_arsize_pipe_max_reg was removed.  [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15506]
-INFO: [Synth 8-256] done synthesizing module 'rd_chnl' (10#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14746]
-INFO: [Synth 8-256] done synthesizing module 'full_axi' (11#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29280]
-INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl_top' (12#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30527]
-INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl' (13#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31528]
-INFO: [Synth 8-256] done synthesizing module 'design_1_axi_bram_ctrl_0_0' (14#1) [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/synth/design_1_axi_bram_ctrl_0_0.vhd:108]
+INFO: [Synth 8-5534] Detected attribute (* ram_style = "block" *) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15207]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.curr_arsize_reg_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15998]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.no_ar_ack_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:19903]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.do_cmplt_burst_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:21244]
+WARNING: [Synth 8-6014] Unused sequential element GEN_NO_RD_CMD_OPT.axi_arsize_pipe_max_reg was removed.  [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:15506]
+INFO: [Synth 8-256] done synthesizing module 'rd_chnl' (10#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:14746]
+INFO: [Synth 8-256] done synthesizing module 'full_axi' (11#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:29280]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl_top' (12#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:30527]
+INFO: [Synth 8-256] done synthesizing module 'axi_bram_ctrl' (13#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ipshared/a002/hdl/axi_bram_ctrl_v4_1_rfs.vhd:31528]
+INFO: [Synth 8-256] done synthesizing module 'design_1_axi_bram_ctrl_0_0' (14#1) [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/synth/design_1_axi_bram_ctrl_0_0.vhd:108]
 WARNING: [Synth 8-3331] design wrap_brst has unconnected port curr_axlen[7]
 WARNING: [Synth 8-3331] design wrap_brst has unconnected port curr_axlen[6]
 WARNING: [Synth 8-3331] design wrap_brst has unconnected port curr_axlen[5]
@@ -300,7 +300,7 @@ WARNING: [Synth 8-3331] design wr_chnl has unconnected port BRAM_RdData[1]
 WARNING: [Synth 8-3331] design wr_chnl has unconnected port BRAM_RdData[0]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 2030.305 ; gain = 272.434 ; free physical = 11501 ; free virtual = 20135
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 2031.430 ; gain = 271.434 ; free physical = 12930 ; free virtual = 20942
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -313,47 +313,47 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 2033.273 ; gain = 275.402 ; free physical = 11484 ; free virtual = 20118
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2031.430 ; gain = 271.434 ; free physical = 12897 ; free virtual = 20898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 2033.273 ; gain = 275.402 ; free physical = 11484 ; free virtual = 20118
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:16 . Memory (MB): peak = 2031.430 ; gain = 271.434 ; free physical = 12897 ; free virtual = 20898
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2039.211 ; gain = 0.000 ; free physical = 11445 ; free virtual = 20080
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2042.336 ; gain = 0.000 ; free physical = 12907 ; free virtual = 20890
 INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.srcs/sources_1/bd/design_1/ip/design_1_axi_bram_ctrl_0_0/design_1_axi_bram_ctrl_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2197.055 ; gain = 0.000 ; free physical = 11268 ; free virtual = 19917
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2198.180 ; gain = 0.000 ; free physical = 12549 ; free virtual = 20546
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 5 instances were transformed.
   FDR => FDRE: 1 instance 
   MUXCY_L => MUXCY: 4 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2197.055 ; gain = 0.000 ; free physical = 11265 ; free virtual = 19914
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2198.180 ; gain = 0.000 ; free physical = 12566 ; free virtual = 20563
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 11202 ; free virtual = 19855
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 14035 ; free virtual = 22005
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 11202 ; free virtual = 19854
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:28 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 14031 ; free virtual = 22000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property DONT_TOUCH = true for U0. (constraint file  /home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:26 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 11200 ; free virtual = 19852
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:29 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 14038 ; free virtual = 22007
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'arb_sm_cs_reg' in module 'sng_port_arb'
 INFO: [Synth 8-5544] ROM "wrap_burst_total_cmb" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -402,7 +402,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'GEN_NO_RD_CMD_OPT.rd_data_
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'GEN_NO_RD_CMD_OPT.rlast_sm_cs_reg' using encoding 'sequential' in module 'rd_chnl'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:27 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 11081 ; free virtual = 19744
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:30 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13976 ; free virtual = 21953
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -556,7 +556,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\gext_
 INFO: [Synth 8-3886] merging instance 'U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_BRESP.axi_bresp_int_reg[0]' (FDRE) to 'U0/gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_BRESP.axi_bresp_int_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\gext_inst.abcv4_0_ext_inst/GEN_AXI4.I_FULL_AXI/I_WR_CHNL/GEN_BRESP.axi_bresp_int_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10895 ; free virtual = 19566
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:33 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13771 ; free virtual = 21788
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -568,13 +568,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 9964 ; free virtual = 18635
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13238 ; free virtual = 21233
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10203 ; free virtual = 18874
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 12903 ; free virtual = 20898
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -586,7 +586,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:45 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10243 ; free virtual = 18914
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:47 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 12893 ; free virtual = 20887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -610,13 +610,13 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10530 ; free virtual = 19201
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13659 ; free virtual = 21664
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10530 ; free virtual = 19200
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13658 ; free virtual = 21664
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -635,25 +635,25 @@ Report Check Netlist:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10507 ; free virtual = 19178
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13673 ; free virtual = 21679
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10506 ; free virtual = 19176
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13672 ; free virtual = 21678
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10504 ; free virtual = 19174
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13668 ; free virtual = 21677
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10504 ; free virtual = 19174
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13667 ; free virtual = 21677
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -699,18 +699,18 @@ Report Instance Areas:
 |10    |          I_WRAP_BRST                     |wrap_brst         |    36|
 +------+------------------------------------------+------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10503 ; free virtual = 19174
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13666 ; free virtual = 21677
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 163 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 2197.055 ; gain = 275.402 ; free physical = 10541 ; free virtual = 19211
-Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:49 . Memory (MB): peak = 2197.055 ; gain = 439.184 ; free physical = 10540 ; free virtual = 19211
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:48 . Memory (MB): peak = 2198.180 ; gain = 271.434 ; free physical = 13736 ; free virtual = 21745
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:52 . Memory (MB): peak = 2198.180 ; gain = 438.184 ; free physical = 13736 ; free virtual = 21745
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2197.055 ; gain = 0.000 ; free physical = 10558 ; free virtual = 19228
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2198.180 ; gain = 0.000 ; free physical = 13781 ; free virtual = 21783
 INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2200.023 ; gain = 0.000 ; free physical = 11390 ; free virtual = 20060
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2198.180 ; gain = 0.000 ; free physical = 13631 ; free virtual = 21628
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   (MUXCY,XORCY) => CARRY4: 1 instance 
@@ -719,17 +719,17 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 89 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:01:02 . Memory (MB): peak = 2200.023 ; gain = 690.656 ; free physical = 11555 ; free virtual = 20226
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2200.023 ; gain = 0.000 ; free physical = 11555 ; free virtual = 20226
+synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:01:05 . Memory (MB): peak = 2198.180 ; gain = 687.719 ; free physical = 13915 ; free virtual = 21912
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2198.180 ; gain = 0.000 ; free physical = 13915 ; free virtual = 21912
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/design_1_axi_bram_ctrl_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/design_1_axi_bram_ctrl_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_bram_ctrl_0_0, cache-ID = a8a2d852caa3d942
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_bram_ctrl_0_0, cache-ID = 28ecbccb9a528ed2
 INFO: [Coretcl 2-1174] Renamed 9 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2224.035 ; gain = 0.000 ; free physical = 11865 ; free virtual = 20536
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2222.191 ; gain = 0.000 ; free physical = 13947 ; free virtual = 21948
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/design_1_axi_bram_ctrl_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint '/home/wask/workspace/mgr/hls_perceptron/vivado/simple_perceptron/simple_perceptron.runs/design_1_axi_bram_ctrl_0_0_synth_1/design_1_axi_bram_ctrl_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_bram_ctrl_0_0_utilization_synth.rpt -pb design_1_axi_bram_ctrl_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 26 14:59:12 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 22 19:37:42 2020...

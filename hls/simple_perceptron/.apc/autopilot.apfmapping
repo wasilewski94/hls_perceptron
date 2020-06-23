@@ -4,7 +4,9 @@
     <originFiles name="core.cpp" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/core.cpp"/>
   </source>
   <testbench>
-    <originFiles name="weights.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/weights.h"/>
     <originFiles name="test_core.cpp" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/test_core.cpp"/>
+    <originFiles name="hls_weights.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/hls_weights.h"/>
+    <originFiles name="hls_input.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/hls_input.h"/>
+    <originFiles name="hls_biases.h" path="/home/wask/workspace/mgr/hls_perceptron/hls/simple_perceptron/hls_biases.h"/>
   </testbench>
 </autopilotfilemapping:AutoPilotFileMapping>

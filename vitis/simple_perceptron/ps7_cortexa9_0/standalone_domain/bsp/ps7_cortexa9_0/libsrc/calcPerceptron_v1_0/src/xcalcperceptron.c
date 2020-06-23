@@ -107,6 +107,40 @@ u32 XCalcperceptron_Get_neurons(XCalcperceptron *InstancePtr) {
     return Data;
 }
 
+void XCalcperceptron_Set_w_offset(XCalcperceptron *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XCalcperceptron_WriteReg(InstancePtr->Ctrl_bus_BaseAddress, XCALCPERCEPTRON_CTRL_BUS_ADDR_W_OFFSET_DATA, Data);
+}
+
+u32 XCalcperceptron_Get_w_offset(XCalcperceptron *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XCalcperceptron_ReadReg(InstancePtr->Ctrl_bus_BaseAddress, XCALCPERCEPTRON_CTRL_BUS_ADDR_W_OFFSET_DATA);
+    return Data;
+}
+
+void XCalcperceptron_Set_b_offset(XCalcperceptron *InstancePtr, u32 Data) {
+    Xil_AssertVoid(InstancePtr != NULL);
+    Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    XCalcperceptron_WriteReg(InstancePtr->Ctrl_bus_BaseAddress, XCALCPERCEPTRON_CTRL_BUS_ADDR_B_OFFSET_DATA, Data);
+}
+
+u32 XCalcperceptron_Get_b_offset(XCalcperceptron *InstancePtr) {
+    u32 Data;
+
+    Xil_AssertNonvoid(InstancePtr != NULL);
+    Xil_AssertNonvoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);
+
+    Data = XCalcperceptron_ReadReg(InstancePtr->Ctrl_bus_BaseAddress, XCALCPERCEPTRON_CTRL_BUS_ADDR_B_OFFSET_DATA);
+    return Data;
+}
+
 void XCalcperceptron_InterruptGlobalEnable(XCalcperceptron *InstancePtr) {
     Xil_AssertVoid(InstancePtr != NULL);
     Xil_AssertVoid(InstancePtr->IsReady == XIL_COMPONENT_IS_READY);

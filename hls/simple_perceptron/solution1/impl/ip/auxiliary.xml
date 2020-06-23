@@ -7,6 +7,8 @@
   <xd:arg xd:name="res[]" xd:originalName="res" xd:direction="out" xd:interfaceRef="res_PORTA" xd:busTypeRef="bram" xd:arraySize="26" xd:dataWidth="32"/>
   <xd:arg xd:name="inputs" xd:originalName="inputs" xd:direction="in" xd:interfaceRef="s_axi_CTRL_BUS" xd:busTypeRef="axilite" xd:offset="0x10" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
   <xd:arg xd:name="neurons" xd:originalName="neurons" xd:direction="in" xd:interfaceRef="s_axi_CTRL_BUS" xd:busTypeRef="axilite" xd:offset="0x18" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="w_offset" xd:originalName="w_offset" xd:direction="in" xd:interfaceRef="s_axi_CTRL_BUS" xd:busTypeRef="axilite" xd:offset="0x20" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
+  <xd:arg xd:name="b_offset" xd:originalName="b_offset" xd:direction="in" xd:interfaceRef="s_axi_CTRL_BUS" xd:busTypeRef="axilite" xd:offset="0x28" xd:handshakeRef="ap_none" xd:dataWidth="32"/>
   <xd:latencyEstimates xd:best-case="undef" xd:worst-case="undef" xd:average-case="undef"/>
-  <xd:resourceEstimates xd:LUT="2527" xd:FF="1555" xd:BRAM="0" xd:DSP="20"/>
+  <xd:resourceEstimates xd:LUT="2719" xd:FF="1695" xd:BRAM="0" xd:DSP="20"/>
 </xd:acceleratorMap>

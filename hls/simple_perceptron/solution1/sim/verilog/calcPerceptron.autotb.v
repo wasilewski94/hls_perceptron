@@ -22,25 +22,33 @@
 `define AESL_BRAM_INST_b bram_inst_b
 `define AESL_BRAM_res AESL_autobram_res
 `define AESL_BRAM_INST_res bram_inst_res
+`define AESL_DEPTH_inputs 1
+`define AESL_DEPTH_neurons 1
 `define AUTOTB_TVIN_x  "../tv/cdatafile/c.calcPerceptron.autotvin_x.dat"
 `define AUTOTB_TVIN_w  "../tv/cdatafile/c.calcPerceptron.autotvin_w.dat"
 `define AUTOTB_TVIN_b  "../tv/cdatafile/c.calcPerceptron.autotvin_b.dat"
 `define AUTOTB_TVIN_res  "../tv/cdatafile/c.calcPerceptron.autotvin_res.dat"
+`define AUTOTB_TVIN_inputs  "../tv/cdatafile/c.calcPerceptron.autotvin_inputs.dat"
+`define AUTOTB_TVIN_neurons  "../tv/cdatafile/c.calcPerceptron.autotvin_neurons.dat"
 `define AUTOTB_TVIN_x_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_x.dat"
 `define AUTOTB_TVIN_w_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_w.dat"
 `define AUTOTB_TVIN_b_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_b.dat"
 `define AUTOTB_TVIN_res_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_res.dat"
+`define AUTOTB_TVIN_inputs_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_inputs.dat"
+`define AUTOTB_TVIN_neurons_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvin_neurons.dat"
 `define AUTOTB_TVOUT_res  "../tv/cdatafile/c.calcPerceptron.autotvout_res.dat"
 `define AUTOTB_TVOUT_res_out_wrapc  "../tv/rtldatafile/rtl.calcPerceptron.autotvout_res.dat"
 module `AUTOTB_TOP;
 
-parameter AUTOTB_TRANSACTION_NUM = 1;
+parameter AUTOTB_TRANSACTION_NUM = 2;
 parameter PROGRESS_TIMEOUT = 10000000;
-parameter LATENCY_ESTIMATION = 63917;
+parameter LATENCY_ESTIMATION = -1;
 parameter LENGTH_x = 784;
 parameter LENGTH_w = 12704;
 parameter LENGTH_b = 26;
 parameter LENGTH_res = 26;
+parameter LENGTH_inputs = 1;
+parameter LENGTH_neurons = 1;
 
 task read_token;
     input integer fp;
@@ -70,24 +78,24 @@ reg AESL_done_delay2 = 0;
 reg AESL_ready_delay = 0;
 wire ready;
 wire ready_wire;
-wire [3 : 0] CRTL_BUS_AWADDR;
-wire  CRTL_BUS_AWVALID;
-wire  CRTL_BUS_AWREADY;
-wire  CRTL_BUS_WVALID;
-wire  CRTL_BUS_WREADY;
-wire [31 : 0] CRTL_BUS_WDATA;
-wire [3 : 0] CRTL_BUS_WSTRB;
-wire [3 : 0] CRTL_BUS_ARADDR;
-wire  CRTL_BUS_ARVALID;
-wire  CRTL_BUS_ARREADY;
-wire  CRTL_BUS_RVALID;
-wire  CRTL_BUS_RREADY;
-wire [31 : 0] CRTL_BUS_RDATA;
-wire [1 : 0] CRTL_BUS_RRESP;
-wire  CRTL_BUS_BVALID;
-wire  CRTL_BUS_BREADY;
-wire [1 : 0] CRTL_BUS_BRESP;
-wire  CRTL_BUS_INTERRUPT;
+wire [4 : 0] CTRL_BUS_AWADDR;
+wire  CTRL_BUS_AWVALID;
+wire  CTRL_BUS_AWREADY;
+wire  CTRL_BUS_WVALID;
+wire  CTRL_BUS_WREADY;
+wire [31 : 0] CTRL_BUS_WDATA;
+wire [3 : 0] CTRL_BUS_WSTRB;
+wire [4 : 0] CTRL_BUS_ARADDR;
+wire  CTRL_BUS_ARVALID;
+wire  CTRL_BUS_ARREADY;
+wire  CTRL_BUS_RVALID;
+wire  CTRL_BUS_RREADY;
+wire [31 : 0] CTRL_BUS_RDATA;
+wire [1 : 0] CTRL_BUS_RRESP;
+wire  CTRL_BUS_BVALID;
+wire  CTRL_BUS_BREADY;
+wire [1 : 0] CTRL_BUS_BRESP;
+wire  CTRL_BUS_INTERRUPT;
 wire [31 : 0] x_ADDR_A;
 wire  x_EN_A;
 wire [3 : 0] x_WEN_A;
@@ -102,13 +110,6 @@ wire [31 : 0] w_DIN_A;
 wire [31 : 0] w_DOUT_A;
 wire  w_CLK_A;
 wire  w_RST_A;
-wire [31 : 0] w_ADDR_B;
-wire  w_EN_B;
-wire [3 : 0] w_WEN_B;
-wire [31 : 0] w_DIN_B;
-wire [31 : 0] w_DOUT_B;
-wire  w_CLK_B;
-wire  w_RST_B;
 wire [31 : 0] b_ADDR_A;
 wire  b_EN_A;
 wire [3 : 0] b_WEN_A;
@@ -123,13 +124,6 @@ wire [31 : 0] res_DIN_A;
 wire [31 : 0] res_DOUT_A;
 wire  res_CLK_A;
 wire  res_RST_A;
-wire [31 : 0] res_ADDR_B;
-wire  res_EN_B;
-wire [3 : 0] res_WEN_B;
-wire [31 : 0] res_DIN_B;
-wire [31 : 0] res_DOUT_B;
-wire  res_CLK_B;
-wire  res_RST_B;
 integer done_cnt = 0;
 integer AESL_ready_cnt = 0;
 integer ready_cnt = 0;
@@ -139,6 +133,7 @@ reg ready_last_n;
 reg ready_delay_last_n;
 reg done_delay_last_n;
 reg interface_done = 0;
+wire CTRL_BUS_write_data_finish;
 wire AESL_slave_start;
 reg AESL_slave_start_lock = 0;
 wire AESL_slave_write_start_in;
@@ -157,24 +152,24 @@ wire ap_rst_n;
 wire ap_rst_n_n;
 
 `AUTOTB_DUT `AUTOTB_DUT_INST(
-    .s_axi_CRTL_BUS_AWADDR(CRTL_BUS_AWADDR),
-    .s_axi_CRTL_BUS_AWVALID(CRTL_BUS_AWVALID),
-    .s_axi_CRTL_BUS_AWREADY(CRTL_BUS_AWREADY),
-    .s_axi_CRTL_BUS_WVALID(CRTL_BUS_WVALID),
-    .s_axi_CRTL_BUS_WREADY(CRTL_BUS_WREADY),
-    .s_axi_CRTL_BUS_WDATA(CRTL_BUS_WDATA),
-    .s_axi_CRTL_BUS_WSTRB(CRTL_BUS_WSTRB),
-    .s_axi_CRTL_BUS_ARADDR(CRTL_BUS_ARADDR),
-    .s_axi_CRTL_BUS_ARVALID(CRTL_BUS_ARVALID),
-    .s_axi_CRTL_BUS_ARREADY(CRTL_BUS_ARREADY),
-    .s_axi_CRTL_BUS_RVALID(CRTL_BUS_RVALID),
-    .s_axi_CRTL_BUS_RREADY(CRTL_BUS_RREADY),
-    .s_axi_CRTL_BUS_RDATA(CRTL_BUS_RDATA),
-    .s_axi_CRTL_BUS_RRESP(CRTL_BUS_RRESP),
-    .s_axi_CRTL_BUS_BVALID(CRTL_BUS_BVALID),
-    .s_axi_CRTL_BUS_BREADY(CRTL_BUS_BREADY),
-    .s_axi_CRTL_BUS_BRESP(CRTL_BUS_BRESP),
-    .interrupt(CRTL_BUS_INTERRUPT),
+    .s_axi_CTRL_BUS_AWADDR(CTRL_BUS_AWADDR),
+    .s_axi_CTRL_BUS_AWVALID(CTRL_BUS_AWVALID),
+    .s_axi_CTRL_BUS_AWREADY(CTRL_BUS_AWREADY),
+    .s_axi_CTRL_BUS_WVALID(CTRL_BUS_WVALID),
+    .s_axi_CTRL_BUS_WREADY(CTRL_BUS_WREADY),
+    .s_axi_CTRL_BUS_WDATA(CTRL_BUS_WDATA),
+    .s_axi_CTRL_BUS_WSTRB(CTRL_BUS_WSTRB),
+    .s_axi_CTRL_BUS_ARADDR(CTRL_BUS_ARADDR),
+    .s_axi_CTRL_BUS_ARVALID(CTRL_BUS_ARVALID),
+    .s_axi_CTRL_BUS_ARREADY(CTRL_BUS_ARREADY),
+    .s_axi_CTRL_BUS_RVALID(CTRL_BUS_RVALID),
+    .s_axi_CTRL_BUS_RREADY(CTRL_BUS_RREADY),
+    .s_axi_CTRL_BUS_RDATA(CTRL_BUS_RDATA),
+    .s_axi_CTRL_BUS_RRESP(CTRL_BUS_RRESP),
+    .s_axi_CTRL_BUS_BVALID(CTRL_BUS_BVALID),
+    .s_axi_CTRL_BUS_BREADY(CTRL_BUS_BREADY),
+    .s_axi_CTRL_BUS_BRESP(CTRL_BUS_BRESP),
+    .interrupt(CTRL_BUS_INTERRUPT),
     .ap_clk(ap_clk),
     .ap_rst_n(ap_rst_n),
     .x_Addr_A(x_ADDR_A),
@@ -191,13 +186,6 @@ wire ap_rst_n_n;
     .w_Dout_A(w_DOUT_A),
     .w_Clk_A(w_CLK_A),
     .w_Rst_A(w_RST_A),
-    .w_Addr_B(w_ADDR_B),
-    .w_EN_B(w_EN_B),
-    .w_WEN_B(w_WEN_B),
-    .w_Din_B(w_DIN_B),
-    .w_Dout_B(w_DOUT_B),
-    .w_Clk_B(w_CLK_B),
-    .w_Rst_B(w_RST_B),
     .b_Addr_A(b_ADDR_A),
     .b_EN_A(b_EN_A),
     .b_WEN_A(b_WEN_A),
@@ -211,14 +199,7 @@ wire ap_rst_n_n;
     .res_Din_A(res_DIN_A),
     .res_Dout_A(res_DOUT_A),
     .res_Clk_A(res_CLK_A),
-    .res_Rst_A(res_RST_A),
-    .res_Addr_B(res_ADDR_B),
-    .res_EN_B(res_EN_B),
-    .res_WEN_B(res_WEN_B),
-    .res_Din_B(res_DIN_B),
-    .res_Dout_B(res_DOUT_B),
-    .res_Clk_B(res_CLK_B),
-    .res_Rst_B(res_RST_B));
+    .res_Rst_A(res_RST_A));
 
 // Assignment for control signal
 assign ap_clk = AESL_clock;
@@ -228,7 +209,7 @@ assign AESL_reset = rst;
 assign AESL_start = start;
 assign AESL_ce = ce;
 assign AESL_continue = tb_continue;
-  assign AESL_slave_write_start_in = slave_start_status ;
+  assign AESL_slave_write_start_in = slave_start_status  & CTRL_BUS_write_data_finish;
   assign AESL_slave_start = AESL_slave_write_start_finish;
   assign AESL_done = slave_done_status ;
 
@@ -366,11 +347,6 @@ assign bramw_EN_A = w_EN_A;
 assign w_DOUT_A = bramw_Dout_A;
 assign bramw_WEN_A = 0;
 assign bramw_Din_A = 0;
-assign bramw_Clk_B = w_CLK_B;
-assign bramw_Rst_B = w_RST_B;
-assign bramw_Addr_B = w_ADDR_B;
-assign bramw_EN_B = w_EN_B;
-assign w_DOUT_B = bramw_Dout_B;
 assign bramw_WEN_B = 0;
 assign bramw_Din_B = 0;
 assign bramw_ready=    ready;
@@ -458,49 +434,46 @@ assign bramres_Clk_A = res_CLK_A;
 assign bramres_Rst_A = res_RST_A;
 assign bramres_Addr_A = res_ADDR_A;
 assign bramres_EN_A = res_EN_A;
-assign res_DOUT_A = bramres_Dout_A;
 assign bramres_WEN_A = res_WEN_A;
 assign bramres_Din_A = res_DIN_A;
-assign bramres_Clk_B = res_CLK_B;
-assign bramres_Rst_B = res_RST_B;
-assign bramres_Addr_B = res_ADDR_B;
-assign bramres_EN_B = res_EN_B;
-assign res_DOUT_B = bramres_Dout_B;
 assign bramres_WEN_B = 0;
 assign bramres_Din_B = 0;
-assign bramres_ready= ready;
-assign bramres_done = interface_done;
+assign bramres_ready= ready_initial | bramres_done;
+assign bramres_done =    AESL_done_delay;
 
 
-AESL_axi_slave_CRTL_BUS AESL_AXI_SLAVE_CRTL_BUS(
+
+
+AESL_axi_slave_CTRL_BUS AESL_AXI_SLAVE_CTRL_BUS(
     .clk   (AESL_clock),
     .reset (AESL_reset),
-    .TRAN_s_axi_CRTL_BUS_AWADDR (CRTL_BUS_AWADDR),
-    .TRAN_s_axi_CRTL_BUS_AWVALID (CRTL_BUS_AWVALID),
-    .TRAN_s_axi_CRTL_BUS_AWREADY (CRTL_BUS_AWREADY),
-    .TRAN_s_axi_CRTL_BUS_WVALID (CRTL_BUS_WVALID),
-    .TRAN_s_axi_CRTL_BUS_WREADY (CRTL_BUS_WREADY),
-    .TRAN_s_axi_CRTL_BUS_WDATA (CRTL_BUS_WDATA),
-    .TRAN_s_axi_CRTL_BUS_WSTRB (CRTL_BUS_WSTRB),
-    .TRAN_s_axi_CRTL_BUS_ARADDR (CRTL_BUS_ARADDR),
-    .TRAN_s_axi_CRTL_BUS_ARVALID (CRTL_BUS_ARVALID),
-    .TRAN_s_axi_CRTL_BUS_ARREADY (CRTL_BUS_ARREADY),
-    .TRAN_s_axi_CRTL_BUS_RVALID (CRTL_BUS_RVALID),
-    .TRAN_s_axi_CRTL_BUS_RREADY (CRTL_BUS_RREADY),
-    .TRAN_s_axi_CRTL_BUS_RDATA (CRTL_BUS_RDATA),
-    .TRAN_s_axi_CRTL_BUS_RRESP (CRTL_BUS_RRESP),
-    .TRAN_s_axi_CRTL_BUS_BVALID (CRTL_BUS_BVALID),
-    .TRAN_s_axi_CRTL_BUS_BREADY (CRTL_BUS_BREADY),
-    .TRAN_s_axi_CRTL_BUS_BRESP (CRTL_BUS_BRESP),
-    .TRAN_CRTL_BUS_interrupt (CRTL_BUS_INTERRUPT),
-    .TRAN_CRTL_BUS_ready_out (AESL_ready),
-    .TRAN_CRTL_BUS_ready_in (AESL_slave_ready),
-    .TRAN_CRTL_BUS_done_out (AESL_slave_output_done),
-    .TRAN_CRTL_BUS_idle_out (AESL_idle),
-    .TRAN_CRTL_BUS_write_start_in     (AESL_slave_write_start_in),
-    .TRAN_CRTL_BUS_write_start_finish (AESL_slave_write_start_finish),
-    .TRAN_CRTL_BUS_transaction_done_in (AESL_done_delay),
-    .TRAN_CRTL_BUS_start_in  (AESL_slave_start)
+    .TRAN_s_axi_CTRL_BUS_AWADDR (CTRL_BUS_AWADDR),
+    .TRAN_s_axi_CTRL_BUS_AWVALID (CTRL_BUS_AWVALID),
+    .TRAN_s_axi_CTRL_BUS_AWREADY (CTRL_BUS_AWREADY),
+    .TRAN_s_axi_CTRL_BUS_WVALID (CTRL_BUS_WVALID),
+    .TRAN_s_axi_CTRL_BUS_WREADY (CTRL_BUS_WREADY),
+    .TRAN_s_axi_CTRL_BUS_WDATA (CTRL_BUS_WDATA),
+    .TRAN_s_axi_CTRL_BUS_WSTRB (CTRL_BUS_WSTRB),
+    .TRAN_s_axi_CTRL_BUS_ARADDR (CTRL_BUS_ARADDR),
+    .TRAN_s_axi_CTRL_BUS_ARVALID (CTRL_BUS_ARVALID),
+    .TRAN_s_axi_CTRL_BUS_ARREADY (CTRL_BUS_ARREADY),
+    .TRAN_s_axi_CTRL_BUS_RVALID (CTRL_BUS_RVALID),
+    .TRAN_s_axi_CTRL_BUS_RREADY (CTRL_BUS_RREADY),
+    .TRAN_s_axi_CTRL_BUS_RDATA (CTRL_BUS_RDATA),
+    .TRAN_s_axi_CTRL_BUS_RRESP (CTRL_BUS_RRESP),
+    .TRAN_s_axi_CTRL_BUS_BVALID (CTRL_BUS_BVALID),
+    .TRAN_s_axi_CTRL_BUS_BREADY (CTRL_BUS_BREADY),
+    .TRAN_s_axi_CTRL_BUS_BRESP (CTRL_BUS_BRESP),
+    .TRAN_CTRL_BUS_interrupt (CTRL_BUS_INTERRUPT),
+    .TRAN_CTRL_BUS_write_data_finish(CTRL_BUS_write_data_finish),
+    .TRAN_CTRL_BUS_ready_out (AESL_ready),
+    .TRAN_CTRL_BUS_ready_in (AESL_slave_ready),
+    .TRAN_CTRL_BUS_done_out (AESL_slave_output_done),
+    .TRAN_CTRL_BUS_idle_out (AESL_idle),
+    .TRAN_CTRL_BUS_write_start_in     (AESL_slave_write_start_in),
+    .TRAN_CTRL_BUS_write_start_finish (AESL_slave_write_start_finish),
+    .TRAN_CTRL_BUS_transaction_done_in (AESL_done_delay),
+    .TRAN_CTRL_BUS_start_in  (AESL_slave_start)
 );
 
 initial begin : generate_AESL_ready_cnt_proc
@@ -577,6 +550,12 @@ reg [31:0] size_b_backup;
 reg end_res;
 reg [31:0] size_res;
 reg [31:0] size_res_backup;
+reg end_inputs;
+reg [31:0] size_inputs;
+reg [31:0] size_inputs_backup;
+reg end_neurons;
+reg [31:0] size_neurons;
+reg [31:0] size_neurons_backup;
 
 initial begin : initial_process
     integer proc_rand;
